@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<dlgData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <header>
+    <conditions>
+      <string>ds.Adair_Respect &gt;= 10 &amp;&amp; ds.Escape_Crisis == 5</string>
+    </conditions>
+    <links>
+      <int>6167</int>
+    </links>
+    <dlg_name>Military_Gate</dlg_name>
+    <def_link>6166</def_link>
+  </header>
+  <parts>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Lieutenant's not taking any visitors right now.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>Ask again.</text>
+          <def_link>6168</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>I think I know a way to get his attention. &lt;Attack&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>startCombat();</string>
+            <string>MilitaryTurnHostile();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Then I guess I wasted a trip. I'll go.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>6166</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Lieutenant Adair told me to bring you in if you showed up.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>Thanks. Lead the way.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>startBlackOut(); </string>
+            <string>teleportPartyToAdair();</string>
+            <string>dlgstart(Adair_End);</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>I need to take care of something first. </text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>6167</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Going to be the same answer. He's like that.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>Tell him I was here. I'm leaving.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Fine, I'm going.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>6168</UID>
+    </dlgPart>
+  </parts>
+  <participants>
+    <dlgParticipant>
+      <UID>0</UID>
+      <charID>-1</charID>
+      <name>Corporal</name>
+      <role>Speaker</role>
+      <req>NotRequired</req>
+      <color>Black</color>
+    </dlgParticipant>
+  </participants>
+</dlgData>

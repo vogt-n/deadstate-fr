@@ -1,0 +1,768 @@
+<?xml version="1.0"?>
+<dlgData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <header>
+    <conditions>
+      <string>ds.Dick_Met == 1 &amp;&amp; ds.Vic_Coleman !=1</string>
+      <string>isInParty(1001) == True &amp;&amp; ds.Vic_Coleman &lt; 2</string>
+      <string>isInParty(1001) == True &amp;&amp; ds.Vic_Coleman == 2</string>
+      <string>ds.Dick_Met == 1 &amp;&amp; isInParty(1001) == False &amp;&amp; ds.Vic_Coleman == 1</string>
+    </conditions>
+    <links>
+      <int>5715</int>
+      <int>5704</int>
+      <int>5714</int>
+      <int>5714</int>
+    </links>
+    <dlg_name>Dick_Intro</dlg_name>
+    <def_link>5703</def_link>
+  </header>
+  <parts>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Police! Hold it right there!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Dick_Met = 1;</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>You're trespassing on Coleman police property - turn around now or lethal force will be used!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>- New Answ -</text>
+          <def_link>5704</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isInParty(1001) == True</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>- New Answ -</text>
+          <def_link>5710</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isInParty(1001) == False</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>5703</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>1</owner_ID>
+          <text>Dick Ferguson? That you? This is Vic Castillo from Splendid.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Vic_Coleman = 2;</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Vic? We've been waiting for you - got your radio message, must be weeks ago now. Big Jim Reinhart with you? </text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>1</owner_ID>
+          <text>He, uh... he didn't make it. </text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Well, I'm realy sorry to hear it.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>1</owner_ID>
+          <text>Yeah... Dick - I'm here 'cause we got a whole lot of people in Splendid. Was hoping we could move 'em up here or maybe get some backup to help us out down there. </text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>No can do, Vic. We got our own to look after. 'Course, you and any other officers and their families are welcome to join us up here, but anyone's not police, they got no business here. </text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>1</owner_ID>
+          <text>...Dick - you're a goddamn cop! We got a duty to look after these people! We need to be out there restoring some goddamn order for the civilians that are left! </text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>They had their chance, Vic. We tried and now we're being attacked out on our own streets. Not a damn thing we can do but wait it out. They can rot out there for all I care!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>1</owner_ID>
+          <text>Dick Ferguson, you fucking coward! You better believe if I get through this, I'm gonna make sure you can't get a badge at a goddamn toy store! </text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>1</owner_ID>
+          <text>&lt;To you&gt;They're not gonna help us... Let's go.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>They're cowards! Why don't we just go in and take 'em out?!</text>
+          <def_link>5705</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Maybe we can reason with them?</text>
+          <def_link>5706</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Do you want to stay?</text>
+          <def_link>5707</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>I'm with you... Fuck these guys. Let's go.</text>
+          <def_link>5708</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>5704</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>1</owner_ID>
+          <text>Now you listen up - they may be cowards, but they're goddamn police and I know those people. No... We're not doing anything but going home knowing that we're in the right and that they're bound to get what's coming to them some day.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>- New Answ -</text>
+          <def_link>5709</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>5705</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>1</owner_ID>
+          <text>You heard them... Only way they're opening this door is to start shooting. We should go.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>- New Answ -</text>
+          <def_link>5709</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>5706</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>1</owner_ID>
+          <text>This ain't my town. And to be honest, I don't think me and Dick would see eye to eye, especially after I kicked his ass up and down that courthouse.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>- New Answ -</text>
+          <def_link>5709</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>5707</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>1</owner_ID>
+          <text>Yeah... I'm ashamed to even know 'em.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>- New Answ -</text>
+          <def_link>5709</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>5708</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Vic - you and your people best be on your way. I don't want to shoot, but you've been warned. Now get out of here.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>Alright - we're going!</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Let's go...</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Fuck this - we're coming in!</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>startCombat();</string>
+            <string>CopsTurnHostile();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Police? You've got no power! I'm the goddamn law now!</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>CopsTurnHostile();</string>
+            <string>startCombat();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>5709</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>This is not a public shelter and we will not tolerate your presence here in Coleman!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>We're from Splendid - we could use police assistance.</text>
+          <def_link>5711</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>We just want to trade with you.</text>
+          <def_link>5712</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>We just want to know what's going on. Do you have any info you can share?</text>
+          <def_link>5713</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Remember all that police brutality from the old days? Well, payback's a bitch, motherfuckers!</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>CopsTurnHostile();</string>
+            <string>startCombat();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>5710</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Last I heard, Splendid had its own police force. There's nothing we can do for you.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>- New Answ -</text>
+          <def_link>5714</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>5711</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>We're not opening these doors. Just turn around and don't let us catch you in Coleman again.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>- New Answ -</text>
+          <def_link>5714</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>5712</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Ain't nothing you can tell us we don't already know. So be on your way.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>- New Answ -</text>
+          <def_link>5714</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>5713</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>This is your last warning! Leave Coleman now or we will cut you down where you stand! &lt;You hear the sound of someone chambering a shotgun round&gt; </text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>Alright - we're going!</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Don't shoot - I'm going, you fucking cowards... </text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Fuck this - we're coming in!</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>startCombat();</string>
+            <string>CopsTurnHostile();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Police? You've got no power! I'm the goddamn law now!</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>startCombat();</string>
+            <string>CopsTurnHostile();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>5714</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>You again... I fucking warned you! Fire!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>&lt;You hear the sound of police taking position inside.&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>startCombat(1068);</string>
+            <string>CopsTurnHostile();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>5715</UID>
+    </dlgPart>
+  </parts>
+  <participants>
+    <dlgParticipant>
+      <UID>0</UID>
+      <charID>1068</charID>
+      <name>Dick</name>
+      <role>Speaker</role>
+      <req>NotRequired</req>
+      <color>Black</color>
+    </dlgParticipant>
+    <dlgParticipant>
+      <UID>1</UID>
+      <charID>1001</charID>
+      <name>Vic</name>
+      <role>Guest</role>
+      <req>NotRequired</req>
+      <color>Black</color>
+    </dlgParticipant>
+  </participants>
+</dlgData>

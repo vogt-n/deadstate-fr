@@ -1,0 +1,483 @@
+<?xml version="1.0"?>
+<dlgData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <header>
+    <conditions />
+    <links />
+    <dlg_name>Anita_Bit</dlg_name>
+    <def_link>398</def_link>
+  </header>
+  <parts>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[START] You know this already, &lt;charname&gt;, but I'm infected. I don't have long, so I need you to listen. Can you do that for me?</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Anita_Bit = 1;</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[ReneeAlive] I can. Go ahead.</text>
+          <def_link>399</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isShelterCharDead(1003) == 0</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[ReneeAlive] Whatever, make it quick.</text>
+          <def_link>399</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isShelterCharDead(1003) == 0</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>changeMood(-2,1012);</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[ReneeDead] Of course, Anita.</text>
+          <def_link>400</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isShelterCharDead(1003) == 1</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[ReneeDead] Fine, hurry it up.</text>
+          <def_link>400</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isShelterCharDead(1003) == 1</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>changeMood(-2, 1012);</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>398</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[RENEEALIVE] I knew the day would come when I would be preparing to die, and honestly, I'd kind of hoped I'd be able to prepare, that it wouldn't be shocking and sudden or I was too senile to know it was coming. It's just... it's soon. It's too soon, but, there's nothing I can do to change it, so that's that.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Renee is the most important thing to me in the whole world. She was since the day she was born. I loved my husband, but I got married young, and he was a very traditional sort of man, didn't want me to get a job. And he didn't want me spoiling my girl, but she was everything to me. My world.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>When he passed, I was in Atlanta, and Renee and I moved back home to Taos to live with my mother. And I knew I had to support her. I tried delivery driving, but it wasn't enough money. So I had to leave her to be a truck driver. And it hurt, but I knew I had to do it.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>So now I'm gonna be leaving for good, and I told you all that because I want you to know how much my daughter means to me. And you need to protect her - not because I don't think she can do that herself, but because she's a special person, and I asked you to as a last request. Can you do that?</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[Promise] I promise, Anita. I won't take her out in the field.</text>
+          <def_link>401</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Try] I'll do my best.</text>
+          <def_link>402</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Nope] I can't promise that. Sorry.</text>
+          <def_link>403</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>399</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[RENEEDEAD] Renee was the most important thing in my life, and now she's gone. Right now, I can only take comfort in the knowledge that I'll be with her soon - God willing.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>I need you to make me this promise. Davis, and anyone who has been here or will be here - they count on you. And you were chosen to lead for whatever reason, so bear that in mind.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>I need to know my death won't have been for nothing. That... my Renee's death wasn't for nothing. I didn't do all that much in my life, and I felt bad about that until I looked at her, but she's gone and I will be soon too and I need to know that's something you don't take lightly. That you'll bear the weight.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[Swear] I swear I'll remember you and Renee, Anita. I promise.</text>
+          <def_link>404</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Neutral] I'll do what I can.</text>
+          <def_link>405</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Dismiss] Mistakes get made. I can't wear them around my neck every day.</text>
+          <def_link>406</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>400</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[PROMISE] Thank the Lord... and thank you, &lt;charname&gt;. I can't tell you what it means to me that you'll keep her as safe as you can. Renee didn't like thinking it was the end of the world. Maybe, if good people like you and her are surviving, it won't be. I can meet the Lord with relief in my heart now.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>blockCharFromParty(1003, true);</string>
+            <string>changeMood(8, 1012);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>It's the least I can do. Be well, Anita.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>401</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[TRY] &lt;Anita sighs&gt; I guess that's the most a mother can do in this world - send her hopes out to the angels and pray they hear. Thank you.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(3, 1012);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>Sorry I couldn't do more. Bye.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>402</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[NOPE] Well, I'm glad I at least told you about it. Maybe sometime you'll change your mind and respect a dying woman's wish to protect her only child.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(-5, 1012);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>&lt;Anita quickly leaves the room.&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>403</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[SWEAR] Thank you. I hope you have the time and means to do some kind of a service - I know my faith might not be the same as yours, but if you believe in Heaven, please believe I will appreciate knowing I've been properly laid to rest.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(3, 1012);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>I'll keep that in mind. Goodbye for now.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>404</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[NEUTRAL] I suppose that's the best I can hope for. Good day.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(-3, 1012);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>&lt;Anita quietly leaves the room.&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>405</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[DISMISS] Do you really think people dying aren't worth remembering?! God forgive me for wishing we'd never taken you back here! And may Heaven protect this poor place and all the people in it...</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(-8, 1012);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>&lt;Anita runs out the room.&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>406</UID>
+    </dlgPart>
+  </parts>
+  <participants>
+    <dlgParticipant>
+      <UID>0</UID>
+      <charID>1012</charID>
+      <name>Anita</name>
+      <role>Speaker</role>
+      <req>AliveShelterChar</req>
+      <color>Black</color>
+    </dlgParticipant>
+  </participants>
+</dlgData>

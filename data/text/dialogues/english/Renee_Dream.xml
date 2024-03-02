@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<dlgData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <header>
+    <conditions />
+    <links />
+    <dlg_name>Renee_Dream</dlg_name>
+    <def_link>331</def_link>
+  </header>
+  <parts>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>This is going to sound silly, but... I had a dream last night. Something happened to Mom in the dream - one of those things got her. It really got to me... Even cried a bit.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Renee_Dream = 1;</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Um, do you think... Maybe you could give her the day off? I just have this horrible feeling something's going to happen to her. It would really make me feel better if I knew she wasn't doing anything dangerous.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>Sure, Renee. I'll tell her to take the day off. </text>
+          <def_link>332</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>I'm sorry - I'm very busy and I need everyone's help today. </text>
+          <def_link>333</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>It's nothing. I had a dream I went boogie-boarding with Mr. T - do I look like I'm wearing a swimsuit?</text>
+          <def_link>333</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>331</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Thanks... I thought you might tell me I was being stupid. This really means a lot to me. </text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(5, 1003);</string>
+            <string>blockCharFromParty(1012, true); </string>
+            <string>createOffsetEvent("AnitaBackToParty", 1, "blockCharFromParty(1012, false);"); </string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>You're welcome. See ya.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Don't get used to this. I'll talk to you later.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>332</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Right... It sounded pretty stupid, huh? I'm sorry I bothered you.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(-2, 1003);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>&lt;Renee hurries off.&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>333</UID>
+    </dlgPart>
+  </parts>
+  <participants>
+    <dlgParticipant>
+      <UID>0</UID>
+      <charID>1003</charID>
+      <name>Renee</name>
+      <role>Speaker</role>
+      <req>AliveShelterChar</req>
+      <color>Black</color>
+    </dlgParticipant>
+  </participants>
+</dlgData>

@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+<dlgData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <header>
+    <conditions />
+    <links />
+    <dlg_name>Clifford_Greedy</dlg_name>
+    <def_link>3235</def_link>
+  </header>
+  <parts>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>So... The last few days, I've done... a lot. Yeah. And... I think I should get more food. Because I helped more.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Clifford_Greedy = 1;</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>Everyone gets the same amount, no matter what they've done.</text>
+          <def_link>3236</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>That's true. How about ten extra rations?</text>
+          <def_link>3237</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>shelterGetResource(food) &gt;= 10</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>shelterChangeResource(food, -10);</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>If you can keep it quiet, I'll give you five extra rations. If I give you more, someone will notice.</text>
+          <def_link>3238</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Negotiation &gt;= 5 &amp;&amp; shelterGetResource(food) &gt;= 5</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>shelterChangeResource(food, -5);</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>I can't. If one person starts hoarding food, everyone will and this place will fall apart.</text>
+          <def_link>3239</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Leadership &gt;= 6</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>3235</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>That's... That's not fair. &lt;Mumbles something&gt; all of them. I'm going to... Never mind. I'm going.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(-5, 1019);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>&lt;Clifford walks off.&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>3236</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Thank you. Um... That's all. Well, I should go.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(5, 1019);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>&lt;Clifford walks off.&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>3237</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Um... Hm. Well... Okay. That's fair. I guess. Well... Okay, I'm going to go now.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(5, 1019);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>&lt;Clifford walks off.&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>3238</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>So... no? I don't like that. I don't care about the reasons. It's just... never mind. I'm going.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(-2, 1019);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>&lt;Clifford walks off.&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>3239</UID>
+    </dlgPart>
+  </parts>
+  <participants>
+    <dlgParticipant>
+      <UID>0</UID>
+      <charID>1019</charID>
+      <name>Clifford</name>
+      <role>Speaker</role>
+      <req>AliveShelterChar</req>
+      <color>Black</color>
+    </dlgParticipant>
+  </participants>
+  <tempPart>
+    <lines>
+      <dlgLine>
+        <owner_ID>0</owner_ID>
+        <text>So... no? I don't like that. I don't care about the reasons. It's just... never mind. I'm going.</text>
+        <defAppearChecks>
+          <boolean>false</boolean>
+          <boolean>false</boolean>
+          <boolean>false</boolean>
+          <boolean>false</boolean>
+          <boolean>false</boolean>
+          <boolean>false</boolean>
+          <boolean>false</boolean>
+          <boolean>false</boolean>
+        </defAppearChecks>
+        <onAppearChecks />
+        <onLoadScripts>
+          <string>changeMood(-2, 1019);</string>
+        </onLoadScripts>
+      </dlgLine>
+    </lines>
+    <answers>
+      <dlgAnsw>
+        <text>&lt;Clifford walks off.&gt;</text>
+        <def_link>-1</def_link>
+        <auto_answer>false</auto_answer>
+        <checkOnAppear />
+        <checksOnClick />
+        <linksOnClick />
+        <scriptsOnClick>
+          <string>dlgEndFadeFullFast();</string>
+        </scriptsOnClick>
+      </dlgAnsw>
+    </answers>
+    <UID>3239</UID>
+  </tempPart>
+</dlgData>

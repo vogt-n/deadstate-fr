@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<dlgData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <header>
+    <conditions />
+    <links />
+    <dlg_name>Gillian_Protest</dlg_name>
+    <def_link>90</def_link>
+  </header>
+  <parts>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[PROTEST] Um... &lt;charname&gt;? I wanted to tell you... I'm not doing real well here. Um, or that here isn't doing real well. If things don't get better soon, I may just... you know... go.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Gillan_Protest = 1;</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[Protest Nice] I know things are tough, but we need you here. Things will look up soon!</text>
+          <def_link>91</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Protest Mean] You'd seriously just walk away? Things get tough, and you just fucking give up, just like that?!</text>
+          <def_link>92</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Protest Negotiation] I know it's been hard, Gillian, and I know it's probably not what you were hoping for. But we - this community - needs you here. Please.</text>
+          <def_link>93</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.negotiation &gt;= 4</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Protest Leadership] You were in that store by yourself, and things were tough! Can't you be strong like that now? We need to each step up and be a positive example for people to look up to!</text>
+          <def_link>94</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.leadership &gt;= 7</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Protest Evil] What a fucking whiner. You think you can do better out there? You ready to up and leave? Fine. Get out then. Nobody's making you stay.</text>
+          <def_link>95</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>90</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[PROTEST NICE] Okay... I'll be here. I mean... you know. For now.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(-1,1034);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[END] Thanks, Gillian. I'll talk to you later.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>91</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[PROTEST MEAN] N-no! I mean - I didn't mean it like that... I'll just... I'll stay...</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Gillian_Trust -= 7;</string>
+            <string>changeMood(-5,1034);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[END] Good to hear it. Now go make yourself useful somewhere.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>92</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[PROTEST NEGOTIATION] Well... people need me? I just... okay. It's hard, but I guess it's hard for everybody. I'll do what I can...</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Gillian_Trust++;</string>
+            <string>changeMood(1,1034);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[END] Thanks, Gillian. I'll talk to you later.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>93</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[PROTEST LEADERSHIP] I-I'm not really... a leader-ey kind of person, but um... if you think I can do it, I'll try... okay...</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Gillian_Trust++;</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[END] Good answer! I believe in you. We'll talk more later.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>94</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[PROTEST EVIL] &lt;Gillian backs up a step, her hands clenching in sudden fear&gt; I-I-I... er... i-it's okay, I'll stay... I'll be good! I'll just... find something... to help with... &lt;She takes another shaky step backwards, then turns and runs away&gt;</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Gillan_Trust -= 10;</string>
+            <string>changeMood(-7,1034);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>Coward. She better stay in line.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>95</UID>
+    </dlgPart>
+  </parts>
+  <participants>
+    <dlgParticipant>
+      <UID>0</UID>
+      <charID>1034</charID>
+      <name>Gillian</name>
+      <role>Speaker</role>
+      <req>AliveShelterChar</req>
+      <color>#400080</color>
+    </dlgParticipant>
+  </participants>
+</dlgData>

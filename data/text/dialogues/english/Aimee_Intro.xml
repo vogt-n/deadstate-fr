@@ -1,0 +1,524 @@
+<?xml version="1.0"?>
+<dlgData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <header>
+    <conditions />
+    <links />
+    <dlg_name>Aimee_Intro</dlg_name>
+    <def_link>398</def_link>
+  </header>
+  <parts>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[START] S-stay back! I have a gun! ...God, I don't even know if you're real, or it's just another nightmare - b-but stay away from me!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Aimee_Intro = 1;</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[Kind] Easy - we just want to talk.</text>
+          <def_link>399</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Med] She's in bad shape - looks like she hasn't had proper water in at least two days.</text>
+          <def_link>402</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.medical &gt;= 5</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Talk] It's okay, friend, we're not here to hurt you. What's your name?</text>
+          <def_link>403</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.negotiation &gt;= 4</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Alone] Another nightmare? How long have you been here by yourself?</text>
+          <def_link>401</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Aggro] Drop the gun or I shoot.</text>
+          <def_link>400</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>398</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[KIND] Talk? Nobody... nobody wants to just talk anymore. They're dead and they try to tear you apart or they're alive and they... they try to rob you, or kill you... why do you just want to talk?!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[Soothe] We're friendly. We just want to help, I promise.</text>
+          <def_link>404</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Talk] I'm different - I'd like to talk. I'm &lt;charname&gt; - what's your name?</text>
+          <def_link>403</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.negotiation &gt;= 4</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Alone] Were you attacked? You look like you're alone here...</text>
+          <def_link>401</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Aggro] Fine - you won't back down, how about this: drop the gun or I kill you.</text>
+          <def_link>400</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>399</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[AGGRO] &lt;The young woman sobs slightly, her shaking hands tightening around the gun.&gt; N-no! I can't give this place up, I can't! I won't!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[Soothe] All right, all right, you're obviously in a bad way, I'll back off. See? Nobody needs to shoot, we can talk.</text>
+          <def_link>404</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Alone] Just answer me this: are you alone? How long have you been here?</text>
+          <def_link>401</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Attack] Then there's only one way this can go. &lt;Attack her.&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>TurnAimeeHostile();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>400</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[ALONE] I... I don't remember how long I've been alone. Since Dustin... &lt;She sniffles a moment, but keeps her hands wrapped tightly around the gun.&gt; It's been a while. People tried to break in, but a warning shot scared them off. I... I don't want to kill anyone, but I will if I have to!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[Soothe] It's okay - you don't have to kill anyone today. Let's you and me talk, all right?</text>
+          <def_link>404</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Talk] I know it must have been hard being here by yourself. I'm &lt;charname&gt; - what's your name?</text>
+          <def_link>403</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.negotiation &gt;= 4</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Attack] Okay. Then we can do things the hard way. &lt;Attack her.&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>TurnAimeeHostile();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>401</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[MEDICAL] Stop talking like I'm not here! I - &lt;She shakes her head a moment, as if trying to focus.&gt; I'm tired, yeah, and I ain't had water for a while, but I can - I can still shoot you!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[Soothe] It's okay - you don't have to kill anyone today. Let's you and me talk, all right?</text>
+          <def_link>404</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Talk] I know it must have been hard being here by yourself. I'm &lt;charname&gt; - what's your name?</text>
+          <def_link>403</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.negotiation &gt;= 4</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Attack] Okay. Then we can do things the hard way. &lt;Attack her.&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>TurnAimeeHostile();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>402</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[TALK] I'm... I'm Aimee. Aimee Sysko - that's 'Ay - Why - Em - E - E,' not 'Ay - Em - Why.' This is - this was - the Wicked Lily. Owned it with my boyfriend... Dustin. We... we holed up here when shit went south. Thought things would change... </text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[Core] It's okay. Just keep talking.</text>
+          <def_link>406</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>403</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[SOOTHE] &lt;The young woman looks at you suspiciously, but lowers her gun slightly.&gt; O-okay. We'll talk. But any funny business, and I will shoot you!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[Core] I understand. Just keep talking.</text>
+          <def_link>406</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>404</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[CORE] Dustin and I... we hid here, watched things go to shit. Waited for the revolution... what he said was gonna be "the overthrow of the old order"... but it wasn't. Everything just fell apart and... and never got put back together again.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>He... killed himself. And I've been here... been here all by myself since. Runnin' out of stuff to drink and eat and... and I couldn't even bury him proper so he's in the other room and still I... I can't leave. I don't know where to go or why...</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[Invite] You don't have to stay here, Aimee. I've got a safe place - you can come back there, I promise.</text>
+          <def_link>408</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Shoo] You've got to get out of this place, you know, or you'll die here.</text>
+          <def_link>407</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Attack] Well then - let me make this easier for you. &lt;Attack her.&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>TurnAimeeHostile();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>406</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[SHOO] &lt;Aimee looks at you warily, and raises the gun again.&gt; I... I'm not leaving! You can't force me out of my own place, you can't!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[Invite] Easy, easy! I just meant it's not safe here - I've got a safe place to stay, if you're interested.</text>
+          <def_link>408</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Attack] Actually yes, I can. &lt;Attack her.&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>TurnAimeeHostile();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>407</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[INVITE] I... a safe place? I don't... I guess I don't have anything left here for me. I got all my stuff packed, I - I meant to go once, but I stared at the door and lost my nerve. I guess... I guess I'm ready now. Th... thank you.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>addCharToShelter(1026);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[End] No problem. Just stay close by and follow when I leave.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>startBlackOut(); </string>
+            <string>deleteCharacter(1026);</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>408</UID>
+    </dlgPart>
+  </parts>
+  <participants>
+    <dlgParticipant>
+      <UID>0</UID>
+      <charID>1026</charID>
+      <name>Aimee</name>
+      <role>Speaker</role>
+      <req>AliveChar</req>
+      <color>Black</color>
+    </dlgParticipant>
+  </participants>
+</dlgData>

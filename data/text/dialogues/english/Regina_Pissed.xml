@@ -3,15 +3,15 @@
   <header>
     <conditions />
     <links />
-    <dlg_name>Elaine_Getz</dlg_name>
-    <def_link>451</def_link>
+    <dlg_name>Regina_Pissed</dlg_name>
+    <def_link>1244</def_link>
   </header>
   <parts>
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Je suis un peu inquiète pour Getz... Je vois bien que son esprit est bloqué comme je l'étais, mais peu importe ce que je lui dis, il reste inflexible. Tu m'as aidée... tu peux peut-être l'aider également ? </text>
+          <text>You call yourself a fucking leader? Other people want to listen to you, that's fine - I'm through following your shitty orders! </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -24,14 +24,30 @@
           </defAppearChecks>
           <onAppearChecks />
           <onLoadScripts>
-            <string>ds.Elaine_Getz = 1;</string>
+            <string>ds.Regina_Pissed = 1;</string>
           </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Count yourself lucky I don't just shank you and take control of this place myself.  </text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
         </dlgLine>
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Je vais essayer. Merci de m'en avoir parlé, Elaine.</text>
-          <def_link>452</def_link>
+          <text>I AM still in charge and I say you don't eat today. Disobey again and I'll order you shot!</text>
+          <def_link>1245</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
           <checksOnClick />
@@ -39,8 +55,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Je ne sais pas... Beaucoup de gens ont peur de lui. il est peut-être trop loin déja.</text>
-          <def_link>453</def_link>
+          <text>I'm going to give you one more day to think this through. Consider what I've done for you in the past.</text>
+          <def_link>1246</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
           <checksOnClick />
@@ -48,17 +64,26 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Tu penses qu'on devrait se séparer de lui ?</text>
-          <def_link>454</def_link>
+          <text>I've made mistakes, but look what I have to work with. Think you could get this far with this lot? Do you really?</text>
+          <def_link>1247</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>ds.Negotiation &gt;= 6</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>S'il meurt, il meurt. S'il est prêt à nous aider, mieux vaut lui que l'un d'entre vous.</text>
-          <def_link>458</def_link>
+          <text>Big bad Regina can't hack it anymore? Fine. Who needs you. You can rot here and eat half-rations until you toughen up. </text>
+          <def_link>1248</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Leadership &gt;= 6</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>You can stay or you can try to walk out of here. </text>
+          <def_link>1249</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
           <checksOnClick />
@@ -66,13 +91,13 @@
           <scriptsOnClick />
         </dlgAnsw>
       </answers>
-      <UID>451</UID>
+      <UID>1244</UID>
     </dlgPart>
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Euh... ouais. Tu n'as pas l'air si inquiet.</text>
+          <text>You're making a BIG mistake. Maybe one of your last.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -85,138 +110,14 @@
           </defAppearChecks>
           <onAppearChecks />
           <onLoadScripts>
-            <string>changeMood(-1, 1007);</string>
+            <string>ds.Regina_Respect-=5;</string>
+            <string>changeMood(-8, 1010);</string>
           </onLoadScripts>
         </dlgLine>
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Elaine s'en va.&gt;</text>
-          <def_link>-1</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick>
-            <string>dlgEndFadeFullFast();</string>
-          </scriptsOnClick>
-        </dlgAnsw>
-      </answers>
-      <UID>452</UID>
-    </dlgPart>
-    <dlgPart>
-      <lines>
-        <dlgLine>
-          <owner_ID>0</owner_ID>
-          <text>Je ne sais pas ... Je n'ai jamais pensé que je me remettrais de ma faute après l'accident... mais je l'ai fait. Peut-être que quelque chose le préoccupe ou peut-être a-t-il juste besoin de temps. Je garderai un œil sur lui.</text>
-          <defAppearChecks>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-          </defAppearChecks>
-          <onAppearChecks />
-          <onLoadScripts />
-        </dlgLine>
-      </lines>
-      <answers>
-        <dlgAnsw>
-          <text>Moi aussi. Merci pour ton aide, Elaine.</text>
-          <def_link>457</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>Tu penses qu'il pourrait être une menace ?</text>
-          <def_link>454</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>Préviens-moi s'il fait quoi que ce soit de bizarre.</text>
-          <def_link>457</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-      </answers>
-      <UID>453</UID>
-    </dlgPart>
-    <dlgPart>
-      <lines>
-        <dlgLine>
-          <owner_ID>0</owner_ID>
-          <text>No...</text>
-          <defAppearChecks>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-          </defAppearChecks>
-          <onAppearChecks />
-          <onLoadScripts />
-        </dlgLine>
-      </lines>
-      <answers>
-        <dlgAnsw>
-          <text>- New Answ -</text>
-          <def_link>456</def_link>
-          <auto_answer>true</auto_answer>
-          <checkOnAppear>ds.Elaine_Badass == 1</checkOnAppear>
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>- New Answ -</text>
-          <def_link>455</def_link>
-          <auto_answer>true</auto_answer>
-          <checkOnAppear>ds.Elaine_Badass == 0</checkOnAppear>
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-      </answers>
-      <UID>454</UID>
-    </dlgPart>
-    <dlgPart>
-      <lines>
-        <dlgLine>
-          <owner_ID>0</owner_ID>
-          <text>Il a juste besoin de quelqu'un pour le comprendre. Je peux continuer à essayer, mais tu as plus d'expérience.</text>
-          <defAppearChecks>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-          </defAppearChecks>
-          <onAppearChecks />
-          <onLoadScripts />
-        </dlgLine>
-      </lines>
-      <answers>
-        <dlgAnsw>
-          <text>Je ferai de mon mieux. Merci, Elaine.</text>
+          <text>Get out of my sight!</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -227,63 +128,24 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Préviens-moi s'il fait quoi que ce soit de bizarre.</text>
-          <def_link>457</def_link>
+          <text>We'll see...</text>
+          <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
           <checksOnClick />
           <linksOnClick />
-          <scriptsOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
         </dlgAnsw>
       </answers>
-      <UID>455</UID>
+      <UID>1245</UID>
     </dlgPart>
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Mais s'il devient un problème, tu n'as qu'un mot à dire et je le descends.</text>
-          <defAppearChecks>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-          </defAppearChecks>
-          <onAppearChecks />
-          <onLoadScripts />
-        </dlgLine>
-      </lines>
-      <answers>
-        <dlgAnsw>
-          <text>C'est bon à savoir.</text>
-          <def_link>457</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>Euh, fais-moi simplement savoir s'il cause des problèmes, merci.</text>
-          <def_link>457</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-      </answers>
-      <UID>456</UID>
-    </dlgPart>
-    <dlgPart>
-      <lines>
-        <dlgLine>
-          <owner_ID>0</owner_ID>
-          <text>C'est le moins que je puisse faire. Je te dois bien ça.</text>
+          <text>I don't know if a day's going to make a difference... Let's hope for your sake you're right.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -296,13 +158,24 @@
           </defAppearChecks>
           <onAppearChecks />
           <onLoadScripts>
-            <string>changeMood(1, 1007);</string>
+            <string>changeMood(5, 1010);</string>
           </onLoadScripts>
         </dlgLine>
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Elaine s'en va.&gt;</text>
+          <text>Excuse me - I have work to do.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Yeah, sure.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -313,29 +186,13 @@
           </scriptsOnClick>
         </dlgAnsw>
       </answers>
-      <UID>457</UID>
+      <UID>1246</UID>
     </dlgPart>
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Vraiment ? Si j'avais été un désagrément un jour de plus, m'auriez-vous laissé mourir aussi ? </text>
-          <defAppearChecks>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-          </defAppearChecks>
-          <onAppearChecks />
-          <onLoadScripts />
-        </dlgLine>
-        <dlgLine>
-          <owner_ID>0</owner_ID>
-          <text>Je pensais mieux te connaître que ça.</text>
+          <text>Maybe. I don't know... Probably not. But that doesn't excuse your shitty decisions. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -348,13 +205,25 @@
           </defAppearChecks>
           <onAppearChecks />
           <onLoadScripts>
-            <string>changeMood(-1, 1007);</string>
+            <string>changeMood(5, 1010);</string>
+            <string>ds.Regina_Respect++;</string>
           </onLoadScripts>
         </dlgLine>
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Elaine se retourne et s'en va.&gt;</text>
+          <text>Well, think it over.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>You've got a day to deal with your issues.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -365,14 +234,99 @@
           </scriptsOnClick>
         </dlgAnsw>
       </answers>
-      <UID>458</UID>
+      <UID>1247</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>...Hmph. Try that tough love shit on me - I invented that. Just get outta my sight.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(3, 1010);</string>
+            <string>ds.Regina_Respect++;</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>Sure thing. Some of us have to get things done.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>This place is your best chance. Think it over.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>1248</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Ha ha ha... Yeah. We'll fucking see, now won't we?</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Regina_Respect-=10;</string>
+            <string>changeMood(-20, 1010);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>&lt;Regina walks away.&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>1249</UID>
     </dlgPart>
   </parts>
   <participants>
     <dlgParticipant>
       <UID>0</UID>
-      <charID>1007</charID>
-      <name>Elaine</name>
+      <charID>1010</charID>
+      <name>Regina</name>
       <role>Speaker</role>
       <req>AliveShelterChar</req>
       <color>Black</color>

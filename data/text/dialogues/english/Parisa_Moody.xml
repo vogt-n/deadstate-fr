@@ -3,15 +3,15 @@
   <header>
     <conditions />
     <links />
-    <dlg_name>Elaine_Getz</dlg_name>
-    <def_link>451</def_link>
+    <dlg_name>Parisa_Moody</dlg_name>
+    <def_link>398</def_link>
   </header>
   <parts>
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Je suis un peu inquiète pour Getz... Je vois bien que son esprit est bloqué comme je l'étais, mais peu importe ce que je lui dis, il reste inflexible. Tu m'as aidée... tu peux peut-être l'aider également ? </text>
+          <text>I need to take some time off today. It's... I'll get over it, but I just can't focus right now. I feel like I can't breathe, I can't concentrate, and every time I try to mull over an idea it's like picking up sand and feeling it just trickle away.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -24,14 +24,14 @@
           </defAppearChecks>
           <onAppearChecks />
           <onLoadScripts>
-            <string>ds.Elaine_Getz = 1;</string>
+            <string>ds.Parisa_Moody = 1;</string>
           </onLoadScripts>
         </dlgLine>
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Je vais essayer. Merci de m'en avoir parlé, Elaine.</text>
-          <def_link>452</def_link>
+          <text>[Wrong] What's wrong?</text>
+          <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
           <checksOnClick />
@@ -39,8 +39,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Je ne sais pas... Beaucoup de gens ont peur de lui. il est peut-être trop loin déja.</text>
-          <def_link>453</def_link>
+          <text>[Nice] It's okay. Take today off and try to relax.</text>
+          <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
           <checksOnClick />
@@ -48,17 +48,26 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Tu penses qu'on devrait se séparer de lui ?</text>
-          <def_link>454</def_link>
+          <text>[Talk] It sounds like you're really stressed. Try to focus on something external, like work - and talk to people. That'll help.</text>
+          <def_link>401</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>ds.negotiation &gt;=5</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>S'il meurt, il meurt. S'il est prêt à nous aider, mieux vaut lui que l'un d'entre vous.</text>
-          <def_link>458</def_link>
+          <text>[Lead] When you need to find your focus, look to someone you can believe in, and follow their lead.</text>
+          <def_link>402</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.leadership &gt;= 6</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Mean] What are you, throwing a tantrum? Take a lap around the gym, work it out or something, then get yourself busy.</text>
+          <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
           <checksOnClick />
@@ -66,13 +75,72 @@
           <scriptsOnClick />
         </dlgAnsw>
       </answers>
-      <UID>451</UID>
+      <UID>398</UID>
     </dlgPart>
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Euh... ouais. Tu n'as pas l'air si inquiet.</text>
+          <text>[WRONG] If I actually knew what it was, don't you think I'd be trying to fix it right now? I just feel like something's trying to crawl out of my chest. Not literally - of course - but I can't focus, and I can't relax. I feel like the whole world is blaming me for something.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>[Nice] It's okay. Take today off and try to relax.</text>
+          <def_link>400</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Talk] It sounds like you're really stressed. Try to focus on something external, like work - and talk to people. That'll help.</text>
+          <def_link>401</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.negotiation &gt;=5</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Lead] When you need to find your focus, look to someone you can believe in, and follow their lead.</text>
+          <def_link>402</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.leadership &gt;= 6</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Mean] What are you, throwing a tantrum? Take a lap around the gym, work it out or something, then get yourself busy.</text>
+          <def_link>403</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>399</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[NICE] I - thanks. I don't know what I'll do, but whatever it is, I'll stay out of everyone's way.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -85,13 +153,14 @@
           </defAppearChecks>
           <onAppearChecks />
           <onLoadScripts>
-            <string>changeMood(-1, 1007);</string>
+            <string>changeMood(5, 1027);</string>
+            <string>shelterSetAllyStatus(1027, "Unavailable", 24);</string>
           </onLoadScripts>
         </dlgLine>
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Elaine s'en va.&gt;</text>
+          <text>Best of luck.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -102,188 +171,13 @@
           </scriptsOnClick>
         </dlgAnsw>
       </answers>
-      <UID>452</UID>
+      <UID>400</UID>
     </dlgPart>
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Je ne sais pas ... Je n'ai jamais pensé que je me remettrais de ma faute après l'accident... mais je l'ai fait. Peut-être que quelque chose le préoccupe ou peut-être a-t-il juste besoin de temps. Je garderai un œil sur lui.</text>
-          <defAppearChecks>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-          </defAppearChecks>
-          <onAppearChecks />
-          <onLoadScripts />
-        </dlgLine>
-      </lines>
-      <answers>
-        <dlgAnsw>
-          <text>Moi aussi. Merci pour ton aide, Elaine.</text>
-          <def_link>457</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>Tu penses qu'il pourrait être une menace ?</text>
-          <def_link>454</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>Préviens-moi s'il fait quoi que ce soit de bizarre.</text>
-          <def_link>457</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-      </answers>
-      <UID>453</UID>
-    </dlgPart>
-    <dlgPart>
-      <lines>
-        <dlgLine>
-          <owner_ID>0</owner_ID>
-          <text>No...</text>
-          <defAppearChecks>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-          </defAppearChecks>
-          <onAppearChecks />
-          <onLoadScripts />
-        </dlgLine>
-      </lines>
-      <answers>
-        <dlgAnsw>
-          <text>- New Answ -</text>
-          <def_link>456</def_link>
-          <auto_answer>true</auto_answer>
-          <checkOnAppear>ds.Elaine_Badass == 1</checkOnAppear>
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>- New Answ -</text>
-          <def_link>455</def_link>
-          <auto_answer>true</auto_answer>
-          <checkOnAppear>ds.Elaine_Badass == 0</checkOnAppear>
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-      </answers>
-      <UID>454</UID>
-    </dlgPart>
-    <dlgPart>
-      <lines>
-        <dlgLine>
-          <owner_ID>0</owner_ID>
-          <text>Il a juste besoin de quelqu'un pour le comprendre. Je peux continuer à essayer, mais tu as plus d'expérience.</text>
-          <defAppearChecks>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-          </defAppearChecks>
-          <onAppearChecks />
-          <onLoadScripts />
-        </dlgLine>
-      </lines>
-      <answers>
-        <dlgAnsw>
-          <text>Je ferai de mon mieux. Merci, Elaine.</text>
-          <def_link>-1</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick>
-            <string>dlgEndFadeFullFast();</string>
-          </scriptsOnClick>
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>Préviens-moi s'il fait quoi que ce soit de bizarre.</text>
-          <def_link>457</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-      </answers>
-      <UID>455</UID>
-    </dlgPart>
-    <dlgPart>
-      <lines>
-        <dlgLine>
-          <owner_ID>0</owner_ID>
-          <text>Mais s'il devient un problème, tu n'as qu'un mot à dire et je le descends.</text>
-          <defAppearChecks>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-          </defAppearChecks>
-          <onAppearChecks />
-          <onLoadScripts />
-        </dlgLine>
-      </lines>
-      <answers>
-        <dlgAnsw>
-          <text>C'est bon à savoir.</text>
-          <def_link>457</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>Euh, fais-moi simplement savoir s'il cause des problèmes, merci.</text>
-          <def_link>457</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-      </answers>
-      <UID>456</UID>
-    </dlgPart>
-    <dlgPart>
-      <lines>
-        <dlgLine>
-          <owner_ID>0</owner_ID>
-          <text>C'est le moins que je puisse faire. Je te dois bien ça.</text>
+          <text>[TALK] I can't say that I'm a huge people person, but I guess you're right - I don't really feel like being alone right now either. I'll go see what needs doing...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -296,13 +190,14 @@
           </defAppearChecks>
           <onAppearChecks />
           <onLoadScripts>
-            <string>changeMood(1, 1007);</string>
+            <string>shelterSetAllyStatus(1027, "Available", 24);</string>
+            <string>changeMood(5, 1027);</string>
           </onLoadScripts>
         </dlgLine>
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Elaine s'en va.&gt;</text>
+          <text>&lt;Parisa leaves the room.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -313,29 +208,13 @@
           </scriptsOnClick>
         </dlgAnsw>
       </answers>
-      <UID>457</UID>
+      <UID>401</UID>
     </dlgPart>
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Vraiment ? Si j'avais été un désagrément un jour de plus, m'auriez-vous laissé mourir aussi ? </text>
-          <defAppearChecks>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-          </defAppearChecks>
-          <onAppearChecks />
-          <onLoadScripts />
-        </dlgLine>
-        <dlgLine>
-          <owner_ID>0</owner_ID>
-          <text>Je pensais mieux te connaître que ça.</text>
+          <text>[LEAD] Yeah... I guess there's someone at this Shelter who never gets a day off... Davis. Oh, and you're not so bad yourself, I guess.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -348,13 +227,13 @@
           </defAppearChecks>
           <onAppearChecks />
           <onLoadScripts>
-            <string>changeMood(-1, 1007);</string>
+            <string>shelterSetAllyStatus(1027, "Available", 24);</string>
           </onLoadScripts>
         </dlgLine>
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Elaine se retourne et s'en va.&gt;</text>
+          <text>See, already you're back to joking. Keep it up.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -365,14 +244,51 @@
           </scriptsOnClick>
         </dlgAnsw>
       </answers>
-      <UID>458</UID>
+      <UID>402</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[MEAN] &lt;Parisa stares at you humorlessly.&gt; Sure, because every single issue of mood can always be sorted by running around pointlessly, can't it? Such a stellar idea, I wonder why everybody doesn't do it.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>shelterSetAllyStatus(1027, "Available", 24);</string>
+            <string>changeMood(-8, 1027);</string>
+          </onLoadScripts>
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>&lt;She stalks out of the room before you can reply.&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>403</UID>
     </dlgPart>
   </parts>
   <participants>
     <dlgParticipant>
       <UID>0</UID>
-      <charID>1007</charID>
-      <name>Elaine</name>
+      <charID>1027</charID>
+      <name>Parisa</name>
       <role>Speaker</role>
       <req>AliveShelterChar</req>
       <color>Black</color>

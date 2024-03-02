@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<dlgData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <header>
+    <conditions />
+    <links />
+    <dlg_name>Davis_Fallout</dlg_name>
+    <def_link>7702</def_link>
+  </header>
+  <parts>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>&lt;You stumble downstairs, dizzy and feverish. You call out to Davis, then notice that he's not moving. You reach out to confirm his death, but stumble and fall to the ground.&gt;</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>- New Answ -</text>
+          <def_link>7703</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>DS_block.setVisible(true);</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>7702</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>1</owner_ID>
+          <text>&lt;Everything goes black and you can't move. You have maybe minutes before the radiation finishes you off. As you lay there dying, you think of all the things you might have done differently if given another chance...&gt;</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>&lt;You take your final breath...&gt;</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>DS_block.setVisible(false);</string>
+            <string>ds.ending_radiationPoisoning = true;</string>
+            <string>callEndings();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>7703</UID>
+    </dlgPart>
+  </parts>
+  <participants>
+    <dlgParticipant>
+      <UID>0</UID>
+      <charID>1013</charID>
+      <name>Davis</name>
+      <role>Speaker</role>
+      <req>NotRequired</req>
+      <color>Black</color>
+    </dlgParticipant>
+    <dlgParticipant>
+      <UID>1</UID>
+      <charID>-1</charID>
+      <name>You</name>
+      <role>Guest</role>
+      <req>NotRequired</req>
+      <color>Black</color>
+    </dlgParticipant>
+  </participants>
+</dlgData>

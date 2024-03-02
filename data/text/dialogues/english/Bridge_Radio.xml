@@ -1,0 +1,712 @@
+<?xml version="1.0"?>
+<dlgData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <header>
+    <conditions />
+    <links />
+    <dlg_name>Bridge_Radio</dlg_name>
+    <def_link>7631</def_link>
+  </header>
+  <parts>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>&lt;You start cranking open the gate. As you do, you hear something coming from a dropped walkie-talkie.&gt;</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Bridge - does anyone copy? We have backup on the way to your position. All units - destroy that vehicle!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>They're coming! Defend the bus!</text>
+          <def_link>7632</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>7631</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>1</owner_ID>
+          <text>&lt;You can hear several vehicles approaching - more than you'd like. If the bus is destroyed, everyone will die. You know that no matter, that bus has to clear the blockade.&gt; </text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>- New Answ -</text>
+          <def_link>7633</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1025) == True &amp;&amp; isInParty(1025) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>getz</text>
+          <def_link>7634</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1014) == True &amp;&amp; isInParty(1014) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>charleston</text>
+          <def_link>7635</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1043) == True &amp;&amp; isInParty(1043) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>doug</text>
+          <def_link>7636</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1005) == True &amp;&amp; ds.Doug_Friend == 1 &amp;&amp; isInParty(1005) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>mia</text>
+          <def_link>7637</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1040) == True &amp;&amp; isCharInShelter(1041) == True &amp;&amp; isInParty(1040) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>fiona</text>
+          <def_link>7638</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1038) == True &amp;&amp; isInParty(1038) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>oscar</text>
+          <def_link>7639</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1002) == True &amp;&amp; isShelterCharDead(1022) == True &amp;&amp; isInParty(1002) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>end</text>
+          <def_link>7640</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>7632</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>7</owner_ID>
+          <text>The hell you're doing this alone - I'm coming with you!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>- New Answ -</text>
+          <def_link>7634</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1014) == True &amp;&amp; isInParty(1014) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>- New Answ -</text>
+          <def_link>7635</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1043) == True &amp;&amp; isInParty(1043) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>doug</text>
+          <def_link>7636</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1005) == True &amp;&amp; ds.Doug_Friend == 1 &amp;&amp; isInParty(1005) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>mia</text>
+          <def_link>7637</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1040) == True &amp;&amp; isCharInShelter(1041) == True &amp;&amp; isInParty(1040) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>fiona</text>
+          <def_link>7638</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1038) == True &amp;&amp; isInParty(1038) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>oscar</text>
+          <def_link>7639</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1002) == True &amp;&amp; isShelterCharDead(1022) == True &amp;&amp; isInParty(1002) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>end</text>
+          <def_link>7640</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>7633</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>2</owner_ID>
+          <text>I've been ready to die for months – but at least if it's here, it's for a good reason.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>- New Answ -</text>
+          <def_link>7635</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1043) == True &amp;&amp; isInParty(1043) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>doug</text>
+          <def_link>7636</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1005) == True &amp;&amp; ds.Doug_Friend == 1 &amp;&amp; isInParty(1005) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>mia</text>
+          <def_link>7637</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1040) == True &amp;&amp; isCharInShelter(1041) == True &amp;&amp; isInParty(1040) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>fiona</text>
+          <def_link>7638</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1038) == True &amp;&amp; isInParty(1038) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>oscar</text>
+          <def_link>7639</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1002) == True &amp;&amp; isShelterCharDead(1022) == True &amp;&amp; isInParty(1002) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>end</text>
+          <def_link>7640</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>7634</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>3</owner_ID>
+          <text>You have my sword! Splendid yields for no man!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>doug</text>
+          <def_link>7636</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1005) == True &amp;&amp; ds.Doug_Friend == 1 &amp;&amp; isInParty(1005) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>mia</text>
+          <def_link>7637</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1040) == True &amp;&amp; isCharInShelter(1041) == True &amp;&amp; isInParty(1040) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>fiona</text>
+          <def_link>7638</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1038) == True &amp;&amp; isInParty(1038) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>oscar</text>
+          <def_link>7639</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1002) == True &amp;&amp; isShelterCharDead(1022) == True &amp;&amp; isInParty(1002) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>end</text>
+          <def_link>7640</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>7635</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>4</owner_ID>
+          <text>I don't care what anyone thinks of me, because you actually listened. And for once, I am going to be the hero! Oh, what's that? Just saving your life!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>mia</text>
+          <def_link>7637</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1040) == True &amp;&amp; isCharInShelter(1041) == True &amp;&amp; isInParty(1040) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>fiona</text>
+          <def_link>7638</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1038) == True &amp;&amp; isInParty(1038) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>oscar</text>
+          <def_link>7639</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1002) == True &amp;&amp; isShelterCharDead(1022) == True &amp;&amp; isInParty(1002) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>end</text>
+          <def_link>7640</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>7636</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>5</owner_ID>
+          <text>Sara, the only thing I'm good for is keeping you alive. And that's what I'm going to do.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>fiona</text>
+          <def_link>7638</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1038) == True &amp;&amp; isInParty(1038) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>oscar</text>
+          <def_link>7639</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1002) == True &amp;&amp; isShelterCharDead(1022) == True &amp;&amp; isInParty(1002) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>end</text>
+          <def_link>7640</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>7637</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>6</owner_ID>
+          <text>I'll never let them hurt you! I'll die first!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>oscar</text>
+          <def_link>7639</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear>isCharInShelter(1002) == True &amp;&amp; isShelterCharDead(1022) == True &amp;&amp; isInParty(1002) == false</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>end</text>
+          <def_link>7640</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>7638</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>8</owner_ID>
+          <text>I've lost enough already – this is for you, Melina.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>end</text>
+          <def_link>7640</def_link>
+          <auto_answer>true</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+      </answers>
+      <UID>7639</UID>
+    </dlgPart>
+    <dlgPart>
+      <lines>
+        <dlgLine>
+          <owner_ID>1</owner_ID>
+          <text>&lt;The bus starts its engine and begins moving past the gate. You can see the enemy troops moving in.&gt;</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+      </lines>
+      <answers>
+        <dlgAnsw>
+          <text>We're getting through this - nobody's dying today! You hear me?!</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>bridgeEnding_OpenGate();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Come on, you sons of bitches! I'm ready to die - are you?!</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>bridgeEnding_OpenGate();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Drop your targets quickly and don't let them get near that bus. We've got this.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>bridgeEnding_OpenGate();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>I don't care who you are - we're getting out of here alive! Davis, no matter what happens to me - just go! </text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>bridgeEnding_OpenGate();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+      </answers>
+      <UID>7640</UID>
+    </dlgPart>
+  </parts>
+  <participants>
+    <dlgParticipant>
+      <UID>0</UID>
+      <charID>-1</charID>
+      <name>Radio</name>
+      <role>Speaker</role>
+      <req>NotRequired</req>
+      <color>Black</color>
+    </dlgParticipant>
+    <dlgParticipant>
+      <UID>1</UID>
+      <charID>-1</charID>
+      <name>You</name>
+      <role>Guest</role>
+      <req>NotRequired</req>
+      <color>Black</color>
+    </dlgParticipant>
+    <dlgParticipant>
+      <UID>2</UID>
+      <charID>1014</charID>
+      <name>Getz</name>
+      <role>Guest</role>
+      <req>NotRequired</req>
+      <color>Black</color>
+    </dlgParticipant>
+    <dlgParticipant>
+      <UID>3</UID>
+      <charID>1043</charID>
+      <name>Sir Charleston</name>
+      <role>Guest</role>
+      <req>NotRequired</req>
+      <color>Black</color>
+    </dlgParticipant>
+    <dlgParticipant>
+      <UID>4</UID>
+      <charID>1005</charID>
+      <name>Doug</name>
+      <role>Guest</role>
+      <req>NotRequired</req>
+      <color>Black</color>
+    </dlgParticipant>
+    <dlgParticipant>
+      <UID>5</UID>
+      <charID>1040</charID>
+      <name>Mia</name>
+      <role>Guest</role>
+      <req>NotRequired</req>
+      <color>Black</color>
+    </dlgParticipant>
+    <dlgParticipant>
+      <UID>6</UID>
+      <charID>1038</charID>
+      <name>Fiona</name>
+      <role>Guest</role>
+      <req>NotRequired</req>
+      <color>Black</color>
+    </dlgParticipant>
+    <dlgParticipant>
+      <UID>7</UID>
+      <charID>1025</charID>
+      <name>Bud</name>
+      <role>Guest</role>
+      <req>NotRequired</req>
+      <color>Black</color>
+    </dlgParticipant>
+    <dlgParticipant>
+      <UID>8</UID>
+      <charID>1002</charID>
+      <name>Oscar</name>
+      <role>Guest</role>
+      <req>NotRequired</req>
+      <color>Black</color>
+    </dlgParticipant>
+  </participants>
+</dlgData>
