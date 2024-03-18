@@ -1,7 +1,8 @@
 ## Chargement de 7zip
-pushd "H:\Program Files\7-Zip"
+## TODO : Localiser l'emplacement de 7zip depuis le registre.
+Push-Location "H:\Program Files\7-Zip"
 $lo7zipFile = Get-Item .\7z.exe
-popd
+Pop-Location
 
 ## Copie du script original
 if (!(Test-Path .\release\scripts.aod))
