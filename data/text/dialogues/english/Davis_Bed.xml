@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- TODO -->
 <dlgData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <header>
     <conditions />
@@ -9,13 +10,33 @@
   <parts>
     <dlgPart>
       <lines>
+        <!-- Clone pour gérer le genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm glad you made it back. I can only imagine what it was like out there.</text>
+          <text>Je suis heureux que tu sois rentré. Je ne peux qu'imaginer ce que c'était là-bas.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean> <!-- homme -->
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>startBlackSplash();</string>
+            <string>ds.Davis_Bed = 1;</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Je suis heureux que tu sois rentrée. Je ne peux qu'imaginer ce que c'était là-bas.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean> <!-- femme -->
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -73,7 +94,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>We've been keeping supplies in the backroom near the basement. If you have the parts for the fence, you should put them on the shelf and I'll organize everything for the repairs.</text>
+          <text>Nous avons stocké des fournitures dans l'arrière-boutique près du sous-sol. Si vous avez des pièces pour la clôture, vous devriez les mettre sur l'étagère et je vais organiser tout ça pour les réparations.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -89,7 +110,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>We managed to secure the school interior - it'll hold for tonight, but we'll all sleep a lot more soundly when that fence is up.</text>
+          <text>Nous avons réussi à sécuriser l'intérieur de l'école - ça ira pour ce soir, mais nous dormirons tous beaucoup plus tranquillement quand cette clôture sera en place.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -103,13 +124,30 @@
           <onAppearChecks />
           <onLoadScripts />
         </dlgLine>
+        <!-- Clone de la ligne de dialogue pour gérer le genre-->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Anyway, you must be tired. We set up a bed for you in one of the classrooms upstairs. Go get some rest - we'll talk more in the morning.</text>
+          <text>Quoi qu'il en soit, tu dois être fatigué. Nous t'avons préparé un lit dans l'une des salles de classe à l'étage. Va te reposer, nous en reparlerons demain matin.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean> <!-- homme -->
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Quoi qu'il en soit, tu dois être fatiguée. Nous t'avons préparé un lit dans l'une des salles de classe à l'étage. Va te reposer, nous en reparlerons demain matin.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean> <!-- femme -->
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -122,7 +160,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Thanks. I could use some sleep.</text>
+          <text>Merci. J'ai bien besoin de repos.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -135,7 +173,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't think I can sleep much after today. I'll try. Have a good night.</text>
+          <text>Je ne pense pas pouvoir fermer l'œil après cette journée. Mais je vais essayer. Je vous souhaite une bonne nuit.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -154,7 +192,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Looks like you brought everyone back. That's the first good news we've had in awhile.</text>
+          <text>On dirait que tu as ramené tout le monde. C'est la première bonne nouvelle que nous ayons eue depuis longtemps.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -188,7 +226,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Everyone's broken up over the loss of Joel... It's... unfortunate, but we all knew the risks.</text>
+          <text>Tout le monde est bouleversé par la perte de Joel... C'est... malheureux, mais nous connaissions tous les risques.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -238,7 +276,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Anita's not taking Renee's loss well... best to leave her alone right now.</text>
+          <text>Anita ne prend pas très bien la mort de Renée... Il vaut mieux la laisser tranquille pour l'instant.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -270,7 +308,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Anita's loss has really hit Renee hard... best to leave her alone right now.</text>
+          <text>La perte d'Anita a véritablement bouleversé Renée... Mieux vaut la laisser tranquille pour l'instant.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
