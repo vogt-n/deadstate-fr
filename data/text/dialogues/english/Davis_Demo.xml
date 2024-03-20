@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- TODO -->
 <dlgData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <header>
     <conditions />
@@ -11,7 +12,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'll get right to the point - as of today, we won't have enough antibiotics to give every infected individual their proper dose.</text>
+          <text>Je vais aller droit au but : à partir d'aujourd'hui, nous n'aurons pas assez d'antibiotiques pour administrer à chaque personne infectée la dose appropriée.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -28,7 +29,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Please continue...</text>
+          <text>Vas-y poursuis...</text>
           <def_link>79</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -43,7 +44,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Which means that, when we run out in three days, these people will... die. And return. Since the risk of that many people turning at once is too great, we need to come up with a solution before it's too late.</text>
+          <text>Ce qui signifie que, lorsque nous n'en aurons plus dans trois jours, ces personnes vont... mourir. Et reviendront. Le risque qu'un si grand nombre de personnes se transforment en même temps étant trop grand, nous devons trouver une solution avant qu'il ne soit trop tard.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -59,17 +60,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone des options de dialogue en fonction du genre -->
         <dlgAnsw>
-          <text>I'm open to suggestions.</text>
+          <text>Je suis ouvert aux suggestions.</text>
           <def_link>81</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I've got an idea, but let's hear some others.</text>
+          <text>Je suis ouverte aux suggestions.</text>
+          <def_link>81</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>J'ai une idée, mais écoutons les autres.</text>
           <def_link>81</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -84,7 +95,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>So... What should we do?</text>
+          <text>Alors... Qu'est-ce qu'on fait ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -101,7 +112,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I think we should wait and see. We'll do what we can to get new antibiotics in the meantime.</text>
+          <text>Je pense qu'il faut attendre et voir. Nous ferons ce que nous pouvons pour obtenir de nouveaux antibiotiques en attendant.</text>
           <def_link>84</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -110,7 +121,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I think we should ration supplies. Some will have to go without until we find more.</text>
+          <text>Je pense que nous devrions rationner les fournitures. Certains devront se priver jusqu'à ce qu'on en trouve d'autres.</text>
           <def_link>82</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -119,7 +130,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I think we need to get rid of the infected. Kill them if necessary.</text>
+          <text>Je pense qu'il faut se débarrasser des infectés. Les tuer si nécessaire.</text>
           <def_link>83</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -134,7 +145,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You propose we take no special action... is that correct?</text>
+          <text>Tu proposes qu'on ne prenne aucune mesure particulière... c'est bien ça ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -151,7 +162,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Yes, that's my final decision.</text>
+          <text>Oui, c'est ma décision finale.</text>
           <def_link>85</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -160,7 +171,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I need to rethink this.</text>
+          <text>Je dois y repenser.</text>
           <def_link>85</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -175,7 +186,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You're proposing we ration antibiotics and only give them to certain people. Is that correct?</text>
+          <text>Tu proposes de rationner les antibiotiques et de ne les donner qu'à certaines personnes. C'est bien ça ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -192,7 +203,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Yes, that's my final decision.</text>
+          <text>Oui, c'est ma décision finale.</text>
           <def_link>85</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -201,7 +212,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I need to rethink this.</text>
+          <text>Je dois y repenser.</text>
           <def_link>85</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -216,7 +227,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You're proposing we get rid of infected people before they turn. Is that... correct?</text>
+          <text>Tu suggères que nous nous débarrassions des personnes infectées avant qu'elles ne se transforment. Est-ce que c'est... correct ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -233,7 +244,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Yes, that's my final decision.</text>
+          <text>Oui, c'est ma décision finale.</text>
           <def_link>85</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -242,7 +253,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>No - I'd like to reconsider our options.</text>
+          <text>Non, j'aimerais reconsidérer nos options.</text>
           <def_link>85</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -257,7 +268,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[End Conversation]</text>
+          <text>[Fin de la conversation]</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -306,7 +317,7 @@
     <lines>
       <dlgLine>
         <owner_ID>0</owner_ID>
-        <text>[End Conversation]</text>
+        <text>[Fin de la conversation]</text>
         <defAppearChecks>
           <boolean>false</boolean>
           <boolean>false</boolean>
