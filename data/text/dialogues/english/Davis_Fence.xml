@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>We should begin repairing the fence today. Do you have the supplies?</text>
+          <text>Il faudrait commencer à réparer la clôture aujourd'hui. As-tu les fournitures nécessaires ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -31,7 +31,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Yes. We found everything we need.</text>
+          <text>Oui. Nous avons rassemblé tout ce dont nous avons besoin.</text>
           <def_link>632</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Llano_Parts &gt;= 1</checkOnAppear>
@@ -40,7 +40,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>No. It was too dangerous to bring anything back.</text>
+          <text>Non. C'était trop dangereux de tout ramener.</text>
           <def_link>630</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Llano_Parts == 0</checkOnAppear>
@@ -55,7 +55,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Hmm... I understand, but we really need to get that fence repaired. Every day it's down, we're all at risk. </text>
+          <text>Hmm... Je comprends, mais il faut vraiment que cette clôture soit réparée. Pour chaque jour où elle est en panne, nous sommes tous en danger. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -71,7 +71,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Despite the danger, I don't know of any other way. You should probably give it another try... </text>
+          <text>Malgré le danger, je ne vois pas d'autre solution. Tu devrais probablement réessayer... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -88,7 +88,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Why don't you go?!</text>
+          <text>Pourquoi tu n'y irais pas ?!</text>
           <def_link>631</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -97,7 +97,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'll see what I can do.</text>
+          <text>Je vais voir ce que je peux faire.</text>
           <def_link>634</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -112,7 +112,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I would if I could... </text>
+          <text>Je le ferais si je pouvais... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -128,7 +128,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>This isn't something we can argue about. You've seen the danger out there - if we don't get the fence up, we have nowhere else to go. </text>
+          <text>Ce n'est pas un sujet sur lequel nous pouvons nous disputer. Vous avez vu le danger qui nous guette : si nous n'élevons pas la clôture, nous n'aurons nulle part où aller. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -145,7 +145,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I'll try to get those materials.</text>
+          <text>J'essaierai d'obtenir ces matériaux.</text>
           <def_link>634</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -154,10 +154,19 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I can do it. Just not happy about it.</text>
+          <text>Je peux le faire. Mais je n'en suis pas très content.</text>
           <def_link>634</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je peux le faire. Mais je n'en suis pas très contente.</text>
+          <def_link>634</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -169,7 +178,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Great, we should get that task assigned to some people here. I've put up a task board in the cafeteria. You should assign people to jobs so they know what they should be doing. </text>
+          <text>Parfait, nous devrions attribuer cette tâche à certaines personnes ici. J'ai mis un tableau des tâches à la cafétéria. Vous devriez assigner des tâches aux gens pour qu'ils sachent ce qu'ils doivent faire.  </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -188,7 +197,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'll make sure we keep track of everyone's progress so we can manage this place efficiently.</text>
+          <text>Je veillerai à ce que nous suivions les progrès de chacun afin de pouvoir gérer cet endroit efficacement.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -204,7 +213,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>For now, you should assign some people to repair the fence since we have the necessary components. It's not a very complicated task, so anyone should be up to it.</text>
+          <text>Pour l'instant, vous devriez assigner quelques personnes à la réparation de la clôture puisque nous avons les composants nécessaires. Ce n'est pas une tâche très compliquée, tout le monde devrait pouvoir s'en charger.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -220,7 +229,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>If we're going to fix this place up and hold out here, we're going to need more parts, food, and... probably weapons. I know it's dangerous, but someone's going to have to go out and look for supplies.</text>
+          <text>Si nous voulons réparer cet endroit et pouvoir tenir, nous aurons besoin de plus de composants, de nourriture et... probablement d'armes. Je sais que c'est dangereux, mais il faut que quelqu'un aille chercher des provisions.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -236,7 +245,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>We'll only be able to work during daylight hours, so keep that in mind. That fence is our top priority - if anything happens to it, everyone here is at risk. As long as we keep it up, people won't worry about it.</text>
+          <text>Nous ne pourrons travailler que de jour, gardez-le à l'esprit. Cette clôture est notre priorité absolue. S'il lui arrive quoi que ce soit, tout le monde ici est en danger. Tant que nous l'entretenons, les gens n'auront rien à craindre.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -253,7 +262,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Understood, I'll go take a look at the task board.</text>
+          <text>Compris, je vais jeter un coup d'œil au tableau des tâches.</text>
           <def_link>633</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -262,7 +271,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Let's hope they know how to follow directions.  </text>
+          <text>Espérons qu'ils sauront suivre les instructions.  </text>
           <def_link>633</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -277,7 +286,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Also, if you have any spare parts left, you may want to try and get that abandoned well on the property operational again. A source of fresh water could definitely help boost morale around here.</text>
+          <text>Par ailleurs, s'il vous reste des composants, vous pourriez essayer de remettre en service ce puits abandonné sur la propriété. Une source d'eau fraîche pourrait certainement aider à remonter le moral des troupes.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -296,7 +305,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Good idea. I'll look into it.</text>
+          <text>C'est une bonne idée. Je m'en occupe.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -307,7 +316,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I have something else planned, but I'll think about it.</text>
+          <text>J'ai autre chose de prévu, mais j'y réfléchirai.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -324,7 +333,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Well, when you get them back here, you'll want to assign some people to the task. I've put up a job board in the cafeteria. </text>
+          <text>Quand vous les aurez ramenés ici, vous devrez affecter des gens à cette tâche. J'ai mis un panneau d'affichage à la cafétéria. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -340,7 +349,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'll make sure we keep track of everyone's progress so we can manage this place efficiently.</text>
+          <text>Je veillerai à ce que nous suivions les progrès de chacun afin de pouvoir gérer cet endroit efficacement.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -356,7 +365,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>If we're going to fix this place up and hold out here, we're going to need more parts, food, and... probably weapons. I know it's dangerous, but someone's going to have to go out and look for supplies.</text>
+          <text>Si nous voulons réparer cet endroit et tenir le coup, nous aurons besoin de plus de composants, de nourriture et... probablement d'armes. Je sais que c'est dangereux, mais il faut que quelqu'un aille chercher des provisions.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -372,7 +381,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>We'll only be able to work during daylight hours, so keep that in mind. That fence is our top priority - if anything happens to it, everyone here is at risk. As long as we keep it up, people won't worry about it.</text>
+          <text>Nous ne pourrons travailler que de jour, gardez-le à l'esprit. Cette clôture est notre priorité absolue. S'il lui arrive quoi que ce soit, tout le monde ici est en danger. Tant que nous l'entretenons, les gens n'auront rien à craindre.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -391,7 +400,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Like I said, I'll see what I can do... See ya.</text>
+          <text>Comme je l'ai dit, je vais voir ce que je peux faire... À bientôt.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -402,7 +411,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>It'll be done today. I'll go check out the job board.</text>
+          <text>Ce sera fait aujourd'hui. Je vais aller voir le tableau des tâches.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
