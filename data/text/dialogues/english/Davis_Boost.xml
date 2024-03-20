@@ -15,7 +15,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[START OK] I've got the radio booster up and running - I tried to make contact with the DJ, and it actually worked! His name is Lane Vibesit, and he sounded glad to hear another human voice. He told me where his radio station's located - here, I'll mark it on your map.</text>
+          <text>[START OK] J'ai essayé de contacter le DJ et ça a marché ! Il s'appelle Lane Vibesit, et il avait l'air content d'entendre une autre voix humaine. Il m'a dit où se trouve sa station de radio - tiens, je vais l'indiquer sur ta carte.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -34,7 +34,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You should know, though... he didn't sound like he was doing too well. His voice has been getting weaker as I've heard him broadcasting, and he admitted he's running out of food. If you can get to him soon, we might be able to help him.</text>
+          <text>Mais tu dois savoir qu'il n'avait pas l'air d'aller très bien. Sa voix s'est affaiblie au fur et à mesure que je l'entendais parler, et il a admis qu'il n'avait plus rien à manger. Si tu peux le retrouver rapidement, nous pourrons peut-être le secourir.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -51,7 +51,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Thanks, Davis. I'll get right on that.</text>
+          <text>Merci, Davis. Je m'y mets tout de suite.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -63,7 +63,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'll see what I can do.</text>
+          <text>Je vais voir ce que je peux faire.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -73,11 +73,24 @@
             <string>dlgEndFadeFullFast();</string>
           </scriptsOnClick>
         </dlgAnsw>
+        <!-- Clone de l'option de réponse pour gérer le genre -->
         <dlgAnsw>
-          <text>Eh, I'm busy. He can wait.</text>
+          <text>Je suis occupé. Il peut attendre.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+            <string>changeMood(-5. 1013);</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis occupée. Il peut attendre.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -92,7 +105,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[START BAD] I managed to get the radio booster up and running, but when I tried to contact the DJ, I couldn't reach anyone. &lt;Davis looks solemn.&gt; I think we may have been too late.</text>
+          <text>[START BAD] J'ai réussi à faire fonctionner mon amplificateur radio, mais quand j'ai essayé de contacter le DJ, je n'ai pu joindre personne. &lt;Davis a l'air solennel.&gt; Je pense que nous sommes arrivés trop tard.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -111,7 +124,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I'm sorry, Davis. I know you did all you could. Thanks for trying.</text>
+          <text>Je suis désolé, Davis. Je sais que tu as fait tout ce que tu pouvais. Merci d'avoir essayé.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -123,7 +136,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>At least we have a greater radio range now...</text>
+          <text>Au moins, nous avons une meilleure portée radio maintenant...</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -134,7 +147,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>The guy was probably a dick anyway. Nice radio work, though.</text>
+          <text>Le gars était probablement un con de toute façon. Joli travail avec la radio, cependant.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
