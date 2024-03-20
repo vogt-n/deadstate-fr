@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- TODO -->
 <dlgData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <header>
     <conditions>
@@ -17,7 +18,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>How can I help?</text>
+          <text>Comment puis-je aider ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -34,7 +35,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>The bus is ready to go. Let's start getting everyone loaded on.</text>
+          <text>Le bus est prêt, commençons à rassembler tout le monde.</text>
           <def_link>587</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Bus_Ready == 1</checkOnAppear>
@@ -43,7 +44,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>The plane's ready to go. We should start loading people onto a bus and getting them to the airport. </text>
+          <text>L'avion est prêt à partir. On devrait commencer à rassembler tout le monde dans le bus pour l'aéroport.</text>
           <def_link>588</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Plane_Ready == 1</checkOnAppear>
@@ -52,7 +53,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I have the medical supplies we need.</text>
+          <text>J'ai le matériel médicale qu'on a besoin.</text>
           <def_link>578</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Davis_Medical == 1 &amp;&amp; shelterGetResource(antibiotics) &gt;= 5</checkOnAppear>
@@ -62,8 +63,8 @@
             <string>shelterChangeResource(antibiotics, -5);</string>
           </scriptsOnClick>
         </dlgAnsw>
-        <dlgAnsw>
-          <text>I have the parts for the signal booster for the radio.</text>
+        <dlgAnsw> 
+          <text>J'ai les ressources pour booster le signal de la radio.</text>
           <def_link>586</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Davis_Radio == 1 &amp;&amp; ds.Radio_Ready == 0 &amp;&amp; shelterGetResource(parts) &gt;= 5</checkOnAppear>
@@ -72,7 +73,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I need to ration the shelter's food for a little while.</text>
+          <text>Je dois rationner la nourriture du refuge pendant un certain temps.</text>
           <def_link>597</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -81,7 +82,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Anything that would improve your mood? </text>
+          <text>Quelque chose qui pourrait améliorer ton humeur ? </text>
           <def_link>583</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -90,7 +91,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Can I ask you a question?</text>
+          <text>Puis-je te poser une question ?</text>
           <def_link>568</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -99,7 +100,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>We'll talk later.</text>
+          <text>Nous en reparlerons plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -116,7 +117,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Of course.</text>
+          <text>Bien sûr.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -133,7 +134,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Where am I?</text>
+          <text>Ou suis-je ?</text>
           <def_link>581</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>getGameDay() &lt;=2</checkOnAppear>
@@ -142,7 +143,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>What else can you tell me about the weeks before I got here?</text>
+          <text>Que pouvez-vous me dire d'autre sur les semaines qui ont précédé mon arrivée ?</text>
           <def_link>572</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -151,7 +152,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>What can you tell me about the people here?</text>
+          <text>Que pouvez-vous me dire sur les gens d'ici ?</text>
           <def_link>582</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>getGameDay() &lt;= 5</checkOnAppear>
@@ -160,7 +161,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>How should we improve this place?</text>
+          <text>Comment pouvons-nous améliorer cet endroit ?</text>
           <def_link>573</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -169,7 +170,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>What else can you tell me about yourself?</text>
+          <text>Que peux-tu me dire d'autre sur toi-même ?</text>
           <def_link>574</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>getGameDay() &gt;= 5</checkOnAppear>
@@ -178,7 +179,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>We'll talk later.</text>
+          <text>Nous en reparlerons plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -195,7 +196,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Think you're up to talking about our situation now?</text>
+          <text>Tu penses que tu es prêt à discuter de notre situation maintenant ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -212,7 +213,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Sure.</text>
+          <text>Bien sûr.</text>
           <def_link>571</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -221,7 +222,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Let's get this over with.</text>
+          <text>Finissons-en.</text>
           <def_link>571</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -230,7 +231,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Give me a minute...</text>
+          <text>Donnez-moi une minute...</text>
           <def_link>570</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -245,7 +246,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Whenever you're ready.</text>
+          <text>Quand tu veux.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -262,7 +263,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Thanks.</text>
+          <text>Merci.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -273,7 +274,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Alright.</text>
+          <text>Très bien.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -290,7 +291,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Good. I'll get the others.</text>
+          <text>Bien. Je vais chercher les autres.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -307,7 +308,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Davis motions to Anita...&gt;</text>
+          <text>&lt;Davis fait signe à Anita...&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -327,7 +328,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You're in Texas - a town called Splendid. They evacuated the town, so we're all that's left. It's a long story... we should talk about this when we have more time.   </text>
+          <text>Vous êtes au Texas, dans une ville appelée Splendid. Ils ont évacué la ville, alors il ne reste plus que nous. C'est une longue histoire... nous devrions en parler quand nous aurons plus de temps.   </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -344,7 +345,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I have another question.</text>
+          <text>J'ai une autre question.</text>
           <def_link>568</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -353,7 +354,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>That's all I needed to know. See ya.</text>
+          <text>C'est tout ce que je voulais savoir. A bientôt.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -370,7 +371,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Joel and I are locals. Joel's a police officer and I've worked here at the school. Anita and Renee ran out of gas not far from here - I picked up their distress call on the radio.</text>
+          <text>Joel et moi sommes originaires de la région. Joel est policier et j'ai travaillé ici à l'école. Anita et Renée sont tombées en panne d'essence non loin d'ici - j'ai capté leur appel de détresse à la radio.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -386,7 +387,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>We picked up another survivor in the plane crash, but he hasn't woken up yet. I guess we'll have to wait and see if he recovers.</text>
+          <text>Nous avons récupéré un autre survivant de l'accident d'avion, mais il ne s'est pas encore réveillé. Je suppose que nous devrons attendre de voir s'il se rétablit.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -402,7 +403,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>The other woman, that's Elaine. She's been through a lot. Maybe you should try talking to her. </text>
+          <text>L'autre personne, c'est Elaine. Elle a beaucoup souffert. Vous devriez peut-être essayer de lui parler. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -418,7 +419,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Just be patient - they're a lot stronger than you think.</text>
+          <text>Soyez patient, ils sont beaucoup plus forts que vous ne le pensez.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -435,7 +436,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I have another question.</text>
+          <text>J'ai une autre question.</text>
           <def_link>568</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -444,7 +445,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I see. I should go.</text>
+          <text>Je vois. Je dois y aller.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -461,7 +462,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Well, it all happened rather quickly, to be honest. One day the news was reporting about a mystery illness, the next they were talking about travel restrictions and civil unrest. All of a sudden the nation was under martial law and major cities were being evacuated.</text>
+          <text>Pour être honnête, tout s'est passé assez vite. Un jour, les journaux parlaient d'une maladie mystérieuse, le lendemain, ils parlaient de restrictions de voyage et de troubles civils. Tout à coup, le pays a été placé sous la loi martiale et les grandes villes ont été évacuées.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -477,7 +478,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Like most people, I didn't really believe the dead were coming back to life until I saw it for myself. I guess that's how it's gotten this bad. </text>
+          <text>Comme la plupart des gens, je ne croyais pas vraiment que les morts revenaient à la vie jusqu'à ce que je le voie de mes propres yeux. Je suppose que c'est comme ça que la situation est devenue si grave. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -493,7 +494,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>We're dealing with it as best we can for a town this size... I'd like to hope the rest of the world is doing the same. </text>
+          <text>Nous y faisons face du mieux que nous pouvons pour une ville de cette taille... J'espère que le reste du monde fait de même. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -510,7 +511,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Another question...</text>
+          <text>Une autre question...</text>
           <def_link>568</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -519,7 +520,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I see. Thanks. That's it for now.</text>
+          <text>Je vois. Merci. C'est tout pour l'instant.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -536,7 +537,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Hmm... Well, I can think of a couple of things, but most of all, I think people will be happier if they feel safe. Though, it might be important for you to ask around and see what the others want.</text>
+          <text>Hmm... Je pense à plusieurs choses, mais surtout, je pense que les gens seront plus heureux s'ils se sentent en sécurité. Mais il serait peut-être important que vous demandiez aux autres ce qu'ils veulent.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -552,7 +553,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Keeping the school stocked with food, fuel, medical supplies, creature comforts, and other items would go a long way around here.</text>
+          <text>Garder les stocks de l'école bien remplis, avec de la nourriture, du carburant, des fournitures médicales, des articles de confort, et d'autres choses encore, ça serait déjà pas mal par ici.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -569,7 +570,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Okay. I had something else I wanted to ask.</text>
+          <text>Ok, j'avais une autre question à poser.</text>
           <def_link>568</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -578,7 +579,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Hmm... I should go do that now.</text>
+          <text>Hmm... Je devrais y aller maintenant.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -595,7 +596,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Me? You mean you want to know how I ended up in this chair?</text>
+          <text>Moi ? Tu veux dire que tu veux savoir comment j'ai terminé sur cette chaise ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -612,7 +613,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>No, that's not necessary.</text>
+          <text>Non, ce n'est pas nécessaire.</text>
           <def_link>575</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -621,7 +622,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Okay.</text>
+          <text>Ok.</text>
           <def_link>576</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -636,7 +637,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>It's alright...</text>
+          <text>Ce n'est pas grave...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -668,7 +669,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I was a firefighter. When I was younger, our car flipped...  My mother died, but a fireman saved my life. I always wanted to be that person that pulled the little boy out of the wreck...</text>
+          <text>J'étais pompier. Quand j'étais plus jeune, notre voiture s'est retournée...  Ma mère est morte, mais un pompier m'a sauvé la vie. J'ai toujours voulu être la personne qui a sorti le petit garçon de l'épave...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -684,7 +685,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>And I became a pretty good one, maybe a little too devoted to the job. It takes its toll.</text>
+          <text>Et je suis devenu un bon pompier, peut-être un peu trop dévoué à son travail. Ca à des effets néfastes.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -700,7 +701,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text> It was about eight years ago, my wife had just left with our daughter. The fire was at a local farm, during drought conditions. We were trying to get the livestock out, when I heard a boy's cries.</text>
+          <text>Il y a environ huit ans, ma femme venait de partir avec notre fille. L'incendie s'est déclaré dans une ferme locale, en pleine sécheresse. Nous essayions de sortir le bétail quand j'ai entendu les cris d'un garçon.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -732,7 +733,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I did get him out, but as I was running out with him, a beam fell... It crushed my spine. I never walked again. </text>
+          <text>Je l'ai sorti de là, mais alors que je courais avec lui, une poutre est tombée... Elle m'a écrasé la colonne vertébrale. Je n'ai plus jamais marché. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -748,7 +749,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>For a long time, I felt defeated, like my life was over. But then I started working in the library here at the school, and I eventually made peace with my situation. When the crisis began, I felt those old instincts - like I could make a difference and... </text>
+          <text>Pendant longtemps, je me suis sentie abattue, comme si ma vie était finie. Mais j'ai commencé à travailler à la bibliothèque de l'école et j'ai fini par faire la paix avec ma situation. Lorsque la crise a éclaté, j'ai retrouvé mes vieux instincts, j'ai senti que je pouvais faire la différence et... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -764,7 +765,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm talking your ear off - sorry.</text>
+          <text>Je suis en train de vous rebattre les oreilles - désolée.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -781,7 +782,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>So you can't walk at all? You're stuck here.</text>
+          <text>Donc tu ne peux pas marcher du tout ? Tu es cloué à ta chaise.</text>
           <def_link>577</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -790,7 +791,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>No problem. I had another question.</text>
+          <text>Pas de problème. J'avais une autre question.</text>
           <def_link>568</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -799,7 +800,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm sure you'll do whatever you can. We'll talk later.</text>
+          <text>Je suis sûr que tu feras tout ce que tu peux. On en reparlera plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -816,7 +817,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Let me check... Nope, still aren't working. </text>
+          <text>Laissez-moi vérifier... Non, elles ne bougent toujours pas. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -832,7 +833,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>But seriously, if I could walk, I'd be out there with you. I can keep an eye things here while you're gone, though. </text>
+          <text>Mais sérieusement, si je pouvais marcher, je serais dehors avec toi. En attendant, Je peux garder un oeil sur la situation ici pendant que tu es absent. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -849,7 +850,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Good to know. I had another question.</text>
+          <text>C'est bon à savoir. J'avais une autre question.</text>
           <def_link>568</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -858,7 +859,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Just checking. I should go.</text>
+          <text>Je passais juste. Je devrais y aller.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -875,7 +876,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Great. </text>
+          <text>Parfait. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -918,7 +919,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>We'd be better off if Renee was here, but I'll see what I can do. </text>
+          <text>Nous serions mieux si Renée se trouvait encore à nos côtés, mais je vais voir ce que je peux faire. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -937,7 +938,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Davis takes the medical supplies and begins to look through them.&gt;</text>
+          <text>&lt;Davis prend les fournitures médicales et commence à les examiner.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -954,7 +955,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'll give these to Renee. I'm sure she'll have our mystery man on his feet in no time.</text>
+          <text>Je vais donner ceci à Renée. Je suis sûr qu'elle mettra notre homme mystère sur pied en un rien de temps.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -973,7 +974,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Davis takes the medical supplies and begins to look through them.&gt;</text>
+          <text>&lt;Davis prend les fournitures médicales et commence à les examiner.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -990,7 +991,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I wish I could call my daughter, but... More realistically, I guess I could use real coffee beans - that would make monitoring the radio easier. Deodorant would be nice - gets a bit hot in here most days.</text>
+          <text>J'aimerais pouvoir appeler ma fille, mais... De façon plus réaliste, je pense que je pourrais également apprécier de vrais grains de café, ce qui m'aiderait à surveiller la radio. Du déodorant serait le bienvenu - il fait un peu chaud ici la plupart du temps.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1007,7 +1008,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Here's some whole bean coffee.</text>
+          <text>Voici du café en grains.</text>
           <def_link>584</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ownsItem(2019) </checkOnAppear>
@@ -1018,7 +1019,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I have some deodorant.</text>
+          <text>J'ai du déodorant.</text>
           <def_link>585</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ownsItem(2015) </checkOnAppear>
@@ -1029,7 +1030,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'll let you know if I come across any.</text>
+          <text>Je vous ferai savoir si j'en trouve.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1046,7 +1047,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I appreciate this. And I think it will make the school smell a whole lot better. </text>
+          <text>Je vous remercie. Je crois que l'école se portera beaucoup mieux. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1067,7 +1068,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You're welcome. See ya.</text>
+          <text>De rien, à plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1078,7 +1079,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Glad it helps. </text>
+          <text>Ravi(e) d'aider. </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1095,7 +1096,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Ah... smells like civilization. It's the little things, right?</text>
+          <text>Ah... ça sent la civilisation. Ce sont les bonnes petites choses, n'est-ce pas ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1116,7 +1117,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Yup. Enjoy, Davis.</text>
+          <text>Ouais. Profites-en, Davis.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1127,7 +1128,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>If only everyone here worried about how they smell. See ya.</text>
+          <text>Si seulement tout le monde ici s'inquiétait de son odeur. A plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1144,7 +1145,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Excellent. The manual I'm working from is kind of old and vague, but I think with these I ought to get things up and running in about three days. I'll let you know when I've got it working.</text>
+          <text>Excellent. Le manuel à partir duquel je travaille est un peu vieux et vague, mais je pense qu'avec ça, je devrais pouvoir faire fonctionner les choses en trois jours environ. Je vous ferai savoir quand je l'aurai fait fonctionner.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1165,7 +1166,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Davis pulls out the radio manual.&gt;</text>
+          <text>&lt;Davis sort le manuel de la radio.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1179,14 +1180,30 @@
       <UID>586</UID>
     </dlgPart>
     <dlgPart>
+      <!-- Clone de la ligne pour gérer le sexe -->
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Are you sure you're ready to go? We don't know what me might hit on the road, so you may want to make sure everyone's armed and you've got personnel assigned to duty.</text>
+          <text>Es-tu sûr d'être prêt à partir ? Nous ne savons pas ce que nous pourrions rencontrer sur la route, alors tu devrais t'assurer que tout le monde est armé et qu'il y a du monde assigné à la garde.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine><dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Es-tu sûr d'être prête à partir ? Nous ne savons pas ce que nous pourrions rencontrer sur la route, alors tu devrais t'assurer que tout le monde est armé et qu'il y a du monde assigné à la garde.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1199,7 +1216,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I'm ready as I'll ever be. Let's go.</text>
+          <text>Je suis prêt(e) comme jamais. Allons-y.</text>
           <def_link>589</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1208,7 +1225,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You're right - I'll get everyone suited up and make the final picks for my team.</text>
+          <text>Tu as raison - je vais mettre tout le monde en tenue et faire les derniers préparatifs pour mon équipe.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1225,11 +1242,26 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Are you sure you're ready to go? We don't know what me might hit on the road, so you may want to make sure everyone's armed and you've got personnel assigned to duty.</text>
+          <text>Es-tu sûr d'être prêt à partir ? Nous ne savons pas ce que nous pourrions rencontrer sur la route, alors tu devrais t'assurer que tout le monde est armé et qu'il y a du monde assigné à la garde.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine><dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Es-tu sûr d'être prête à partir ? Nous ne savons pas ce que nous pourrions rencontrer sur la route, alors tu devrais t'assurer que tout le monde est armé et qu'il y a du monde assigné à la garde.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1242,7 +1274,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I'm ready as I'll ever be. Let's go.</text>
+          <text>Je suis prêt(e) comme jamais. Allons-y.</text>
           <def_link>592</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1251,7 +1283,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You're right - I'll get everyone suited up and make the final picks for my team.</text>
+          <text>Tu as raison - je vais mettre tout le monde en tenue et faire les derniers préparatifs pour mon équipe.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1268,7 +1300,23 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'll let everyone know.</text>
+          <text>Je vais prévenir tout le monde.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine><!--:: TODO ::-->
+          <owner_ID>0</owner_ID>
+          <text>Il est difficile à croire que nous partons. Je sais que cela ne fait que quelques mois, mais j'ai l'impression que cela fait des années. Et cet endroit, malgré tout ce qui s'est passé, commence à me sembler être notre maison.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1284,23 +1332,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>It's hard to believe we're leaving. I know it's only been a few months, but it feels like years. And this place, for everything that's happened, has started to feel like a home.</text>
-          <defAppearChecks>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-          </defAppearChecks>
-          <onAppearChecks />
-          <onLoadScripts />
-        </dlgLine>
-        <dlgLine>
-          <owner_ID>0</owner_ID>
-          <text>If it wasn't for you, I'm not sure how things would have turned out. I know it hasn't been easy...</text>
+          <text>Si tu n'avais pas été là, je ne sais pas comment les choses se seraient passées. Je sais que ça n'a pas été facile...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1341,7 +1373,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Especially after your loss on the plane. It took real fortitude to step up after that.</text>
+          <text>Surtout après avoir perdu des êtres chers dans l'avion. Il a fallu une vraie volonté pour s'en sortir après ça.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1373,7 +1405,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>So... &lt;charname&gt; - think you can save our lives one more time?</text>
+          <text>Alors... &lt;charname&gt; - Tu penses que tu peux nous sauver la vie une fois de plus ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1390,7 +1422,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>It's why I'm in charge, isn't it?</text>
+          <text>C'est la raison pour laquelle je suis aux commandes, n'est-ce pas ?</text>
           <def_link>594</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1399,7 +1431,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm not thinking about what obstacles we might hit - I just want to finally get out of here.</text>
+          <text>Je ne pense pas aux obstacles que nous pourrions rencontrer, je veux simplement enfin décoller d'ici.</text>
           <def_link>594</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1407,17 +1439,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone de la réplique pour avoir la conjugaison lié au genre -->
         <dlgAnsw>
-          <text>I've gotten too good at killing people... Hopefully, I won't have to do that anymore.</text>
+          <text>Je suis devenu trop doué pour tuer des gens... J'espère ne plus avoir à le faire.</text>
           <def_link>594</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>If anyone's still stupid enough to get in our way, I've perfected a cure for that. Leave it to me.</text>
+          <text>Je suis devenu trop douée pour tuer des gens... J'espère ne plus avoir à le faire.</text>
+          <def_link>594</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Si quelqu'un est encore assez stupide pour se mettre en travers de notre chemin, j'ai perfectionné une méthode pour y remédier. Laissez-moi faire.</text>
           <def_link>594</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1432,7 +1474,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'll do a final sweep to make sure we haven't forgot anything. See you on the bus.</text>
+          <text>Je vais faire un dernier tour pour m'assurer qu'on n'a rien oublié. On se retrouve dans le bus.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1449,7 +1491,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Davis goes back to his checklist. You grab your gear and head out to the bus.&gt;</text>
+          <text>&lt;Davis retourne à sa checklist. Vous prenez votre équipement et vous vous dirigez vers le bus.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1484,7 +1526,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>It's hard to believe we're leaving. I know it's only been a few months, but it feels like years. And this place, for everything that's happened, has started to feel like a home.</text>
+          <text>Il est difficile à croire que nous partons. Je sais que cela ne fait que quelques mois, mais j'ai l'impression que cela fait des années. Et cet endroit, malgré tout ce qui s'est passé, commence à me sembler être notre maison.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1500,7 +1542,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>If it wasn't for you, I'm not sure how things would have turned out. I know it hasn't been easy...</text>
+          <text>Si tu n'avais pas été là, je ne sais pas comment les choses se seraient passées. Je sais que ça n'a pas été facile...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1541,7 +1583,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Especially after your loss on the plane. It took real fortitude to step up after that. I'm surprised you can even board another one.</text>
+          <text>Surtout après avoir perdu des êtres chers dans l'avion. Il a fallu une vraie volonté pour s'en sortir après ça. Je suis surpris que tu puisses embarquer à nouveau.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1573,7 +1615,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>So... &lt;charname&gt; - think you can save our lives one more time?</text>
+          <text>Alors... &lt;charname&gt; - Tu penses que tu peux nous sauver la vie une fois de plus ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1590,7 +1632,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>It's why I'm in charge, isn't it?</text>
+          <text>C'est la raison pour laquelle je suis aux commandes, n'est-ce pas ?</text>
           <def_link>596</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1599,7 +1641,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm not thinking about what obstacles we might hit - I just want to finally get out of here.</text>
+          <text>Je ne pense pas aux obstacles que nous pourrions rencontrer, je veux simplement enfin décoller d'ici.</text>
           <def_link>596</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1607,17 +1649,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone de la réplique pour avoir la conjugaison lié au genre -->
         <dlgAnsw>
-          <text>I've gotten too good at killing people... Hopefully, I won't have to do that anymore.</text>
+          <text>Je suis devenu trop doué pour tuer des gens... J'espère ne plus avoir à le faire.</text>
           <def_link>596</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>If anyone's still stupid enough to get in our way, I've perfected a cure for that. Leave it to me.</text>
+          <text>Je suis devenu trop douée pour tuer des gens... J'espère ne plus avoir à le faire.</text>
+          <def_link>596</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Si quelqu'un est encore assez stupide pour se mettre en travers de notre chemin, j'ai perfectionné une méthode pour y remédier. Laissez-moi faire.</text>
           <def_link>596</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1632,7 +1684,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'll do a final sweep to make sure we haven't forgot anything. See you on the plane.</text>
+          <text>Je vais faire un dernier tour pour m'assurer qu'on n'a rien oublié. On se retrouve dans l'avion.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1649,7 +1701,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Davis goes back to his checklist. You grab your gear and head out to your vehicle.&gt;</text>
+          <text>&lt;Davis retourne à sa checklist. Vous prenez votre équipement et vous vous dirigez vers le véhicule.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1668,7 +1720,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>We can cut rations for a short time, but it won't help morale. How long should we ration food for?  </text>
+          <text>Nous pouvons réduire les rations pour une courte période, mais ça n'améliorera pas le moral des troupes. Combien de temps devrions-nous rationner la nourriture ?  </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1685,7 +1737,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Ration food for 1 day.</text>
+          <text>Juste pour un jour.</text>
           <def_link>598</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1696,7 +1748,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Ration food for 3 days.</text>
+          <text>Trois jour, ça me semble bien.</text>
           <def_link>598</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1707,7 +1759,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Ration food for 5 days.</text>
+          <text>Hélas, nous allons devoir tenir cinq jours.</text>
           <def_link>598</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1718,7 +1770,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Forget it. We don't need morale to drop any lower right now.</text>
+          <text>Oublions cela. Nous n'avons pas besoin que le moral baisse davantage pour l'instant.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1735,7 +1787,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Understood. I'll make sure everyone knows.</text>
+          <text>J'ai compris. Je m'assurerai que tout le monde soit au courant.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1752,7 +1804,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Davis makes a note on his supply list.&gt;</text>
+          <text>&lt;Davis fait une note sur sa liste d'approvisionnement.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
