@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[START] Good morning, &lt;charname&gt; - I wanted to ask your opinion on a little project I was thinking about adding to the Shelter. It's not much, but I hope it helps morale here.</text>
+          <text>[START] Bonjour, &lt;charname&gt; - Je voulais te demander ton avis sur un petit projet que j'envisageais d'ajouter à notre abri. Ce n'est pas grand-chose, mais j'espère que cela aidera à remonter le moral des troupes.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>After hearing about Sheriff Reinhart's death, I felt like his sacrifice needed to be remembered. Not just him, but... so many people have been lost, and we don't exactly have the abilty to visit a grave anymore to pay our respects.</text>
+          <text>Après avoir appris la mort du shérif Reinhart, j'ai pensé qu'il fallait se souvenir de son sacrifice. Pas uniquement lui, mais... tant de personnes ont été perdues, et nous n'avons plus vraiment la possibilité de nous rendre sur une tombe pour leur rendre hommage.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -46,7 +46,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I was thinking of setting aside an area in the Shelter to use as a Memorial Wall - a place to remember lost loved ones, so we know their memory continues on. And if one of us falls... I'll make sure they're remembered there as well.</text>
+          <text>Je pensais aménager un espace dans l'abri pour en faire un mur commémoratif - un endroit où l'on se souviendrait des êtres chers disparus, pour que nous sachions que leur mémoire se perpétue. Et si l'un d'entre nous tombe... Je veillerai à ce qu'on se souvienne aussi de lui.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -63,16 +63,25 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Sheriff] Reinhart saved my life. I'd be glad to have a way for him to be remembered.</text>
+          <text>[Sheriff] Reinhart m'a sauvé la vie. Je serais heureux d'avoir un moyen de me souvenir de lui.</text>
           <def_link>5710</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Loss Love] I know all too well what it's like to lose someone. I'd like to have a way to remember them.</text>
+          <text>[Sheriff] Reinhart m'a sauvé la vie. Je serais heureuse d'avoir un moyen de me souvenir de lui.</text>
+          <def_link>5710</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Loss Love] Je sais trop bien ce que c'est que de perdre quelqu'un. J'aimerais avoir un moyen de me souvenir d'eux.</text>
           <def_link>5711</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Family_Loss == 1</checkOnAppear>
@@ -81,7 +90,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Loss Family] A single wall won't be enough to remember what I've lost... but anything would help.</text>
+          <text>[Loss Family] Un seul mur ne suffira pas pour se souvenir de ce que j'ai perdu... mais n'importe quoi pourrait aider.</text>
           <def_link>5712</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Family_Loss == 2</checkOnAppear>
@@ -90,7 +99,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Grim] A memorial wall? You don't think that's kind of grim?</text>
+          <text>[Grim] Un mur commémoratif ? Tu ne trouves pas que c'est un peu sinistre ?</text>
           <def_link>5708</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -99,7 +108,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Update] Okay, but who will update the thing?</text>
+          <text>[Update] D'accord, mais qui va le tenir à jour ?</text>
           <def_link>5709</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -108,7 +117,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Dismiss] Fine, do what you want, I'm okay with it.</text>
+          <text>[Dismiss] Très bien, fais ce que tu veux, ça me va.</text>
           <def_link>5713</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -123,7 +132,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SHERIFF] Thank you. I know the Sheriff was a good man, and he worked hard to get everyone off that plane that he could. I also know he wouldn't have wanted to burden you with the leadership of this place, but he'd be proud that you stepped up to handle it.</text>
+          <text>[SHERIFF] Je te remercie. Je sais que le shérif était un homme bon, et qu'il a travaillé dur pour faire sortir de l'avion tous ceux qu'il pouvait. Je sais aussi qu'il n'aurait pas voulu vous imposer la responsabilité de cet endroit, mais il serait fier de voir ce que vous avez fait.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -140,7 +149,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Grim] I'm slightly worried some people might find it a little grim.</text>
+          <text>[Grim] J'ai un peu peur que certaines personnes trouvent cela un peu sinistre.</text>
           <def_link>5708</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -149,7 +158,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Thank you, Davis. I appreciate you doing this.</text>
+          <text>Merci, Davis. J'apprécie l'initiative.</text>
           <def_link>5713</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -166,7 +175,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LOSS LOVE] If this Memorial Wall helps in any way to give you some kind of peace and connection with the love you lost... I'd be blessed in knowing I helped make that happen.</text>
+          <text>[LOSS LOVE] Si ce mur commémoratif vous aide à trouver la paix et à vous rapprocher de l'amour que vous avez perdu, je serais heureux de savoir que j'ai contribué à ce que cela se produise.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -183,7 +192,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Grim] I'm slightly worried some people might find it a little grim.</text>
+          <text>[Grim] J'ai un peu peur que certaines personnes trouvent cela un peu sinistre.</text>
           <def_link>5708</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -192,7 +201,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Thank you, Davis. I appreciate you doing this.</text>
+          <text>Merci, Davis. J'apprécie l'initiativea.</text>
           <def_link>5713</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -209,7 +218,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LOSS FAMILY] The burden placed on you must be vast, but if this wall helps you to remember those you've lost in any way, and bring you happy memories, I'm blessed to have helped make it happen.</text>
+          <text>[LOSS FAMILY] Le fardeau qui pèse sur vous doit être immense, mais si ce mur vous aide à vous souvenir de ceux que vous avez perdus d'une manière ou d'une autre, et qu'il vous apporte des souvenirs heureux, je suis heureux de pouvoir contribuer à sa réalisation.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -226,7 +235,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Grim] I'm slightly worried some people might find it a little grim.</text>
+          <text>[Grim] J'ai un peu peur que certaines personnes trouvent cela un peu sinistre.</text>
           <def_link>5708</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -235,7 +244,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Thank you, Davis. I appreciate you doing this.</text>
+          <text>Merci, Davis. J'apprécie l'initiative.</text>
           <def_link>5713</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -252,7 +261,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[GRIM] I don't believe so. My father was a pastor, and while I don't hold to all the beliefs he had, he taught me a great deal about dealing with loss. When a member of the church lost someone, or they passed on, or - even when my mother died, he dealt with loss as calmly as he could.</text>
+          <text>[GRIM] Je ne crois pas que ce soit le cas. Mon père était pasteur et, bien que je ne partage pas toutes ses convictions, il m'a beaucoup appris sur la façon de gérer la perte d'un être cher. Lorsqu'un membre de l'église perdait quelqu'un, qu'il décédait, ou même lorsque ma mère mourait, il faisait face à la situation aussi calmement qu'il le pouvait.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -268,7 +277,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>So many people deal with loss as a kind of rage that burns through them and leaves nothing left. They run away from any reminder of death - not even just their loved one - and think that will bring them peace, but in reality it disconnects them from everything living.</text>
+          <text>Beaucoup de gens vivent la perte comme une sorte de rage qui les brûle et ne laisse rien derrière elle. Ils fuient tout rappel de la mort - même s'il ne s'agit pas seulement de l'être aimé - et pensent que cela leur apportera la paix, mais en réalité, cela les déconnecte de tout ce qui est vivant.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -284,7 +293,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>My father helped teach me that although we shouldn't shackle ourselves the past, having a visible memory of people we've lost brings them closer to us, and reminds us that when our time comes, we won't be forgotten.</text>
+          <text>Mon père m'a appris que même s'il ne faut pas s'enfermer dans le passé, le fait d'avoir un souvenir visible des personnes que nous avons perdues les rapproche de nous et nous rappelle que lorsque notre heure viendra, nous ne serons pas oubliés.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -301,7 +310,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I can understand that. Thanks for doing this, Davis.</text>
+          <text>Je comprends cela. Merci pour cette initiative, Davis.</text>
           <def_link>5713</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -312,7 +321,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Okay, it might still be morbid to some, but if you're willing to handle that, okay.</text>
+          <text>D'accord, c'est peut-être un peu morbide pour certains, mais si tu es prêt à le supporter, d'accord.</text>
           <def_link>5713</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -327,7 +336,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[UPDATE] Well, I expect most of the updates will come from people here, but - well. It'll be harder for me to get to, but I'll be updating it when I can. Honestly, good exercise plus feeling like I'm doing something to help... it's rewarding.</text>
+          <text>[UPDATE] Je m'attends à ce que la plupart des changements viennent des gens d'ici, mais... bon. Il est plus difficile pour moi de le faire, mais je le mettrai à jour dès que je le pourrai. Honnêtement, faire de l'exercice et avoir l'impression de faire quelque chose pour aider... c'est gratifiant.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -344,7 +353,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Okay, that's the weirdest excuse I've ever heard to do pull-ups, but if that's your thing, go for it.</text>
+          <text>D'accord, c'est l'excuse la plus bizarre que j'aie jamais entendue pour faire des tractions, mais si c'est votre truc, allez-y.</text>
           <def_link>5713</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -353,7 +362,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm sure others will help. Thanks for doing this, Davis.</text>
+          <text>Je suis sûr que d'autres t'aideront. Merci pour l'initiative Davis.</text>
           <def_link>5713</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -370,7 +379,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[END] Thanks for supporting me on this. I'll do what I can to get something started right away.</text>
+          <text>[END] Merci pour ton soutien. Je vais faire mon possible pour commencer quelque chose tout de suite.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -386,7 +395,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>And once it's up... you should check back now and then to see what people have written. Some may take longer to deal with their losses than others. I think knowing that you've stopped by to understand their loss may help as well.</text>
+          <text>Et une fois que ça sera en place, vous devriez revenir de temps en temps pour voir ce que les gens ont écrit. Certains mettent plus de temps que d'autres à surmonter leurs pertes. Je pense que le fait de savoir que vous vous êtes arrêté pour partager leur peine peut aussi les aider.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -403,7 +412,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Will do. Thanks again.</text>
+          <text>Je le ferai. Merci encore.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -414,7 +423,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'll see about it when I've got the time. Bye.</text>
+          <text>Je m'en occuperai quand j'aurai le temps. Au revoir.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -425,7 +434,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Yeah, yeah, whatever.</text>
+          <text>Oui, oui, peu importe.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
