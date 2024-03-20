@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!-- TODO -->
+<!-- Révision du fichier pour prise en charge du genre dans les réponses -->
 <dlgData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <header>
     <conditions>
@@ -353,11 +353,23 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour gestion du genre -->
         <dlgAnsw>
-          <text>Je prefère rester seul(e) pour le moment. Excuse-moi.</text>
+          <text>Je prefère rester seule pour le moment. Excuse-moi.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je prefère rester seul pour le moment. Excuse-moi.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -450,12 +462,22 @@
           <onLoadScripts />
         </dlgLine>
       </lines>
+      <!-- Clone pour gestion du genre -->
       <answers>
         <dlgAnsw>
-          <text>Merci, je t'en suis reconnaissant(e)</text>
+          <text>Merci, je t'en suis reconnaissante</text>
           <def_link>266</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Merci, je t'en suis reconnaissant</text>
+          <def_link>266</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -849,11 +871,23 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour gestion du genre -->
         <dlgAnsw>
-          <text>Peut importe - écoute, j'ai juste besoin d'être seul(e). Excuse-moi</text>
+          <text>Peut importe - écoute, j'ai juste besoin d'être seule. Excuse-moi</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+         <dlgAnsw>
+          <text>Peut importe - écoute, j'ai juste besoin d'être seul. Excuse-moi</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -1636,11 +1670,12 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour gestion du genre-->
         <dlgAnsw>
-          <text>Ravi(e) de t'aider. A plus.</text>
+          <text>Ravie de t'aider. A plus.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -1648,10 +1683,33 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>J'aurais parié(e), profites-en.</text>
+          <text>Ravi de t'aider. A plus.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <!-- Clone pour gestion du genre-->
+        <dlgAnsw>
+          <text>J'aurais pariée, profites-en.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+         <dlgAnsw>
+          <text>J'aurais parié, profites-en.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -1685,11 +1743,23 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour gestion du genre -->
         <dlgAnsw>
-          <text>Ravi(e) de t'aider. A plus.</text>
+          <text>Ravie de t'aider. A plus.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Ravi de t'aider. A plus.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
