@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[START] I heard about what happened in Coleman... sorry to hear things fell out the way they did.</text>
+          <text>[START] J'ai entendu parler de ce qui s'est passé à Coleman... je suis désolé d'apprendre que les choses se soient déroulées de la sorte.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I did everything I could to stop it... there wasn't any other way.</text>
+          <text>J'ai fait tout ce que j'ai pu pour l'empêcher... il n'y avait pas d'autre moyen.</text>
           <def_link>6340</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -39,7 +39,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Those fucks got what was coming to them.</text>
+          <text>Ces enfoirés ont eu ce qu'ils méritaient.</text>
           <def_link>6340</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -48,7 +48,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>The most we can do is try to move on.</text>
+          <text>Le mieux que l'on puisse faire, c'est d'essayer d'aller de l'avant.</text>
           <def_link>6340</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -63,7 +63,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SECOND] Well... you should be aware that the survivors aren't taking the attack well. I've caught a number of transmissions between officers that directed them to track you down.</text>
+          <text>[SECOND] Eh bien... vous devriez savoir que les survivants ne prennent pas très bien cette attaque. J'ai capté un certain nombre de transmissions entre agents qui leur demandaient de vous retrouver.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -79,7 +79,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>As much as I hate to say it, I think you can probably expect to tangle with at least a squad or two the next time you leave the Shelter.</text>
+          <text>Même si je déteste le dire, je pense que vous devriez vous attendre à rencontrer au moins une escouade ou deux la prochaine fois que vous quitterez l'abri.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -95,8 +95,31 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour gestion du genre -->
         <dlgAnsw>
-          <text>I'll be careful out there. Thanks, Davis.</text>
+          <text>Je serai prudent. Merci, Davis.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je serai prudente. Merci, Davis.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>S'ils essaient de m'arrêter, je n'ai aucun problème à en tuer d'autres.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -107,18 +130,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>If they try to stop me, I've got no problem with killing more of them.</text>
-          <def_link>-1</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick>
-            <string>dlgEndFadeFullFast();</string>
-          </scriptsOnClick>
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>Understood. I'll do what I have to.</text>
+          <text>C'est compris. Je ferai ce qu'il faudra.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

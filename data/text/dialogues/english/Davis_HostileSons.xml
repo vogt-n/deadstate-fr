@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[START] The radio's been full of messages that you attacked the local militia - is that true?</text>
+          <text>[START] La radio a diffusé de nombreux messages indiquant que tu avais attaqué la milice locale - est-ce vrai ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I wanted to avoid it, but they didn't give me much choice.</text>
+          <text>Je voulais l'éviter, mais ils ne m'ont pas laissé le choix.</text>
           <def_link>6340</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -39,7 +39,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Hell yes I did, and I'd do it again.</text>
+          <text>Oui, je l'ai fait, et je le referais.</text>
           <def_link>6340</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -48,7 +48,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Yes. And?</text>
+          <text>Oui. Et Donc?</text>
           <def_link>6340</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -63,7 +63,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SECOND] The Sons - that militia - they're a big organization, lots of leadership... &lt;Davis sighs.&gt; Look. You know I don't agree with anything they stand for. They're domestic terrorists, and... and they're extremely well organized and well armed. And there's a lot of them.</text>
+          <text>[SECOND] Les Sons, cette milice, c'est une grande organisation, avec beaucoup de chefs... &lt;Davis soupire.&gt; Ecoute. Tu sais que je ne suis pas d'accord avec ce qu'ils représentent. Ce sont des terroristes nationaux, et... ils sont extrêmement bien organisés et bien armés. De plus, ils sont nombreux.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -79,7 +79,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You should be very careful when traveling too far away from here - from the sound of the messages, they know exactly who you are, and will likely attack you on sight.</text>
+          <text>Faites très attention lorsque tu t'éloignes d'ici - d'après le son des messages, ils savent exactement qui tu es et t'attaqueront probablement à vue.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -96,7 +96,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Thanks, Davis. I'll keep a close eye out.</text>
+          <text>Merci, Davis. Je garderai l'œil ouvert.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -106,11 +106,12 @@
             <string>dlgEndFadeFullFast();</string>
           </scriptsOnClick>
         </dlgAnsw>
+        <!-- Clone pour gestion du genre -->
         <dlgAnsw>
-          <text>Bring it on. I'll be glad to take more of those assholes out.</text>
+          <text>Qu'ils viennent. Je serai ravi d'éliminer d'autres salauds.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -118,7 +119,18 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Right. I'll do that.</text>
+          <text>Qu'ils viennent. Je serai ravie d'éliminer d'autres salauds.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>D'accord. Je ferai ça.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
