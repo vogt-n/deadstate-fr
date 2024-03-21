@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0"?>.
 <dlgData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <header>
     <conditions />
@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I thought you should know... Fiona killed herself.</text>
+          <text>J'ai pensé que tu devais savoir... Fiona s'est suicidée.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -31,7 +31,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>She was in the yard - I think the went out there sometime during the night and shot herself. I... don't think she wanted the infection to get her first. &lt;He sighs, looking weary.&gt; I didn't even wake up.</text>
+          <text>Elle était dans le jardin - je pense qu'elle est sortie pendant la nuit et qu'elle s'est tirée une balle. Je... ne pense pas qu'elle voulait que l'infection l'atteigne en premier. &lt;Il soupire, l'air las.&gt; Je ne me suis même pas réveillé.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -47,11 +47,12 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour gestion du genre -->
         <dlgAnsw>
-          <text>[Kind] Thanks for telling me. I know it's hard, but at least she's at peace now.</text>
+          <text>[Kind] Merci de m'avoir prévenu. Je sais que c'est dur, mais au moins elle est en paix maintenant.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -62,7 +63,21 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Normal] Right... thanks for taking care of it. Talk to you later.</text>
+          <text>[Kind] Merci de m'avoir prévenue. Je sais que c'est dur, mais au moins elle est en paix maintenant.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>deleteCharacter(1038);</string>
+            <string>removeCharFromShelter(1038);</string>
+            <string>changeMood(2, 1013);</string>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Normal] D'accord... merci de t'en être occupé. À plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -75,7 +90,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Mean] Good riddance - she was a lunatic.</text>
+          <text>[Mean] Bon débarras - c'était une folle.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
