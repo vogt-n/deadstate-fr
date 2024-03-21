@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- TODO -->
 <dlgData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <header>
     <conditions />
@@ -11,7 +12,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[START] &lt;charname&gt; - Lloyd's gone. I heard noises last night and went to investigate, and Lloyd was in the Pantry, raiding our food stores.</text>
+          <text>[START] &lt;charname&gt; - Lloyd est parti. J'ai entendu des bruits la nuit dernière et je suis allée enquêter, et Lloyd était dans le Garde-Manger, en train de piller nos réserves de nourriture.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -32,7 +33,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Before I could call out, he pointed a gun at me, and threatened to shoot me if I made a sound. &lt;Davis sighs heavily&gt; He made it quite clear that he didn't like the way you were running things, and wanted to get out "before the shit hit the fan."</text>
+          <text>Avant que je puisse crier, il a pointé une arme sur moi et a menacé de me tuer si je faisais le moindre bruit. &lt;Davis soupire lourdement&gt; Il a dit clairement qu'il n'aimait pas la façon dont vous dirigiez les choses et qu'il voulait partir "avant que la merde ne commence à se répandre".</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -48,7 +49,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>He wheeled me all the way to the front gate with the gun at my neck to make sure I didn't sound the alarm, and... I'm embarrassed to say it, but he tipped me out of my wheelchair and locked it outside the gate when he left.</text>
+          <text>Il m'a fait rouler jusqu'à la porte d'entrée avec l'arme au cou pour s'assurer que je ne déclenche pas l'alarme, et... Je suis gêné de le dire, mais il m'a fait tomber de mon fauteuil roulant et l'a enfermé à l'extérieur de la porte lorsqu'il est parti.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -65,7 +66,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[AmountHigh] How much food did he take?</text>
+          <text>[AmountHigh] Combien de nourriture a-t-il pris ?</text>
           <def_link>5710</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>shelterGetResource(food) &gt; 0</checkOnAppear>
@@ -74,7 +75,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[AmountNone] How much food did he take?</text>
+          <text>[AmountNone] Combien de nourriture a-t-il pris ?</text>
           <def_link>5711</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>shelterGetResource(food) == 0</checkOnAppear>
@@ -83,7 +84,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Wait] Why the fuck am I just finding about this shit now, instead of last night?</text>
+          <text>[Wait] Pourquoi est-ce que je découvre cette saloperie maintenant, au lieu d'hier soir ?</text>
           <def_link>5712</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -92,7 +93,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Angry] That fucking asshole! I should've never brought him here...</text>
+          <text>[Angry] Quel putain de trou de balle ! Je n'aurais jamais dû l'amener ici...</text>
           <def_link>5709</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -100,11 +101,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- clone pour le genre -->
         <dlgAnsw>
-          <text>[Sorry] I'm so sorry, Davis...</text>
+          <text>[Sorry] Je suis vraiment désolé, Davis...</text>
           <def_link>5708</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Sorry] Je suis vraiment désolée, Davis...</text>
+          <def_link>5708</def_link>
+          <auto_answer>false</auto_answer>
+          <<checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -116,7 +127,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[AMOUNTHIGH] From the looks of things, he grabbed just over a week's supply. I suppose we should be grateful that he didn't entirely clean out our store, but only narrowly.</text>
+          <text>[AMOUNTHIGH] D'après ce que j'ai vu, il en a pris pour un peu plus d'une semaine. Je suppose que nous devrions être reconnaissants qu'il n'ait pas entièrement vidé notre magasin, mais seulement en partie.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -133,7 +144,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Wait] Why the fuck am I just finding about this shit now, instead of last night?</text>
+          <text>[Wait] Pourquoi est-ce que je découvre cette saloperie maintenant, au lieu d'hier soir ?</text>
           <def_link>5712</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -142,7 +153,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Angry] That fucking asshole! I should've never brought him here...</text>
+          <text>[Angry] Quel putain de trou de balle ! Je n'aurais jamais dû l'amener ici...</text>
           <def_link>5709</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -150,11 +161,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- clone pour le genre -->
         <dlgAnsw>
-          <text>[Sorry] I'm so sorry, Davis...</text>
+          <text>[Sorry] Je suis vraiment désolé, Davis...</text>
           <def_link>5708</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Sorry] Je suis vraiment désolée, Davis...</text>
+          <def_link>5708</def_link>
+          <auto_answer>false</auto_answer>
+          <<checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -166,7 +187,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[AMOUNTNONE] I hate to say it, but... it looks like he took everything we had. Our food stores were already low, but now they're completely exhausted.</text>
+          <text>[AMOUNTNONE] Je regrette de devoir le dire, mais... on dirait qu'il a pris tout ce qu'on avait. Nos réserves de nourriture étaient déjà faibles, mais maintenant elles sont complètement épuisées.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -183,7 +204,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Wait] Why the fuck am I just finding about this shit now, instead of last night?</text>
+          <text>[Wait] Pourquoi est-ce que je découvre cette saloperie maintenant, au lieu d'hier soir ?</text>
           <def_link>5712</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -192,7 +213,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Angry] That fucking asshole! I should've never brought him here...</text>
+          <text>[Angry] Quel putain de trou de balle ! Je n'aurais jamais dû l'amener ici...</text>
           <def_link>5709</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -200,11 +221,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- clone pour le genre -->
         <dlgAnsw>
-          <text>[Sorry] I'm so sorry, Davis...</text>
+          <text>[Sorry] Je suis vraiment désolé, Davis...</text>
           <def_link>5708</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Sorry] Je suis vraiment désolée, Davis...</text>
+          <def_link>5708</def_link>
+          <auto_answer>false</auto_answer>
+          <<checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -216,7 +247,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[WAIT] &lt;Davis stares at you a moment, visibly annoyed.&gt;</text>
+          <text>[WAIT] &lt;Davis vous regarde un moment, visiblement ennuyé.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -234,7 +265,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I apologize, but it took me a while to recover the means to open the gate and get my wheelchair back. Pulling myself entirely up the stairs and to your room, only to then either have you carry me back down or navigate them without the use of my legs was not something I could have done quickly.</text>
+          <text>Je m'excuse, mais il m'a fallu un certain temps pour retrouver les moyens d'ouvrir la porte et de récupérer mon fauteuil roulant. Me hisser entièrement dans les escaliers et jusqu'à votre chambre, pour ensuite vous demander de me ramener ou de naviguer sans l'usage de mes jambes n'est pas quelque chose que je peux faire rapidement.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -250,7 +281,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>The short version is this: I have limits. That took many years of dealing with my condition to admit, but there it is. I hope that's sufficient enough of an answer.</text>
+          <text>La version courte est la suivante : J'ai des limites. Il m'a fallu de nombreuses années de traitement de ma maladie pour l'admettre, mais c'est ainsi. J'espère que cette réponse est suffisante.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -266,8 +297,31 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour gestion du genre -->
         <dlgAnsw>
-          <text>Sorry. Just stressed. Talk more later.</text>
+          <text>Je suis désolée. Je suis stressée. J'en reparlerai plus tard.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis désolé. Je suis stressé. J'en reparlerai plus tard.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>D'accord, d'accord. On va s'occuper de ça.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -278,18 +332,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Right, right. We'll deal with this.</text>
-          <def_link>-1</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick>
-            <string>dlgEndFadeFullFast();</string>
-          </scriptsOnClick>
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>Oh, boo fucking hoo. If I find Lloyd again I'll have fun killing him.</text>
+          <text>Oh, putain de merde. Si je retrouve Lloyd, je vais prendre du plaisir à le tuer.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -306,7 +349,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[ANGRY] Lloyd excelled primarily at looking out for his own interests, and that seemed an excellent partnership as long as those of the Shelter perfectly supported his.</text>
+          <text>[ANGRY] Lloyd excellait surtout à veiller à ses propres intérêts, ce qui lui permettait de former un excellent partenariat tant que les intérêts de l'Abri coïncidaient parfaitement avec les siens.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -322,7 +365,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>The reality is that situation was untenable, and now we have to deal with the consequences.</text>
+          <text>En réalité, cette situation était intenable, et nous devons maintenant en assumer les conséquences.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -339,7 +382,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Right. Going to deal with this now.</text>
+          <text>C'est vrai. Il faut s'en occuper maintenant.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -350,7 +393,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Just in his nature, right. Pardon me if I don't appreciate the wisdom.</text>
+          <text>C'est dans sa nature, n'est-ce pas ? Désolé si je n'apprécie pas la leçon.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -361,7 +404,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Thanks for the goddamn pep talk, dad. Bye.</text>
+          <text>Merci pour ce putain de discours d'encouragement, papa. Au revoir.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -378,7 +421,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SORRY] To be entirely honest? I'm grateful he didn't kill me, because he looked easily angry enough to do so. He also kindly didn't knock me unconscious, which I appreciated, as I've had it happen before and it is excruciatingly unpleasant.</text>
+          <text>[SORRY] Pour être tout à fait honnête ? Je suis reconnaissant qu'il ne m'ait pas tué, parce qu'il avait l'air suffisamment en colère pour le faire. Il ne m'a pas non plus assommé, ce qui est très appréciable, car cela m'est déjà arrivé et c'est atrocement désagréable.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -394,7 +437,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>And he reiterated more than once that "this isn't personal" in regards to me, and that he blamed you for everything, et cetera. &lt;Davis frowns.&gt; None of which absolves him of anything, of course, but if there's a silver lining to this, it's that I'm not dead.</text>
+          <text>Et il a répété plus d'une fois que " ce n'était pas personnel " en ce qui me concerne, et qu'il te blâmait pour tout, et cetera. &lt;Davis fronce les sourcils.&gt; Rien de tout cela ne l'absout de quoi que ce soit, bien sûr, mais s'il y a une lueur d'espoir dans tout ça, c'est que je ne suis pas mort.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -411,7 +454,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>We'll figure out how to deal with things. I'm just glad you're okay.</text>
+          <text>Nous trouverons comment gérer la situation. Je suis juste content que tu ailles bien.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -422,7 +465,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I promise if we ever find him, I'll deal with him properly.</text>
+          <text>Je te promets que si on le trouve, je m'occuperai de lui comme il faut.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -433,7 +476,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Hoo-fuckin-ray for that.</text>
+          <text>Un putain de hourra pour ça.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
