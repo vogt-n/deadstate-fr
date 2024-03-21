@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm sorry to tell you this, but... Jenifer ran away from the Shelter this morning.</text>
+          <text>Je suis désolé de t'annoncer ça, mais... Jenifer s'est enfuie de l'abri ce matin.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -31,7 +31,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>She was out in the yard when I got up, and she didn't react when I called to her - she was just standing there, shaking her head. When I went outside, she just took off running, climbed the fence, and kept going. I... I couldn't stop her.</text>
+          <text>Elle était dans la cour quand je me suis levée, et elle n'a pas réagi quand je l'ai appelée - elle est restée là, à secouer la tête. Quand je suis sortie, elle s'est mise à courir, a escaladé la clôture et a continué à courir. Je... Je n'ai pas pu l'arrêter.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -47,7 +47,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I just wanted to let you know. I wish we could have helped her more, but I know... she was a troubled person.</text>
+          <text>Je voulais juste que tu le saches. J'aurais aimé pouvoir l'aider davantage, mais je sais... que c'était une personne perturbée.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -64,7 +64,41 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Dammit... thanks for letting me know.</text>
+          <text>Bon sang... merci de me l'avoir fait savoir.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <!-- Clone pour le genre -->
+        <dlgAnsw>
+          <text>Moi aussi, Davis. Je suis désolée.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+         <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Moi aussi, Davis. Je suis désolée.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Elle était folle, ne t'en fais pas.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -75,29 +109,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Me too, Davis. I'm sorry.</text>
-          <def_link>-1</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick>
-            <string>dlgEndFadeFullFast();</string>
-          </scriptsOnClick>
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>She was crazy, don't sweat it.</text>
-          <def_link>-1</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick>
-            <string>dlgEndFadeFullFast();</string>
-          </scriptsOnClick>
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>So much for her.</text>
+          <text>Tant pis pour elle.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

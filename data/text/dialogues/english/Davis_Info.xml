@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[START] I've been thinking about this for a few days, and honestly, more than anything else right now, I think we need information. We've been in the dark about the greater shape of the outside world for a while now, and frankly, that worries me.</text>
+          <text>[START] J'y réfléchis depuis quelques jours et, honnêtement, je pense que nous avons surtout besoin d'informations. Cela fait un moment que nous sommes dans l'ignorance de ce qui se passe dans le monde extérieur et, franchement, cela m'inquiète.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -29,7 +29,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I haven't gotten anything from any authority figures on any radio broadcasts, and we don't have the means to broadcast very far out. Even the DJ I've been listening to hasn't caught any new information.</text>
+          <text>Je n'ai rien reçu en provenance des autorités sur les ondes radio, et nous n'avons pas les moyens d'émettre très loin. Même le DJ que j'écoute n'a pas reçu de nouvelles informations.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -46,7 +46,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Search] So what're you proposing?</text>
+          <text>[Search] Alors qu'est-ce que tu proposes ?</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -55,7 +55,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Search] Hurry up and get to the point.</text>
+          <text>[Search] Dépêche-toi et va droit au but.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -66,7 +66,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Survival] You think we should search population centers or look for individual survivors?</text>
+          <text>[Survival] Tu penses qu'il faut chercher les centres de population ou des survivants isolés ?</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.survival &gt;= 4</checkOnAppear>
@@ -81,7 +81,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SEARCH] We need answers, and I think we need to try and find people who are at least willing to talk. Maybe we can offer them shelter if they need it. It wouldn't hurt to have a few more people around here to help out... we certainly have the room.</text>
+          <text>[SEARCH] Nous avons besoin de réponses, et je pense que nous devons essayer de trouver des gens qui sont au moins prêts à parler. Nous pouvons peut-être leur offrir un abri s'ils en ont besoin. Ça ne ferait pas de mal d'avoir quelques personnes de plus par ici pour nous aider... nous avons certainement la place.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -98,7 +98,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Why] I hope people are willing to trust us.</text>
+          <text>[Why] J'espère que les gens seront prêts à nous faire confiance.</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -107,7 +107,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Why] People don't exactly seem eager to talk out there.</text>
+          <text>[Why] Les gens n'ont pas vraiment l'air de discuter, dehors.</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -120,13 +120,32 @@
     </dlgPart>
     <dlgPart>
       <lines>
+         <!-- Clone pour gestion du genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SURVIVAL] Aha, you've caught my point exactly. I might avoid the larger population areas - last I heard they were pretty dangerous, but if you're willing to risk it, they could be a good idea to search.</text>
+          <text>[SURVIVAL] Aha, tu as bien saisi ce que je voulais dire. J'éviterai peut-être les zones les plus peuplées. Aux dernières nouvelles, elles sont assez dangereuses, mais si tu es prêt à prendre le risque, c'est peut-être une bonne idée d'y faire des recherches.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean> <!-- homme-->
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(2, 1013);</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[SURVIVAL] Aha, tu as bien saisi ce que je voulais dire. J'éviterai peut-être les zones les plus peuplées. Aux dernières nouvelles, elles sont assez dangereuses, mais si tu es prête à prendre le risque, c'est peut-être une bonne idée d'y faire des recherches.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean> <!-- femme -->
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -141,7 +160,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Go on.</text>
+          <text>Continue.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -156,7 +175,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[WHY] I... &lt;Davis looks down a moment, his face serious.&gt; I get random messages across the radio. I've heard of scattered groups of survivors who have people in their number who have been bit, individuals whose families have been torn apart in front of them, camps destroyed in the night.</text>
+          <text>[WHY] Je... &lt;Davis baisse les yeux un moment, le visage sérieux.&gt; Je reçois des messages aléatoires par radio. J'ai entendu parler de groupes épars de survivants dont certains membres ont été mordus, de personnes dont les familles ont été déchirées sous leurs yeux, de camps détruits dans la nuit.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -172,7 +191,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>And then I hear about people who are terrified and asking for help - that looters kicked in their door and sent them fleeing for their lives, who were ambushed while they were traveling, who were trying to pick up supplies and got shot for their troubles.</text>
+          <text>Et puis j'entends des gens terrifiés qui demandent de l'aide - des pillards ont défoncé leur porte et les ont fait fuir pour échapper à la mort, ils sont tombés dans une embuscade alors qu'ils se déplaçaient, ils essayaient de ramasser des vivres et se sont fait tirer dessus pour leur malheur.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -188,7 +207,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>People out there... maybe they can be talked to, reasoned with - if you're lucky. But they're scared. And if they're not scared, then they're the people to be frightened of. </text>
+          <text>Les gens dehors... il est peut-être possible de leur parler, de les raisonner - si vous avez de la chance. Mais ils ont peur. Et s'ils n'ont pas peur, c'est d'eux dont il faut avoir peur. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -205,7 +224,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Understood. Thanks for the warning, Davis. I'll see what I can find out.</text>
+          <text>Je comprends. Merci pour l'avertissement, Davis. Je vais voir ce que je peux faire.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -215,11 +234,12 @@
             <string>dlgEndFadeFullFast();</string>
           </scriptsOnClick>
         </dlgAnsw>
+        <!-- Clone pour le genre -->
         <dlgAnsw>
-          <text>Got it. I'll be careful.</text>
+          <text>J'ai compris. Je serai prudent.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -227,7 +247,18 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>If so, they'll find out they should be scared of me most of all. </text>
+          <text>J'ai compris. Je serai prudente.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Si c'est le cas, ils découvriront qu'ils devraient surtout avoir peur de moi. </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
