@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Ryan had a severe asthma attack last night. We tried everything we could to get him stabilized, but no matter what we did, he couldn't breathe. I'm sorry... We lost him.</text>
+          <text>Ryan a fait une grave crise d'asthme la nuit dernière. Nous avons fait tout ce que nous pouvions pour le stabiliser, mais quoi que nous fassions, il ne pouvait pas respirer. Je suis désolé... Nous l'avons perdu.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -31,7 +31,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I understand... You should probably let everyone else know.</text>
+          <text>Je comprends... Tu devrais probablement prévenir tout le monde.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -41,11 +41,12 @@
             <string>dlgEndFadeFullFast();</string>
           </scriptsOnClick>
         </dlgAnsw>
+        <!-- clone pour gérer le genre -->
         <dlgAnsw>
-          <text>This is bad... I'm probably going to get blamed. I gotta go.</text>
+          <text>Ça craint... Je serais probablement blâmée. Je dois y aller.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -53,7 +54,18 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Poor kid... I was going to get his medication today too! I'll talk to you later. </text>
+          <text>Ça craint... Je serais probablement blâmé. Je dois y aller.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Pauvre enfant... J'allais chercher ses médicaments aujourd'hui aussi ! On se parle plus tard. </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
