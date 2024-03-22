@@ -47,15 +47,25 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour le genre -->
         <dlgAnsw>
-          <text>Je ne suis pas ravi(e) qu'ils soient morts. Mais si tu veux rester là à me faire des reproches toute la journée, il faudra bien que quelqu'un prenne ta place.</text>
+          <text>Je ne suis pas ravi qu'ils soient morts. Mais si tu veux rester là à me faire des reproches toute la journée, il faudra bien que quelqu'un prenne ta place.</text>
           <def_link>502</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Negotiation &gt;= 6</checkOnAppear>
+          <checkOnAppear>ds.Negotiation &gt;= 6 &amp;&amp; isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+         <dlgAnsw>
+          <text>Je ne suis pas ravie qu'ils soient morts. Mais si tu veux rester là à me faire des reproches toute la journée, il faudra bien que quelqu'un prenne ta place.</text>
+          <def_link>502</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Negotiation &gt;= 6 &amp;&amp; isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>       
         <dlgAnsw>
           <text>Qu'est-ce que tu crois, que c'est juste un retard sur le tarmac ? Il s'agit d'une lutte pour la survie. Jusqu'à ce que tu le réalises, tu peux te contenter de demi-rations.</text>
           <def_link>503</def_link>

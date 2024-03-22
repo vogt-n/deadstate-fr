@@ -1125,11 +1125,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour gestion du genre -->
         <dlgAnsw>
-          <text>Je suis désolée si je me suis montrée impatient(e) avec toi. S'il te plaît... parle-moi.</text>
+          <text>Je suis désolée si je me suis montrée impatient avec toi. S'il te plaît... parle-moi.</text>
           <def_link>417</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Leadership &gt;= 2</checkOnAppear>
+          <checkOnAppear>ds.Leadership &gt;= 2 &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis désolée si je me suis montrée impatiente avec toi. S'il te plaît... parle-moi.</text>
+          <def_link>417</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Leadership &gt;= 2 &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -1179,11 +1189,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour prise en compte du genre -->
         <dlgAnsw>
-          <text>Je vais rester assis(e) et attendre que tu dises quelque chose. C'est tout.</text>
+          <text>Je vais rester assise et attendre que tu dises quelque chose. C'est tout.</text>
           <def_link>418</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je vais rester assis et attendre que tu dises quelque chose. C'est tout.</text>
+          <def_link>418</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -2898,11 +2918,23 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour gestion du genre -->
         <dlgAnsw>
-          <text>Content(e) d'avoir pu aider.</text>
+          <text>Contente d'avoir pu aider.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Content d'avoir pu aider.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
