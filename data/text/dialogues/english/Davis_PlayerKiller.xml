@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;charname&gt;... what in God's name happened out there? Where is everyone?</text>
+          <text>&lt;charname&gt;... Pour l'amour de dieu, qu'est-ce qui s'est passé là-bas ? Ou est tout le monde ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -31,7 +31,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Negotiation]We got ambushed... I barely made it out alive... Let me rest, please.</text>
+          <text>[Negotiation]Nous sommes tombés dans une embuscade... J'ai eu du mal à m'en sortir vivant... Laisse-moi me reposer, s'il te plaît.</text>
           <def_link>7710</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 4</checkOnAppear>
@@ -40,7 +40,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Leadership]It was a bad situation, but I did the best I could... but it wasn't enough to save them.</text>
+          <text>[Leadership]Nous étions dans une mauvaise situation, mais j'ai fait de mon mieux... mais ça n'a pas suffi à les sauver.</text>
           <def_link>7711</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 4</checkOnAppear>
@@ -48,17 +48,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour le genre -->
         <dlgAnsw>
-          <text>[Threat]You listen to me, Cray. They're dead. I made sure. Understood?</text>
+          <text>[Threat]Écoute-moi, Cray. Ils sont morts. Je m'en suis assurée. C'est compris ?</text>
           <def_link>7712</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't want to talk about it... it was horrible.</text>
+          <text>[Threat]Écoute-moi, Cray. Ils sont morts. Je m'en suis assuré. C'est compris ?</text>
+          <def_link>7712</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je ne veux pas en parler... c'était horrible.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -76,7 +86,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[Negotiation]&lt;Davis's breath catches - he looks close to tears.&gt; All of them? I... I'm so sorry, &lt;charname&gt;. Please, go rest. This is... hard to endure.</text>
+          <text>[Negotiation]&lt;DDavis retient son souffle - il semble au bord des larmes.&gt; Tous ? Je... Je suis vraiment désolé, &lt;charname&gt;. S'il te plaît, va te reposer. C'est... difficile à vivre.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -93,7 +103,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Right... I'll do that.</text>
+          <text>Bien, c'est vrai... J'y vais.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -110,7 +120,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[Leadership]&lt;Davis's breath catches - he looks close to tears.&gt; I'm so sorry... that must have... have been difficult. At least you made it back. Go... rest.</text>
+          <text>[Leadership]&lt;Davis retient son souffle - il semble au bord des larmes.&gt; Je suis tellement désolé... cela a dû... être difficile. Au moins, tu es revenu. Va te reposer.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -127,7 +137,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Right... I'll do that.</text>
+          <text>Bien, c'est vrai... J'y vais.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -144,7 +154,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[Threat]&lt;Davis stares at you, half in horror and half in a muted fury, which is snuffed in your gaze.&gt; I believe I do, &lt;lastname&gt;.</text>
+          <text>[Threat]&lt;Davis vous fixe, à moitié dans l'horreur et à moitié dans une fureur sourde, qui est étouffée dans votre regard.&gt; Je crois que le message est reçu, &lt;lastname&gt;.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -163,7 +173,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Glad to hear it. Now never speak of this again.</text>
+          <text>Heureux de l'entendre. Maintenant, n'en parlons plus jamais.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No... don't take it... It's my stuff.</text>
+          <text>Non... ne le prenez pas... Ce sont mes affaires.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -28,7 +28,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Are you okay? Do you need help?</text>
+          <text>Est-ce que ça va ? Tu as besoin d'aide ?</text>
           <def_link>7260</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -37,7 +37,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You're alive in there? What happened to you?</text>
+          <text>Tu es vivant là-dedans ? Qu'est-ce qui t'est arrivé ?</text>
           <def_link>7260</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -46,7 +46,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>If you want it, come out here and take it from me.</text>
+          <text>Si tu les veux, viens ici et prends-les moi.</text>
           <def_link>7261</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -55,7 +55,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Shh... It'll all be over for you soon.</text>
+          <text>Chut... Tout sera bientôt fini pour toi.</text>
           <def_link>7262</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -70,7 +70,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I can't move... I haven't been able to move for hours... </text>
+          <text>Je ne peux pas bouger... Je ne peux plus bouger depuis des heures... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -87,7 +87,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Hours? I don't know if I can do anything for you. I'm sorry.</text>
+          <text>Des heures ? Je ne crois pas que je puisse faire quoi que ce soit pour toi. Désolé.</text>
           <def_link>7263</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -96,7 +96,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I can put you out of your misery if you want.</text>
+          <text>Je peux mettre fin à tes souffrances si tu veux.</text>
           <def_link>7262</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -105,7 +105,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Then I guess you don't mind if I take your supplies.</text>
+          <text>Dans ce cas, je suppose que ça ne te gêne pas que je prenne tes affaires.</text>
           <def_link>7261</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -120,7 +120,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>It's mine! I collected it... It doesn't belong to you! &lt;cough&gt;</text>
+          <text>C'est à moi ! Je les ai collectées... Ça ne t'appartient pas ! &lt;tousse&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -136,7 +136,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Go away... Leave my stuff alone.</text>
+          <text>Va-t'en... Laisse mes affaires tranquilles.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -152,8 +152,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>Sorry. Unlike you, I intend to make it to tomorrow.</text>
+          <text>Je suis désolée. Contrairement à vous, j'ai l'intention de vivre jusqu'à demain.</text>
+          <def_link>7263</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis désolé. Contrairement à vous, j'ai l'intention de vivre jusqu'à demain.</text>
+          <def_link>7263</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Ces choses seront bientôt là. Quelle façon merdique de disparaître.</text>
           <def_link>7263</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -162,16 +181,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Those things will be here soon. Boy, what a shitty way to go.</text>
-          <def_link>7263</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>Whatever.</text>
+          <text>Peu importe.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -188,7 +198,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I don't want to die! You don't have the right! It's mine! My life - my stuff! Get out of here!</text>
+          <text>Je ne veux pas mourir ! Tu n'as pas le droit ! C'est à moi ! Ma vie - mes affaires ! Va-t'en d'ici !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -204,11 +214,12 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I'm sorry - we need this. I have to go now...</text>
+          <text>Je suis désolé - nous en avons besoin. Je dois partir maintenant...</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -216,7 +227,18 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Those things will be here soon. Boy, what a shitty way to go. Well, see ya.</text>
+          <text>Je suis désolée - nous en avons besoin. Je dois partir maintenant...</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Ces choses seront bientôt là. Quelle façon merdique de disparaître. Eh bien, à plus tard.</text>
           <def_link>7263</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -227,7 +249,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Whatever.</text>
+          <text>Peu importe.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -244,7 +266,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Fuck you! Fuck you for being here... This is my life - these are my things! Get out of here! &lt;cough&gt;</text>
+          <text>Va te faire foutre ! Va au diable d'être venu ici... C'est ma vie, ce sont mes affaires ! Fous le camp d'ici ! &lt;cough&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -260,8 +282,31 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I'm sorry - we need this. I have to go now...</text>
+          <text>Je suis désolé, on en a besoin. Je dois y aller maintenant...</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis désolée, on en a besoin. Je dois y aller maintenant...</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je n'allais pas les prendre, mais tu es un pauvre con. Alors je le fais. Ciao.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -272,7 +317,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I wasn't going to take them, but you're a dick. So I am. Goodbye now.</text>
+          <text>Regarde ces nuages et oublie que je suis là. Chut... </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -283,18 +328,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Just look at those clouds and forget I'm here. Shh... </text>
-          <def_link>-1</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick>
-            <string>dlgEndFadeFullFast();</string>
-          </scriptsOnClick>
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>I'm going. Um... good luck.</text>
+          <text>J'y vais. Euh... bonne chance.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
