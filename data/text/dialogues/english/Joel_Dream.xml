@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Mornin'. Man, those dead people are messin' with my dreams now. Dreamt I saw this giant ice cream cone in a football stadium, but when I went over to eat it, it started moaning and chasing after me. You think that means something?</text>
+          <text>Bonne matinée. Ces morts viennent troubler mes rêves maintenant. J'ai rêvé que je voyais un cornet de glace géant dans un stade de football, mais quand je me suis approché pour le manger, il s'est mis à gémir et à me courir après. Tu crois que ça veut dire quelque chose ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Probably not.</text>
+          <text>Probablement pas.</text>
           <def_link>190</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -39,7 +39,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>That you're nervous?</text>
+          <text>Que tu es nerveux ?</text>
           <def_link>191</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -48,7 +48,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Don't eat expired ice cream?</text>
+          <text>Ne mange pas de glace périmée ?</text>
           <def_link>192</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -57,7 +57,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It might mean you like guys.</text>
+          <text>Cela pourrait signifier que tu aimes les hommes.</text>
           <def_link>193</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -65,11 +65,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour gérer le genre-->
         <dlgAnsw>
-          <text>Kinda busy, Joel - do you need something?</text>
+          <text>Je suis un peu occupé, Joel - tu as besoin de quelque chose ?</text>
           <def_link>194</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis un peu occupée, Joel - tu as besoin de quelque chose ?</text>
+          <def_link>194</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -81,7 +91,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Well, that's good, I guess. </text>
+          <text>Eh bien, tant mieux, j'imagine. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -113,7 +123,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Suppose I'm not a fan of dead people walking around, that's true.</text>
+          <text>Je suppose que je ne suis pas fan de morts qui se promènent, c'est vrai.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -145,7 +155,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>It expires? I didn't know that.</text>
+          <text>Ça expire ? Je ne le savais pas.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -177,7 +187,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>What?! Aw, man, I hope not. 'Cause I really like girls. </text>
+          <text>Quoi ? ! Oh, mince, j'espère que non. Parce que j'aime vraiment les filles. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -209,7 +219,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Uh... not really. I guess I was just making small talk. You probably have a lot to get done - I'll let you get back to that.</text>
+          <text>Euh... pas vraiment. Je suppose que je faisais juste la conversation. Tu as probablement beaucoup de choses à faire, je te laisse t'y remettre.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -226,7 +236,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Okay. See ya.</text>
+          <text>Ok. A plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -237,11 +247,21 @@
             <string>dlgEndFadeFullFast();</string>
           </scriptsOnClick>
         </dlgAnsw>
+        <!-- Clone pour gestion du genre -->
         <dlgAnsw>
-          <text>No, it's okay, Joel, you can keep talking. I'm just a bit stressed out.</text>
+          <text>Non, c'est bon, Joel, tu peux continuer à parler. Je suis juste un peu stressé.</text>
           <def_link>195</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Leadership &gt;= 2</checkOnAppear>
+          <checkOnAppear>ds.Leadership &gt;= 2 &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Non, c'est bon, Joel, tu peux continuer à parler. Je suis juste un peu stressée.</text>
+          <def_link>195</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Leadership &gt;= 2 &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -253,7 +273,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Um... I guess what bugged me about that dream was, well, the ice cream. All of it must have all melted 'round here and like, I don't know when I'll ever have ice cream again. I mean, it sounds silly to say with all the crazy stuff going on, but... aw, you know what, I just didn't get much sleep.</text>
+          <text>Hum... Je crois que ce qui m'a dérangé dans ce rêve, c'est la glace. Tout a dû fondre par ici et je ne sais pas quand je pourrai à nouveau manger de la glace. Je veux dire, ça a l'air idiot de dire ça avec toutes les choses folles qui se passent, mais... oh, tu sais quoi, c'est juste que je n'ai pas beaucoup dormi.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -270,7 +290,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Do you need to take today off?</text>
+          <text>Tu as besoin de prendre un jour de repos ?</text>
           <def_link>196</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -279,7 +299,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>People are dying and you miss ice cream? </text>
+          <text>Des gens meurent et tu regrettes les glaces ? </text>
           <def_link>197</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -288,7 +308,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>As long as there are cows, salt, and ice, the potential for ice cream still exists.</text>
+          <text>Tant qu'il y aura des vaches, du sel et de la glace, il sera toujours possible de faire de la glace.</text>
           <def_link>198</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -297,7 +317,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Get your head together, we've got work to do.</text>
+          <text>Reprends-toi, on a du travail.</text>
           <def_link>199</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -312,7 +332,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No, that's okay - I'll be alright. I really just didn't think about how long this whole thing would last. I'll get over it and I'm good to go in the meantime. </text>
+          <text>Non, c'est bon, ça va aller. Je n'ai vraiment pas réfléchi à combien de temps tout cela allait durer. Je m'en remettrai et je serai prêt à continuer en même temps. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -329,7 +349,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Joel smiles and walks off.]</text>
+          <text>[Joel sourit et s'en va.]</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -346,7 +366,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Well, when you put it that way, I suppose my priorities are a bit out of whack. Don't worry, I know the stakes out there - I'm not going to let you down over a scoop of pistachio. </text>
+          <text>Eh bien, présenté de cette manière, je suppose que mes priorités sont un peu déréglées. Ne t'inquiète pas, je connais les enjeux - je ne vais pas te laisser tomber pour une boule de pistache. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -363,7 +383,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Joel smiles and walks off.]</text>
+          <text>[Joel sourit et s'en va.]</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -381,7 +401,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You're right! Maybe I just need to keep my head in the game and one of these days, when things are better, I'll celebrate with a nice, fresh scoop of homemade ice cream. That'll keep me going nicely. </text>
+          <text>Vous avez raison ! Il faut peut-être que je garde la tête froide et qu'un de ces jours, quand ça ira mieux, je fête ça avec une bonne boule de glace maison. Cela me permettra de continuer à aller de l'avant. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -398,7 +418,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Joel smiles and walks off.]</text>
+          <text>[Joël sourit et s'en va.]</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -416,7 +436,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Right, right... Sorry, I'm just being silly. Sorry for taking up your time.</text>
+          <text>C'est vrai, c'est vrai... Désolé, je suis juste un peu bête. Désolé de t'avoir fait perdre ton temps.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -433,7 +453,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Joel sighs and walks off.]</text>
+          <text>[Joël soupire et s'en va.]</text>
           <def_link>-1</def_link>
           <auto_answer>true</auto_answer>
           <checkOnAppear />
