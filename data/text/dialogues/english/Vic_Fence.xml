@@ -17,11 +17,12 @@
     <def_link>893</def_link>
   </header>
   <parts>
+    <!-- Début discussion si aucune condition n'est remplie -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Got something to discuss.</text>
+          <text>Il faut qu'on discute de quelque chose.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -69,11 +70,12 @@
       </answers>
       <UID>893</UID>
     </dlgPart>
+    <!-- Cas dicussion normal et respect de vic inférieur à 0 -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I think we got off on the wrong foot... Now, if you're at all interested in making things right, hear me out.</text>
+          <text>Je pense que nous sommes partis du mauvais pied... Maintenant, si tu es un tant soit peu intéressé pour arranger les choses, écoute-moi.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -90,7 +92,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>What do you want?</text>
+          <text>Qu'est-ce que tu veux ?</text>
           <def_link>897</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -99,7 +101,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm listening.</text>
+          <text>J'écoute.</text>
           <def_link>897</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -110,11 +112,12 @@
       </answers>
       <UID>895</UID>
     </dlgPart>
+    <!-- Discussion avec Vic respect entre 0 et 3 -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Folks have been safe here so far, and maybe it's luck or maybe you know what you're doing. But I don't want to take any chances, so I say we make our safety here a priority.</text>
+          <text>Les gens ont été en sécurité ici jusqu'à présent, et peut-être que c'est de la chance ou que tu sais ce que tu fais. Mais je ne veux prendre aucun risque, alors je propose que nous fassions de notre sécurité une priorité.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -131,7 +134,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>What do you propose?</text>
+          <text>Que proposes-tu ?</text>
           <def_link>897</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -140,7 +143,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm listening.</text>
+          <text>J'écoute.</text>
           <def_link>897</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -151,11 +154,12 @@
       </answers>
       <UID>896</UID>
     </dlgPart>
+    <!-- On écoute avec respect inférieur à 3 -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>We need to beef up the defenses here. Reinforce the fence, so nothing can get in here. I'm not even talking about the infected or dead or whatever we're calling them - I want that fence strong enough to keep everyone out.</text>
+          <text>Nous devons renforcer les défenses ici. Renforcer la clôture, pour que rien ne puisse entrer ici. Je ne parle même pas des infectés, des morts ou de ce que nous appelons ainsi - je veux que cette clôture soit assez solide pour empêcher tout le monde d'entrer.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -171,7 +175,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>We should focus our efforts on securing the materials necessary to get it done.</text>
+          <text>Nous devrions concentrer nos efforts sur l'obtention des matériaux nécessaires pour y parvenir.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -188,7 +192,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I'll make it my top priority.</text>
+          <text>J'en ferai ma priorité.</text>
           <def_link>898</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -197,7 +201,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I have other priorities. </text>
+          <text>J'ai d'autres priorités. </text>
           <def_link>899</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -205,17 +209,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour accord du genre -->
         <dlgAnsw>
-          <text>I'm glad you brought this to my attention.</text>
+          <text>Je suis heureuse que vous ayez attiré mon attention sur ce point.</text>
           <def_link>898</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Leadership &gt;= 2</checkOnAppear>
+          <checkOnAppear>ds.Leadership &gt;= 2 &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I disagree. I think food and weapons should be our top priority.</text>
+          <text>Je suis heureux que vous ayez attiré mon attention sur ce point.</text>
+          <def_link>898</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Leadership &gt;= 2 &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je ne suis pas d'accord. Je pense que la nourriture et les armes devraient être notre priorité absolue.</text>
           <def_link>899</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -226,11 +240,12 @@
       </answers>
       <UID>897</UID>
     </dlgPart>
+    <!-- On accepte d'en faire la prio -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Good. If you need help getting it built, you let me know, but we need to get it done within the next two weeks. Now, if you'll excuse me, I'm going to give the yard a once over.</text>
+          <text>Bien. Si tu as besoin d'aide pour la construction, fais-le moi savoir, mais il faut que ce soit fait dans les deux prochaines semaines. Maintenant, si tu veux bien m'excuser, je vais aller faire un tour dans la cour.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -249,7 +264,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Vic leaves.&gt;</text>
+          <text>&lt;Vic s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -262,11 +277,12 @@
       </answers>
       <UID>898</UID>
     </dlgPart>
+    <!-- On a dit que ce n'est pas notre priorité -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm not asking! The safety of this shelter should be your top priority. I don't care what it takes -  just get it done!</text>
+          <text>Je ne demande pas ! La sécurité de ce refuge devrait être ta priorité absolue. Je me fiche de ce qu'il faut faire, mais fais-le !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -285,7 +301,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Fine. I'll see what I can do.</text>
+          <text>C'est bon. Je vais voir ce que je peux faire.</text>
           <def_link>900</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -294,7 +310,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It's my call, and I say it's not a priority.</text>
+          <text>C'est à moi de décider, et je dis que ce n'est pas une priorité.</text>
           <def_link>901</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -305,11 +321,12 @@
       </answers>
       <UID>899</UID>
     </dlgPart>
+    <!-- On s'est repris et on a dit qu'on allait le faire -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Goddamn right you will. Now, if you need help getting materials, you come get me. But I want this taken care of in the next two weeks. </text>
+          <text>Bon sang, bien sûr que tu vas le faire. Maintenant, si tu as besoin d'aide pour obtenir du matériel, tu viens me chercher. Mais je veux qu'on s'en occupe dans les deux prochaines semaines. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -326,7 +343,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Vic leaves.&gt;</text>
+          <text>&lt;Vic s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -339,11 +356,12 @@
       </answers>
       <UID>900</UID>
     </dlgPart>
+    <!-- On a refusé encore -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I want that fence reinforced in two weeks! And that's the last I'm going to say about that. This meeting's over. </text>
+          <text>Je veux que cette clôture soit renforcée dans deux semaines ! Et c'est la dernière chose que je dirai à ce sujet. Cette réunion est terminée. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -362,7 +380,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Vic leaves.&gt;</text>
+          <text>&lt;Vic s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -375,11 +393,12 @@
       </answers>
       <UID>901</UID>
     </dlgPart>
+    <!-- On a gagnée son respect -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I have a favor to ask - and as I remember correctly, we had a verbal agreement about such things.</text>
+          <text>J'ai une faveur à te demander - et si je me souviens bien, nous avions un accord verbal sur ce genre de choses.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -396,7 +415,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I'm listening.</text>
+          <text>Je t'écoute.</text>
           <def_link>904</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -405,7 +424,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>What is it?</text>
+          <text>De quoi s'agit-il ?</text>
           <def_link>904</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -416,11 +435,12 @@
       </answers>
       <UID>903</UID>
     </dlgPart>
+    <!-- suite de la discussion ci-dessus -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>It is my strong opinion that we reinforce the perimeter fence. Not just to keep those - whatever they are out, but to keep everything out. If you really want to make good on our agreement, you'll get it done.</text>
+          <text>J'ai la ferme intention de renforcer la clôture du périmètre. Pas seulement pour empêcher ces choses, quelles qu'elles soient, mais pour empêcher d'entrée tout ce qui se trouve à l'extérieur. Si tu veux vraiment respecter notre accord, tu le feras.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -437,7 +457,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Sure thing, Vic. That was the deal.</text>
+          <text>Oui, bien sûr, Vic. C'était notre marché.</text>
           <def_link>898</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -446,7 +466,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I have to disagree on this point - there's more pressing priorities.</text>
+          <text>Je ne suis pas d'accord sur ce point, il y a des priorités plus urgentes.</text>
           <def_link>905</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -455,7 +475,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I disagree. I think food and weapons should be our top priority.</text>
+          <text>Je ne suis pas d'accord. Je pense que la nourriture et les armes devraient être notre première priorité.</text>
           <def_link>905</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -466,11 +486,12 @@
       </answers>
       <UID>904</UID>
     </dlgPart>
+    <!-- Entrée de la dicussion alors que la cloture n'est pas la -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Listen to me... what I'm saying is, you want to have this understanding between us, I strongly recommend you MAKE it a priority.</text>
+          <text>Écoute-moi... ce que je dis, c'est que si tu veux qu'il y ait une entente entre nous, je te recommande fortement d'en faire une priorité.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -487,7 +508,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Okay, okay. I'll work on the fence.</text>
+          <text>D'accord, d'accord. Je vais travailler sur la clôture.</text>
           <def_link>900</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -496,7 +517,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I've already outlined a plan. I may get around to the fence, but not right now.</text>
+          <text>J'ai déjà esquissé un plan. Je m'occuperai peut-être de la clôture, mais pas tout de suite.</text>
           <def_link>901</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -507,11 +528,12 @@
       </answers>
       <UID>905</UID>
     </dlgPart>
+    <!-- Entrée de la dicussion alors que la cloture est déjà la  -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>The fence is looking pretty sturdy. </text>
+          <text>La clôture a l'air plutôt solide. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -550,11 +572,12 @@
       </answers>
       <UID>910</UID>
     </dlgPart>
+    <!-- cloture et on a un respect supérieur à 3 -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>It feels a lot more secure here, knowing the fence is secure and your word's actually worth something. Anyhow... I'm going to go have a smoke before the day creeps up on me. See ya.</text>
+          <text>On se sent plus en sécurité ici, sachant que la clôture est solide et que ta parole vaut quelque chose. Quoi qu'il en soit... Je vais aller fumer une cigarette avant que la journée ne me rattrape. À bientôt.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -574,7 +597,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Vic walks off.&gt;</text>
+          <text>&lt;Vic s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -587,11 +610,12 @@
       </answers>
       <UID>911</UID>
     </dlgPart>
+    <!-- cloture et respect inférieur à 3 -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I wasn't sure you were going to come through, honestly. But.... glad to see it done - I appreciate the effort. Anyhow... I'm going to go have a smoke before the day creeps up on me. See ya.</text>
+          <text>Je n'étais pas sûr que tu allais réussir, honnêtement. Mais.... heureux de voir que c'est fait - j'apprécie l'effort. Quoi qu'il en soit... Je vais aller fumer une cigarette avant que la journée ne me rattrape. À bientôt.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -611,7 +635,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Vic walks off.&gt;</text>
+          <text>&lt;Vic s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -624,11 +648,12 @@
       </answers>
       <UID>912</UID>
     </dlgPart>
+    <!-- Point d'entrée avec la cloture non terminée -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Why the hell isn't that fence secure yet, huh? </text>
+          <text>Pourquoi diable cette clôture n'est-elle pas encore en place, hein ? </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -649,7 +674,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>We don't have the resources or the man power.</text>
+          <text>Nous n'avons ni les ressources ni les effectifs nécessaires.</text>
           <def_link>913</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -658,7 +683,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Because fences aren't made out of wishes.</text>
+          <text>Parce que les clôtures ne sont pas faites de souhaits.</text>
           <def_link>913</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -669,11 +694,12 @@
       </answers>
       <UID>909</UID>
     </dlgPart>
+    <!-- on a échoué la construction -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I took you at your word, but it's obvious that your word isn't worth jack shit. If I can't trust you to work with me to keep this place safe, well, then it's obvious that I'm going to have to involve myself in running this place even more.  </text>
+          <text>Je t'ai pris au mot, mais il est évident que ta parole ne vaut pas grand-chose. Si je ne peux pas te faire confiance pour travailler avec moi à la sécurité de cet endroit, alors il est évident que je vais devoir m'impliquer encore plus dans la gestion de cet endroit.  </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -690,7 +716,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Look, Vic - things came up, resources fell short, what do you want me to say? I'm sorry.</text>
+          <text>Ecoute, Vic - des choses se sont produites, les moyens ont manqué, qu'est-ce que tu veux que je te dise ? Je suis désolé.</text>
           <def_link>914</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -699,7 +725,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Involve yourself more? Is that a threat?</text>
+          <text>T'impliquer encore plus ? C'est une menace ?</text>
           <def_link>915</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -708,7 +734,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Here's my management philosophy - my way is the right way and if you don't like it, fuck off.</text>
+          <text>Voici ma conception du management : ma méthode est la bonne et si vous ne l'aimez pas, allez vous faire foutre.</text>
           <def_link>916</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -717,7 +743,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>If you give me another week, I'll get it done - I swear.</text>
+          <text>Si tu me donnes une semaine de plus, je le ferai - je le jure.</text>
           <def_link>917</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Negotiation &gt;= 5 &amp;&amp; ds.Vic_Fence != 2</checkOnAppear>
@@ -726,7 +752,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Has anyone died? Trust me, I'm doing everything I can to keep people alive.</text>
+          <text>Est-ce que quelqu'un est mort ? Crois-moi, je fais tout ce que je peux pour que les gens restent en vie.</text>
           <def_link>918</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Leadership &gt;= 4</checkOnAppear>
@@ -737,11 +763,12 @@
       </answers>
       <UID>913</UID>
     </dlgPart>
+    <!-- on a dit qu'on a eu des problèmes -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Sorry's not good enough when you're putting lives on the line. I kinda had a feeling like I shouldn't trust you when we first talked. You think I was a monkey on your back before, well, now you got a goddamn gorilla hanging on you. </text>
+          <text>Être désolé n'est pas suffisant quand on met des vies en jeu. J'ai eu l'impression que je ne devais pas te faire confiance quand on s'est parlé pour la première fois. Tu pensais que j'étais un singe sur ton dos avant, eh bien, maintenant tu as un putain de gorille accroché à toi. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -760,7 +787,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Vic walks off.&gt;</text>
+          <text>&lt;Vic s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -777,7 +804,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>A threat? Every single square inch outside that fence is a potential threat. What that was, is a goddamn promise. I'm watching you.</text>
+          <text>Une menace ? Chaque centimètre carré à l'extérieur de cette clôture est une menace potentielle. Ceci était une putain de promesse. Je te surveille.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -796,7 +823,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Vic walks off.&gt;</text>
+          <text>&lt;Vic s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -813,7 +840,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Listen to me, you piece of shit. Other people here might not smell you, but I can. Which is why I'll be damned if I'm going to let you turn this town into your own personal toilet. I'm watching you.</text>
+          <text>Écoute-moi, espèce de merde. Les autres personnes ici ne peuvent pas te sentir, mais moi si. C'est pourquoi je serai damné si je te laisse transformer cette ville en tes propres toilettes. Je te surveille.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -832,7 +859,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Vic walks off.&gt;</text>
+          <text>&lt;Vic s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -849,7 +876,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Another week? My gut says 'no', but... I don't want to fight about this anymore, I just want it done. You've got ONE week.</text>
+          <text>Encore une semaine ? Mon instinct me dit "non", mais... Je ne veux plus me battre à ce sujet, je veux juste que ce soit fait. Tu as une semaine.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -868,7 +895,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Vic walks off.&gt;</text>
+          <text>&lt;Vic s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -885,7 +912,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>True... but that could be a matter of luck. Personally, I don't like leaving things up to chance, especially when those things have been showing up more and more lately. </text>
+          <text>C'est vrai... mais c'est peut-être une question de chance. Personnellement, je n'aime pas laisser les choses au hasard, surtout lorsque ces choses se manifestent de plus en plus souvent ces derniers temps. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -901,7 +928,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>The fact is, I put my trust in you. You keep rolling those dice - I'm going to have to take 'em from you.</text>
+          <text>Le fait est que je te fais confiance. Si vous continuez à lancer les dés, je vais devoir les reprendre.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -918,7 +945,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Vic walks off.&gt;</text>
+          <text>&lt;Vic s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
