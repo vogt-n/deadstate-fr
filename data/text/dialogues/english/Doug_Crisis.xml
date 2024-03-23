@@ -15,7 +15,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Perhaps you can tell me why I'm not worthy of being part of those meetings that you and Davis put together? As I'm one of the most important and respected people in the shelter, it seems like an oversight. </text>
+          <text>Peut-être peux-tu me dire pourquoi je ne suis pas digne de participer à ces réunions que Davis et toi organisez ? Comme je suis l'une des personnes les plus importantes et les plus respectées du refuge, cela semble un oubli. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -33,7 +33,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Or maybe you were just lying about me being important here.</text>
+          <text>Ou peut-être que tu as menti en disant que j'étais important ici.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -49,17 +49,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour gestion du genre -->
         <dlgAnsw>
-          <text>I'm sorry, Doug. Those people were chosen by the others. There's nothing I can do.</text>
+          <text>Je suis désolée, Doug. Ces personnes ont été choisies par les autres. Il n'y a rien que je puisse faire.</text>
           <def_link>810</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+         <dlgAnsw>
+          <text>Je suis désolée, Doug. Ces personnes ont été choisies par les autres. Il n'y a rien que je puisse faire.</text>
+          <def_link>810</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It's just that if I'm in there, I need someone to keep the rabble out of the meeting.</text>
+          <text>C'est juste que si j'y suis, j'ai besoin de quelqu'un pour empêcher la plèbe de participer à la réunion.</text>
           <def_link>811</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Negotiation &gt;= 3</checkOnAppear>
@@ -68,7 +78,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Nobody wants you in there. We're done discussing this.</text>
+          <text>Personne ne veut de toi ici. Nous avons fini d'en discuter.</text>
           <def_link>812</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -77,7 +87,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Don't worry, I make sure I credit your ideas in the discussion.</text>
+          <text>Ne t'inquiète pas, je m'assurerai de créditer tes idées dans la table des discussions.</text>
           <def_link>820</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>pc.Leadership &gt;= 3</checkOnAppear>
@@ -92,7 +102,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Why are you leaving me out of your meetings?! I deserve to have a vote - way more than anybody else here. I demand an apology and immediate promotion to your council. </text>
+          <text>Pourquoi me tiens-tu à l'écart de ces réunions ? Je mérite un vote - bien plus que n'importe qui d'autre ici. J'exige des excuses et une promotion immédiate au sein de votre conseil. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -111,7 +121,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I'm sorry, Doug. Those people were chosen by the others. There's nothing I can do.</text>
+          <text>Je suis désolée, Doug. Ces personnes ont été choisies par les autres. Il n'y a rien que je puisse faire.</text>
           <def_link>813</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -120,7 +130,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>How about I give you some extra rations and we forget about this?</text>
+          <text>Et si je vous donnais des rations supplémentaires et qu'on oubliait tout ça ?</text>
           <def_link>814</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Negotiation &gt;= 3</checkOnAppear>
@@ -129,7 +139,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>First - shove your apology up your Doug hole. Second - get the fuck out of here.</text>
+          <text>D'abord, tu t'excuses. Deuxièmement, dégage d'ici.</text>
           <def_link>817</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -144,7 +154,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>This doesn't make any sense... It's a conspiracy, isn't it? On the part of the others... Well, I will find out who is responsible and... I've said too much. Oh, but they will pay...</text>
+          <text>Ça n'a aucun sens... C'est une conspiration, n'est-ce pas ? De la part des autres... Eh bien, je vais trouver qui est responsable et... J'en ai trop dit. Oh, mais ils paieront...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -161,7 +171,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Doug walks off, muttering names and shaking his fist.&gt;</text>
+          <text>&lt;Doug s'en va en marmonnant des noms et en serrant le poing.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -178,7 +188,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Yes, of course - because you can't trust them not to take everything and stuff their faces while the adults have their back turned. Well, don't worry - I know how a fool thinks, and I'll be watching them.</text>
+          <text>Oui, bien sûr, parce qu'on ne peut pas leur faire confiance pour ne pas tout prendre et se goinfrer pendant que les adultes ont le dos tourné. Ne vous inquiétez pas, je sais comment pensent les imbéciles et je les surveillerai.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -197,7 +207,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Doug walks off.&gt;</text>
+          <text>&lt;Doug s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -214,7 +224,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh... Well, if you want the matter dropped. No reason to drag it out. Nope... </text>
+          <text>Oh... Eh bien, si tu veux qu'on laisse tomber l'affaire, il n'y a pas de raison de s'éterniser. Il n'y a pas de raison de s'éterniser. Non... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -230,7 +240,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>If that's your final word on the matter...</text>
+          <text>Si c'est ton dernier mot sur la question...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -246,7 +256,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>...Then I guess I should... be going? Yeah...</text>
+          <text>...Alors je suppose que je devrais... y aller ? Ouais...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -265,7 +275,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh, and in case you didn't know - partnership OVER!</text>
+          <text>Oh, et au cas où tu ne le saurais pas, notre partenariat est terminé !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -282,7 +292,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Doug hurries off.&gt;</text>
+          <text>&lt;Doug se dépêche de partir.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -299,7 +309,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh, how convenient that the policy makers should get there by a popularity contest! Because what ten idiots want is totally equal to what one genius wants - oh wait, it's not! </text>
+          <text>Oh, comme c'est pratique que les décideurs politiques soient élus par un concours de popularité ! Parce que ce que veulent dix idiots est tout à fait égal à ce que veut un génie - oh, attendez, ce n'est pas le cas ! </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -318,7 +328,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Doug walks off, muttering names and shaking his fist.&gt;</text>
+          <text>&lt;Doug s'en va en marmonnant des noms et en serrant le poing.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -335,7 +345,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh, sure, just buy me off with food. Of course, I could use this food to help me buy influence - five extra rations should do it.</text>
+          <text>Oh, bien sûr, il suffit de m'acheter avec de la nourriture. Naturellement, je pourrais utiliser cette nourriture pour m'aider à acheter de l'influence - cinq rations supplémentaires devraient suffire.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -352,7 +362,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Here's five extra rations... And don't tell anyone I gave them to you.</text>
+          <text>Voilà cinq rations supplémentaires... Et ne répète à personne que c'est moi qui te les ai données.</text>
           <def_link>815</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -360,17 +370,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I'm sorry, we don't have five rations to spare.</text>
+          <text>Je suis désolée, mais il ne nous reste même plus cinq rations.</text>
           <def_link>816</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Or... You could be my eyes and ears here. Spy on my enemies. Give us both an advantage.</text>
+          <text>Je suis désolé, mais il ne nous reste même plus cinq rations.</text>
+          <def_link>816</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Ou... Tu pourrais être mes yeux et mes oreilles ici. Espionner mes ennemis. Nous donner un avantage à tous les deux.</text>
           <def_link>821</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>pc.Negotiation &gt;= 4 &amp;&amp; ds.Doug_Friend &lt; 2</checkOnAppear>
@@ -385,7 +405,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh, of course, I will never use this information against you... Well, sleep tight.</text>
+          <text>Oh, bien sûr, je n'utiliserai jamais cette information contre toi... Eh bien, dors bien.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -402,7 +422,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Doug walks off cheerfully.&gt;</text>
+          <text>&lt;Doug s'en va gaiement.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -419,7 +439,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Well then, prepare to have your policies smeared by me! What's that sound in your head that sounds like regret - does it have a name? Oh, wait, yes it does, and it's called 'Doug'!</text>
+          <text>Eh bien, préparez-vous à ce que je salisse votre politique ! Quel est ce bruit dans votre tête qui ressemble à du regret - a-t-il un nom ? Oh, attendez, oui, et il s'appelle "Doug" !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -438,7 +458,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Doug walks off.&gt;</text>
+          <text>&lt;Doug s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -455,7 +475,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You have no idea who you are messing with! I will use every ounce of brain power I have to show everyone what a fraud you are. And nothing is a match for my brain!</text>
+          <text>Vous n'avez aucune idée de qui vous êtes en train de manipuler ! Je vais utiliser toute la puissance de mon cerveau pour montrer à tout le monde à quel point tu es une imposture. Et rien n'est à la hauteur de mon cerveau !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -474,7 +494,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Oh, no. Please don't do that. That would be terrible.</text>
+          <text>Oh, non. S'il te plaît, ne fais pas ça. Ce serait terrible.</text>
           <def_link>818</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -483,7 +503,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I bet a pipe wrench could easily beat your brain.</text>
+          <text>Je parie qu'une clé à pipe pourrait facilement écraser ton cerveau.</text>
           <def_link>819</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -498,7 +518,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Ha ha! Nope. It is done. Beware... beware of Doug, amigo!</text>
+          <text>Ha ha ! Non. C'est fait. Attention... attention à Doug, amigo !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -514,7 +534,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Ha ha! Nope. It is done. Beware... beware of Doug, amiga!</text>
+          <text>Ha ha ! Non. C'est fait. Attention... attention à Doug, amiga!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -531,7 +551,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Doug walks off.&gt;</text>
+          <text>&lt;Doug s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -548,7 +568,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Yes - threaten me! It'll just make it easier to show just what a thug you are. </text>
+          <text>Oui, menace-moi ! Il sera ainsi plus facile de montrer à quel point tu es malhonnête. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -567,7 +587,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Doug walks off.&gt;</text>
+          <text>&lt;Doug s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -584,7 +604,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Really? Well, you better... Still not happy about this, but at least my ideas are being heard.</text>
+          <text>Vraiment ? Eh bien, il vaut mieux... Je ne suis toujours pas satisfait, mais au moins mes idées sont entendues.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -601,7 +621,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Doug walks off.&gt;</text>
+          <text>&lt;Doug s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -618,7 +638,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Be kind of like the ninja to your daimyo?</text>
+          <text>Être un peu comme le ninja pour votre daimyo ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -634,7 +654,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Yes, I find this acceptable. In turn, I will share my ideas with you, and if you want to succeed, you'll make them your top priority.</text>
+          <text>Oui, je trouve cela acceptable. En retour, je partagerai mes idées avec vous, et si on veut réussir, il faut en faire la priorité absolue.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -653,7 +673,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Yeah, that's it. Now, shh... act like we weren't talking.</text>
+          <text>Oui, c'est ça. Maintenant, chut... fais comme si on n'avait jamais parlé.</text>
           <def_link>822</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -662,7 +682,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I can't wait.</text>
+          <text>Je ne peux attendre.</text>
           <def_link>822</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -677,7 +697,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>We'll have this place eating out of our hands in no time. Because that's what sheep do, at the petting zoo. That we run.</text>
+          <text>Cet endroit va nous manger dans la main en un rien de temps. Parce que c'est ce que font les moutons, au zoo pour enfants. Qu'on dirige.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -694,7 +714,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Doug walks off cheerfully.&gt;</text>
+          <text>&lt;Doug s'en va joyeusement.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
