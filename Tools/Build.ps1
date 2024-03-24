@@ -1,6 +1,6 @@
 ## Chargement de 7zip
 ## TODO : Localiser l'emplacement de 7zip depuis le registre.
-Push-Location "H:\Program Files\7-Zip"
+Push-Location "C:\Program Files\7-Zip"
 $lo7zipFile = Get-Item .\7z.exe
 Pop-Location
 
