@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>That woman threatened me again! Right when we were all in the middle of our morning prayer. Luckily, my group defended me - but they have voiced their concerns that there's a lack of respect for laws here. </text>
+          <text>Cette femme m'a encore menacé ! Alors que nous étions tous en pleine prière du matin. Heureusement, mon groupe m'a défendue - mais ils ont exprimé leur inquiétude quant au manque de respect des lois ici. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -29,7 +29,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm doing what I can to control them... however, a few extra items to replace the ones that Regina broke or took would go a long way to proving you care about the religious members of the shelter. </text>
+          <text>Je fais ce que je peux pour les contrôler... cependant, quelques objets supplémentaires pour remplacer ceux que Regina a cassés ou emportés prouveraient que vous vous souciez des membres religieux du refuge. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -46,7 +46,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>How much would you need?</text>
+          <text>De combien aurais-tu besoin ?</text>
           <def_link>1686</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -54,17 +54,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour l'accord -->
         <dlgAnsw>
-          <text>I'm sorry it happened, but I can't spare anything right now. </text>
+          <text>Je suis désolée, mais je ne peux rien faire pour l'instant. </text>
           <def_link>1690</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Forget it. She's just going to do it again.</text>
+          <text>Je suis désolé, mais je ne peux rien faire pour l'instant. </text>
+          <def_link>1690</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Oublie ça. Elle va recommencer.</text>
           <def_link>1688</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -75,11 +85,12 @@
       </answers>
       <UID>1685</UID>
     </dlgPart>
+    <!-- On demande combien de composants -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Well, about a dozen or so items. I'm sure you understand.</text>
+          <text>Eh bien, une douzaine d'articles. Je suis sûr que tu comprends.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -94,9 +105,10 @@
           <onLoadScripts />
         </dlgLine>
       </lines>
+      <!-- Pas très logique, on paye en morale ?! -->
       <answers>
         <dlgAnsw>
-          <text>Fine. Take what you need. </text>
+          <text>Très bien. Prends ce dont tu as besoin. </text>
           <def_link>1687</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>shelterGetResource(morale) &gt;= 12</checkOnAppear>
@@ -107,7 +119,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I can't do it. We don't have enough to spare. </text>
+          <text>Je ne peux pas t'aider. Nous n'en avons pas assez. </text>
           <def_link>1688</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -115,8 +127,9 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Idem on paye en morale -->
         <dlgAnsw>
-          <text>I can only give you six. And my guarantee that she won't do it again.</text>
+          <text>Je ne peux t'en donner que six. Et ma garantis qu'elle ne recommencera pas.</text>
           <def_link>1689</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Negotiation &gt;= 7 &amp;&amp; shelterGetResource(morale) &gt;= 6</checkOnAppear>
@@ -129,11 +142,12 @@
       </answers>
       <UID>1686</UID>
     </dlgPart>
+    <!-- On a donné des ressources (12)-->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Good - thank you. Let's hope this is the last time we have to worry about this. </text>
+          <text>Bien, merci. Espérons que c'est la dernière fois que nous avons à nous inquiéter de cela. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -153,7 +167,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Todd walks off towards the supply room.&gt;</text>
+          <text>&lt;Todd se dirige vers la salle d'approvisionnement.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -166,11 +180,12 @@
       </answers>
       <UID>1687</UID>
     </dlgPart>
+    <!-- On ne donne pas de ressources -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>This is very disappointing, and will be for the others as well. Let's hope you will find it in yourself to be more understanding in the future. </text>
+          <text>C'est très décevant, et ça le sera aussi pour les autres. Espérons que tu sauras te montrer plus compréhensif à l'avenir. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -190,7 +205,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Todd walks away.&gt;</text>
+          <text>&lt;Todd s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -203,11 +218,12 @@
       </answers>
       <UID>1688</UID>
     </dlgPart>
+    <!-- on donne la moitié -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Hmm... It's not ideal, but I will do what I can to promote understanding within my group. I do hope, for all our sake, that you make the Regina issue go away. </text>
+          <text>Hmm... Ce n'est pas l'idéal, mais je ferai ce que je peux pour favoriser la compréhension au sein de mon groupe. J'espère, pour notre bien à tous, que tu feras disparaître le problème de Regina. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -227,7 +243,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Todd walks away.&gt;</text>
+          <text>&lt;Todd s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -240,11 +256,12 @@
       </answers>
       <UID>1689</UID>
     </dlgPart>
+    <!-- désolé mais on ne peut rien faire -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm a victim of persecution - persecution against me and all the other believers here. This isn't our fault and if you're going to let that woman stay here, I feel it's only right you replace the items she damaged.</text>
+          <text>Je suis victime de persécution - persécution à mon encontre et à l'encontre de tous les autres croyants ici. Ce n'est pas notre faute et si on laisse cette femme rester ici, j'estime qu'il est juste de remplacer les objets qu'elle a abîmés.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -261,7 +278,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>How much would you need?</text>
+          <text>De combien aurais-tu besoin ?</text>
           <def_link>1686</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -287,7 +304,7 @@
     <lines>
       <dlgLine>
         <owner_ID>0</owner_ID>
-        <text>Hmm... It's not ideal, but I will do what I can to promote understanding within my group. I do hope, for all our sake, that you make the Regina issue go away. </text>
+        <text>Hmm... Ce n'est pas l'idéal, mais je ferai ce que je peux pour favoriser la compréhension au sein de mon groupe. J'espère, pour notre bien à tous, que tu feras disparaître le problème de Regina. </text>
         <defAppearChecks>
           <boolean>false</boolean>
           <boolean>false</boolean>
@@ -307,7 +324,7 @@
     </lines>
     <answers>
       <dlgAnsw>
-        <text>&lt;Todd walks away.&gt;</text>
+        <text>&lt;Todd s'en va.&gt;</text>
         <def_link>-1</def_link>
         <auto_answer>false</auto_answer>
         <checkOnAppear />

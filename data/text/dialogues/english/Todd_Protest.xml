@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm here to tell you - I can longer support your leadership. I have asked my friends to unite with me and you will find little cooperation from the faithful here. God forgive your trespasses.   </text>
+          <text>Je suis ici pour te dire que je ne peux plus soutenir ta direction. J'ai demandé à mes amis de s'unir à moi et tu ne trouveras que peu de coopération de la part des fidèles ici. Que Dieu te pardonne tes fautes.   </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Make it a hunger strike - you don't want to cooperate, you don't eat today. </text>
+          <text>Fais donc une grève de la faim - si tu ne veux pas coopérer, tu ne mangeras pas aujourd'hui. </text>
           <def_link>1704</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -39,7 +39,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Without me, you think you'd be alive? I'll give you the day to "pray" for an answer. </text>
+          <text>Sans moi, tu penses que tu serais encore en vie ? Je te donne la journée pour "prier" pour la réponse. </text>
           <def_link>1705</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -47,17 +47,28 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- clone pour accord -->
         <dlgAnsw>
-          <text>Yes, I've made mistakes - I'm sorry. Hopefully, you will take the day to find it in you to forgive me.</text>
+          <text>Oui, j'ai fait des erreurs - je suis désolé. J'espère que tu prendras la journée pour trouver en toi la force de me pardonner.</text>
           <def_link>1706</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Negotiation &gt;= 6</checkOnAppear>
+          <checkOnAppear>ds.Negotiation &gt;= 6 &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You won't even go outside this shelter and you want to criticize me? Half-rations today - pray for more if you don't like it. </text>
+          <text>Oui, j'ai fait des erreurs - je suis désolée. J'espère que tu prendras la journée pour trouver en toi la force de me pardonner.</text>
+          <def_link>1706</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Negotiation &gt;= 6 &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+
+        <dlgAnsw>
+          <text>Tu ne sors même pas de cet abri et tu veux me critiquer ? Demi ration aujourd'hui - t'as cas prier pour en avoir plus si tu n'aimes pas ça. </text>
           <def_link>1707</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Leadership &gt;= 6</checkOnAppear>
@@ -66,7 +77,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Think god will forgive me when I toss you out and watch those things tear you apart?</text>
+          <text>Tu penses que Dieu me pardonnera quand je te jetterai dehors et que je verrai ces choses te mettre en pièces ?</text>
           <def_link>1708</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -77,11 +88,12 @@
       </answers>
       <UID>1703</UID>
     </dlgPart>
+    <!--grève de la faim -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I can endure, but you will end up suffering</text>
+          <text>Je peux endurer, mais vous finirez par souffrir.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -101,7 +113,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>At least I won't suffer on an empty stomach. See ya.</text>
+          <text>Au moins, je ne souffrirai pas l'estomac vide. A plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -112,7 +124,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>You don't even know what suffering is yet, but you will. Bye now.</text>
+          <text>Tu ne sais même pas encore ce qu'est la souffrance, mais ça viendra. Au revoir.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -125,11 +137,12 @@
       </answers>
       <UID>1704</UID>
     </dlgPart>
+    <!-- donne une journée de prière pour trouver la réponse -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I will. I will pray for both of us.</text>
+          <text>Je le ferai. Je prierai pour nous deux.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -149,7 +162,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I hope it helps. We'll talk later.</text>
+          <text>J'espère que ça aidera. Nous nous parlerons plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -160,7 +173,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Great. You do that. Excuse me.</text>
+          <text>Super. Fais ça. Maintenant excuse-moi.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -173,11 +186,12 @@
       </answers>
       <UID>1705</UID>
     </dlgPart>
+    <!-- J'ai fait des erreurs... -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You're right - I will try to find it within myself and with God's help. </text>
+          <text>Tu as raison - je vais essayer de trouver le pardon en moi-même et avec l'aide de Dieu. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -197,7 +211,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Good. Thank you. We'll talk later.</text>
+          <text>Bien. Je vous remercie. Nous en reparlerons plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -208,7 +222,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Great. Excuse me.</text>
+          <text>Très bien. Je te prie de bien vouloir m'excuser.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -221,11 +235,12 @@
       </answers>
       <UID>1706</UID>
     </dlgPart>
+    <!-- tu sors pas de l'abris et tu ose critiquer -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Maybe I have not walked in your shoes as often as I should... I need time to pray for an answer. </text>
+          <text>Je ne me suis peut-être pas mis à ta place aussi souvent que je l'aurais dû... J'ai besoin de temps pour prier pour une réponse. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -245,7 +260,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You do what you have to - I have work to do.</text>
+          <text>Fais ce que tu as à faire, j'ai du travail à faire.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -256,7 +271,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>For your sake, I hope it's an answer I approve of. </text>
+          <text>Dans ton intérêt, j'espère que c'est une réponse que j'approuve. </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -269,11 +284,12 @@
       </answers>
       <UID>1707</UID>
     </dlgPart>
+    <!-- menace de le faire tuer -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I... Please don't. Please please... I'm sorry. Please don't make me go out there again. </text>
+          <text>Si... S'il te plaît, ne le fais pas. S'il te plaît, s'il te plaît... Je suis désolée. S'il te plaît, ne me fais pas retourner là-bas. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -290,7 +306,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I won't. At least - not today. Now... get back to work. </text>
+          <text>Je ne le ferai pas. Du moins, pas aujourd'hui. Maintenant... retourne au travail. </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -301,7 +317,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>For now on, you pray to me for forgiveness, got it? ...Get of here.</text>
+          <text>A partir de maintenant, tu me pries de te pardonner, compris ? ... Sors d'ici.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>How're you doing today?</text>
+          <text>Comment vas-tu aujourd'hui ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -28,7 +28,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Doing fine.</text>
+          <text>Très bien.</text>
           <def_link>1617</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -36,17 +36,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour prise en charge du genre -->
         <dlgAnsw>
-          <text>Alive. That's about all I care about.</text>
+          <text>Je suis vivante. C'est à peu près tout ce qui m'importe.</text>
           <def_link>1617</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>What do you want?</text>
+          <text>Je suis vivant. C'est à peu près tout ce qui m'importe.</text>
+          <def_link>1617</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Qu'est-ce que tu veux ?</text>
           <def_link>1617</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -57,11 +67,12 @@
       </answers>
       <UID>1616</UID>
     </dlgPart>
+    <!-- Suite dans tous les cas -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I wanted to talk to you today about the decisions made in this shelter. It's been explained to me that important matters are usually weighed by multiple people. I would like to add my voice to this group. </text>
+          <text>Je voulais te parler aujourd'hui des décisions prises dans ce refuge. On m'a expliqué que les questions importantes sont généralement pesées par plusieurs personnes. J'aimerais ajouter ma voix à ce groupe. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -78,7 +89,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Sure. Anything else?</text>
+          <text>Bien sûr. Autre chose ?</text>
           <def_link>1618</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -87,7 +98,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't know - seems like it's introducing religion into government.</text>
+          <text>Je ne sais pas - on dirait que c'est introduire la religion dans le gouvernement.</text>
           <def_link>1619</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -96,7 +107,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>No. I don't need god interfering with my decisions.</text>
+          <text>Non. Je n'ai pas besoin que Dieu intervienne dans mes décisions.</text>
           <def_link>1620</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -107,11 +118,12 @@
       </answers>
       <UID>1617</UID>
     </dlgPart>
+    <!-- On accepte sa participation -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No, that's all for now. I should go pray for our continued safety. I'll discuss other matters with you later.  </text>
+          <text>Non, c'est tout pour l'instant. Je dois aller prier pour notre sécurité. Je discuterai d'autres sujets avec toi plus tard.  </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -130,7 +142,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>See ya later.</text>
+          <text>A plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -141,7 +153,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Whatever. </text>
+          <text>Peu importe. </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -154,11 +166,12 @@
       </answers>
       <UID>1618</UID>
     </dlgPart>
+    <!-- On n'est pas chaud pour sa participation -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No, not at all. I just meant that during these desperate times, a spiritual voice may lend more credence to the proceedings. </text>
+          <text>Non, pas du tout. Je voulais juste dire qu'en ces temps désespérés, une voix spirituelle peut donner plus de crédibilité à la procédure. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -174,7 +187,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm not advocating that we quote scripture in support of our decisions - nothing like that. I'm a big believer in democracy - even had a few politicians in my church. </text>
+          <text>Je ne préconise pas de citer les Écritures à l'appui de nos décisions - rien de tel. Je crois beaucoup à la démocratie - j'ai même eu quelques politiciens dans mon église. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -191,7 +204,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Okay, sure. Is that all?</text>
+          <text>D'accord, bien sûr. C'est tout ?</text>
           <def_link>1618</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -200,7 +213,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Sorry, I'm just not comfortable with it.</text>
+          <text>Désolé, mais je ne suis pas à l'aise avec ça.</text>
           <def_link>1620</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -211,11 +224,12 @@
       </answers>
       <UID>1619</UID>
     </dlgPart>
+    <!-- On refuse sa participation -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm sorry - I'm still new here and I'm still getting to know my way around.</text>
+          <text>Je suis désolé - je suis encore nouveau ici et j'apprends encore à me familiariser avec les lieux.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -231,7 +245,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>What I mean is, there are some here that may not accept some decisions unless their spiritual well-being was taken into account. I could... persuade them to see the light in such matters. </text>
+          <text>Ce que je veux dire, c'est qu'il y a des gens ici qui n'accepteraient pas certaines décisions si leur bien-être spirituel n'était pas pris en compte. Je pourrais... les persuader de voir la lumière dans ces affaires. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -248,7 +262,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Hm... I guess. Is there a catch?</text>
+          <text>Hm... Je suppose. Y a-t-il un piège ?</text>
           <def_link>1622</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -257,7 +271,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>And what if I don't agree with your suggestions?</text>
+          <text>Et si je ne suis pas d'accord avec tes suggestions ?</text>
           <def_link>1624</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -266,7 +280,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Not going to happen. Please go.</text>
+          <text>Cela n'arrivera pas. Va-t-en, s'il te plaît.</text>
           <def_link>1621</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -277,11 +291,12 @@
       </answers>
       <UID>1620</UID>
     </dlgPart>
+    <!-- Refus catégorique -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm sorry to hear you say that, since I've already been asked to act on the behalf of the faithful here. I was hoping this wouldn't be an issue, but... perhaps we can put aside this disagreement at the next meeting. </text>
+          <text>Je suis désolé de t'entendre dire cela, car on m'a déjà demandé d'agir au nom des fidèles ici présents. J'espérais que ce ne serait pas un problème, mais... peut-être pouvons-nous mettre de côté ce désaccord lors de la prochaine réunion. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -299,7 +314,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>At least I hope so, for the good of everyone here.</text>
+          <text>Du moins je l'espère, pour le bien de tous ici.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -316,7 +331,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You sneaky son of a bitch!</text>
+          <text>Espèce de fils de pute sournois !</text>
           <def_link>1623</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -325,7 +340,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Whatever. I'm out of here.</text>
+          <text>Peu importe. Je m'en vais.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -338,6 +353,7 @@
       </answers>
       <UID>1621</UID>
     </dlgPart>
+    <!-- ou est le piège -->
     <dlgPart>
       <lines>
         <dlgLine>
@@ -379,11 +395,12 @@
       </answers>
       <UID>1622</UID>
     </dlgPart>
+    <!-- On l'insulte pour son coup de traitre -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Let's not go down this path - we need each other's support, for the good of everyone here. Now I should go pray for our safey. We'll discuss other matters later.</text>
+          <text>Ne nous engageons pas dans cette voie - nous avons besoin du soutien de chacun, pour le bien de tous. Maintenant, je dois aller prier pour notre sécurité. Nous discuterons d'autres sujets plus tard.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -402,7 +419,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Todd walks off.&gt;</text>
+          <text>&lt;Todd s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -415,11 +432,12 @@
       </answers>
       <UID>1623</UID>
     </dlgPart>
+    <!-- Si je ne suis pas d'accord avec tes suggestions ? -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm certainly not going to suggest that you always vote for my suggestions. In fact, I may be able to help my congregation understand some of your decisions... of course, I may need some small signs of good faith once in awhile.</text>
+          <text>Je ne vais certainement pas suggérer que tu votes toujours en faveur de mes suggestions. En fait, je pourrais peut-être aider ma congrégation à comprendre certaines de tes décisions... bien sûr, j'aurais peut-être besoin de quelques petits signes de bonne foi de temps en temps.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -436,7 +454,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Ah, I see how it is... I can do that. Anything else?</text>
+          <text>Ah, je vois ce que c'est... Je peux le faire. Autre chose ?</text>
           <def_link>1618</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -445,7 +463,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't need your advice. Sorry, no.</text>
+          <text>Je n'ai pas besoin de tes conseils. Désolé, c'est non.</text>
           <def_link>1621</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -471,7 +489,7 @@
     <lines>
       <dlgLine>
         <owner_ID>0</owner_ID>
-        <text>I'm sorry to hear you say that, since I've already been asked to act on the behalf of the faithful here. I was hoping this wouldn't be an issue, but... perhaps we can put aside this disagreement at the next meeting. </text>
+        <text>Je suis désolé de t'entendre dire cela, car on m'a déjà demandé d'agir au nom des fidèles ici présents. J'espérais que ce ne serait pas un problème, mais... peut-être pouvons-nous mettre de côté ce désaccord lors de la prochaine réunion. </text>
         <defAppearChecks>
           <boolean>false</boolean>
           <boolean>false</boolean>
@@ -489,7 +507,7 @@
       </dlgLine>
       <dlgLine>
         <owner_ID>0</owner_ID>
-        <text>At least I hope so, for the good of everyone here.</text>
+        <text>Du moins je l'espère, pour le bien de tous ici.</text>
         <defAppearChecks>
           <boolean>false</boolean>
           <boolean>false</boolean>
@@ -506,7 +524,7 @@
     </lines>
     <answers>
       <dlgAnsw>
-        <text>You sneaky son of a bitch!</text>
+        <text>Espèce de fils de pute sournois !</text>
         <def_link>1623</def_link>
         <auto_answer>false</auto_answer>
         <checkOnAppear />
@@ -515,7 +533,7 @@
         <scriptsOnClick />
       </dlgAnsw>
       <dlgAnsw>
-        <text>Whatever. I'm out of here.</text>
+        <text>Peu importe. Je m'en vais.</text>
         <def_link>-1</def_link>
         <auto_answer>false</auto_answer>
         <checkOnAppear />
