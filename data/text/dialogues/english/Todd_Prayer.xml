@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>If you have a minute, I'd like to pray with you.</text>
+          <text>Si tu as une minute, j'aimerais prier avec toi.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -27,35 +27,65 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour accord du verbe -->
         <dlgAnsw>
-          <text>I would like that.</text>
+          <text>J'en serais ravie.</text>
           <def_link>1661</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I prefer to pray alone. </text>
+          <text>J'en serais ravi.</text>
+          <def_link>1661</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <!-- Clone pour accord -->
+        <dlgAnsw>
+          <text>Je préfère prier seule. </text>
           <def_link>1664</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm not a Christian. </text>
+          <text>Je préfère prier seul. </text>
+          <def_link>1664</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <!-- Clone pour accord -->
+        <dlgAnsw>
+          <text>Je ne suis pas chrétienne. </text>
           <def_link>1666</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't do religion, sorry.</text>
+          <text>Je ne suis pas chrétien. </text>
+          <def_link>1666</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je ne pratique pas d'activités religieuses, désolé.</text>
           <def_link>1668</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -64,7 +94,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>After everything that has happened, you still believe a just god is watching over us?</text>
+          <text>Après tout ce qui s'est passé, vous croyez toujours qu'un dieu juste veille sur nous ?</text>
           <def_link>1669</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -75,11 +105,12 @@
       </answers>
       <UID>1660</UID>
     </dlgPart>
+    <!-- on accepte de prier avec lui -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Then let's begin. &lt;He puts his hand on your shoulder.&gt;</text>
+          <text>Alors commençons. &lt;Il pose sa main sur ton épaule.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -95,7 +126,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Lord - please look over us and give us strength in this trying time. We thank you for helping us find one another and providing shelter. We do not claim to understand your methods, but we ask for your divine guidance in these last days.  </text>
+          <text>Seigneur, veillez sur nous et donnez-nous de la force en ces temps difficiles. Nous vous remercions de nous avoir aidés à nous retrouver et à nous abriter. Nous ne prétendons pas comprendre vos méthodes, mais nous vous demandons de nous guider dans ces derniers jours.  </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -111,7 +142,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Would you like to continue?</text>
+          <text>Est-ce que tu veux continuer ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -128,7 +159,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Thank you for sending your servant to help see us through this.</text>
+          <text>Merci d'avoir envoyé votre serviteur pour nous aider à traverser cette épreuve.</text>
           <def_link>1662</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -137,7 +168,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Uh... hey, God, what's up? We could really use some food. Thank you.</text>
+          <text>Euh... hé, Dieu, quoi de neuf ? Nous aurions vraiment besoin de nourriture. Merci.</text>
           <def_link>1663</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -146,7 +177,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Lord, if you could maybe smite all the dead, I promise to pray even when I don't need a favor. </text>
+          <text>Seigneur, si vous pouviez peut-être terrasser tous les morts, je promets de prier même quand je n'ai pas besoin d'une faveur. </text>
           <def_link>1663</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -155,7 +186,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>No. That was just fine.</text>
+          <text>Non. C'était très bien.</text>
           <def_link>1662</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -166,11 +197,12 @@
       </answers>
       <UID>1661</UID>
     </dlgPart>
+    <!-- pas d'ajout ou on remercie todd -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Amen. Well, I feel better. I had no idea you were a spiritual person, but it's good to know.</text>
+          <text>Amen. Je me sens mieux. Je ne savais pas que tu étais une personne spirituelle, mais c'est bon à savoir.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -189,7 +221,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Thank you - it helped. Now, I should get to work.</text>
+          <text>Merci, ça m'a aidé. Maintenant, je devrais me mettre au travail.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -199,11 +231,23 @@
             <string>dlgEndFadeFullFast();</string>
           </scriptsOnClick>
         </dlgAnsw>
+        <!-- clone pour accord -->
         <dlgAnsw>
-          <text>I'm full of surprises. We'll talk later.</text>
+          <text>Je suis pleine de surprises. Nous en reparlerons plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis plein de surprises. Nous en reparlerons plus tard.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -213,11 +257,12 @@
       </answers>
       <UID>1662</UID>
     </dlgPart>
+    <!-- demande de nourriture -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Amen. A bit unorthodox of a prayer, but I'm sure your message got through. And it's comforting to find out that you've got a spiritual side. </text>
+          <text>Amen. Une prière peu orthodoxe, mais je suis sûr que ton message est passé. Et il est réconfortant de découvrir que tu as un côté spirituel. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -234,7 +279,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Well... I should get on with my work.</text>
+          <text>Bon... Je devrais continuer mon travail.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -245,7 +290,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Yup, I sure do love praying. That wasn't my first time at all. Excuse me.</text>
+          <text>Oui, j'adore prier. Ce n'était pas du tout ma première fois. Maintenant, excuse-moi.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -258,11 +303,12 @@
       </answers>
       <UID>1663</UID>
     </dlgPart>
+    <!-- On prefère prier seul -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I understand, but would you make an exception for me? It would mean a lot.</text>
+          <text>Je comprends, mais ferais-tu une exception pour moi ? Cela signifierait beaucoup.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -279,7 +325,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>If you really want to.</text>
+          <text>Si tu le veux vraiment.</text>
           <def_link>1661</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -287,17 +333,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour l'accord -->
         <dlgAnsw>
-          <text>I'm not a Christian. </text>
+          <text>Je ne suis pas chrétienne. </text>
           <def_link>1666</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Look - I didn't want to offend you, but I'm not religious.</text>
+          <text>Je ne suis pas chrétienne. </text>
+          <def_link>1666</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je ne voudrais pas t'offenser, mais je ne suis pas très religion.</text>
           <def_link>1668</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -306,7 +362,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>No! This is nonsense. Now... Please go.</text>
+          <text>Non ! C'est n'importe quoi. Maintenant... S'il te plaît, va-t'en.</text>
           <def_link>1665</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -317,11 +373,12 @@
       </answers>
       <UID>1664</UID>
     </dlgPart>
+    <!-- On lui dit de partir -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I was just trying to help, but if you're going to be hostile, I'll be on my way then. </text>
+          <text>J'essayais juste d'aider, mais si tu dois devenir hostile, je m'en vais. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -349,11 +406,12 @@
       </answers>
       <UID>1665</UID>
     </dlgPart>
+    <!-- On est pas chrétien -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh, that's okay. Whatever your faith, I think it helps to commune with a higher power. Especially at a time like this. Please, would you join me?</text>
+          <text>Oh, ce n'est pas grave. Quelle que soit ta foi, je pense qu'il est utile de communier avec une puissance supérieure. Surtout dans un moment comme celui-ci. S'il te plaît, veux-tu te joindre à moi ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -370,7 +428,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Sure.</text>
+          <text>Bien sûr.</text>
           <def_link>1661</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -379,7 +437,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'd rather not. Especially now, I'd like to remain true to my own faith. </text>
+          <text>Je ne préfère pas. Surtout maintenant, j'aimerais rester fidèle à ma propre foi. </text>
           <def_link>1667</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -388,7 +446,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>No! Stop trying to convert me or whatever you're trying to do - just get out of here!</text>
+          <text>Non ! Arrête d'essayer de me convertir ou quoi que ce soit que tu essaies de faire - sors d'ici !</text>
           <def_link>1665</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -399,11 +457,12 @@
       </answers>
       <UID>1666</UID>
     </dlgPart>
+    <!-- Non je suis ma propre foi -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Well... If it's that important. It's obvious that your faith means a lot to you, and I suppose I can appreciate that. </text>
+          <text>Eh bien... Si c'est si important. Il est évident que ta foi compte beaucoup pour toi, et je suppose que je peux l'apprécier. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -422,7 +481,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Thank you. Perhaps we can talk more later. </text>
+          <text>Je te remercie. Nous pourrons peut-être en reparler plus tard. </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -433,7 +492,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I should go. Excuse me.</text>
+          <text>Je dois y aller. Excuse-moi</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -446,11 +505,12 @@
       </answers>
       <UID>1667</UID>
     </dlgPart>
+    <!-- On ne suit pas de religion -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh... I'm curious - what happened? To make you lose your faith, I mean.</text>
+          <text>Oh... Je suis curieux - que s'est-il passé ? Pour que tu perdes la foi, je veux dire.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -467,7 +527,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I can respect your right to be religious, it's just not a big deal for me. </text>
+          <text>Je respecte ton droit de pratiquer ta religion, mais ce n'est pas très important pour moi. </text>
           <def_link>1672</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -476,7 +536,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It's fairy tales for scared people who want to feel someone's looking out for them. </text>
+          <text>Ce sont des contes de fées pour les gens effrayés qui veulent sentir que quelqu'un s'occupe d'eux. </text>
           <def_link>1675</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -485,7 +545,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>The world as we know it ended. As did my belief. </text>
+          <text>Le monde tel que nous le connaissons a pris fin. Tout comme mes croyances. </text>
           <def_link>1669</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -494,7 +554,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't want to talk about this! I can't stand this nonsense. </text>
+          <text>Je ne veux pas en parler ! Je ne supporte pas ces absurdités. </text>
           <def_link>1665</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -505,11 +565,12 @@
       </answers>
       <UID>1668</UID>
     </dlgPart>
+    <!-- on questionne l'existance de dieu au vu des évenements -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I don't think it's unnatural to be angry. I don't even fully understand what's happening. But I do think we need to make peace with ourselves and our higher power before it's too late.  </text>
+          <text>Je ne pense pas qu'il soit anormal d'être en colère. Je ne comprends même pas tout à fait ce qui se passe. Mais je pense que nous devons faire la paix avec nous-mêmes et avec notre puissance supérieure avant qu'il ne soit trop tard.  </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -526,7 +587,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I don't know if prayer will help me. </text>
+          <text>Je ne sais pas si la prière m'aidera. </text>
           <def_link>1671</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -535,7 +596,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It's obvious who's in charge these days. So, here goes - hail Satan!</text>
+          <text>Il est évident qui commande ces jours-ci. Alors voilà, salut Satan !</text>
           <def_link>1674</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -544,7 +605,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Pray all you want, but all I need these days is a good, sturdy weapon. I'm done talking to you about this. </text>
+          <text>Prie tant que tu veux, mais tout ce dont j'ai besoin aujourd'hui, c'est d'une bonne arme solide. J'ai fini de vous parler de ça. </text>
           <def_link>1665</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -555,11 +616,12 @@
       </answers>
       <UID>1669</UID>
     </dlgPart>
+    <!-- Suite de : devenir hostile -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm sorry for you. Truly, I am. Hopefully, you will think on these matters and reconsider. Before it's too late.</text>
+          <text>Je suis désolé pour toi. Vraiment, je le suis. J'espère que tu réfléchiras à ces questions et que tu reconsidéreras la situation. Avant qu'il ne soit trop tard.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -578,7 +640,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Todd walks away.&gt;</text>
+          <text>&lt;Todd s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -591,11 +653,12 @@
       </answers>
       <UID>1670</UID>
     </dlgPart>
+    <!-- Je ne sais pas si la prière aidera -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>It can't hurt.</text>
+          <text>Ça ne peut pas faire de mal.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -612,7 +675,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Fine. Whatever - let's give it a go.</text>
+          <text>Très bien. Quoi qu'il en soit, essayons.</text>
           <def_link>1661</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -621,7 +684,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Why do you people always say that? Look, it's just not for me. Please understand. </text>
+          <text>Pourquoi les gens disent-ils toujours ça ? Ecoute, ce n'est pas pour moi. S'il te plaît, comprends-moi. </text>
           <def_link>1672</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -630,7 +693,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't want to talk about this anymore - get out of here!</text>
+          <text>Je ne veux plus en parler. Sors d'ici !</text>
           <def_link>1665</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -641,11 +704,12 @@
       </answers>
       <UID>1671</UID>
     </dlgPart>
+    <!-- Pourquoi les gens dises toujours ça ... -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I don't know if I fully understand living without feeling that connection to God. Do you just feel empty? Angry? How do you make your decisions about what's right and what's wrong?</text>
+          <text>Je ne sais pas si je comprends bien le fait de vivre sans ressentir ce lien avec Dieu. Te sens-tu simplement vide ? En colère ? Comment décides-tu de ce qui est bien et de ce qui est mal ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -662,7 +726,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Simple logic. Math. Reasoning. Law. That's what makes sense to me. </text>
+          <text>Simple logique. Les mathématiques. Le raisonnement. La loi. C'est ce qui a du sens pour moi. </text>
           <def_link>1673</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -671,7 +735,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>To use your terminology, the "do unto others as you would have them do unto you" part seems to work. </text>
+          <text>Pour reprendre votre terminologie, la partie "Ne fais pas à autrui ce que tu n'aimerais pas que l'on te fasse" semble fonctionner. </text>
           <def_link>1673</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -680,7 +744,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>My tolerance for religion only goes so far, and you're pushing it right now.</text>
+          <text>Ma tolérance à l'égard de la religion n'est pas illimitée, et tu la pousses à son paroxysme en ce moment.</text>
           <def_link>1674</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -691,11 +755,12 @@
       </answers>
       <UID>1672</UID>
     </dlgPart>
+    <!-- réponse logique -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Well... I can't say I can completely comprehend your lack of faith, but your intentions seem to be righteous. Thank you for indulging me.</text>
+          <text>Eh bien... Je ne peux pas dire que je comprends parfaitement ton manque de foi, mais tes intentions semblent justes. Merci de ton indulgence à mon égard.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -714,7 +779,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Sure. See ya later, Todd. </text>
+          <text>Pas de soucis. À plus tard, Todd. </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -724,11 +789,23 @@
             <string>dlgEndFadeFullFast();</string>
           </scriptsOnClick>
         </dlgAnsw>
+        <!-- clone pour accord -->
         <dlgAnsw>
-          <text>Glad I meet with your seal of approval. Now, I have to work to do - excuse me.</text>
+          <text>Contente d'avoir obtenue ton approbation. Maintenant, j'ai du travail à faire - excuse-moi.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Content d'avoir obtenu ton approbation. Maintenant, j'ai du travail à faire - excuse-moi.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -738,16 +815,36 @@
       </answers>
       <UID>1673</UID>
     </dlgPart>
+    <!-- mma tolérence à des limites -->
     <dlgPart>
       <lines>
+        <!-- Clone pour accord -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>If you're not willing to meet me halfway, I suppose I'll go. Sorry to have wasted your time. </text>
+          <text>Si tu n'es pas prête à me rencontrer à mi-chemin, je suppose que je vais m'en aller. Désolé de t'avoir fait perdre ton temps. </text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Todd_Respect -=3;</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Si tu n'es pas prêt à me rencontrer à mi-chemin, je suppose que je vais m'en aller. Désolé de t'avoir fait perdre ton temps. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
-            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -761,7 +858,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Todd walks away.&gt;</text>
+          <text>&lt;Todd s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -774,11 +871,12 @@
       </answers>
       <UID>1674</UID>
     </dlgPart>
+    <!-- ce sont des comptes de fées -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I've heard that argument before - surely you can't think every religious person is a gullible simpleton?</text>
+          <text>J'ai déjà entendu cet argument - mais on ne peut pas penser que toutes les personnes religieuses sont des crétins, si ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -795,7 +893,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I didn't say that. But I really should have.</text>
+          <text>Je n'ai pas dit cela. Mais j'aurais dû le faire.</text>
           <def_link>1670</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -804,7 +902,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>No, I don't. But you seem to be judging me for my beliefs right now. </text>
+          <text>Non, ce n'est pas le cas. Mais tu sembles me juger pour mes croyances en ce moment. </text>
           <def_link>1672</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -813,7 +911,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm done talking about this! I'm tired of the bullshit, and I've got better things to do.</text>
+          <text>J'en ai assez de parler de ça ! J'en ai marre des conneries, et j'ai mieux à faire.</text>
           <def_link>1665</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

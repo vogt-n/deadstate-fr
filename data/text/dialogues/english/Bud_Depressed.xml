@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Today... It would have been our forty-first anniversary. It just hit me really hard. </text>
+          <text>Aujourd'hui... Cela aurait été notre quarante et unième anniversaire. Ça m'a frappé de plein fouet. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -29,7 +29,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Every day it gets just a tiny bit harder to remember little details in her face. Saw her every day for my adult life and now she's even dying inside my own head, bit by bit.</text>
+          <text>Chaque jour, il est un peu plus difficile de se souvenir des petits détails de son visage. Je l'ai vue tous les jours pendant ma vie d'adulte et maintenant elle meurt dans ma tête, petit à petit.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -45,7 +45,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I just don't feel right. Hate to do it, but I think I'm going to have to stay behind today.</text>
+          <text>Je ne me sens pas bien. Je déteste faire ça, mais je pense que je vais devoir rester en arrière aujourd'hui.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -62,7 +62,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>If you think I'm just going to let you sit here and grieve all day, you're mistaken.</text>
+          <text>Si tu crois que je vais te laisser t'asseoir ici et pleurer toute la journée, tu te trompes.</text>
           <def_link>2902</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -71,7 +71,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Sure, I understand. Take the day to remember her.</text>
+          <text>Bien sûr, je comprends. Prends la journée pour te souvenir d'elle.</text>
           <def_link>2903</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -80,7 +80,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Instead of grieving, why don't you help me get some revenge on the bastards that infected her?</text>
+          <text>Au lieu de faire ton deuil, pourquoi ne m'aiderais-tu pas à me venger des salauds qui l'ont infectée ?</text>
           <def_link>2904</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Negotiation &gt;= 6</checkOnAppear>
@@ -89,7 +89,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I promise you, we will honor her memory when the time comes. Today, I need you at my side.</text>
+          <text>Je te promets que nous honorerons sa mémoire le moment venu. Aujourd'hui, j'ai besoin de toi à mes côtés.</text>
           <def_link>2905</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Leadership &gt;= 4</checkOnAppear>
@@ -102,14 +102,33 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- clone pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>What do you know... If you're smart, you'll keep your distance from me today.</text>
+          <text>Qu'est-ce que tu sais... Si tu es intelligente, tu garderas tes distances avec moi aujourd'hui.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(-8, 1025);</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Qu'est-ce que tu sais... Si tu es intelligent, tu garderas tes distances avec moi aujourd'hui.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
-            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -123,7 +142,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Bud walks off.&gt;</text>
+          <text>&lt;Bud s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -140,7 +159,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Thanks... I sure wish she was here. She'd do more good for this place than I ever did.</text>
+          <text>Merci... J'aimerais bien qu'elle soit là. Elle ferait plus de bien à cet endroit que je n'en ai jamais fait.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -160,7 +179,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Bud walks off.&gt;</text>
+          <text>&lt;Bud s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -177,7 +196,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>...I know what you're trying to do. And you know, I'm starting to think that would do me some good. Come get me when you're ready to go.</text>
+          <text>Je sais ce que vous essayez de faire. Et tu sais, je commence à penser que ça me ferait du bien. Viens me chercher quand tu seras prêt à partir.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -196,7 +215,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Bud walks off.&gt;</text>
+          <text>&lt;Bud s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -213,7 +232,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Sigh&gt;If you say so, commander. I'll be around if you need me.</text>
+          <text>&lt;Soupir&gt; Si tu le dis, commandant. Je serai là si vous avez besoin de moi.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -230,7 +249,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Bud walks off.&gt;</text>
+          <text>&lt;Bud s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

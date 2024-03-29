@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Hi - how are you holding up?</text>
+          <text>Bonjour, comment vas-tu ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -28,7 +28,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I'm fine - thanks for asking. </text>
+          <text>Je vais bien, merci de me le demander. </text>
           <def_link>1649</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -37,7 +37,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Between you and me - not great...</text>
+          <text>Entre toi et moi, ce n'est pas terrible...</text>
           <def_link>1650</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -46,7 +46,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>What do you want?</text>
+          <text>Qu'est-ce que tu veux ?</text>
           <def_link>1651</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -57,11 +57,12 @@
       </answers>
       <UID>1648</UID>
     </dlgPart>
+    <!-- On va bien -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Well, I worry about everyone here. I pray constantly for our safety - let's hope the Lord doesn't have his hands too full to hear me these day, heh...</text>
+          <text>Je m'inquiète pour tout le monde ici. Je prie constamment pour notre sécurité - espérons que le Seigneur n'a pas les mains trop pleines pour m'entendre ces jours-ci, héhé...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -77,7 +78,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Just joking, of course. </text>
+          <text>Je plaisante, bien sûr. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -94,7 +95,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Something you need, Todd?</text>
+          <text>Tu as besoin de quelque chose, Todd ?</text>
           <def_link>1652</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -102,11 +103,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- accord -->
         <dlgAnsw>
-          <text>I'm a bit busy...</text>
+          <text>Je suis un peu occupé...</text>
           <def_link>1652</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis un peu occupée...</text>
+          <def_link>1652</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -114,11 +125,12 @@
       </answers>
       <UID>1649</UID>
     </dlgPart>
+    <!-- entre toi et moi c'est pas fou -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh, I'm sorry to hear it. You know, you should really feel free to come to me if you ever feel the need to talk. I don't just mean about your soul or anything like that - just to talk when you need it. </text>
+          <text>Oh, je suis désolé de l'entendre. Tu sais, tu devrais vraiment te sentir libre de venir me voir si jamais tu ressens le besoin de parler. Je ne parle pas seulement de ton âme ou de quelque chose comme ça - juste de parler quand tu en as besoin. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -135,7 +147,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Thanks. Something you need from me?</text>
+          <text>Merci. Tu as besoin de quelque chose ?</text>
           <def_link>1652</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -144,7 +156,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Right. What do you want?</text>
+          <text>Oui. Qu'est-ce que tu veux ?</text>
           <def_link>1652</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -155,11 +167,12 @@
       </answers>
       <UID>1650</UID>
     </dlgPart>
+    <!-- Qu'est ce que tu veux -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh, well, while I have you here - there was something I wanted to ask.</text>
+          <text>Oh, eh bien, pendant que je t'ai ici, je voulais te demander quelque chose.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -176,7 +189,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>No kidding.</text>
+          <text>Sans blague.</text>
           <def_link>1652</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -185,7 +198,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Spit it out.</text>
+          <text>Crache le morceau.</text>
           <def_link>1652</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -196,11 +209,12 @@
       </answers>
       <UID>1651</UID>
     </dlgPart>
+    <!-- bon qu'est ce que tu veux ... -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Ah, yes. As you know, many of the faithful here spend much of their time with me discussing spiritual matters or looking for guidance. It would be helpful, I feel, to have a few more creature comforts about when they come to see me.</text>
+          <text>Ah, oui. Comme tu le sais, de nombreux fidèles passent beaucoup de temps avec moi à discuter de questions spirituelles ou à chercher des conseils. Je pense qu'il serait utile d'avoir un peu plus de confort lorsqu'ils viennent me voir.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -216,7 +230,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>So I was wondering if I could take a few things from the equipment room - a few candles, blankets, batteries, some sodas. A dozen or so items should cover it.</text>
+          <text>Je me demandais donc si je pouvais prendre quelques objets dans la salle d'équipement - quelques bougies, des couvertures, des piles, des sodas. Une douzaine d'objets devraient suffire.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -233,7 +247,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I'm not sure that's fair to everyone else here. I can't make an exception for you, sorry.</text>
+          <text>Je ne suis pas sûr que ce soit juste pour tous les autres. Je ne peux pas faire d'exception pour toi, désolé.</text>
           <def_link>1653</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -242,7 +256,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>We can spare it. Take the items you need. </text>
+          <text>Nous pouvons nous passer de ça. Prends ce dont tu as besoin. </text>
           <def_link>1655</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>shelterGetResource(morale) &gt;= 12</checkOnAppear>
@@ -253,7 +267,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>It's been a pretty bad week and those items are in demand. How about you take six?</text>
+          <text>La semaine a été plutôt mauvaise et ces articles sont très demandés. Et si tu n'en prenais que six ?</text>
           <def_link>1656</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Negotiation &gt;= 5 &amp;&amp; shelterGetResource(morale) &gt;= 6</checkOnAppear>
@@ -264,7 +278,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Take fifteen... if you think it will help increase morale around here.</text>
+          <text>Prends-en une quinzaine... si tu penses que ça peut aider à remonter le moral des gens ici.</text>
           <def_link>1657</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Leadership &gt;= 4 &amp;&amp; shelterGetResource(morale) &gt;= 15</checkOnAppear>
@@ -275,7 +289,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Why don't you just pray for some goddamn candles? Or is that not working?</text>
+          <text>Pourquoi tu ne pries pas pour qu'on te donne des putains de bougies ? Ou ça ne marche pas ?</text>
           <def_link>1658</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -286,11 +300,12 @@
       </answers>
       <UID>1652</UID>
     </dlgPart>
+    <!-- pas juste vis à vis des autres -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Well, it's not just for me - there are quite a few of us. More all the time. I'm just trying to help - there are a lot of broken people out there, and I'm doing my best to help put them back together. </text>
+          <text>Eh bien, ce n'est pas seulement pour moi - nous sommes nombreux et de plus en plus. J'essaie juste d'aider - il y a beaucoup de gens brisés, et je fais de mon mieux pour les aider à se reconstruire. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -307,7 +322,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Okay. You can take 12 items. But I want to see results. </text>
+          <text>D'accord. Tu peux prendre une douzaine d'articles. Mais je veux voir des résultats. </text>
           <def_link>1654</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>shelterGetResource(morale) &gt;= 12</checkOnAppear>
@@ -317,11 +332,12 @@
             <string>shelterChangeResource(morale, -12);</string>
           </scriptsOnClick>
         </dlgAnsw>
+        <!-- Clone pour accord -->
         <dlgAnsw>
-          <text>No, I'm sorry. I can't do it and that's final. Now, excuse me. </text>
+          <text>Non, je suis désolée. Je ne peux pas le faire et c'est définitif. Maintenant, excuse-moi. </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -329,10 +345,31 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Go ask god for your goddamn sodas - I'm busy.</text>
+          <text>Non, je suis désolé. Je ne peux pas le faire et c'est définitif. Maintenant, excuse-moi. </text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <!-- Clone pour accord -->
+        <dlgAnsw>
+          <text>Va demander à Dieu pour tes foutus sodas - je suis occupé.</text>
           <def_link>1658</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Va demander à Dieu pour tes foutus sodas - je suis occupée.</text>
+          <def_link>1658</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -340,11 +377,12 @@
       </answers>
       <UID>1653</UID>
     </dlgPart>
+    <!-- prends -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'll do whatever is in my power. God bless you. </text>
+          <text>Je ferai tout ce qui est en mon pouvoir. Que Dieu te bénisse. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -363,7 +401,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You're welcome. We'll talk later. </text>
+          <text>Je t'en prie. On en reparlera plus tard. </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -374,7 +412,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Uh... you too. I gotta go. </text>
+          <text>Euh... toi aussi. Je dois y aller. </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -387,11 +425,12 @@
       </answers>
       <UID>1654</UID>
     </dlgPart>
+    <!-- ok, prends 12 -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I appreciate your understanding. God bless you.</text>
+          <text>J'apprécie ta compréhension. Que Dieu te bénisse.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -410,7 +449,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Let me know if you need anything else. See ya, Todd. </text>
+          <text>Fais-moi savoir si tu as besoin d'autre chose. A bientôt, Todd. </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -421,7 +460,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>You're welcome. We'll talk later. </text>
+          <text>De rien. On se parle plus tard. </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -434,11 +473,12 @@
       </answers>
       <UID>1655</UID>
     </dlgPart>
+    <!-- prends 6 -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Well... it's not ideal, but we'll try to make due. Thank you. </text>
+          <text>Ce n'est pas l'idéal, mais nous nous en accommoderons. Je te remercie de ton attention. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -457,7 +497,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You're welcome. I've got some others waiting to talk - excuse me.</text>
+          <text>Il n'y a pas de quoi. J'ai d'autres personnes qui attendent de parler - excuses-moi.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -468,7 +508,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Wish I could do more. See ya.</text>
+          <text>J'aimerais pouvoir faire plus. A bientôt.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -481,11 +521,12 @@
       </answers>
       <UID>1656</UID>
     </dlgPart>
+    <!-- prends 15 -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>That is incredibly generous of you! That will go a long way - God bless you.</text>
+          <text>C'est incroyablement généreux de ta part ! Cela fera énormément de bien - que Dieu te bénisse.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -504,7 +545,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Happy to help. We'll talk later.</text>
+          <text>Heureux d'aider. Nous en reparlerons plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -515,7 +556,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I hope you'll remember this at the next meeting. Excuse me.</text>
+          <text>J'espère que tu t'en souviendras à la prochaine réunion. Excuse-moi.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -528,11 +569,12 @@
       </answers>
       <UID>1657</UID>
     </dlgPart>
+    <!-- non, demande les à dieu -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I can see that you're dealing with some anger right now... It's a shame that we'll have to go without, but I'm sure my friends will understand when they hear how stressed you've been. Sorry to have bothered you. </text>
+          <text>Je vois que tu es en colère en ce moment... C'est dommage que nous devions nous en passer, mais je suis sûr que mes amis comprendront quand ils sauront à quel point vous êtes stressé. Désolé de vous avoir dérangé. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -549,12 +591,13 @@
           </onLoadScripts>
         </dlgLine>
       </lines>
+      <!-- accord -->
       <answers>
         <dlgAnsw>
-          <text>I'm sure you are. Excuse me.</text>
+          <text>J'en suis sûr. Excuse-moi.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -562,7 +605,18 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>You want that shit, grab a backpack and get it. I'm out of here. </text>
+          <text>J'en suis sûre. Excuse-moi.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Si tu veux cette merde, prends un sac à dos et va la chercher. Je m'en vais. </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -590,7 +644,7 @@
     <lines>
       <dlgLine>
         <owner_ID>0</owner_ID>
-        <text>I'll do whatever is in my power. God bless you. </text>
+        <text>Je ferai tout ce qui est en mon pouvoir. Que Dieu te bénisse. </text>
         <defAppearChecks>
           <boolean>false</boolean>
           <boolean>false</boolean>
@@ -609,7 +663,7 @@
     </lines>
     <answers>
       <dlgAnsw>
-        <text>You're welcome. We'll talk later. </text>
+        <text>Je t'en prie. On en reparlera plus tard. </text>
         <def_link>-1</def_link>
         <auto_answer>false</auto_answer>
         <checkOnAppear />
@@ -620,7 +674,7 @@
         </scriptsOnClick>
       </dlgAnsw>
       <dlgAnsw>
-        <text>Uh... you too. I gotta go. </text>
+        <text>Euh... toi aussi. Je dois y aller. </text>
         <def_link>-1</def_link>
         <auto_answer>false</auto_answer>
         <checkOnAppear />

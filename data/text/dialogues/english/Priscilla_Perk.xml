@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>It's been real exciting going outside the school and seeing places. I mean, I feel sorry for them dead people - and I sure as heck don't like dealing with them. But I never got to get out much, you know?</text>
+          <text>C'est vraiment excitant de sortir de l'école et de voir des endroits. Je veux dire que j'ai de la peine pour les morts - et je n'aime vraiment pas m'occuper d'eux. Mais je n'ai jamais eu l'occasion de beaucoup sortir, tu sais ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -27,7 +27,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>It's a shame that it had to happen now. Some people tell me that they feel sorry for me, but I don't mind. I just feel like I owe all these people something for helping me to see the world, even if it is the end. </text>
+          <text>C'est dommage que cela n'arrive que maintenant. Certaines personnes me disent qu'elles ont pitié de moi, mais ça ne me dérange pas. J'ai l'impression que je dois quelque chose à tous ces gens pour m'avoir aidé à voir le monde, même si c'est la fin. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -44,7 +44,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>There's still time to learn more. &lt;Priscilla will learn new skills faster.&gt;</text>
+          <text>Il est encore temps d'en apprendre davantage. &lt;Priscilla apprendra plus vite.&gt;</text>
           <def_link>1789</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -53,7 +53,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>We could always use more food. &lt;Gardens produce more food per week.&gt;</text>
+          <text>Nous avons toujours besoin de plus de nourriture. &lt;Les jardins produisent plus de nourriture par semaine.&gt;</text>
           <def_link>1791</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -64,11 +64,12 @@
       </answers>
       <UID>1788</UID>
     </dlgPart>
+    <!-- Apprendre davantage -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Suppose I could. I love the library. And there's a whole lot of folks who know all sorts of neat stuff. 'Til the man upstairs says it's time to go, I'm going to experience everything I can.</text>
+          <text>Je suppose que je pourrais le faire. J'adore la bibliothèque. Et il y a plein de gens qui savent toutes sortes de choses intéressantes. Jusqu'à ce que l'homme d'en haut me dise qu'il est temps de partir, je vais faire l'expérience de tout ce que je peux.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -86,7 +87,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I feel like coming here's the best thing that ever happened to me, so I'll do what I can to make y'all proud.</text>
+          <text>J'ai l'impression que venir ici est la meilleure chose qui me soit arrivée, alors je ferai tout ce que je peux pour vous rendre fiers.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -102,11 +103,12 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- clone pour accord -->
         <dlgAnsw>
-          <text>I'm sure you will, Priscilla. See you later.</text>
+          <text>J'en suis sûre, Priscilla. A plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -114,7 +116,18 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I like your attitude. Keep it up.</text>
+          <text>J'en suis sûr, Priscilla. A plus tard.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>J'aime ton attitude. Continue comme ça.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -127,11 +140,12 @@
       </answers>
       <UID>1789</UID>
     </dlgPart>
+    <!-- plus de nourriture -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh, yeah - I don't mind spending an hour or day more tending to the garden. Heck, it's kind of relaxing. And I'm pretty sure there's not a person here who knows more about growing plants than me.</text>
+          <text>Oh, oui - ça ne me dérange pas de passer une heure ou un jour de plus à m'occuper du jardin. C'est plutôt relaxant. Et je suis presque sûr qu'il n'y a personne ici qui en sache plus que moi sur la culture des plantes.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -150,7 +164,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I appreciate your effort, Priscilla. Talk to you later.</text>
+          <text>J'apprécie votre effort, Priscilla. À plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -161,7 +175,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Fresh food will be a welcome change. Keep up the good work.</text>
+          <text>La nourriture fraîche sera un changement bienvenu. Continuez à faire du bon travail.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
