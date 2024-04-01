@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Michiru is crying. She says something quickly to you in Japanese.&gt;</text>
+          <text>&lt;Michiru est en pleurs. Elle vous dit rapidement quelque chose en japonais.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Ryan. ...It is sad. </text>
+          <text>Ryan. ...C'est triste. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -46,17 +46,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- clone pour genre-->
         <dlgAnsw>
-          <text>I'm sorry about Ryan...</text>
+          <text>Je suis désolée pour Ryan...</text>
           <def_link>2338</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I know.</text>
+          <text>Je suis désolé pour Ryan...</text>
+          <def_link>2338</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je sais.</text>
           <def_link>2338</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -71,7 +81,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Sad... He is very... small. It is very sad! </text>
+          <text>Triste... Il est très... petit. C'est très triste ! </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -88,7 +98,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Michiru walks away, crying.&gt;</text>
+          <text>&lt;Michiru s'éloigne en pleurant.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -116,7 +126,7 @@
     <lines>
       <dlgLine>
         <owner_ID>0</owner_ID>
-        <text>Sad... He is very... small. It is very sad! </text>
+        <text>Triste... Il est très... petit. C'est très triste ! </text>
         <defAppearChecks>
           <boolean>false</boolean>
           <boolean>false</boolean>
@@ -133,7 +143,7 @@
     </lines>
     <answers>
       <dlgAnsw>
-        <text>&lt;Michiru walks away, crying.&gt;</text>
+        <text>&lt;Michiru s'éloigne en pleurant.&gt;</text>
         <def_link>-1</def_link>
         <auto_answer>false</auto_answer>
         <checkOnAppear />

@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Excuse me. I need talk you for doctor... eh-to... For making better cutting. </text>
+          <text>Excuse-moi. J'ai besoin de te parler pour le docteur... eh-to... Pour faire une meilleure coupe. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Okay - I need more information.</text>
+          <text>Ok - j'ai besoin de plus d'informations.</text>
           <def_link>2321</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -39,7 +39,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>...What?</text>
+          <text>...Quoi?</text>
           <def_link>2321</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -47,11 +47,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- clone pour genre -->
         <dlgAnsw>
-          <text>I'm sorry - I don't have time for this.</text>
+          <text>Je suis désolée - je n'ai pas le temps pour ça.</text>
           <def_link>2322</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis désolé - je n'ai pas le temps pour ça.</text>
+          <def_link>2322</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -59,11 +69,12 @@
       </answers>
       <UID>2320</UID>
     </dlgPart>
+    <!-- Ok - j'ai besoin de plus d'informations. & quoi-->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I am do better job. But not have... have the good cutting. It is necessary for great success. Nani... how do you say?   </text>
+          <text>Je fais un meilleur travail. Mais ne pas avoir... avoir une bonne coupe. C'est nécessaire pour un grand succès. Nani... qu'est-ce que tu en dis ?   </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -80,7 +91,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I don't understand.</text>
+          <text>Je ne comprends pas.</text>
           <def_link>2323</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -89,7 +100,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>...Huh?</text>
+          <text>...Euh?</text>
           <def_link>2323</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -98,7 +109,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Cutting... Do you mean for surgery? You need better tools?</text>
+          <text>La coupe... Tu veux dire pour la chirurgie ? Tu as besoin de meilleurs outils ?</text>
           <def_link>2326</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Medical &gt;= 7</checkOnAppear>
@@ -113,7 +124,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Please... It is important.</text>
+          <text>S'il te plaît... C'est important.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -130,7 +141,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Fine. What is it?</text>
+          <text>Bien. Qu'est-ce qu'il y a ?</text>
           <def_link>2323</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -139,7 +150,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't understand. Go tell Davis. Goodbye.</text>
+          <text>Je ne comprends pas. Va le dire à Davis. Au revoir.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -152,11 +163,12 @@
       </answers>
       <UID>2322</UID>
     </dlgPart>
+    <!-- euh ? -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Here! &lt;She holds up a book with a diagram of a human body. She runs her finger over it as if making cutting motions.&gt;</text>
+          <text>La! &lt;Elle brandit un livre avec un schéma du corps humain. Elle passe son doigt dessus comme pour faire des mouvements de coupe&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -172,7 +184,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Now is no good. It is very difficult. It is very... how do you say? Not for good healthy soon. Take... it is difficult.  </text>
+          <text>Maintenant, ce n'est pas bon. C'est très difficile. C'est très... comment dire ? Pas pour une bonne santé bientôt. Prends... c'est difficile.  </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -189,7 +201,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>People aren't listening to you?</text>
+          <text>Les gens ne t'écoutent pas ?</text>
           <def_link>2324</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -198,7 +210,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You need a better book?</text>
+          <text>Tu as besoin d'un meilleur livre ?</text>
           <def_link>2324</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -207,7 +219,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You want to cut someone?</text>
+          <text>Tu veux découper quelqu'un ?</text>
           <def_link>2325</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -216,7 +228,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You can't do surgery anymore?</text>
+          <text>Tu ne peux plus faire de chirurgie ?</text>
           <def_link>2324</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -225,7 +237,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't understand. Go tell Davis. Goodbye.</text>
+          <text>Je ne comprends pas. Va le dire à Davis. Au revoir.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -242,7 +254,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No, no, no. Here... &lt;She runs her finger across the diagram of the human body again.&gt; The cutting. Now is bad. I no do good. </text>
+          <text>Non, non, non. La... &lt;Elle repasse son doigt sur le schéma du corps humain.&gt; Le découpage. Maintenant, c'est mauvais. Je ne fais plus rien de bon. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -259,7 +271,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You're not able to do your job anymore? I understand.</text>
+          <text>Tu ne peux plus faire ton travail ? Je comprends.</text>
           <def_link>2330</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -268,7 +280,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You're not good at medicine anymore?</text>
+          <text>Tu n'es plus bonne en médecine ?</text>
           <def_link>2330</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -277,7 +289,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You need better lighting?</text>
+          <text>Tu as besoin d'un meilleur éclairage ?</text>
           <def_link>2330</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -286,7 +298,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You finger is supposed to be a device?</text>
+          <text>Ton doigt est censé être un outil ?</text>
           <def_link>2325</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -295,7 +307,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't understand. Go tell Davis. Goodbye.</text>
+          <text>Je ne comprends pas. Va le dire à Davis. Au revoir.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -312,7 +324,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No. The cutting! Doctor. For the make surgery. I make - no. I use. Very important.</text>
+          <text>Non. La découpe ! Docteur. Pour la chirurgie. Je fais - non. J'utilise. C'est très important.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -329,7 +341,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You need an assistant?</text>
+          <text>Tu as besoin d'un assistant ?</text>
           <def_link>2324</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -338,7 +350,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You need something for surgery?</text>
+          <text>Tu as besoin de quelque chose pour la chirurgie ?</text>
           <def_link>2325</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -347,7 +359,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You need glasses to see better during operations?</text>
+          <text>Tu as besoin de lunettes pour mieux voir pendant les opérations ?</text>
           <def_link>2324</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -356,7 +368,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You need more painkillers?</text>
+          <text>Tu as besoin de plus d'analgésiques ?</text>
           <def_link>2324</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -365,7 +377,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't understand. Go tell Davis. Goodbye.</text>
+          <text>Je ne comprends pas. Va le dire à Davis. Au revoir.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -382,7 +394,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Yes. Better cutting. Ah... Please. How do you say? Help me for understand you.</text>
+          <text>Oui. Une meilleure coupe. Ah... S'il te plaît. Comment dis-tu cela ? Aides-moi à te comprendre.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -399,7 +411,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>A knife?</text>
+          <text>Un couteau ?</text>
           <def_link>2327</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -408,7 +420,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Tools?</text>
+          <text>Des outils ?</text>
           <def_link>2326</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -417,7 +429,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Surgeon device?</text>
+          <text>Un appareil de chirurgien ?</text>
           <def_link>2327</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -432,7 +444,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Yes! Yes. Tools. Surgery tools. For doctor that make surgery. Very important. Many people I better make. Very better. </text>
+          <text>Oui ! Oui. Des outils. Outils de chirurgie. Pour les médecins qui opèrent. Très important. Beaucoup de gens que je dois opérer. Très bien. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -449,7 +461,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Surgical tools? Yes, that would make things easier. I'll look for some.</text>
+          <text>Des outils chirurgicaux ? Oui, cela faciliterait les choses. Je vais en chercher.</text>
           <def_link>2329</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -458,7 +470,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Those tools would only be found in a hospital. Very dangerous. I don't know.</text>
+          <text>Ces outils ne se trouvent que dans un hôpital. C'est très dangereux. Je n'en sais rien.</text>
           <def_link>2328</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -473,7 +485,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Maybe. It is many thing for doctor. Cut, take, hold. Many doctor has. For the surgery. It is very success. </text>
+          <text>Peut-être. C'est beaucoup de choses pour un docteur. Couper, prendre, tenir. Beaucoup de médecins ont. Pour la chirurgie. C'est un grand succès. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -490,7 +502,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Where would I find these surgery tools?</text>
+          <text>Où puis-je trouver ces outils de chirurgie ?</text>
           <def_link>2328</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -499,7 +511,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Ah, I understand - a surgeon's kit. I don't know where to get one. </text>
+          <text>Ah, je comprends - un kit de chirurgien. Je ne sais pas où en trouver un. </text>
           <def_link>2328</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -514,7 +526,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Hospital. Where surgery make. Eh-to... How do you say? The room? Room of surgery? Hospital has?</text>
+          <text>A l'hôpital. Où l'on fait de la chirurgie. Eh-to... Comment dit-on ? La salle ? La salle de chirurgie ? L'hôpital a ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -546,7 +558,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You give me. I make better surgery.</text>
+          <text>Tu me donnes. Je fais de meilleures opérations.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -563,7 +575,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Okay, I'll see if I can find any. We'll talk later.</text>
+          <text>D'accord, je vais voir si j'en trouve. On en reparlera plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -574,7 +586,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Maybe. Hospitals are dangerous. I'll let you know.</text>
+          <text>Peut-être. Les hôpitaux sont dangereux. Je te tiens au courant.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -602,7 +614,7 @@
     <lines>
       <dlgLine>
         <owner_ID>0</owner_ID>
-        <text>Hospital. Where surgery make. Eh-to... How do you say? The room? Room of surgery? Hospital has?</text>
+        <text>A l'hôpital. Où l'on fait de la chirurgie. Eh-to... Comment dit-on ? La salle ? La salle de chirurgie ? L'hôpital a ?</text>
         <defAppearChecks>
           <boolean>false</boolean>
           <boolean>false</boolean>

@@ -15,7 +15,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Ryan-kun... Sorry...  </text>
+          <text>Ryan-kun... Désolé...  </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -31,7 +31,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>Michiru - no... &lt;Sniff&gt; Isn't there anything else we can do?!</text>
+          <text>Michiru - no... &lt;Sniff&gt; N'y a-t-il rien d'autre que nous puissions faire ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -47,7 +47,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Go. Now. Please. Goodbye, Ryan-kun...</text>
+          <text>Vas-y. Maintenant. S'il te plaît. Au revoir, Ryan-kun...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -88,7 +88,7 @@
       <lines>
         <dlgLine>
           <owner_ID>2</owner_ID>
-          <text>C'mon, kid... Nothing else we can do. We gotta go.</text>
+          <text>Aller, petit... On ne peut rien faire d'autre. Il faut qu'on y aille.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -104,7 +104,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Marku-san... Take Ryan. It is sad... Goodbye.</text>
+          <text>Marku-san... Prends Ryan. C'est triste... Au revoir.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -140,7 +140,7 @@
       <lines>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>&lt;Sniff&gt;Goodbye Michiru...</text>
+          <text>&lt;Sniff&gt;Au revoir Michiru...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -175,7 +175,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You use the gun? It is... for the good. </text>
+          <text>Tu utiliseras le pistolet ? C'est... pour le bien. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -191,17 +191,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour prise en charge du genre -->
         <dlgAnsw>
-          <text>I'm sorry, Michiru.</text>
+          <text>Je suis désolée, Michiru.</text>
           <def_link>2349</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+          <dlgAnsw>
+          <text>Je suis désolé, Michiru.</text>
+          <def_link>2349</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Are you ready? Anything else you need to say?</text>
+          <text>Tu es prête ? Tu as encore quelque chose à dire ?</text>
           <def_link>2349</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -216,7 +226,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>...Ryan-kun, Marku-san... &lt;She says something in Japanese.&gt;</text>
+          <text>...Ryan-kun, Marku-san... &lt;Elle dit quelque chose en japonais.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -233,7 +243,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I don't understand.</text>
+          <text>Je ne comprends pas.</text>
           <def_link>2350</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -242,7 +252,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I can't... I don't know what you're saying.</text>
+          <text>Je ne peux pas... Je ne sais pas ce que tu dis.</text>
           <def_link>2350</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -257,7 +267,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Kenji-chan... &lt;She says something in Japanese.&gt; Yukari-chan... &lt;She says something else you can't understand.&gt; </text>
+          <text>Kenji-chan... &lt;Elle dit quelque chose en japonais.&gt; Yukari-chan... &lt;Elle dit quelque chose d'autre que tu ne peux pas comprendre.&gt; </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -276,7 +286,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>It's time.</text>
+          <text>C'est l'heure.</text>
           <def_link>2351</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -294,7 +304,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>&lt;Shoot her in the head&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête&gt;</text>
           <def_link>2353</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -309,7 +319,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;She says something else in Japanese, then she twitches and stops moving.&gt;</text>
+          <text>&lt;Elle dit quelque chose d'autre en japonais, puis elle tressaille et s'arrête de bouger.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -326,7 +336,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I really hate this part...</text>
+          <text>Je déteste vraiment cette partie...</text>
           <def_link>2352</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -335,7 +345,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Okay... You can do this.</text>
+          <text>D'accord... Tu peux le faire.</text>
           <def_link>2352</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -344,7 +354,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>&lt;Shoot her in the head&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête&gt;</text>
           <def_link>2353</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -359,7 +369,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;After a few minutes, Michiru stirs and begins reaching out for you.&gt;</text>
+          <text>&lt;Au bout de quelques minutes, Michiru se réveille et commence à tendre les bras vers vous.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -376,7 +386,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Shoot her in the head&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête&gt;</text>
           <def_link>2353</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -391,7 +401,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Michiru's head cocks back and then slumps forward. She is dead.&gt;</text>
+          <text>&lt;La tête de Michiru bascule en arrière, puis s'affaisse en avant. Elle est morte.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -410,7 +420,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Bye Michiru... </text>
+          <text>Adieu Michiru... </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -421,7 +431,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I didn't always understand you, but I know you meant a lot to others.</text>
+          <text>Je ne t'ai pas toujours compris, mais je sais que tu as beaucoup compté pour les autres.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -432,7 +442,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>...Helluva way to start the day.</text>
+          <text>...Une sacrée façon de commencer la journée.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
