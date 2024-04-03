@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Cough&gt;...You're here to get this over with, huh? </text>
+          <text>&lt;Tousse&gt; ...Vous êtes ici pour en finir, hein ? </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -28,7 +28,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Yeah.</text>
+          <text>Ouais.</text>
           <def_link>4302</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -37,7 +37,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't really have a choice.</text>
+          <text>Je n'ai pas vraiment le choix.</text>
           <def_link>4302</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -52,7 +52,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>So this is where it ends... Splendid, Texas. Few months ago, I didn't even know it existed, now I'm going to die here.</text>
+          <text>C'est donc ici que ça se termine... Splendid, Texas. Il y a quelques mois, je ne savais même pas que ça existait, maintenant je vais mourir ici.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -68,7 +68,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh, what'd I'd give to just have one more summer day on Lake Washington... &lt;sniff&gt;... Or to know my kids made it... </text>
+          <text>Oh, qu'est-ce que je donnerais pour avoir encore un jour d'été sur le lac Washington... &lt;sniff&gt; ...ou savoir que mes enfants ont réussi... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -84,17 +84,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone -->
         <dlgAnsw>
-          <text>I'm sorry, Nathan.</text>
+          <text>Je suis désolée, Nathan.</text>
           <def_link>4303</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Fucking Splendid... No one should have to die in a place like this.</text>
+          <text>Je suis désolé, Nathan.</text>
+          <def_link>4303</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Putain de Splendide... Personne ne devrait mourir dans un endroit comme celui-ci.</text>
           <def_link>4303</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -109,7 +119,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>The worse part is... trying to remember all the details, you know? Of my kids' faces? How can I forget something like that?!  </text>
+          <text>Le pire, c'est d'essayer de se souvenir de tous les détails, vous savez ? Des visages de mes enfants ? Comment puis-je oublier quelque chose comme ça ?  </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -125,7 +135,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Kids... I just want to... take a picture. I was taking a picture. ...Hold up that fish! Get closer to your sister... Smile now... Here it... ughh... &lt;Nathan breathing gets heavy, then stops.&gt;</text>
+          <text>Les enfants... Je voulais juste... prendre une photo. J'étais en train de prendre une photo. ...Arrêtez ce poisson ! Rapproche-toi de ta soeur... Souriez maintenant... Voilà... ughh... &lt;La respiration de Nathan s'accélère, puis s'arrête.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -153,7 +163,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Come on... just for once, don't come back.</text>
+          <text>Allez... pour une fois, ne reviens pas.</text>
           <def_link>4304</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -162,7 +172,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>&lt;Shoot him in the head.&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête.&gt;</text>
           <def_link>4305</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -177,7 +187,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;You wait for a minute. You think you notice a finger moving, then you're sure. Nathan's body rears back up.&gt;</text>
+          <text>&lt;Vous attendez une minute. Tu crois voir un doigt bouger, puis tu en es sûr. Le corps de Nathan se redresse.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -194,7 +204,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Shoot him in the head.&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête.&gt;</text>
           <def_link>4305</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -209,7 +219,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;The gun jerks in your hand and in less than a second, Nathan's face is no longer recognizable. There is no question that he's anything but dead.&gt;</text>
+          <text>&lt;L'arme bouge dans votre main et en moins d'une seconde, le visage de Nathan n'est plus reconnaissable. Il ne fait aucun doute qu'il est loin d'être mort.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -228,7 +238,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Goodbye, my friend.</text>
+          <text>Au revoir, mon ami.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -239,7 +249,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>One more. I'm starting to lose count...</text>
+          <text>Un de plus. Je commence à perdre le compte...</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -250,7 +260,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Well, time to go through your stuff.</text>
+          <text>Il est temps de fouiller dans vos affaires.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
