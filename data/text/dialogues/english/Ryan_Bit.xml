@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You have to tell me - there's a cure for this, right? Right! This can't be happening... Not to me. It can't! </text>
+          <text>Tu dois me dire qu'il y a un remède à cela, n'est-ce pas ? C'est vrai ! Ça ne peut pas arriver... Pas à moi. Ce n'est pas possible ! </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -31,7 +31,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>What are you talking about?</text>
+          <text>Qu'est-ce que tu racontes ?</text>
           <def_link>2248</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -40,7 +40,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Did you get bit?</text>
+          <text>Tu as été mordu ?</text>
           <def_link>2247</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -55,7 +55,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>YES!</text>
+          <text>OUI!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -87,7 +87,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Starts crying&gt; Why me? I haven't done anything to anybody! </text>
+          <text>&lt;Commence à pleurer&gt; Pourquoi moi ? Je n'ai rien fait à personne ! </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -103,7 +103,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I wanted to do so much... Tell me this isn't happening!</text>
+          <text>Je voulais tellement faire... Dis-moi que ce n'est pas vrai !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -119,17 +119,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- clone pour accord -->
         <dlgAnsw>
-          <text>I'm sorry, Ryan. We'll do everything we can.</text>
+          <text>Je suis désolée, Ryan. Nous ferons tout ce que nous pourrons.</text>
           <def_link>2249</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>When the time comes... I'll make sure it's painless.</text>
+          <text>Je suis désolé, Ryan. Nous ferons tout ce que nous pourrons.</text>
+          <def_link>2249</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Quand le moment viendra... Je m'assurerai que ce soit sans douleur.</text>
           <def_link>2250</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -144,7 +154,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>This is your fault! You should have watched out for me! I'm seventeen - I'm not like them, I don't know what I'm doing! Oh, shit... I'm gonna die... </text>
+          <text>C'est de ta faute ! Tu aurais dû veiller sur moi ! J'ai dix-sept ans, je ne suis pas comme eux, je ne sais pas ce que je fais ! Oh, merde... Je vais mourir... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -160,17 +170,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>Ryan... I'm sorry.</text>
+          <text>Ryan... Je suis désolée.</text>
           <def_link>2251</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Calm down.</text>
+          <text>Ryan... Je suis désolé.</text>
+          <def_link>2251</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Calme-toi.</text>
           <def_link>2251</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -181,11 +201,12 @@
       </answers>
       <UID>2249</UID>
     </dlgPart>
+    <!-- quand le moment viendra ... -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>OH, THANKS!</text>
+          <text>OH, MERCI!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -217,7 +238,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Crying&gt; I'm gonna die...</text>
+          <text>&lt;En pleurs&gt; je vais mourir...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -234,7 +255,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Ryan runs off before you can say anything else.&gt;</text>
+          <text>&lt;Ryan s'enfuit avant que tu puisses dire quoi que ce soit d'autre.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -262,7 +283,7 @@
     <lines>
       <dlgLine>
         <owner_ID>0</owner_ID>
-        <text>&lt;Crying&gt; I'm gonna die...</text>
+        <text>&lt;En pleurs&gt; je vais mourir...</text>
         <defAppearChecks>
           <boolean>false</boolean>
           <boolean>false</boolean>
@@ -279,7 +300,7 @@
     </lines>
     <answers>
       <dlgAnsw>
-        <text>&lt;Ryan runs off before you can say anything else.&gt;</text>
+        <text>&lt;Ryan s'enfuit avant que tu puisses dire quoi que ce soit d'autre.&gt;</text>
         <def_link>-1</def_link>
         <auto_answer>false</auto_answer>
         <checkOnAppear />

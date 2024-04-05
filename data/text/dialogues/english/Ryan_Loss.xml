@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;He has obviously been crying.&gt; I... I need to talk. Um... &lt;sniff&gt; Michiru...</text>
+          <text>&lt;Il a manifestement pleuré.&gt; Je... J'ai besoin de parler. Hum... &lt;sniff&gt; Michiru...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,17 +30,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- clone pour genre -->
         <dlgAnsw>
-          <text>I'm really sorry, Ryan. I know she really cared about you.</text>
+          <text>Je suis vraiment désolée, Ryan. Je sais qu'elle tenait vraiment à toi.</text>
           <def_link>2195</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>She will be missed.</text>
+          <text>Je suis vraiment désolé, Ryan. Je sais qu'elle tenait vraiment à toi.</text>
+          <def_link>2195</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Elle nous manquera.</text>
           <def_link>2195</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -55,7 +65,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Yeah...</text>
+          <text>Ouais...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -71,7 +81,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I was hoping we could hold... &lt;sniff&gt; hold a funeral for her? 'Cause... she was... </text>
+          <text>J'espérais que nous pourrions tenir... &lt;sniff&gt; des funérailles pour elle ? Parce que... elle était... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -87,7 +97,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I really miss her.</text>
+          <text>Elle me manque vraiment.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -124,11 +134,12 @@
       </answers>
       <UID>2195</UID>
     </dlgPart>
+    <!-- mark est en vie -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>And I know Mark does too.</text>
+          <text>Et je sais que Mark aussi.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -156,11 +167,12 @@
       </answers>
       <UID>2196</UID>
     </dlgPart>
+    <!-- mark mort -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I didn't want to lose her... Not after Mark...</text>
+          <text>Je ne voulais pas la perdre... Pas après Mark...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -188,11 +200,12 @@
       </answers>
       <UID>2197</UID>
     </dlgPart>
+    <!-- suite dans tous les cas -->
     <dlgPart>
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>So... can we do the funeral?</text>
+          <text>Alors... on peut organiser des funérailles ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -209,7 +222,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Absolutely. We can spare the parts and time. &lt;-10 parts and Ryan's time&gt;</text>
+          <text>Absolument. On peut se passer de certaines fournitures et du temps nécessaire. &lt;-10 fournitures et la journée de Ryan&gt;</text>
           <def_link>2199</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>shelterGetResource(parts) &gt;= 10</checkOnAppear>
@@ -221,7 +234,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>We should have a service, but she would want us to use the wood and nails for the fence, to keep you safe. &lt;-Ryan's time&gt;</text>
+          <text>Nous devrions avoir un hommage, mais elle aurait voulu que nous utilisions le bois et les clous pour la clôture, pour te garder en sécurité. &lt;- journée de Ryan&gt;</text>
           <def_link>2200</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Negotiation &gt;= 6</checkOnAppear>
@@ -232,7 +245,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>No. Mourn her all you want, but our resources are for the living.</text>
+          <text>Non. Pleure-la tant que tu veux, mais nos ressources sont pour les vivants.</text>
           <def_link>2201</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -247,7 +260,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Sniff&gt; Thanks...</text>
+          <text>&lt;Sniff&gt; Merci...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -265,7 +278,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Well... see ya there, I guess... </text>
+          <text>Eh bien... à bientôt, je suppose... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -282,7 +295,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Ryan walks off, crying.&gt;</text>
+          <text>&lt;Ryan s'en va en pleurant.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -299,7 +312,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I guess... Whatever. I just wanna say good-</text>
+          <text>Je suppose que... Peu importe. Je veux juste lui dire au-</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -317,7 +330,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Sniff&gt; I gotta go...</text>
+          <text>&lt;Sniff&gt; Je dois y aller...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -334,7 +347,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Ryan walks off, crying.&gt;</text>
+          <text>&lt;Ryan s'en va en pleurant.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -351,7 +364,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You don't even care do you?!</text>
+          <text>Tu t'en fiches, n'est-ce pas ?!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -369,7 +382,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>What do you know - fuck you!</text>
+          <text>Qu'est-ce que t'en sais - va te faire foutre !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -386,7 +399,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Ryan walks off, crying.&gt;</text>
+          <text>&lt;Ryan s'en va en pleurant.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -414,7 +427,7 @@
     <lines>
       <dlgLine>
         <owner_ID>0</owner_ID>
-        <text>You don't even care do you?!</text>
+        <text>Tu t'en fiches, n'est-ce pas ?!</text>
         <defAppearChecks>
           <boolean>false</boolean>
           <boolean>false</boolean>
@@ -432,7 +445,7 @@
       </dlgLine>
       <dlgLine>
         <owner_ID>0</owner_ID>
-        <text>What do you know - fuck you!</text>
+        <text>Qu'est-ce que t'en sais - va te faire foutre !</text>
         <defAppearChecks>
           <boolean>false</boolean>
           <boolean>false</boolean>
@@ -449,7 +462,7 @@
     </lines>
     <answers>
       <dlgAnsw>
-        <text>&lt;Ryan walks off, crying.&gt;</text>
+        <text>&lt;Ryan s'en va en pleurant.&gt;</text>
         <def_link>-1</def_link>
         <auto_answer>false</auto_answer>
         <checkOnAppear />

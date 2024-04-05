@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I don't want to die... Why me? What did I do to deserve this?</text>
+          <text>Je ne veux pas mourir... Pourquoi moi ? Qu'est-ce que j'ai fait pour mériter ça ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -27,7 +27,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Isn't there anything you can do? Anything?!</text>
+          <text>N'y a-t-il rien que tu puisses faire ? N'importe quoi ?!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -43,17 +43,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- clone pour genre -->
         <dlgAnsw>
-          <text>I'm sorry, Ryan. There's nothing I can do.</text>
+          <text>Je suis désolée, Ryan. Il n'y a rien que je puisse faire.</text>
           <def_link>2273</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>No.</text>
+          <text>Je suis désolé, Ryan. Il n'y a rien que je puisse faire.</text>
+          <def_link>2273</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Non.</text>
           <def_link>2273</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -68,7 +78,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Where's Mark? I want Mark! ...I want my mom... </text>
+          <text>Où est Mark ? Je veux Mark ! ...Je veux ma mère ... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -87,7 +97,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>They're dead, Ryan.</text>
+          <text>Ils sont morts, Ryan.</text>
           <def_link>2274</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -96,7 +106,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You'll see them soon.</text>
+          <text>Tu les verras bientôt.</text>
           <def_link>2274</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -105,7 +115,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>&lt;Shoot him in the head.&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête.&gt;</text>
           <def_link>2276</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -120,7 +130,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm old enough to stay by myself... You don't have to take me - besides, I don't like Texas. </text>
+          <text>Je suis assez grand pour rester seul... Tu n'es pas obligé de m'emmener - en plus, je n'aime pas le Texas. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -136,7 +146,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I want to stay here... I'm going to go to the lake with Missy... I think she's finally going to let me...  &lt;Ryan slumps over.&gt;</text>
+          <text>Je veux rester ici... Je vais aller au lac avec Missy... Je crois qu'elle va enfin me laisser faire...  &lt;Ryan s'affaisse.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -152,7 +162,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Ryan stops breathing and slumps over.&gt;</text>
+          <text>&lt;Ryan arrête de respirer et s'effondre.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -178,7 +188,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You're just a kid.</text>
+          <text>Tu n'es qu'un enfant.</text>
           <def_link>2275</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -187,7 +197,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>&lt;Shoot him in the head.&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête.&gt;</text>
           <def_link>2276</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -202,7 +212,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Ryan's head moves and he stares right at you.&gt; </text>
+          <text>&lt;La tête de Ryan bouge et il te regarde fixement.&gt; </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -219,7 +229,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Shoot him in the head.&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête.&gt;</text>
           <def_link>2276</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -234,7 +244,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Ryan's blood hits the wall behind him and his body goes limp. He is dead.&gt;</text>
+          <text>&lt;Le sang de Ryan frappe le mur derrière lui et son corps devient mou. Il est mort.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -253,7 +263,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Goodbye, kid.</text>
+          <text>Adieu, petit.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -264,7 +274,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Too damn young... </text>
+          <text>Trop jeune, bon sang... </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -275,7 +285,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>You were a pain in the ass. If you were still alive, I'd have you clean this up.</text>
+          <text>Tu étais un emmerdeur. Si tu étais encore en vie, je t'aurais fait nettoyer ça.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm tired of this... You keep telling people what to do, and you know what - you suck at it! </text>
+          <text>J'en ai assez... Tu continues à dire aux gens ce qu'ils doivent faire, et tu sais quoi - tu es à chier pour ça ! </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -29,7 +29,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You get people killed, boss us around - and for what? We're all going to die and it's going to be your fault.</text>
+          <text>Tu fais tuer des gens, tu nous donnes des ordres - et pour quoi ? On va tous mourir et ce sera de ta faute.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -45,7 +45,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I hate this place... Next time you ask me to do something, you can just go fucking do it yourself! </text>
+          <text>Je déteste cet endroit... La prochaine fois que tu me demandes de faire quelque chose, tu peux aller le faire toi-même ! </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -62,7 +62,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You don't have to eat either. Refuse tomorrow and you can go find a new place to die in. </text>
+          <text>Tu n'es pas obligé de manger non plus. Si tu refuses demain, tu pourras trouver un nouvel endroit où mourir. </text>
           <def_link>2260</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -71,7 +71,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It's like you want me to throw you out. But I'm going to give you today to think about what would happen if I did.</text>
+          <text>C'est comme si tu voulais que je te jette dehors. Mais je vais te donner la journée pour réfléchir à ce qui se passerait si je le faisais.</text>
           <def_link>2261</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -79,17 +79,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- clone pour genre -->
         <dlgAnsw>
-          <text>I've made mistakes, and I'm willing to admit that. Are you willing to give me another chance? Take a day and think it over. </text>
+          <text>J'ai fait des erreurs, et je suis prête à l'admettre. Es-tu prête à me donner une autre chance ? Prends une journée et réfléchis-y. </text>
           <def_link>2262</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Negotiation &gt;= 6</checkOnAppear>
+          <checkOnAppear>ds.Negotiation &gt;= 6 &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>What are you going to wait for? Death? Half-rations until you decide you're willing to fight for your life.</text>
+          <text>J'ai fait des erreurs, et je suis prêt à l'admettre. Es-tu prêt à me donner une autre chance ? Prends une journée et réfléchis-y. </text>
+          <def_link>2262</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Negotiation &gt;= 6 &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Que vas-tu attendre ? La mort ? Une demi-ration jusqu'à ce que tu te décides à te battre pour ta vie.</text>
           <def_link>2263</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -98,7 +108,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You hate this place? Then pack your things and get out. </text>
+          <text>Tu détestes cet endroit ? Alors fais tes valises et pars. </text>
           <def_link>2264</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -113,7 +123,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I hope you fucking die today!</text>
+          <text>J'espère que tu vas crever aujourd'hui !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -133,7 +143,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Ryan storms off.&gt;</text>
+          <text>&lt;Ryan part en trombe.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -150,7 +160,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Fine. I don't know how much it will help, but... maybe. I'll think about it. </text>
+          <text>C'est bon. Je ne sais pas si ça m'aidera, mais... peut-être. Je vais y réfléchir. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -170,7 +180,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Ryan walks off.&gt;</text>
+          <text>&lt;Ryan s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -187,7 +197,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Look... I don't know, maybe I'm overreacting. I just... I guess I'm just stressed out. I'll think about it.</text>
+          <text>Ecoute... Je ne sais pas, peut-être que je réagis de manière excessive. C'est juste que... Je suppose que je suis juste stressé. Je vais y réfléchir.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -207,7 +217,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Ryan walks off.&gt;</text>
+          <text>&lt;Ryan s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -224,7 +234,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I don't know... I'll think about it.</text>
+          <text>Je ne sais pas... Je vais y réfléchir.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -244,7 +254,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Ryan walks off.&gt;</text>
+          <text>&lt;Ryan s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -261,7 +271,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Wait - I don't want to go out there alone. You proved your point - okay?! I'll fucking stay and work...</text>
+          <text>Attends, je ne veux pas y aller seul. Tu as démontré ton point de vue, d'accord ?! Je vais rester et travailler... putain!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -280,7 +290,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Ryan walks off.&gt;</text>
+          <text>&lt;Ryan s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
