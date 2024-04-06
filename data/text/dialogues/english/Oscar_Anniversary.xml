@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>...Fuck this day. </text>
+          <text>...Putain de jour. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -28,7 +28,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>What's wrong?</text>
+          <text>Qu'est-ce qui ne va pas ?</text>
           <def_link>1411</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -37,7 +37,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You don't look so good, Oscar.</text>
+          <text>Tu n'as pas l'air bien, Oscar.</text>
           <def_link>1411</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -46,7 +46,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>That's how I say 'good morning' now too.</text>
+          <text>C'est comme ça que je dis "bonjour" maintenant aussi.</text>
           <def_link>1411</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -61,7 +61,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Today... it would have been our anniversary. I keep thinking about Melina, how she looked on that day. All our family, our friends...  Feels like it was years ago. </text>
+          <text>Aujourd'hui... ça aurait été notre anniversaire. Je n'arrête pas de penser à Melina, à son apparence ce jour-là. Toute notre famille, nos amis...  J'ai l'impression que c'était il y a des années. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -77,7 +77,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You'll have to forgive me. I'm really not going to be any use to you today.</text>
+          <text>Tu dois me pardonner. Je ne vais vraiment pas t'être utile aujourd'hui.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -94,7 +94,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I don't need this today - I need your help. </text>
+          <text>Je n'ai pas besoin de ça aujourd'hui - j'ai besoin de ton aide. </text>
           <def_link>1412</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -102,17 +102,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- clone pour gestion du genre -->
         <dlgAnsw>
-          <text>Oh, wow. I'm sorry, Oscar. Take the day off.</text>
+          <text>Oh, wow. Je suis désolée, Oscar. Prends ton jour de congé.</text>
           <def_link>1413</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It's best not be alone at times like these - why don't you come out today? Maybe we can find flowers for her grave.</text>
+          <text>Oh, wow. Je suis désolé, Oscar. Prends ton jour de congé.</text>
+          <def_link>1413</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>C'est mieux de ne pas être seul dans ces moments-là - pourquoi ne viendrais-tu pas aujourd'hui ? On pourrait peut-être trouver des fleurs pour sa tombe.</text>
           <def_link>1414</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Negotiation &gt;= 6</checkOnAppear>
@@ -121,7 +131,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I know what she meant to you. But she would want you to help keep this place safe.</text>
+          <text>Je sais ce qu'elle représentait pour toi. Mais elle aurait voulu que tu aides à garder cet endroit en sécurité.</text>
           <def_link>1415</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Leadership &gt;= 5</checkOnAppear>
@@ -136,7 +146,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You don't need this?! I didn't want to lose the love of my life! </text>
+          <text>Tu n'as pas besoin de ça ?! Je ne voulais pas perdre l'amour de ma vie ! </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -152,7 +162,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You can make me work, fine, whatever - but fuck you for not giving a shit!</text>
+          <text>Tu peux me faire travailler, très bien, peu importe - mais tu peux aller te faire foutre pour ne pas en avoir quelque chose à carrer !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -171,7 +181,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Oscar pushes past you and walks off.&gt;</text>
+          <text>&lt;Oscar te bouscule et s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -188,7 +198,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm sorry I can't help, but... I'm just... Look, I'll see you later.</text>
+          <text>Je suis désolé de ne pas pouvoir vous aider, mais... Je suis juste... Ecoute, on se voit plus tard.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -208,7 +218,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Oscar walks off.&gt;</text>
+          <text>&lt;Oscar s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -225,7 +235,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I guess. She liked... she liked poppies. I'll get my gear.</text>
+          <text>J'imagine. Elle aimait... elle aimait les coquelicots. Je vais chercher mon matériel.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -244,7 +254,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Oscar walks off.&gt;</text>
+          <text>&lt;Oscar s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -261,7 +271,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>It was easier to do it when she was here... Whatever, just let me get my gear, alright?</text>
+          <text>C'était plus facile de le faire quand elle était là... Peu importe, laisse-moi juste prendre mon équipement, d'accord ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -278,7 +288,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Oscar pushes past you and walks off.&gt;</text>
+          <text>&lt;Oscar te bouscule et s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
