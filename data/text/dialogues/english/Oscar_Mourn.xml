@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>She's dead... It doesn't seem real. I just keep seeing myself in the previous days, by her side, and I want to imagine that I'm there again, that this moment isn't happening... </text>
+          <text>Elle est morte... Tout cela ne paraît irréel. Je me revois les jours précédents, à ses côtés, et je veux imaginer que j'y suis à nouveau, que ce moment n'est pas réel... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -70,26 +70,46 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- clone pour genre -->
         <dlgAnsw>
-          <text>I'm so sorry, Oscar. I've felt that way too, when I woke up here.</text>
+          <text>Je suis vraiment désolée, Oscar. J'ai ressenti la même chose en me réveillant ici.</text>
           <def_link>1388</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Family_Loss == 1</checkOnAppear>
+          <checkOnAppear>ds.Family_Loss == 1 &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm so sorry, Oscar. I can't imagine what you're going through.</text>
+          <text>Je suis vraiment désolé, Oscar. J'ai ressenti la même chose en me réveillant ici.</text>
+          <def_link>1388</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Family_Loss == 1 &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <!-- clone pour genre -->
+        <dlgAnsw>
+          <text>Je suis vraiment désolée, Oscar. Je ne peux pas imaginer ce que tu traverses.</text>
           <def_link>1389</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Family_Loss == 0</checkOnAppear>
+          <checkOnAppear>ds.Family_Loss == 0 &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Is there anything I can do for you?</text>
+          <text>Je suis vraiment désolé, Oscar. Je ne peux pas imaginer ce que tu traverses.</text>
+          <def_link>1389</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Family_Loss == 0 &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Y a-t-il quelque chose que je puisse faire pour toi ?</text>
           <def_link>1391</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -98,7 +118,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I need you to be strong, for the sake of the living still here.</text>
+          <text>J'ai besoin que tu sois fort, pour le bien des vivants qui sont encore ici.</text>
           <def_link>1390</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -113,7 +133,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You promised! You promised she'd get the antibiotics she needed and you lied! And now she's dead... I told her it was all going to be okay... I told her you would take care of us.</text>
+          <text>Tu avais promis ! Tu avais promis qu'elle recevrait les antibiotiques dont elle avait besoin et tu as menti ! Et maintenant, elle est morte... Je lui ai dit que tout irait bien... Je lui ai dit que tu prendrais soin de nous.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -130,18 +150,28 @@
           </onLoadScripts>
         </dlgLine>
       </lines>
+      <!-- clone pour genre -->
       <answers>
         <dlgAnsw>
-          <text>I'm sorry. What did you want me to say?</text>
+          <text>Je suis désolée. Qu'est-ce que tu voulais que je dise ?</text>
           <def_link>1387</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I tried! I did everything I could!</text>
+          <text>Je suis désolé. Qu'est-ce que tu voulais que je dise ?</text>
+          <def_link>1387</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>J'ai essayé ! J'ai fait tout ce que j'ai pu !</text>
           <def_link>1390</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -156,7 +186,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>...I'm not going to forgive you for that. But maybe she'll forgive you, if you do one last thing for her - give her a proper burial. I want her grave to remind you of your failure and your lies every day you walk through that front door. </text>
+          <text>...Je ne te pardonnerai pas pour ça. Mais peut-être qu'elle te pardonnera, si tu fais une dernière chose pour elle - lui donner un enterrement digne de ce nom. Je veux que sa tombe te rappelle ton échec et tes mensonges chaque jour où tu franchiras la porte d'entrée. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -173,7 +203,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>We're going to have to use quite a few spare parts for the coffin and marker... but get it done. &lt;-10 parts and Oscar's time&gt;</text>
+          <text>Nous allons devoir utiliser quelques pièces en réserve pour le cercueil et la pierre tombale... mais ça ira. &lt;-10 composants et le temps d'Oscar&gt;</text>
           <def_link>1392</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>shelterGetResource(parts) &gt;= 10</checkOnAppear>
@@ -181,17 +211,26 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>We don't have the parts or time for it. I'm very sorry.</text>
+          <text>Nous n'avons ni les pièces ni le temps pour cela. Je suis vraiment désolée.</text>
           <def_link>1393</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw><dlgAnsw>
+          <text>Nous n'avons ni les pièces ni le temps pour cela. Je suis vraiment désolé.</text>
+          <def_link>1393</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Don't you think she'd rather the materials used for a funeral would be best used on the living?</text>
+          <text>Ne crois-tu pas qu'elle préférerait que ces matériaux soient utilisés pour aider les vivants ?</text>
           <def_link>1394</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Negotiation &gt;= 8</checkOnAppear>
@@ -200,7 +239,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>We need those materials to keep the fence up. When this is all over, we'll give her a proper funeral, I swear. </text>
+          <text>Nous avons besoin de ces matériaux pour entretenir la clôture. Quand tout sera fini, on lui fera des funérailles dignes de ce nom, je le jure. </text>
           <def_link>1395</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Leadership &gt;= 6</checkOnAppear>
@@ -215,7 +254,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Yeah, I guess you do...</text>
+          <text>Oui, je suppose que c'est le cas...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -247,7 +286,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Yeah...</text>
+          <text>Ouais...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -279,7 +318,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Sure, whatever...</text>
+          <text>Certainement, peu importe...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -311,7 +350,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>There's one thing you can do for me. I want a proper burial for her. She... she... uh...</text>
+          <text>Il y a une chose que vous pouvez faire pour moi. Je veux un enterrement digne de ce nom pour elle. Elle... elle... euh...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -328,7 +367,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>We're going to have to use quite a few spare parts for the coffin and marker... but I'll get it done.  &lt;-10 parts and Oscar's time&gt;</text>
+          <text>Nous allons devoir utiliser quelques pièces en réserve pour le cercueil et la pierre tombale... mais ça ira.  &lt;-10 composants et le temps d'Oscar&gt;</text>
           <def_link>1392</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>shelterGetResource(parts) &gt;= 10</checkOnAppear>
@@ -336,17 +375,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>We don't have the parts or time for it. I'm very sorry.</text>
+          <text>Nous n'avons ni les pièces ni le temps pour cela. Je suis vraiment désolée.</text>
           <def_link>1393</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Don't you think she'd rather the materials used for a funeral would be best used on the living?</text>
+          <text>Nous n'avons ni les pièces ni le temps pour cela. Je suis vraiment désolé.</text>
+          <def_link>1393</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Ne crois-tu pas qu'elle préférerait que ces matériaux soient utilisés pour aider les vivants ?</text>
           <def_link>1394</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Negotiation &gt;= 8</checkOnAppear>
@@ -355,7 +404,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>We need those materials to keep the fence up. When this is all over, we'll give her a proper funeral, I swear. </text>
+          <text>Nous avons besoin de ces matériaux pour entretenir la clôture. Quand tout sera fini, on lui fera des funérailles dignes de ce nom, je le jure. </text>
           <def_link>1395</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Leadership &gt;= 6</checkOnAppear>
@@ -370,7 +419,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>...Okay. I... I need to go now, put together a coffin for her.</text>
+          <text>...Ok. Je... Il faut que j'y aille, que je prépare un cercueil pour elle.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -405,7 +454,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Don't have the parts? My wife is dead and you can't find a few planks and nails to honor her memory? </text>
+          <text>Vous n'avez pas les ressources ? Ma femme est morte et tu ne peux pas trouver quelques planches et clous pour honorer sa mémoire ? </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -423,7 +472,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Pathetic! I just... I just wanted to... the hell with you, then. I'll bury her myself if I have to.</text>
+          <text>C'est pathétique ! Je voulais juste... Je voulais juste... Va au diable, alors. Je l'enterrerai moi-même s'il le faut.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -440,7 +489,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Oscar walks off before you can say anything else.&gt;</text>
+          <text>&lt;Oscar s'en va avant que tu puisses dire quoi que ce soit d'autre.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -457,7 +506,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>She... she was always so giving... so concerned about other people. Probably, yeah... Yeah, she'd maybe want that. I just... I should go.</text>
+          <text>Elle... elle a toujours été si généreuse... si soucieuse des autres. Probablement, oui... Oui, elle voudrait peut-être ça. C'est juste que... Je devrais y aller.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -476,7 +525,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Oscar walks off.&gt;</text>
+          <text>&lt;Oscar s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>true</auto_answer>
           <checkOnAppear />
@@ -493,7 +542,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Whatever...  Guess you have to think about things like that still. All I can think about is... um...  I... I have to go.</text>
+          <text>Quoi qu'il en soit...  Je suppose qu'il faut toujours penser à ce genre de choses. Tout ce à quoi je pense, c'est... hum...  Je... Je dois y aller.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -510,7 +559,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Oscar walks off.&gt;</text>
+          <text>&lt;Oscar s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>true</auto_answer>
           <checkOnAppear />
@@ -527,7 +576,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I don't really want to talk right now... I'll do what I can for the sake of those other people, but otherwise... I'd prefer to be left alone.</text>
+          <text>Je n'ai pas vraiment envie de parler maintenant... Je ferai ce que je peux pour le bien des autres personnes, mais sinon... Je préférerais qu'on me laisse tranquille.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -544,7 +593,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Oscar walks off.&gt;</text>
+          <text>&lt;Oscar s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>true</auto_answer>
           <checkOnAppear />
