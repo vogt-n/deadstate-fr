@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Hi... I have talk you?</text>
+          <text>Bonjour... Je parles avec toi ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -28,7 +28,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Let me go get a translator.</text>
+          <text>Je vais chercher un traducteur.</text>
           <def_link>1453</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -37,7 +37,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Can it wait?</text>
+          <text>Ça peut attendre ?</text>
           <def_link>1454</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -46,7 +46,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Sorry, I don't have time to deal with this. Goodbye.</text>
+          <text>Désolé, je n'ai pas le temps de m'occuper de ça. Au revoir.</text>
           <def_link>1455</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -61,7 +61,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No - I have practice now. What I am saying.</text>
+          <text>Non, je dois m'entraîner maintenant. Ce que je dis.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -78,7 +78,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Oh, okay. Go ahead.</text>
+          <text>Oh, d'accord. Continue.</text>
           <def_link>1456</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -87,7 +87,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Great. Let's hear it.</text>
+          <text>Très bien. Écoutons ça.</text>
           <def_link>1456</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -102,7 +102,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No.</text>
+          <text>Non.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -119,7 +119,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Let's hear it.</text>
+          <text>Écoutons ça.</text>
           <def_link>1456</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -127,11 +127,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour gestion du genre -->
         <dlgAnsw>
-          <text>I'm sorry, I'm busy. It will have to.</text>
+          <text>Je suis désolée, je suis occupée. Il le faudra bien.</text>
           <def_link>1455</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis désolée, je suis occupée. Il le faudra bien.</text>
+          <def_link>1455</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -143,7 +153,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[Something in Spanish] I do not like this! </text>
+          <text>[Quelque chose en espagnol] Je n'aime pas ça ! </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -162,7 +172,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Melina quickly walks off.&gt;</text>
+          <text>&lt;Melina s'en va rapidement.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -179,7 +189,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Please be... patience with me.</text>
+          <text>S'il te plaît, sois... patience avec moi.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -195,7 +205,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I have problem of Todd. He is... preach? Priest? </text>
+          <text>J'ai un problème avec Todd. Il est... prêcheur ? Prêtre ? </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -212,7 +222,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>What did he do?</text>
+          <text>Qu'est-ce qu'il a fait ?</text>
           <def_link>1458</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -221,7 +231,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Did he try to touch you or something?</text>
+          <text>A-t-il essayé de te toucher ou quelque chose comme ça ?</text>
           <def_link>1457</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -229,11 +239,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>Oh. That guy. Yeah, I bet.</text>
+          <text>Oh. Ce type. Oui, j'en étais sûre.</text>
           <def_link>1458</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Oh. Ce type. Oui, j'en étais sûr.</text>
+          <def_link>1458</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -245,7 +265,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No!</text>
+          <text>Non!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -277,7 +297,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>He is Christian. And he make many talks to me about his worship.</text>
+          <text>Il est chrétien. Et il m'a souvent parlé de son culte.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -294,7 +314,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>So?</text>
+          <text>Et donc?</text>
           <def_link>1460</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -303,7 +323,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Yup, that's kind of what he does.</text>
+          <text>Oui, c'est un peu ce qu'il fait.</text>
           <def_link>1460</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -312,7 +332,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Oh, is he annoying you?</text>
+          <text>Oh, il t'ennuie ?</text>
           <def_link>1461</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -321,7 +341,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Hurry up.</text>
+          <text>Dépêche-toi.</text>
           <def_link>1459</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -336,7 +356,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I am trying! Please to listen.</text>
+          <text>J'essaie ! S'il te plaît, écoutes-moi.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -362,7 +382,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't have time for this. Sort it out yourself.</text>
+          <text>Je n'ai pas le temps pour ça. Débrouille-toi tout seul.</text>
           <def_link>1455</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -377,7 +397,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I am yudees - no, how is it called - jusdi? Do you understand?</text>
+          <text>Je suis yuffe - non, comment ça s'appelle - jusdi ? Tu comprends ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -394,7 +414,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>No.</text>
+          <text>Non.</text>
           <def_link>1462</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -403,7 +423,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Juicy?</text>
+          <text>Jaune?</text>
           <def_link>1462</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -412,7 +432,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Jewish?</text>
+          <text>Juif?</text>
           <def_link>1463</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -421,7 +441,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Jesuit?</text>
+          <text>Jésuite?</text>
           <def_link>1462</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -430,7 +450,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't care. This is taking too long. Goodbye.</text>
+          <text>Je m'en fiche. Cela prend trop de temps. Au revoir.</text>
           <def_link>1455</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -445,7 +465,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No. Yes? I try to say better.</text>
+          <text>Non. Oui ? J'essaie de dire mieux.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -477,7 +497,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;She takes out a necklace and shows you a Star of David.&gt; You understand?</text>
+          <text>&lt;Elle sort un collier et vous montre une étoile de David.&gt; Tu comprends ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -494,7 +514,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You're Jewish.</text>
+          <text>Tu es juive.</text>
           <def_link>1463</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -503,7 +523,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Is that a snowflake? I'm bad at this. </text>
+          <text>C'est un flocon de neige ? Je ne suis pas douée pour ça. </text>
           <def_link>1465</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -518,7 +538,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Yes - that's it!</text>
+          <text>Oui, c'est ça !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -550,7 +570,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Jewish! Yes, that's the word.</text>
+          <text>Juif ! Oui, c'est le mot.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -582,7 +602,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I am Jewish.</text>
+          <text>Je suis juive.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -598,7 +618,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>So, I do not like Todd to talk me about Christian? Christian pray? </text>
+          <text>Alors, je n'aime pas que Todd me parle de chrétien ? De prières chrétiennes ? </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -614,7 +634,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>He try to make me - no...</text>
+          <text>Il essaie de me faire - non...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -630,7 +650,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Many time he try, come to me and say he want to help me, but he no respect my... ehm, no respect I am Jewish?</text>
+          <text>Il a souvent essayé de venir me voir et de me dire qu'il voulait m'aider, mais il ne respecte pas mon... ehm, il ne respecte pas le fait que je sois juive ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -647,7 +667,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You want him to stop bothering you about this?</text>
+          <text>Tu veux qu'il arrête de t'embêter avec ça ?</text>
           <def_link>1466</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -655,17 +675,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>He's very influential here. I'm sorry, I can't get involved.</text>
+          <text>Il est très influent ici. Je suis désolée, je ne peux pas m'impliquer.</text>
           <def_link>1467</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>He's just trying to help you.</text>
+          <text>Il est très influent ici. Je suis désolé, je ne peux pas m'impliquer.</text>
+          <def_link>1467</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Il essaie juste de t'aider.</text>
           <def_link>1468</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -674,7 +704,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It would be my pleasure to show god boy who the higher power in this place was.</text>
+          <text>Ce sera un plaisir pour moi de montrer à Bon Garçon qui est la plus haute autorité de cet endroit.</text>
           <def_link>1469</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -689,7 +719,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Please to make him stop try pray me.</text>
+          <text>S'il te plaît, pour qu'il arrête d'essayer de me faire des prières.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -705,17 +735,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>He's very influential here. I'm sorry, I can't get involved.</text>
+          <text>Il est très influent ici. Je suis désolée, je ne peux pas m'impliquer.</text>
           <def_link>1467</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'll talk to him and tell him to stop.</text>
+          <text>Il est très influent ici. Je suis désolé, je ne peux pas m'impliquer.</text>
+          <def_link>1467</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je vais lui parler et lui dire d'arrêter.</text>
           <def_link>1469</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -724,7 +764,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>He's just trying to help you.</text>
+          <text>Il essaie juste de t'aider.</text>
           <def_link>1468</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -739,7 +779,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No help? Not fair! He is not respect!</text>
+          <text>Pas d'aide ? Ce n'est pas juste ! Il ne respecte rien !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -755,7 +795,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[Says something quickly in Spanish]</text>
+          <text>[Dit quelque chose rapidement en espagnol]</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -774,7 +814,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Melina throws up her hands and quickly walks out.&gt;</text>
+          <text>&lt;Melina lève les mains et sort rapidement.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -791,7 +831,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No! It is no help. I am not Christian. It is no respect! </text>
+          <text>Non ! Ce n'est pas une aide. Je ne suis pas chrétienne. Ce n'est pas du respect ! </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -808,7 +848,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Okay, I'll talk to him and tell him to stop.</text>
+          <text>D'accord, je vais lui parler et lui dire d'arrêter.</text>
           <def_link>1469</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -817,7 +857,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Just let him talk. Maybe it will help.</text>
+          <text>Laisse-le parler. Peut-être que ça aidera.</text>
           <def_link>1467</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -826,7 +866,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>This isn't an issue. He's free to talk about whatever he wants.</text>
+          <text>Ce n'est pas un problème. Il est libre de parler de ce qu'il veut.</text>
           <def_link>1467</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -841,7 +881,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Thank you. It is very important on me. I hope he stop. </text>
+          <text>Je vous remercie. C'est très important pour moi. J'espère qu'il arrêtera. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -861,7 +901,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Melina smiles and walks out.&gt;</text>
+          <text>&lt;Melina sourit et sort.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
