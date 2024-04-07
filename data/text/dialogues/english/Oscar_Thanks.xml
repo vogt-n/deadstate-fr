@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Excuse me! I just wanted to thank you again for your help. I owe you her life - my life - and I want you to know that I intend to do any thing I can to help out here. </text>
+          <text>Excuse-moi ! Je voulais juste vous remercier encore une fois pour votre aide. Je te dois sa vie - ma vie - et je veux que tu saches que j'ai l'intention de faire tout ce que je peux pour t'aider. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You're welcome. It was lucky we found her when we did.</text>
+          <text>Il n'y a pas de quoi. Nous avons eu de la chance de la trouver à ce moment-là.</text>
           <def_link>1352</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -39,7 +39,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>She'll need antibiotics from now on. Our supply is limited, so you're going to have to work for them. </text>
+          <text>Elle aura besoin d'antibiotiques à partir de maintenant. Notre stock est limité, donc tu devras travailler pour les obtenir. </text>
           <def_link>1353</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -48,7 +48,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>She's infected. She's a risk to the whole shelter now.</text>
+          <text>Elle est infectée. Elle représente un risque pour tout le refuge maintenant.</text>
           <def_link>1354</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -56,11 +56,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>You'll do your best, I'm sure. I'll be counting on your help, Oscar.</text>
+          <text>Vous ferez de votre mieux, j'en suis sûre. Je compte sur ton aide, Oscar.</text>
           <def_link>1355</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Leadership &gt;= 3</checkOnAppear>
+          <checkOnAppear>ds.Leadership &gt;= 3 &amp;&amp; isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Vous ferez de votre mieux, j'en suis sûr. Je compte sur ton aide, Oscar.</text>
+          <def_link>1355</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Leadership &gt;= 3 &amp;&amp; isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -72,7 +82,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>She's doing better now. I mean, I know it's still dangerous out there with those creatures around, but it's a relief knowing she's going to make it. And I'll work my fingers to the bone to keep this place safe.</text>
+          <text>Elle va mieux maintenant. Je sais que c'est toujours dangereux dehors avec ces créatures, mais c'est un soulagement de savoir qu'elle va s'en sortir. Et je travaillerai jusqu'à l'os pour assurer la sécurité de cet endroit.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -104,7 +114,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'll... do whatever it takes. You can count on me. I'll do anything to keep her safe.</text>
+          <text>Je ferai... tout ce qu'il faut. Tu peux compter sur moi. Je ferai tout pour qu'elle soit en sécurité.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -136,7 +146,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Davis told me the antibiotics will keep her alive. Look, I'll work, I'll fight - whatever it takes to keep her alive. She's the most precious thing in the world to me. You give the order and I'll do it.</text>
+          <text>Davis m'a dit que les antibiotiques la maintiendraient en vie. Ecoute, je travaillerai, je me battrai - je ferai tout ce qu'il faut pour la garder en vie. Elle est ce que j'ai de plus précieux au monde. Donne-moi un ordre et je le ferai.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -168,7 +178,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You bet. Anything you need done, you can count on me. That's a promise.</text>
+          <text>Tu peux me faire confiance. Si tu as besoin de quelque chose, tu peux compter sur moi. C'est une promesse.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -202,7 +212,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>If there's anything I know how to do, it's work.  </text>
+          <text>S'il y a une chose que je sais faire, c'est travailler.  </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -219,7 +229,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>What are your skills, exactly?</text>
+          <text>Quelles sont tes compétences, exactement ?</text>
           <def_link>1357</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -228,7 +238,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Great, we have a long day ahead of us. Head to the cafeteria for your assignment.</text>
+          <text>Super, nous avons une longue journée devant nous. Dirige-toi vers la cafétéria pour recevoir ton affectation.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -245,7 +255,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I've done a little of everything - retail, management, boxing lessons, construction. Sometimes all in the same day, you know to pay for school. I was getting a degree in architectural engineering, which I guess I should use to fortify that fence out front.</text>
+          <text>J'ai fait toutes sortes de choses : commerce de détail, gestion, cours de boxe, construction. Parfois tout ça la même journée, pour financer mes études. J'étais en passe d'obtenir un diplôme d'ingénieur en architecture, que je pourrais utiliser pour fortifier cette clôture extérieure.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -262,7 +272,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Good to know. Well, we should get to work - talk to you later.</text>
+          <text>C'est bon à savoir. Eh bien, nous devrions nous mettre au travail - à plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -273,7 +283,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Assignments are on the wall. Enjoy your stay.</text>
+          <text>Les affectations sont affichées sur le tableau. Bon séjour.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
