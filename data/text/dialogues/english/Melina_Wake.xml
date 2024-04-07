@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oscar?! [Something said quickly in Spanish] </text>
+          <text>Oscar?! &lt;Elle dit quelque chose en espagnol, rapidement.&gt; </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>Melina! [Something said excitedly in Spanish] Splendid [Spanish]. </text>
+          <text>Melina! &lt;dit quelque chose avec enthousiasme en espagnol&gt; Splendid &lt;Il continue en espagnol&gt;. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -46,7 +46,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[Spanish] Splendid? [Spanish] Oscar!</text>
+          <text> &lt;parle espagnol&gt; Splendid? &lt;parle espagnol&gt; Oscar!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -62,7 +62,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>So happy... [Spanish] in English, for you. I'm going to translate for her, okay?</text>
+          <text>Si heureux... &lt;parle en espagnol&gt; en anglais, pour vous. Je vais traduire pour elle, d'accord ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -78,7 +78,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[Spanish] ...understand? For tell the people. Thank you. </text>
+          <text>&lt;parle en espagnol&gt; ...compris ? Pour dire aux gens. Je vous remercie. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -94,7 +94,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>She says, she's grateful to all of you and she thanks you for what you have done for us.</text>
+          <text>Elle dit qu'elle vous est reconnaissante à tous et qu'elle vous remercie pour ce que vous avez fait pour nous.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -110,17 +110,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>She's welcome. Glad we could help.</text>
+          <text>Elle est la bienvenue. Heureuse que nous ayons pu l'aider.</text>
           <def_link>1442</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+         <dlgAnsw>
+          <text>Elle est la bienvenue. Heureux que nous ayons pu l'aider.</text>
+          <def_link>1442</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Oscar, tell her what the bite means. </text>
+          <text>Oscar, dis-lui ce que signifie la morsure. </text>
           <def_link>1443</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -135,7 +145,7 @@
       <lines>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>Melina, [Spanish to Melina].</text>
+          <text>Melina, &lt;Parle en espagnol à Melina&gt;.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -151,7 +161,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[Spanish to Oscar, she points to the wound on her shoulder]</text>
+          <text>&lt;S'adresse à Oscar en espagnol, puis elle montre la blessure sur son épaule.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -167,7 +177,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>Um... She wants to know... she wants to know if the wound is all better.</text>
+          <text>Hum... Elle veut savoir... elle veut savoir si la blessure se guérit.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -184,7 +194,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You need to tell her about what the bite means.</text>
+          <text>Tu dois lui dire ce que signifie la morsure.</text>
           <def_link>1443</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -193,7 +203,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Don't dance around it. She has to take an antibiotic. Every day.</text>
+          <text>Ne tourne pas autour du pot. Elle doit prendre un antibiotique. Tous les jours.</text>
           <def_link>1443</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -208,7 +218,7 @@
       <lines>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>Melina... [A few words in Spanish]. </text>
+          <text>Melina... &lt;dit quelques mots en espagnol&gt;. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -224,7 +234,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>...Okay. [Spanish to Oscar].</text>
+          <text>...Okay. &lt;Enchaine avec quelques mots en espagnol adressé à Oscar&gt;.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -240,7 +250,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>She understands. It's a bit sappy, but she said, if I'm here, that's all that matters. She also said she feels much better and doesn't think she needs to be in bed anymore.</text>
+          <text>Elle comprend. C'est un peu triste, mais elle m'a dit que si j'étais là, c'était tout ce qui comptait. Elle a aussi dit qu'elle se sentait beaucoup mieux et qu'elle ne pensait plus avoir besoin de rester au lit.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -257,7 +267,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Okay, we'll try to find something for her to do.</text>
+          <text>D'accord, on va essayer de lui trouver quelque chose à faire.</text>
           <def_link>1444</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -266,7 +276,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Antibiotics are going to be hard to find. She does her part, she'll get them. Tell her.</text>
+          <text>Les antibiotiques vont être difficiles à trouver. Mais si elle fait ce qu'elle a à faire, elle les obtiendra. Dis-lui.</text>
           <def_link>1445</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -275,7 +285,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'll let you two catch up. Seems like you have a lot to discuss.</text>
+          <text>Je vous laisse rattraper le temps perdu. On dirait que vous avez beaucoup de choses à vous dire.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -292,7 +302,7 @@
       <lines>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>I'll tell her. If you don't mind, I would kind of like to talk to her in private now.</text>
+          <text>Je lui dirai. Si ça ne vous dérange pas, j'aimerais lui parler en privé.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -309,7 +319,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Just use Spanish - I can barely say my name in that.</text>
+          <text>Parlez en espagnol - je peux à peine dire mon nom dans cette langue.</text>
           <def_link>1445</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -318,7 +328,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Sure. I'll talk to you later.</text>
+          <text>Bien sûr. À plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -335,7 +345,7 @@
       <lines>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>I don't have to tell her that. We'll earn them - you have my word. Now... if you don't mind, I'd like to talk to her in private.</text>
+          <text>Je n'ai pas besoin de lui dire ça. Nous les gagnerons - vous avez ma parole. Maintenant... si ça ne vous dérange pas, j'aimerais lui parler en privé.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -352,7 +362,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Remind her to take her pill before you go. Report for assignments at the normal time.</text>
+          <text>Rappelle-lui de prendre sa pilule avant de partir puis de se présenter aux activités à l'heure habituelle.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -363,7 +373,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Okay, sure. We'll talk later.</text>
+          <text>D'accord, bien sûr. On se parle plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

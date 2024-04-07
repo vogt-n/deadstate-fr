@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[Speaks to you in Spanish]Oscar? Where is Oscar?!</text>
+          <text>&lt;Elle te dit quelque chose en espagnol&gt; Oscar ? Où est Oscar ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,8 +30,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I'm sorry. He didn't make it.</text>
+          <text>Je suis désolée. Il n'a pas pu rentrer.</text>
+          <def_link>1471</def_link>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis désolé. Il n'a pas pu rentrer.</text>
+          <def_link>1471</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Secouez la tête.]</text>
           <def_link>1471</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -40,16 +59,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Shake your head.]</text>
-          <def_link>1471</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>Do you know the word 'widow'?</text>
+          <text>Connais-tu le mot "veuve" ?</text>
           <def_link>1471</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -64,7 +74,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[Spanish spoken frantically]Oscar?! No! No no no NO!</text>
+          <text>[Espagnol parlé frénétiquement] Oscar?! Non! Non non non NON!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -81,7 +91,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>He was a good man.</text>
+          <text>C'était un homme bon.</text>
           <def_link>1472</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -90,7 +100,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It's not my fault.</text>
+          <text>Ce n'est pas ma faute.</text>
           <def_link>1472</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -99,7 +109,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Calm down. There's nothing I could do.</text>
+          <text>Calme-toi. Il n'y a rien que je pouvais faire.</text>
           <def_link>1472</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -114,7 +124,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[Sobs] Oscar... </text>
+          <text>[Sanglots] Oscar... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -131,7 +141,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Melina runs off.&gt;</text>
+          <text>&lt;Melina s'enfuit.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
