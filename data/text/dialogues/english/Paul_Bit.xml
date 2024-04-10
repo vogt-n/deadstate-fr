@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Something you need to know... I got bit. I'd prefer if this stayed between you and me. It's not going to do anyone any favors to hear another person got infected.</text>
+          <text>Quelque chose que tu dois savoir... J'ai été mordu. Je préférerais que ça reste entre toi et moi. Ça ne rendra service à personne d'entendre qu'une autre personne a été infectée.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -29,17 +29,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- clone pour genre -->
         <dlgAnsw>
-          <text>I'm really sorry to hear it, Paul.</text>
+          <text>Je suis vraiment désolée de l'apprendre, Paul.</text>
           <def_link>1143</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Dammit... Not another one.</text>
+          <text>Je suis vraiment désolé de l'apprendre, Paul.</text>
+          <def_link>1143</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Bon sang... Pas un autre.</text>
           <def_link>1144</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -54,7 +64,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Yeah... I just want you to know - for as long as I can, I will do whatever it takes to keep this place together. That's a promise.</text>
+          <text>Oui... Je veux juste que tu saches que tant que je le pourrai, je ferai tout ce qu'il faut pour que cet endroit reste uni. C'est une promesse.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -71,7 +81,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Paul walks off.&gt;</text>
+          <text>&lt;Paul s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -88,7 +98,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Hey, keep it together - I'm the one that should be worried. Just... don't worry about it.</text>
+          <text>Hé, ne vous en faites pas, c'est moi qui devrais m'inquiéter. Juste... ne t'inquiète pas pour ça.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -105,7 +115,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Paul walks off.&gt;</text>
+          <text>&lt;Paul s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

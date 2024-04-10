@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>What were you thinking! Those people at the camp - they weren't any threat to us!</text>
+          <text>À quoi tu pensais ? Ces gens au camp n'étaient pas une menace pour nous !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You weren't defending yourself - you murdered them! Plain, cold fucking murder! </text>
+          <text>Tu ne t'es pas défendu, tu les as assassinés ! Un meurtre pur et simple ! </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -56,7 +56,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>They were weak. If it hadn't been us, it would have been someone else.</text>
+          <text>Ils étaient faibles. Si ça n'avait pas été nous, ça aurait été quelqu'un d'autre.</text>
           <def_link>1109</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -65,7 +65,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>And this place is stronger for it! I did what I had to for the people here!</text>
+          <text>Et cet endroit en ressort plus fort ! J'ai fait ce qu'il fallait pour les gens d'ici !</text>
           <def_link>1110</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -74,7 +74,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>They were going to ambush us - I saw a gun being drawn and I shot. I swear!</text>
+          <text>Ils allaient nous tendre une embuscade - j'ai vu un pistolet sortir et j'ai tiré. Je le jure !</text>
           <def_link>1111</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Negotiation &gt;= 7</checkOnAppear>
@@ -83,7 +83,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You're upset and want me to step aside, yeah? What then? Everyone chooses sides? Is that what you want?  </text>
+          <text>Tu es fâché et tu veux que je m'écarte, hein ? Qu'est-ce qui se passe alors ? Tout le monde choisit son camp ? C'est ce que tu veux ?  </text>
           <def_link>1112</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Leadership &gt;= 5</checkOnAppear>
@@ -96,13 +96,32 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- Clone pour gérer le genre du personnage -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>...You're a psychopath. Maybe you've always been or you've finally snapped - but the minute you start to see everyone as the enemy, that's when we lose the war!</text>
+          <text>...Tu es un psychopathe. Peut-être que tu l'as toujours été ou que tu as enfin craqué, mais dès que tu commences à voir tout le monde comme un ennemi, c'est là que nous perdons la guerre !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Paul_Respect-=3;</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>...Tu es une psychopathe. Peut-être que tu l'as toujours été ou que tu as enfin craqué, mais dès que tu commences à voir tout le monde comme un ennemi, c'est là que nous perdons la guerre !</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -116,7 +135,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Do something like that again and I swear, you and I are going to exchange more than words...</text>
+          <text>Refais quelque chose comme ça et je te jure que toi et moi, on va échanger plus que des mots...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -133,7 +152,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Paul backs off slowly, keeping one hand on his gun as he walks away.&gt;</text>
+          <text>&lt;Paul recule lentement, gardant une main sur son arme tout en s'éloignant.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -150,7 +169,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Do you really know that? Is that what you'd tell their family members? </text>
+          <text>Tu sais vraiment ça ? C'est ce que tu dirais aux membres de leur famille ? </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -166,7 +185,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>They were survivors - just like us. They could have even decided to join us one day! But no, you murdered them. And I hope it haunts you for the rest of your days.</text>
+          <text>Ce sont des survivants, tout comme nous. Ils auraient même pu décider de nous rejoindre un jour ! Mais non, vous les avez assassinés. Et j'espère que cela te hantera jusqu'à la fin de tes jours.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -185,7 +204,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Paul storms off.&gt;</text>
+          <text>&lt;Paul part en trombe.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -202,7 +221,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You killed innocent people because you could get away with it - be honest with yourself!</text>
+          <text>Tu as tué des innocents parce que tu pouvais t'en tirer - sois honnête avec toi-même !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -218,7 +237,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>They were survivors - just like us. They could have even decided to join us one day! But no, you murdered them. And I hope it haunts you for the rest of your days.</text>
+          <text>Ce sont des survivants, tout comme nous. Ils auraient même pu décider de nous rejoindre un jour ! Mais non, vous les avez assassinés. Et j'espère que cela te hantera jusqu'à la fin de tes jours.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -254,7 +273,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>...I didn't know. Still... I feel like there could have been a better way to handle that. I guess we'll never know now. </text>
+          <text>...Je ne savais pas. Pourtant... J'ai l'impression qu'il y aurait pu y avoir une meilleure façon de gérer ça. Je suppose que nous ne le saurons jamais maintenant. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -273,7 +292,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Paul walks off.&gt;</text>
+          <text>&lt;Paul s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -290,7 +309,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>...No. For the sake of the people here, I'll drop this. But I want you to know, if I think you're ever putting us all at risk with your actions, I will do what I have to do.</text>
+          <text>...Non. Pour le bien des gens ici, je vais laisser tomber. Mais je veux que tu saches que si je pense que tu nous mets tous en danger avec tes actions, je ferai ce qu'il faut.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -307,7 +326,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Paul backs off slowly, keeping one hand on his gun as he walks away.&gt;</text>
+          <text>&lt;Paul recule lentement, gardant une main sur son arme.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -335,7 +354,7 @@
     <lines>
       <dlgLine>
         <owner_ID>0</owner_ID>
-        <text>...No. For the sake of the people here, I'll drop this. But I want you to know, if I think you're ever putting us all at risk with your actions, I will do what I have to do.</text>
+        <text>...Non. Pour le bien des gens ici, je vais laisser tomber. Mais je veux que tu saches que si je pense que tu nous mets tous en danger avec tes actions, je ferai ce qu'il faut.</text>
         <defAppearChecks>
           <boolean>false</boolean>
           <boolean>false</boolean>
@@ -352,7 +371,7 @@
     </lines>
     <answers>
       <dlgAnsw>
-        <text>&lt;Paul backs off slowly, keeping one hand on his gun as he walks away.&gt;</text>
+        <text>&lt;Paul recule lentement, gardant une main sur son arme.&gt;</text>
         <def_link>-1</def_link>
         <auto_answer>false</auto_answer>
         <checkOnAppear />
