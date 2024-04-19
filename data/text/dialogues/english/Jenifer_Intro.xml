@@ -15,7 +15,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Are you here to rescue me? Is it over?</text>
+          <text>Êtes-vous ici pour me sauver ? Est-ce que c'est fini ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -34,7 +34,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>It's not over - but I can get you out, if that's what you want.</text>
+          <text>Ce n'est pas fini, mais je peux vous sortir de là, si c'est ce que vous voulez.</text>
           <def_link>2940</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -43,7 +43,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Are you here alone? How long have you been here?</text>
+          <text>Êtes-vous seul ici ? Depuis combien de temps êtes-vous ici ?</text>
           <def_link>2941</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -52,7 +52,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You can't possibly be here by yourself - where are the others? Are they armed?</text>
+          <text>Vous ne pouvez pas être ici tout seul - où sont les autres ? Sont-ils armés ?</text>
           <def_link>2942</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -67,7 +67,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>It's such a relief to see other people after so long... It's been weeks. I never even really knew what was going on, just that I wasn't supposed to leave the supply room because it was dangerous. </text>
+          <text>C'est un tel soulagement de voir d'autres personnes après tant de temps... Cela fait des semaines. Je n'ai jamais vraiment su ce qui se passait, juste que je ne devais pas quitter la salle d'approvisionnement parce que c'était dangereux. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -99,7 +99,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I don't know. A long time - maybe weeks? Nobody came to get me - is that what you're here for?</text>
+          <text>Je ne sais pas trop. Un long moment - peut-être des semaines ? Personne n'est venu me chercher - c'est pour ça que vous êtes là ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -131,7 +131,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No one else is here. The bellboy, Jeff - he was with me at the start but I think he left to get help. That was weeks ago. </text>
+          <text>Il n'y a personne d'autre ici. Le groom, Jeff, était avec moi au début, mais je crois qu'il est parti chercher de l'aide. C'était il y a des semaines. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -163,7 +163,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Did my parents send you? They must be worried sick about me! Or was it Jeff? Is he okay?</text>
+          <text>C'est mes parents qui t'ont envoyé ? Ils doivent se faire un sang d'encre pour moi ! Ou était-ce Jeff ? Est-ce qu'il va bien ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -179,26 +179,46 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- clone pour genre -->
         <dlgAnsw>
-          <text>I'm sorry - nobody sent me. </text>
+          <text>Je suis désolée, personne ne m'a envoyée. </text>
           <def_link>2944</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I hate to break it to you - they're probably dead by now.</text>
+          <text>Je suis désolé, personne ne m'a envoyé. </text>
+          <def_link>2944</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <!-- clone pour genre -->
+        <dlgAnsw>
+          <text>Je suis désolé de te dire qu'ils sont probablement morts maintenant.</text>
           <def_link>2946</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Let me get this straight - you've been here all this time and you have no idea what's going on?</text>
+          <text>Je suis désolée de te dire qu'ils sont probablement morts maintenant.</text>
+          <def_link>2946</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Si je comprends bien, vous êtes ici depuis tout ce temps et vous n'avez aucune idée de ce qui se passe ?</text>
           <def_link>2947</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -213,7 +233,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh... But - it's still really good to see you! I'm just so happy to see someone finally. Tell me... what exactly have I been hiding from?</text>
+          <text>Oh... Mais c'est quand même bien de vous voir ! Je suis tellement heureuse de voir enfin quelqu'un. Dites-moi... de quoi me suis-je cachée exactement ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -230,7 +250,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>The dead are coming back to life and eating the living.</text>
+          <text>Les morts reviennent à la vie et mangent les vivants.</text>
           <def_link>2949</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -239,7 +259,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Monsters, murder, mayhem. And they stopped making that toothpaste I like.</text>
+          <text>Des monstres, des meurtres, du grabuge. Et ils ont arrêté de fabriquer le dentifrice que j'aime.</text>
           <def_link>2948</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -248,7 +268,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It's kind of the end of the world. </text>
+          <text>C'est un peu la fin du monde. </text>
           <def_link>2949</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -263,7 +283,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No... No, I don't think so. I don't... The phones don't work - they can't call me. I know they're somewhere safe - I don't know where, but I know they are. Why would you even think that?</text>
+          <text>Non... Non, je ne crois pas. Je ne... Les téléphones ne fonctionnent pas - ils ne peuvent pas m'appeler. Je sais qu'ils sont en sécurité - je ne sais pas où, mais je sais qu'ils le sont. Pourquoi pensez-vous cela ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -280,7 +300,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Because everybody is dead. And their corpses get up and kill the living.</text>
+          <text>Parce que tout le monde est mort. Et leurs cadavres se lèvent et tuent les vivants.</text>
           <def_link>2949</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -289,7 +309,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Because it's the end of the world.</text>
+          <text>Parce que c'est la fin du monde.</text>
           <def_link>2949</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -298,7 +318,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Because I'm your son from the future - come with me if you want to live!</text>
+          <text>Parce que je suis ton fils du futur - viens avec moi si tu veux vivre !</text>
           <def_link>2948</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>isPcMale()</checkOnAppear>
@@ -307,7 +327,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Because I'm your daughter from the future - come with me if you want to live!</text>
+          <text>Parce que je suis ta fille du futur - viens avec moi si tu veux vivre !</text>
           <def_link>2948</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>isPcFemale()</checkOnAppear>
@@ -322,7 +342,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>We knew there was an emergency and the hotel was closed. I work here - I was waiting for my parents to pick me up, but they never came. The bellboy told me to stay in here and I assume he went for help. </text>
+          <text>Nous savions qu'il y avait une urgence et que l'hôtel était fermé. Je travaille ici - j'attendais que mes parents viennent me chercher, mais ils ne sont jamais venus. Le groom m'a dit de rester ici et je suppose qu'il est allé chercher de l'aide. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -338,7 +358,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>What exactly is going on?</text>
+          <text>Que se passe-t-il exactement ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -355,7 +375,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>The dead are coming back to life and eating the living.</text>
+          <text>Les morts reviennent à la vie et mangent les vivants.</text>
           <def_link>2949</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -364,7 +384,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Monsters, murder, mayhem. And they stopped making that toothpaste I like.</text>
+          <text>Des monstres, des meurtres, du grabuge. Et ils ont arrêté de fabriquer le dentifrice que j'aime.</text>
           <def_link>2948</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -373,7 +393,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It's kind of the end of the world. </text>
+          <text>C'est un peu la fin du monde. </text>
           <def_link>2949</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -388,7 +408,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh... really?</text>
+          <text>Oh... vraiment ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -405,7 +425,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Sorry, I don't get to have much fun anymore. It's bad - end of civilization bad. You'll see. </text>
+          <text>Désolé, je ne peux plus m'amuser. C'est grave, c'est la fin de la civilisation. Tu verras. </text>
           <def_link>2949</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -414,7 +434,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>The dead walk and eat the living. Now do you wish I was joking?</text>
+          <text>Les morts marchent et mangent les vivants. Vous aimeriez que je plaisante ?</text>
           <def_link>2949</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -429,7 +449,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>...I don't know what to say. That's crazy, but that look on your face... It's really true. And it explains why no one came for me.</text>
+          <text>Je ne sais pas quoi dire. C'est fou, mais ce regard sur votre visage... C'est vraiment vrai. Et ça explique pourquoi personne n'est venu me chercher.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -461,7 +481,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I can't let myself get worked up about that, though. I'm just happy that someone is finally here.  </text>
+          <text>Mais je ne peux pas me laisser perturber par ça. Je suis juste heureuse que quelqu'un soit enfin là.  </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -477,7 +497,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>My name is Jenifer. Thank you for finding me - I'm sure you've had a worse time than me in the last few weeks. </text>
+          <text>Je m'appelle Jenifer. Merci de m'avoir trouvée - je suis sûre que vous avez vécu des moments plus difficiles que moi ces dernières semaines. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -494,7 +514,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Nice to meet you, Jenifer. We have a shelter with other survivors. Would you like to join us?</text>
+          <text>Enchanté, Jenifer. Nous avons un abri avec d'autres survivants. Voulez-vous vous joindre à nous ?</text>
           <def_link>2951</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -503,7 +523,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Yeah, yeah. Where's the food and other supplies?</text>
+          <text>Oui, oui. Où est la nourriture et les autres fournitures ?</text>
           <def_link>2954</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -512,7 +532,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Can you use a gun? Any field medicine or survival training? Welding experience?</text>
+          <text>Savez-vous vous servir d'une arme ? Avez-vous une formation en médecine de terrain ou en survie ? De l'expérience en soudure ?</text>
           <def_link>2960</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -527,7 +547,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Can I? Yes! It'll do me a lot of good to be around other people. This is just so... overwhelming, after being alone for so long. </text>
+          <text>Est-ce que je peux ? Oui ! Ça me fera beaucoup de bien d'être entouré d'autres personnes. C'est tellement... accablant, après avoir été seul si longtemps. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -546,7 +566,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I just need to finish grabbing supplies and then we'll go.</text>
+          <text>J'ai juste besoin de finir de prendre mes affaires et puis on y va.</text>
           <def_link>2953</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -555,7 +575,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm going to warn you - it's not going to be easy.</text>
+          <text>Je vous préviens, ça ne va pas être facile.</text>
           <def_link>2952</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -570,7 +590,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm not used to things being easy. I'll do my best to keep myself together.Thank you so much for this. </text>
+          <text>Je n'ai pas l'habitude que les choses soient faciles. Je ferai de mon mieux pour me ressaisir. Merci beaucoup pour tout cela. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -587,7 +607,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Let's hurry up and take what we need. Before they come. Just be quiet and follow me.</text>
+          <text>Dépêchons-nous et prenons ce dont nous avons besoin. avant qu'ils n'arrivent. Restez silencieux et suivez-moi.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -600,7 +620,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't need anymore problems. As long as you don't add to them, that's all the thanks I need. C'mon.</text>
+          <text>Je n'ai pas besoin de plus de problèmes. Tant que vous n'en rajoutez pas, c'est tout ce dont j'ai besoin. Allez, viens.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -619,7 +639,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'll grab a bag and help out. Thanks again for finding me - I'm so grateful.</text>
+          <text>Je prendrai un sac et j'aiderai. Merci encore de m'avoir trouvée, je vous en suis très reconnaissante.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -636,7 +656,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Let's hurry up and take what we need. Before they come. Just be quiet and follow me.</text>
+          <text>Dépêchons-nous et prenons ce dont nous avons besoin. Avant qu'ils n'arrivent. Ne faites pas de bruit et suivez-moi.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -649,7 +669,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>No, thank you for not being weird or pulling a gun on me. Never mind - let's go.</text>
+          <text>Non, merci de ne pas avoir été bizarre ou d'avoir pointé une arme sur moi. Peu importe, allons-y.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -668,7 +688,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>All that's left of the food is in here. There's a few supplies around the hotel. And whatever's left in the guest rooms. </text>
+          <text>Tout ce qui reste de nourriture est ici. Il y a quelques provisions dans l'hôtel. Et tout ce qui reste dans les chambres. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -684,7 +704,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Um... do you mind if I go with you? I really can't stay by myself much longer.</text>
+          <text>Hum... ça vous dérange si je viens avec vous ? Je ne peux vraiment pas rester seule plus longtemps.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -701,7 +721,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Oh, sure. I guess. As long as you're willing to work.</text>
+          <text>Oh, bien sûr. J'imagine. Tant que tu es prête à travailler.</text>
           <def_link>2951</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -710,7 +730,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>We can hardly feed the people we have. Why should I?</text>
+          <text>Nous pouvons à peine nourrir les gens que nous avons. Pourquoi le ferais-je ?</text>
           <def_link>2955</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -719,7 +739,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>If you keep quiet, do what I tell you, and try not to get me killed. Can you do that?</text>
+          <text>Si vous vous taisez, faites ce que je vous dis, et essayez de ne pas me faire tuer. Tu peux faire ça ?</text>
           <def_link>2958</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -734,7 +754,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'll absolutely help out as much as I can. I'm good at making people less stressed. </text>
+          <text>Je vous aiderai autant que possible. Je suis douée pour rendre les gens moins stressés. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -751,7 +771,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You're a prostitiute?</text>
+          <text>Vous êtes une prostituée ?</text>
           <def_link>2956</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -760,7 +780,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Good enough. Let's go.</text>
+          <text>C'est déjà bien. Allons-y.</text>
           <def_link>2951</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -769,7 +789,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>That doesn't cut it - I need medics, mechanics, soldiers. </text>
+          <text>Ça ne suffit pas - j'ai besoin de médecins, de mécaniciens, de soldats. </text>
           <def_link>2958</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -784,7 +804,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>What? No! I worked at the hotel - in guest relations. I just help people with their problems. Why did you say that? I've never... </text>
+          <text>Qu'est-ce qu'il y a ? Non ! J'ai travaillé à l'hôtel - dans les relations avec les clients. J'aide les gens à résoudre leurs problèmes. Pourquoi as-tu dit ça ? Je n'ai jamais... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -800,7 +820,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Takes a deep breath&gt;It was a mistake. I'm fine. </text>
+          <text>&lt;Prend une grande inspiration&gt;C'était une erreur. Je vais bien. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -817,7 +837,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Forget I said it - let's just go, shall we? </text>
+          <text>Oublie ce que j'ai dit - allons-y, d'accord ? </text>
           <def_link>2951</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -826,7 +846,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>If that bothers you, you aren't going to make it. Still want to go?</text>
+          <text>Si ça te dérange, tu n'y arriveras pas. Tu veux toujours y aller ?</text>
           <def_link>2951</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -835,7 +855,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm going to be blunt - I need medics, soldiers, mechanics. Can you do that? </text>
+          <text>Je vais être franc - j'ai besoin de médecins, de soldats, de mécaniciens. Tu peux faire ça ? </text>
           <def_link>2957</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -850,7 +870,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No, but...</text>
+          <text>Non, mais...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -882,7 +902,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I will work hard, no matter what. You say things are bad, I believe you - but you won't hear a complaint out of me. I just want to help.</text>
+          <text>Je travaillerai dur, quoi qu'il arrive. Vous dites que les choses vont mal, je vous crois - mais vous ne m'entendrez pas me plaindre. Je veux juste aider.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -899,7 +919,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Fine. I'm going to hold you to that. You can come with us.</text>
+          <text>Je veux juste aider. Je vais m'y tenir. Vous pouvez venir avec nous.</text>
           <def_link>2951</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -907,11 +927,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I'm sorry. I can't. </text>
+          <text>Je suis désolée. Je ne peux pas. </text>
           <def_link>2959</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis désolé. Je ne peux pas. </text>
+          <def_link>2959</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -923,7 +953,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You're going to take my food? I can't drive. What am I supposed to do?</text>
+          <text>Vous allez prendre ma nourriture ? Je ne peux pas conduire. Qu'est-ce que je suis censé faire ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -940,7 +970,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You wore me down - fine. You're going to work for this. Come with me.</text>
+          <text>Vous m'avez épuisé - très bien. Tu vas travailler pour ça. Viens avec moi.</text>
           <def_link>2951</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -949,7 +979,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Not my problem. Careful out there.</text>
+          <text>Ce n'est pas mon problème. Fais attention.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -966,7 +996,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No, but...</text>
+          <text>Non, mais...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
