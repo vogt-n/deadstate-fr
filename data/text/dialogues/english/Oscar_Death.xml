@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Hey... Guess this is it, huh?</text>
+          <text>Hey... Je suppose que ça y est, hein ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -31,7 +31,7 @@
           <text>- New Answ -</text>
           <def_link>1418</def_link>
           <auto_answer>true</auto_answer>
-          <checkOnAppear>isCharInShelter(1022) == True</checkOnAppear>
+          <checkOnAppear>isCharInShelter(1022) == True</checkOnAppear> <!-- Melina-->
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -52,7 +52,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Do I have to say it? Take care of Melina. </text>
+          <text>Dois-je le dire ? Prends soin de Melina. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -84,7 +84,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm not scared. I know Melina's waiting for me. </text>
+          <text>Je n'ai pas peur. Je sais que Melina m'attend. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -116,7 +116,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>All I wanted was to keep her safe... Nobody deserves it more than her. That woman... there isn't anyone kinder on this planet. This shouldn't have happend to her.</text>
+          <text>Tout ce que je voulais, c'était la protéger... Personne ne le mérite plus qu'elle. Cette femme... il n'y a personne de plus gentil sur cette planète. Cela n'aurait pas dû lui arriver.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -132,7 +132,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Everything I did, it was for her. I wanted to give us a better life. I could see the kids, the house we would grow old in... It's never going to happen now. I knew it from the day she was bit.</text>
+          <text>Tout ce que j'ai fait, c'était pour elle. Je voulais nous donner une meilleure vie. Je voyais les enfants, la maison dans laquelle nous vieillirions... Cela n'arrivera jamais maintenant. Je l'ai su dès le jour où elle a été mordue.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -148,17 +148,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- clone pour genre -->
         <dlgAnsw>
-          <text>I know. I'm sorry.</text>
+          <text>Je sais. Je suis désolée.</text>
           <def_link>1421</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Those days are over for all of us.</text>
+          <text>Je sais. Je suis désolé.</text>
+          <def_link>1421</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Ces jours sont révolus pour nous tous.</text>
           <def_link>1421</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -173,7 +183,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Someone said, 'be thankful for the time you had.' No! Fuck that. I'm greedy - I want more time, I want all the time I was supposed to have with her!</text>
+          <text>Quelqu'un a dit, "soyez reconnaissant pour le temps que vous avez eu". Non ! Je l'emmerde. Je suis avide - je veux plus de temps, je veux tout le temps que j'étais censé passer avec elle !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -189,7 +199,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Coughing&gt; I keep trying to will myself to beat this thing! I've never given up on anything and I'm not... &lt;Coughing&gt; It can't be over now. I won't let it! I... &lt;coughing&gt;</text>
+          <text>&lt;Toussant&gt; Je continue d'essayer de me forcer à vaincre cette chose ! Je n'ai jamais abandonné quoi que ce soit et je ne suis pas... &lt;Toussant&gt; Ça ne peut pas être fini maintenant. Je ne le permettrai pas ! Je... &lt;Toussant&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -205,7 +215,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Oscar tries to lift himself up&gt; Melina! I won't leave you! I promise! </text>
+          <text>&lt;Oscar essaie de se relever&gt; Melina ! Je ne te quitterai pas ! Je te le promets ! </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -222,7 +232,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>It's alright, she knows.</text>
+          <text>Tout va bien, elle le sait.</text>
           <def_link>1422</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -231,7 +241,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I've never seen anyone fight it like you are.</text>
+          <text>Je n'ai jamais vu personne se battre comme tu le fais.</text>
           <def_link>1422</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -246,7 +256,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Coughing&gt; I can do it... I can-</text>
+          <text>&lt;Toussant&gt; Je peux le faire... Je peux-</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -262,7 +272,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Oscar collapses and starts to convulse.&gt;</text>
+          <text>&lt;Oscar s'effondre et commence à convulser.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -290,7 +300,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Come on... You can do it.</text>
+          <text>Allez... Tu peux le faire.</text>
           <def_link>1423</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -299,7 +309,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>&lt;Shoot him in the head.&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête.&gt;</text>
           <def_link>1424</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -314,7 +324,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Oscar's body stops twitching and the air escapes his lungs one final time.&gt;</text>
+          <text>&lt;Le corps d'Oscar cesse de se contracter et l'air s'échappe une dernière fois de ses poumons.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -330,7 +340,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;After several minutes, he sits up again and stares right at you. His hand stretches toward you.&gt;</text>
+          <text>&lt;Après plusieurs minutes, il se redresse et vous regarde fixement. Sa main se tend vers vous.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -347,7 +357,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Shoot him in the head.&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête.&gt;</text>
           <def_link>1424</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -362,7 +372,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;The shot rings out and Oscar's head hits the ground, spilling the contents of his skull. His eyes are wide open, but it's obvious there is no sign of life in his body.&gt;</text>
+          <text>&lt;Le coup de feu retentit et la tête d'Oscar heurte le sol, répandant le contenu de son crâne. Ses yeux sont grands ouverts, mais il est évident qu'il n'y a plus aucun signe de vie dans son corps.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -381,7 +391,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I could always count on you. Goodbye, my friend.</text>
+          <text>J'ai toujours pu compter sur toi. Au revoir, mon ami.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -392,7 +402,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I hope you have that life you wanted somewhere, somehow.</text>
+          <text>J'espère que tu auras la vie que tu voulais quelque part, d'une manière ou d'une autre.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -403,7 +413,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Great, now who's going to fix shit around here.</text>
+          <text>Super, maintenant qui va réparer la merde ici ?</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

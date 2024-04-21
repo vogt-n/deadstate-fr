@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I need to request some supplies - got a moment to discuss the details? </text>
+          <text>J'ai besoin de demander des fournitures - est-ce que tu as un moment pour discuter des détails ? </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -28,7 +28,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Shouldn't be a problem - what do you need?</text>
+          <text>Cela ne devrait pas poser de problème - de quoi as-tu besoin ?</text>
           <def_link>1114</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -37,7 +37,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm listening.</text>
+          <text>Je t'écoute.</text>
           <def_link>1114</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -45,11 +45,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- clone pour genre -->
         <dlgAnsw>
-          <text>I can't spare any supplies right now. Sorry.</text>
+          <text>Je ne peux pas fournir de matériel pour l'instant. Je suis désolé.</text>
           <def_link>1113</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je ne peux pas fournir de matériel pour l'instant. Je suis désolée.</text>
+          <def_link>1113</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -61,7 +71,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No problem - I'll just write it all down, put it an envelope, and chuck it in a fire. Good talk.</text>
+          <text>Pas de problème, j'écrirai tout cela, je le mettrai dans une enveloppe et je la jetterai au feu. Bonne discussion.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -80,7 +90,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Paul walks off.&gt;</text>
+          <text>&lt;Paul s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -97,7 +107,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'd like to set up a cache of supplies not far from here in case the worst happens and we have to abandon this place.</text>
+          <text>J'aimerais installer une cache de provisions non loin d'ici, au cas où le pire se produirait et que nous devions abandonner cet endroit.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -113,7 +123,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I know it's not something we want to think about, but it never hurts to be prepared. I would need about ten cans of food and maybe about five pieces of camping gear - blankets, pillows, lantern - that kind of thing.   </text>
+          <text>Je sais que ce n'est pas quelque chose auquel on veut penser, mais ça ne fait jamais de mal d'être préparé. J'aurais besoin d'une dizaine de boîtes de conserve et peut-être de cinq articles de camping - couvertures, oreillers, lanterne - ce genre de choses.   </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -129,7 +139,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>It might save some of our lives. Can you spare it?</text>
+          <text>Cela pourrait sauver quelques vies. Peux-tu t'en passer ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -146,7 +156,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>No. I don't think that would be the best use of our resources.</text>
+          <text>Non. Je ne pense pas que ce soit la meilleure façon d'utiliser nos ressources.</text>
           <def_link>1115</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -155,7 +165,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Yes - take the supplies, set up the cache, and create some maps to distribute. </text>
+          <text>Oui, prends le matériel, installe la cache et crée des cartes à distribuer. </text>
           <def_link>1116</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>shelterGetResource(food) &gt;= 10 &amp;&amp; shelterGetResource(morale) &gt;= 5</checkOnAppear>
@@ -164,7 +174,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I think it's a good idea, but five pieces of food is all I can spare.</text>
+          <text>Je pense que c'est une bonne idée, mais cinq portions de nourriture, c'est tout ce que je peux donner.</text>
           <def_link>1117</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>pc.Neogtiation &gt;= 6 &amp;&amp; shelterGetResource(food) &gt;= 5</checkOnAppear>
@@ -173,7 +183,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>No. We'll never have to evacuate because I don't plan on losing this place.</text>
+          <text>Non. Nous n'aurons jamais à évacuer parce que je n'ai pas l'intention de perdre cet endroit.</text>
           <def_link>1118</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -188,7 +198,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>That's unfortunate. Let's just hope we don't live to regret it.</text>
+          <text>C'est dommage. Espérons que nous ne le regretterons pas.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -207,7 +217,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Paul walks off.&gt;</text>
+          <text>&lt;Paul s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -224,7 +234,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Thanks. I'll get it done as soon as possible. And don't worry - I'll make sure I'm not followed.</text>
+          <text>Merci. Je le ferai dès que possible. Et ne t'inquiète pas, je ferai en sorte de ne pas être suivi.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -245,7 +255,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Paul walks off toward the storage room.&gt;</text>
+          <text>&lt;Paul se dirige vers la salle de stockage.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -262,7 +272,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I guess it'll have to do. Thanks - at least it's something. </text>
+          <text>Je suppose qu'il faudra s'en contenter. Merci, au moins c'est quelque chose. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -282,7 +292,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Paul walks off toward the storage room.&gt;</text>
+          <text>&lt;Paul se dirige vers la salle de stockage.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -299,7 +309,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Said every commander whose position was eventually overrun... Never mind. Waste of time to ask.</text>
+          <text>C'est ce qu'ont dit tous les commandants dont la position a fini par être envahie... Peu importe. C'est une perte de temps de demander.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -318,7 +328,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Paul walks off.&gt;</text>
+          <text>&lt;Paul s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -346,7 +356,7 @@
     <lines>
       <dlgLine>
         <owner_ID>0</owner_ID>
-        <text>Said every commander whose position was eventually overrun... Never mind. Waste of time to ask.</text>
+        <text>C'est ce qu'ont dit tous les commandants dont la position a fini par être envahie... Peu importe. C'est une perte de temps de demander.</text>
         <defAppearChecks>
           <boolean>false</boolean>
           <boolean>false</boolean>
@@ -365,7 +375,7 @@
     </lines>
     <answers>
       <dlgAnsw>
-        <text>&lt;Paul walks off.&gt;</text>
+        <text>&lt;Paul s'en va.&gt;</text>
         <def_link>-1</def_link>
         <auto_answer>false</auto_answer>
         <checkOnAppear />

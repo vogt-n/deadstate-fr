@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;While walking to the cafeteria, you spot a visitor at the front gates.&gt;</text>
+          <text>&lt;Alors que tu te rends à la cafétéria, tu aperçois un visiteur à la porte d'entrée.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -27,7 +27,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;The dog looks almost grateful to see you.&gt;</text>
+          <text>&lt;Le chien a l'air presque reconnaissant de te voir.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -44,7 +44,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Hey there... um, dog.</text>
+          <text>Bonjour... hum, le chien.</text>
           <def_link>4157</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -53,7 +53,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Who's a good boy!</text>
+          <text>Qui est un bon toutou !</text>
           <def_link>4157</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -61,17 +61,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>This is the first time I've been happy to see something drooling at the fence.</text>
+          <text>C'est la première fois que je suis heureuse de voir quelque chose baver à la clôture.</text>
           <def_link>4157</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You're out of luck. I don't like dogs, and we can't waste any food on you.</text>
+          <text>C'est la première fois que je suis heureux de voir quelque chose baver à la clôture.</text>
+          <def_link>4157</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Tu n'as pas de chance. Je n'aime pas les chiens, et nous ne pouvons pas gaspiller de la nourriture pour toi.</text>
           <def_link>4156</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -86,7 +96,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;The dog whimpers.&gt;</text>
+          <text>&lt;Le chien gémit.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -103,7 +113,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Oh, c'mon... I really can't take you in.</text>
+          <text>Oh, voyons... Je ne peux vraiment pas t'accueillir.</text>
           <def_link>4160</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -112,7 +122,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Okay, let me take a look at you.</text>
+          <text>D'accord, laisse-moi te regarder.</text>
           <def_link>4158</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -121,7 +131,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>How about a trick? Speak!</text>
+          <text>Que dirais-tu d'un tour ? Parle !</text>
           <def_link>4157</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -130,7 +140,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Go on - get out of here!</text>
+          <text>Allez, va-t-en d'ici !</text>
           <def_link>4161</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -145,7 +155,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;The dog barks and wags its tail.&gt;</text>
+          <text>&lt;Le chien aboie et remue la queue.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -162,7 +172,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Good dog! Let me take a look at you.</text>
+          <text>Bon chien ! Laisse-moi te regarder.</text>
           <def_link>4158</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -171,7 +181,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Are you hungry, boy?</text>
+          <text>As-tu faim, mon grand ?</text>
           <def_link>4157</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -180,7 +190,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You want to come in?</text>
+          <text>Tu veux entrer ?</text>
           <def_link>4162</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -188,11 +198,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- clone pour genre -->
         <dlgAnsw>
-          <text>I'm sorry, buddy... we can't spare any food for you.</text>
+          <text>Je suis désolée, mon grand... nous ne pouvons pas te donner de nourriture.</text>
           <def_link>4156</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis désolé, mon grand... nous ne pouvons pas te donner de nourriture.</text>
+          <def_link>4156</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -204,7 +224,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Getting a better look at the dog, he looks a bit thin.&gt;</text>
+          <text>&lt;En regardant mieux le chien, on s'aperçoit qu'il est un peu maigre.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -221,7 +241,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You're hungry, aren't you? Here - have some of this. &lt;-1 Food&gt;</text>
+          <text>Tu as faim, n'est-ce pas ? Tiens, prends un peu de ça. &lt;-1 nourriture&gt;</text>
           <def_link>4159</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>shelterGetResource(food) &gt;= 1</checkOnAppear>
@@ -232,7 +252,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>You want to come in?</text>
+          <text>Tu veux entrer ?</text>
           <def_link>4162</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -241,7 +261,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I wonder how many people you could feed... Come here, buddy!</text>
+          <text>Je me demande combien de personnes tu pourrais nourrir... Viens ici, mon pote !</text>
           <def_link>4162</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -256,7 +276,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;You hold out your hand with the food. The dog looks you over, then moves closer and finally takes the food from your hand.&gt;</text>
+          <text>&lt;Tu tends la main avec la nourriture. Le chien te regarde, s'approche et prend finalement la nourriture de ta main.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -272,7 +292,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;After finishing the dog barks and licks your hand.&gt;</text>
+          <text>&lt;Après avoir fini, le chien aboie et lèche ta main.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -289,7 +309,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You want to come in?</text>
+          <text>Tu veux entrer ?</text>
           <def_link>4164</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -298,7 +318,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Good dog. Well, I have to go.</text>
+          <text>Bon chien. Bon, il faut que j'y aille.</text>
           <def_link>4163</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -313,7 +333,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;The dog tries to push its paw through the fence toward you.&gt;</text>
+          <text>&lt;Le chien essaie de passer sa patte à travers la clôture dans ta direction.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -330,7 +350,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You're killing me... Okay, let's get a look at you.</text>
+          <text>Tu me tues... D'accord, voyons ce qu'il en est.</text>
           <def_link>4158</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -339,7 +359,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Sorry, buddy. Maybe you'll find someone else to take care of you.</text>
+          <text>Désolé, mon grand. Peut-être que tu trouveras quelqu'un d'autre pour s'occuper de toi.</text>
           <def_link>4165</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -348,7 +368,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Go on - get out of here! Go!</text>
+          <text>Allez, va-t-en ! Allez !</text>
           <def_link>4161</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -363,7 +383,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;The dog looks at you soulfully one last time, then walks away.&gt;</text>
+          <text>&lt;Le chien te regarde une dernière fois avec soulagement, puis s'en va.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -380,7 +400,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;You watch the dog walk away with its tail between its legs.&gt;</text>
+          <text>&lt;Tu regardes le chien s'éloigner, la queue entre les jambes.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -398,7 +418,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;The dog seems hesitant to approach you and remains outside your reach.&gt;</text>
+          <text>&lt;Le chien semble hésiter à s'approcher de toi et reste hors de ta portée.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -415,7 +435,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You're hungry, aren't you? Here - have some of this. &lt;-1 Food&gt;</text>
+          <text>Tu as faim, n'est-ce pas ? Tiens, prends-en un peu. &lt;-1 nourriture&gt;</text>
           <def_link>4159</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>shelterGetResource(food) &gt;= 1</checkOnAppear>
@@ -426,7 +446,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>We can't take you in. Go on, go. Go!</text>
+          <text>Nous ne pouvons pas t'accueillir. Allez, file. Vas-y !</text>
           <def_link>4161</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -435,7 +455,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I got no food for you. Go on. Go away!</text>
+          <text>Je n'ai pas de nourriture pour toi. Vas-y. Va-t'en !</text>
           <def_link>4161</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -450,7 +470,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;The dog barks and wags its tail. It doesn't seem to want to leave.&gt;</text>
+          <text>&lt;Le chien aboie et remue la queue. Il ne semble pas vouloir partir.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -467,7 +487,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Okay, you can come in.</text>
+          <text>D'accord, tu peux entrer.</text>
           <def_link>4164</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -476,7 +496,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Sorry, buddy - that's all I can spare. Go on... Go!</text>
+          <text>Désolé, mon pote, c'est tout ce que je peux faire. Vas-y... file !</text>
           <def_link>4161</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -491,7 +511,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;You open the gate a crack and the dog runs in. It looks like you've got a new friend at the shelter.&gt;</text>
+          <text>&lt;Tu ouvres un peu le portail et le chien entre en courant. On dirait que tu as un nouvel ami au refuge.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -508,7 +528,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Let's take a look at your nametag...</text>
+          <text>Jetons un coup d'œil à ton badge...</text>
           <def_link>4166</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -523,7 +543,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;The dog whimpers again and looks right into your eyes with its troubled brown eyes.&gt;</text>
+          <text>&lt;Le chien gémit à nouveau et te regarde droit dans les yeux avec ses yeux bruns troublés.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -540,7 +560,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You're hungry, aren't you? Here - have some of this. &lt;-1 Food&gt;</text>
+          <text>Tu as faim, n'est-ce pas ? Tiens, prends-en un peu. &lt;-1 nourriture&gt;</text>
           <def_link>4159</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>shelterGetResource(food) &gt;= 1</checkOnAppear>
@@ -551,7 +571,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>You have to go. GO!</text>
+          <text>Il faut que tu t'en ailles. PARS !</text>
           <def_link>4161</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -566,7 +586,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;The dog's nametag reads 'Lightning'.&gt;</text>
+          <text>&lt;La plaque d'identification du chien indique "Lightning".&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -585,7 +605,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Lightning has joined the shelter.&gt;</text>
+          <text>&lt;Lightning a rejoint le refuge.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -613,7 +633,7 @@
     <lines>
       <dlgLine>
         <owner_ID>0</owner_ID>
-        <text>&lt;The dog looks at you soulfully one last time, then walks away.&gt;</text>
+        <text>&lt;Le chien te regarde une dernière fois avec émotion, puis s'en va.&gt;</text>
         <defAppearChecks>
           <boolean>false</boolean>
           <boolean>false</boolean>
@@ -630,7 +650,7 @@
     </lines>
     <answers>
       <dlgAnsw>
-        <text>&lt;You watch the dog walk away with its tail between its legs.&gt;</text>
+        <text>&lt;Tu le regardes s'éloigner, la queue entre les jambes.&gt;</text>
         <def_link>-1</def_link>
         <auto_answer>false</auto_answer>
         <checkOnAppear />

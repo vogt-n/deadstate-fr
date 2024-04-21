@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Jenifer appears to not be aware of your presence.&gt; And then, mom... are you listening, mom? </text>
+          <text>&lt;Jenifer ne semble pas s'apercevoir de ta présence.&gt; Et puis, maman... tu m'écoutes, maman ? </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -27,17 +27,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre de perso principal -->
         <dlgAnsw>
-          <text>Jenifer - your infection is about to kill you. I'm sorry, it's time.</text>
+          <text>Jenifer - ton infection est sur le point de te tuer. Je suis désolée, c'est l'heure.</text>
           <def_link>3112</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Can you hear me? I hope not, it'll make this easier.</text>
+          <text>Jenifer - ton infection est sur le point de te tuer. Je suis désolé, c'est l'heure.</text>
+          <def_link>3112</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Tu m'entends ? J'espère que non, ça rendra les choses plus faciles.</text>
           <def_link>3112</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -52,7 +62,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I hated that place so much. No one liked me... And I kept waiting for you two to pick me up. Take me home. I want to go home.</text>
+          <text>Je détestais tellement cet endroit. Personne ne m'aimait... Et j'attendais toujours que tu viennes me chercher. Que tu m'emmènes à la maison. Je veux rentrer à la maison.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -71,7 +81,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Jenifer? Do you hear me at all?</text>
+          <text>Jenifer ? Tu m'entends ?</text>
           <def_link>3113</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -80,7 +90,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It's time to go home.</text>
+          <text>Il est temps de rentrer à la maison.</text>
           <def_link>3113</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -89,7 +99,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>&lt;Shoot her in the head.&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête.&gt;</text>
           <def_link>3115</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -104,7 +114,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Home... I want to go home... &lt;Jenifer stops breathing and collapses.&gt;</text>
+          <text>Rentrer à la maison... Je veux rentrer à la maison... &lt;Jenifer arrête de respirer et s'effondre.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -120,8 +130,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>Sorry, Jenifer. I'm sorry I let this happen to you.</text>
+          <text>Désolé, Jenifer. Je suis désolé d'avoir laissé cela t'arriver.</text>
+          <def_link>3114</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Désolée, Jenifer. Je suis désolée d'avoir laissé cela t'arriver.</text>
+          <def_link>3114</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Ça ne va pas du tout...</text>
           <def_link>3114</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -130,16 +159,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>This feels so fucking wrong...</text>
-          <def_link>3114</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>&lt;Shoot her in the head.&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête.&gt;</text>
           <def_link>3115</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -154,7 +174,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;After a few minutes, Jenifer's head jerks and looks at you.&gt; Ahhwrrrr....</text>
+          <text>&lt;Au bout de quelques minutes, la tête de Jenifer se relève et te regarde.&gt; Ahhwrrrr....</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -171,7 +191,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Shoot her in the head.&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête.&gt;</text>
           <def_link>3115</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -186,7 +206,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;The blood pools around Jenifer's body. She is most definitely dead.&gt;</text>
+          <text>&lt;Le sang se répand autour du corps de Jenifer. Elle est définitivement morte.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -205,7 +225,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Goodbye, Jenifer.</text>
+          <text>Adieu, Jenifer.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -216,7 +236,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I could just put the gun in my mouth and end it right here... But not today.</text>
+          <text>Je pourrais mettre le pistolet dans ma bouche et en finir ici même... Mais pas aujourd'hui.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -227,7 +247,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Davis! Help me clean this up.</text>
+          <text>Davis ! Aide-moi à nettoyer ça.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
