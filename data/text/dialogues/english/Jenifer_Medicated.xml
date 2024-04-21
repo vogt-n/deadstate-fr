@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Hi... Um, I just wanted to tell you... I'm feeling better. I'm really sorry for what I put everyone through and I will try hard to make it up to them.</text>
+          <text>Bonjour... Je voulais juste te dire... Je me sens mieux. Je suis vraiment désolée pour ce que j'ai fait subir à tout le monde et je vais essayer de me rattraper.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -31,17 +31,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone genre -->
         <dlgAnsw>
-          <text>It's no problem. I'm glad you're feeling better.</text>
+          <text>Il n'y a pas de problème. Je suis contente que tu te sentes mieux.</text>
           <def_link>3090</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Why didn't you just tell me about your condition to begin with?</text>
+          <text>Il n'y a pas de problème. Je suis content que tu te sentes mieux.</text>
+          <def_link>3090</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Pourquoi ne m'as-tu pas parlé de ton état dès le début ?</text>
           <def_link>3091</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -56,7 +66,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Thanks for getting me my medicine. I'd like to go back to work now. </text>
+          <text>Merci de m'avoir donné mes médicaments. J'aimerais reprendre le travail maintenant. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -73,7 +83,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>If you think up for it. I'll check in on you later - see ya.</text>
+          <text>Si tu es d'accord. Je prendrai de tes nouvelles plus tard - à plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -84,7 +94,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>That's good. Your assignment will be on the board. Excuse me.</text>
+          <text>C'est bien. Ton devoir sera sur le tableau. Excuse-moi.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -95,7 +105,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Wait... I need to know why you didn't just tell me you needed more pills.</text>
+          <text>Attends... Je dois savoir pourquoi tu ne m'as pas dit que tu avais besoin de plus de pilules.</text>
           <def_link>3091</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -110,7 +120,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>So, usually when I tell people, they treat me differently. They don't trust me or treat me like a normal person. And I guess I thought could keep it under control. </text>
+          <text>D'habitude, quand je le dis aux gens, ils me traitent différemment. Ils ne me font pas confiance et ne me traitent pas comme une personne normale. Et je crois que je pensais pouvoir garder le contrôle. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -126,7 +136,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>But once the problem got worse, I wasn't thinking clearly. I don't really know how to explain what it feels like to not be in control of your own thoughts. I will let you know if I feel that way again.</text>
+          <text>Mais une fois que le problème s'est aggravé, je n'avais plus les idées claires. Je ne sais pas vraiment comment expliquer ce que l'on ressent lorsqu'on n'est pas maître de ses pensées. Je te ferai savoir si je me sens à nouveau comme ça.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -142,17 +152,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I'm just glad you're feeling well now.</text>
+          <text>Je suis contente que tu te sentes bien maintenant.</text>
           <def_link>3092</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You better.</text>
+          <text>Je suis content que tu te sentes bien maintenant.</text>
+          <def_link>3092</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Tu as intérêt.</text>
           <def_link>3092</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -167,7 +187,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Yeah... Well, I should get to work. It helps me focus. Thanks again.</text>
+          <text>Oui... Je devrais me mettre au travail. Ça m'aide à me concentrer. Merci encore.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -184,7 +204,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Jenifer walks off.&gt;</text>
+          <text>&lt;Jenifer s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
