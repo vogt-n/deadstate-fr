@@ -15,7 +15,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Craig steps gingerly into the room and leans on the doorway as if he's afraid it'll scoot away from him.&gt; Hey - I dunno if it's an ear thing or whatever, but something's gotten my sense of balance pretty fucked up right now. Could I maybe take a day to kinda sort myself out so I'm not wobbling all over the place?</text>
+          <text>&lt;Craig entre avec précaution dans la pièce et s'appuie sur le seuil de la porte comme s'il craignait qu'elle ne s'éloigne de lui.&gt; Je ne sais pas si c'est un problème d'oreille ou autre, mais mon sens de l'équilibre est assez perturbé en ce moment. Est-ce que je pourrais prendre un jour pour me remettre d'aplomb afin de ne pas vaciller dans tous les sens ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -34,7 +34,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Vertigo] Have you had vertigo a lot in the past?</text>
+          <text>[Vertigo] As-tu déjà eu des vertiges dans le passé ?</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -43,7 +43,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Sick] We don't need you wobbling everywhere - go lie down.</text>
+          <text>[Sick] Nous n'avons pas besoin que tu vacilles partout - va t'allonger.</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -51,17 +51,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour gnere -->
         <dlgAnsw>
-          <text>[Deny] I'm sure that isn't fun, but I can't excuse anyone who feels a little dizzy.</text>
+          <text>[Deny] Je suis sûr que ce n'est pas drôle, mais je ne peux pas excuser quelqu'un qui se sent un peu étourdi.</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Negotiate] That's a bad sign. Go lie down, and we'll see if someone can check you out, make sure it's not an ear infection.</text>
+          <text>[Deny] Je suis sûre que ce n'est pas drôle, mais je ne peux pas excuser quelqu'un qui se sent un peu étourdi.</text>
+          <def_link>401</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Negotiate] C'est un mauvais signe. Va t'allonger, et nous verrons si quelqu'un peut t'examiner, pour s'assurer qu'il ne s'agit pas d'une infection de l'oreille.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 4</checkOnAppear>
@@ -70,7 +80,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Leadership] I could really use your help, Craig. I wouldn't tell you to try and push past this if it wasn't important.</text>
+          <text>[Leadership] J'ai vraiment besoin de ton aide, Craig. Je ne te dirais pas d'essayer de passer outre si ce n'était pas important.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 6</checkOnAppear>
@@ -85,7 +95,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[VERTIGO] Well, not super frequently, but now and then, especially when it got really hot and humid or I got too close to any of the stronger chemicals we used in the lab. Things'd get a little spinny, and while most times I could just sit for a bit and it'd be okay, a couple times I'd have to get someone to drive me home.</text>
+          <text>[VERTIGO] Enfin, pas très souvent, mais de temps en temps, surtout lorsqu'il fait très chaud et humide ou que je m'approche trop des produits chimiques puissants que nous utilisons au laboratoire. Les choses tournaient un peu, et même si la plupart du temps je pouvais m'asseoir un peu et que ça allait, il arrivait que je doive demander à quelqu'un de me raccompagner.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -102,7 +112,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Sick] We don't need you wobbling everywhere - go lie down.</text>
+          <text>[Sick] Nous n'avons pas besoin que tu vacilles partout - va t'allonger.</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -110,17 +120,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Deny] I'm sure that isn't fun, but I can't excuse anyone who feels a little dizzy.</text>
+          <text>[Deny] Je suis sûr que ce n'est pas drôle, mais je ne peux pas excuser quelqu'un qui se sent un peu étourdi.</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Negotiate] That's a bad sign. Go lie down, and we'll see if Davis can check you out, make sure it's not an ear infection.</text>
+          <text>[Deny] Je suis sûre que ce n'est pas drôle, mais je ne peux pas excuser quelqu'un qui se sent un peu étourdi.</text>
+          <def_link>401</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Negotiate] C'est mauvais signe. Va t'allonger, et nous allons voir si Davis peut t'examiner, pour s'assurer que ce n'est pas une infection de l'oreille.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 4</checkOnAppear>
@@ -129,7 +149,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Leadership] I could really use your help, Craig. I wouldn't tell you to try and push past this if it wasn't important.</text>
+          <text>[Leadership] J'ai vraiment besoin de ton aide, Craig. Je ne te dirais pas d'essayer de passer outre si ce n'était pas important.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 6</checkOnAppear>
@@ -144,7 +164,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SICK] Thanks - I really appreciate it. I hope this goes away soon, I really don't want to puke or something.</text>
+          <text>[SICK] Merci, j'apprécie vraiment. J'espère que ça passera vite, je n'ai vraiment pas envie de vomir ou de faire quelque chose.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -164,7 +184,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Why don't you keep a trash close by just in case...</text>
+          <text>Pourquoi ne pas garder une poubelle à portée de main, juste au cas où...</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -181,7 +201,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[DENY] It's not just a little dizzy, I - ah, whatever, I'll try to kick this. Hopefully it'll pass with a little sitting...</text>
+          <text>[DENY] Ce n'est pas juste un petit vertige, je... ah, peu importe, je vais essayer de me débarrasser de ça. J'espère que ça passera avec un peu d'assise...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -201,7 +221,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Not too much sitting, though.</text>
+          <text>Pas trop, quand même.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -218,7 +238,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NEGOTIATE] Whoa, I hope it's not... but thanks. I'll take a rest.</text>
+          <text>[NEGOTIATE] Whoa, j'espère que ce n'est pas... mais merci. Je vais me reposer.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -238,7 +258,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Hope you feel better soon.</text>
+          <text>J'espère que tu te sentiras bientôt mieux.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -255,7 +275,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LEADERSHIP] Okay. I dunno how great I'll be at anything for a while, but I'll try to push past this.</text>
+          <text>[LEADERSHIP] Ok. Je ne sais pas si je vais être douée pour quoi que ce soit pendant un moment, mais je vais essayer de dépasser ça.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -274,7 +294,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Best of luck.</text>
+          <text>Bonne chance.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -291,7 +311,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[CRAIGHATE] &lt;Craig enters the room and leans heavily on the doorframe - by his expression, it's clear he's not excited to talk to you.&gt; Look. My vertigo is fucking killing me today. I'm taking the day off, because I don't feel like falling all over the place.</text>
+          <text>[CRAIGHATE] &lt;Craig entre dans la pièce et s'appuie lourdement sur le cadre de la porte - son expression montre clairement qu'il n'est pas très enthousiaste à l'idée de vous parler.&gt; Écoute. Mon vertige me tue aujourd'hui. Je prends un jour de pause, parce que je n'ai pas envie de tomber dans tous les sens.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -310,7 +330,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Defuse] Look, if you need to a have the day off, fine. Work on feeling better.</text>
+          <text>[Defuse] Écoute, si tu as besoin d'un jour de repos, très bien. Essaie de te sentir mieux.</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -319,7 +339,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Ration] Vertigo? Sounds like too much food. Definitely. Let's cut things down a few days.</text>
+          <text>[Ration] Vertige ? On dirait que c'est un excès de nourriture. Tout à fait. Réduisons les choses pendant quelques jours.</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -328,7 +348,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Starve] Go ahead. You don't work, you don't eat. Three days sounds about right.</text>
+          <text>[Starve] Vas-y. Pas de travail, pas de nourriture. Trois jours, c'est pas mal.</text>
           <def_link>407</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -343,7 +363,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[DEFUSE] &lt;Craig stares at you a moment, silent. Then he nods slightly, and walks slowly out of the room.&gt;</text>
+          <text>[DEFUSE] &lt;Craig te regarde un moment, silencieux. Puis il hoche légèrement la tête et sort lentement de la pièce.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -363,7 +383,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Okay then.</text>
+          <text>D'accord.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -380,7 +400,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[RATION] Whatever. Can't be any worse for me anyway. </text>
+          <text>[RATION] Peu importe. Ça ne peut pas être pire pour moi de toute façon. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -400,7 +420,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Good to hear. Now get lost.</text>
+          <text>C'est bon à entendre. Maintenant, va te faire voir.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -417,7 +437,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[STARVE] &lt;The young man seethes for a moment, then turns around, wobbles slightly, and stalks away as well as his vertigo will let him.&gt;</text>
+          <text>[STARVE] &lt;Le jeune homme fulmine un instant, puis se retourne, vacille légèrement et s'éloigne aussi loin que son vertige le lui permet.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -438,7 +458,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Waste of time.</text>
+          <text>C'est une perte de temps.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
