@@ -19,7 +19,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[PREGNANCY SECRET] I dreamt about the shelter at Lampasas last night, and all of today, I just... I just can't get the faces of the people there out of my mind. I... I need to deal with this.</text>
+          <text>[PREGNANCY SECRET] J'ai rêvé du refuge de Lampasas la nuit dernière, et toute la journée, j'ai juste... Je n'arrive pas à oublier les visages des gens là-bas. Je... Je dois faire face à ça.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -38,7 +38,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Okay] I understand. Take today off.</text>
+          <text>[Okay] Je comprends. Prends ta journée.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -47,7 +47,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Negotiation] We all have faces haunting us, Craig. It's most important, in times like this, to be around other people and remember you're not alone.</text>
+          <text>[Negotiation] Nous avons tous des visages qui nous hantent, Craig. Le plus important, dans ces moments-là, c'est d'être entouré d'autres personnes et de se rappeler qu'on n'est pas seul.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 5</checkOnAppear>
@@ -56,7 +56,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Leadership] You got Karen and yourself out of there. That's something to be proud of. Don't hide from that strength, keep working, and let it keep you going.</text>
+          <text>[Leadership] Tu as sorti Karen et toi-même de là. Il y a de quoi être fier. Ne cache pas cette force, continue à travailler et laisse-la t'aider à aller de l'avant.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 4</checkOnAppear>
@@ -64,11 +64,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Nope] I'm sorry - we can't spare anyone right now, even on bad days.</text>
+          <text>[Nope] Je suis désolée - nous ne pouvons épargner personne en ce moment, même dans les mauvais jours.</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Nope] Je suis désolé - nous ne pouvons épargner personne en ce moment, même dans les mauvais jours.</text>
+          <def_link>405</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -80,7 +90,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[PREGNANCY KNOWN, TOGETHER] &lt;Craig looks red-eyed, haunted.&gt; I had a - a nightmare. About the baby. It was - &lt;He winces suddenly and reconsiders.&gt; No, I don't... I don't wanna talk about it. I just need a day to - to get it out of my head.</text>
+          <text>[PREGNANCY KNOWN, TOGETHER] &lt;Craig a les yeux rouges, hantés.&gt; J'ai fait un - un cauchemar. A propos du bébé. C'était - &lt;Il grimace soudain et se ravise.&gt; Non, je ne veux pas... Je ne veux pas en parler. J'ai juste besoin d'une journée pour me sortir ça de la tête.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -100,7 +110,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Okay] I'm not even going to ask. Take the time you need.</text>
+          <text>[Okay] Je ne vais même pas demander. Prends le temps qu'il te faut.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -109,7 +119,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Negotiation] Bad thoughts multiply when you're alone, but get squelched when you're in good company. Keep yourself around people today - it'll be better for you.</text>
+          <text>[Negotiation] Les mauvaises pensées se multiplient quand on est seul, mais elles sont étouffées quand on est en bonne compagnie. Reste en contact avec les gens aujourd'hui - ce sera mieux pour toi.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 5</checkOnAppear>
@@ -118,7 +128,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Leadership] Nightmares happen. The best solution I've found is to put your head down and keep working.</text>
+          <text>[Leadership] Les cauchemars arrivent. La meilleure solution que j'ai trouvée est de baisser la tête et de continuer à travailler.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 4</checkOnAppear>
@@ -127,7 +137,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Nope] You're not the only one having bad dreams. Push through it.</text>
+          <text>[Nope] Vous n'êtes pas le seul à faire des cauchemars. Passe à travers.</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -142,7 +152,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NOT TOGETHER] I - I need a day. I can't... I can't think straight right now. Not being with Karen, it's tearing me up inside.</text>
+          <text>[NOT TOGETHER] J'ai besoin d'une journée. Je ne peux pas... Je n'arrive pas à penser correctement en ce moment. Ne pas être avec Karen, ça me déchire à l'intérieur.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -161,7 +171,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Okay] That can't be easy. Take some time for yourself.</text>
+          <text>[Okay] Ça ne doit pas être facile. Prends du temps pour toi.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -170,7 +180,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Negotiation] Hurts like that take time to repair, I know, but curling up into a ball won't change things. We're with you - just take it a day at a time.</text>
+          <text>[Negotiation] Des blessures comme ça mettent du temps à se réparer, je sais, mais se mettre en boule ne changera pas les choses. Nous sommes avec toi. Prends un jour à la fois.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 5</checkOnAppear>
@@ -179,7 +189,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Leadership] Craig, I know this is tough, but I need you helping. Focus on that.</text>
+          <text>[Leadership] Craig, je sais que c'est difficile, mais j'ai besoin de ton aide. Concentre-toi là-dessus.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 4</checkOnAppear>
@@ -188,7 +198,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[No] There are people who've actually lost loved ones here - I'm not giving you a day to deal with a breakup!</text>
+          <text>[No] Il y a des gens qui ont perdu des êtres chers ici - je ne te donne pas une journée pour gérer une rupture !</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -203,7 +213,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[KAREN DEAD] Today I... I woke up, and I'd been dreaming Karen was still alive. And I rolled over and she wasn't there and I realized... I remembered... she's gone. &lt;He takes a long, shuddering breath.&gt; I can't think straight. I need some time.</text>
+          <text>[KAREN DEAD] Aujourd'hui, je... Je me suis réveillé, et j'ai rêvé que Karen était encore en vie. Je me suis retourné et elle n'était plus là, et j'ai réalisé... Je me suis souvenu... qu'elle était partie. &lt;Il prend une longue respiration, tremblante.&gt; Je n'arrive pas à penser correctement. J'ai besoin de temps.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -222,7 +232,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Okay] I know what you're going through. It... gets easier. But take some time if you need it.</text>
+          <text>[Okay] Je sais ce que tu traverses. C'est... plus facile. Mais prends du temps si tu en as besoin.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.pc_has_loss == 1</checkOnAppear>
@@ -231,7 +241,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Okay - Player No Loss] I can't imagine what you're going through right now, but if you need time today, take it.</text>
+          <text>[Okay - Player No Loss] Je ne peux pas imaginer ce que tu traverses en ce moment, mais si tu as besoin de temps aujourd'hui, prends-le.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.pc_has_loss == 0</checkOnAppear>
@@ -240,7 +250,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Negotiation] If you isolate yourself in your grief, things will only get worse. You need to be with people now - we'll all help you recover.</text>
+          <text>[Negotiation] Si tu t'isoles dans ton chagrin, les choses ne feront qu'empirer. Tu as besoin d'être entouré de gens maintenant - nous t'aiderons tous à te rétablir.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 5</checkOnAppear>
@@ -249,7 +259,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Leadership] We'll grieve when we know it's safe. Until then, I need your help to get us there.</text>
+          <text>[Leadership] Nous ferons notre deuil quand nous saurons que c'est sans danger. D'ici là, j'ai besoin de ton aide pour y parvenir.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 4</checkOnAppear>
@@ -258,7 +268,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[No] If each of us took time to mourn for the dead, we'd all be gone ourselves. Pull it together and do your best to move on.</text>
+          <text>[No] Si chacun d'entre nous prenait le temps de pleurer les morts, nous serions tous partis nous-mêmes. Ressaisis-toi et fais de ton mieux pour aller de l'avant.</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -273,7 +283,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[OKAY] Right... thanks. I'm going to try and... and get some sleep. </text>
+          <text>[OKAY] D'accord... merci. Je vais essayer et... et dormir un peu. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -293,7 +303,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Craig turns and shuffles out the doorway.&gt;</text>
+          <text>&lt;Craig se retourne et sort en traînant les pieds.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -310,7 +320,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NEGOTIATION] I guess... I guess  you're right. Around people. Okay.</text>
+          <text>[NEGOTIATION] J'imagine... Je suppose que vous avez raison. Autour des gens. D'accord.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -330,7 +340,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Best of luck.</text>
+          <text>Bonne chance.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -347,7 +357,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LEADERSHIP] &lt;Craig rubs his eyes and winces.&gt; Okay. Okay. Work, right? I'll work. That's got to help. I hope it helps.</text>
+          <text>[LEADERSHIP] &lt;Craig se frotte les yeux et grimace.&gt; D'accord. Travaillez, d'accord ? Je vais travailler. Ça doit aider. J'espère que ça aidera.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -366,7 +376,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Me too. Hang in there.</text>
+          <text>Moi aussi. Tiens bon.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -383,7 +393,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NOPE] I... I guess it didn't hurt to ask. Oh well... thanks any way.</text>
+          <text>[NOPE] Je... Je suppose que ça ne fait pas de mal de demander. Oh, eh bien... merci en tout cas.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -403,7 +413,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Craig turns in defeat and shuffles away.&gt;</text>
+          <text>&lt;Craig se retourne en signe de défaite et s'éloigne en traînant les pieds.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -420,7 +430,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NO] &lt;Craig narrows his eyes at you and grinds his teeth.&gt; Her being gone is your fault and you're not even going to - you know what, never mind. Forget I fucking said anything.</text>
+          <text>[NO] &lt;Craig plisse les yeux et grince des dents.&gt; Son départ c'est ta faute et tu ne vas même pas... tu sais quoi, laisse tomber. Oublie que j'ai dit quoi que ce soit.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -440,7 +450,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Craig turns and stomps out of the room.&gt;</text>
+          <text>&lt;Craig se retourne et sort de la pièce en trottinant.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
