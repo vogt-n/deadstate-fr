@@ -19,7 +19,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[CRAIG ALIVE NOT TOLD PREGNANT] I'll keep this short. Things are bad around here.  It seems like there's no plan to all this, and everything is unraveling. And... and Craig and I are thinking of leaving.</text>
+          <text>[CRAIG ALIVE NOT TOLD PREGNANT] Je serai bref. Les choses vont mal par ici.  On dirait qu'il n'y a pas de programme et que tout s'effiloche. Et... et Craig et moi pensons à partir.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -38,7 +38,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Even] Look, I know things are difficult right now. Take today off to clear your head, okay?</text>
+          <text>[Even] Écoute, je sais que les choses sont difficiles en ce moment. Prends un jour de libre pour t'éclaircir les idées, d'accord ?</text>
           <def_link>407</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -46,17 +46,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Negotiation] I'm sorry it's rough at the moment. But we're all still alive, aren't we? We just need to pull together. Spend some time off today, consider alternatives, think of the group.</text>
+          <text>[Negotiation] Je suis désolée que ce soit dur en ce moment. Mais nous sommes toujours en vie, n'est-ce pas ? Nous devons juste nous serrer les coudes. Prends un peu de temps libre aujourd'hui, envisage des alternatives, pense au groupe.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.negotiation &gt;= 6</checkOnAppear>
+          <checkOnAppear>ds.negotiation &gt;= 6 &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Leadership] This isn't some kind of hotel, Karen. This is a war, and we win or lose together. Take a half day, sure, but think about the example you're setting. That'll give you some real perspective.</text>
+          <text>[Negotiation] Je suis désolé que ce soit dur en ce moment. Mais nous sommes toujours en vie, n'est-ce pas ? Nous devons juste nous serrer les coudes. Prends un peu de temps libre aujourd'hui, envisage des alternatives, pense au groupe.</text>
+          <def_link>403</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.negotiation &gt;= 6 &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Leadership] Ce n'est pas une sorte d'hôtel, Karen. C'est une guerre, et nous gagnons ou perdons ensemble. Prends un mi-temps, d'accord, mais pense à l'exemple que tu donnes. Ça te permettra de mettre les choses en perspective.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 6</checkOnAppear>
@@ -65,7 +75,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Aggressive] "Thinking of leaving"? Is that a threat, or are you serious? Because there's the fucking door.</text>
+          <text>[Aggressive] « Penser à partir » ? C'est une menace ou tu es sérieuse ? Parce qu'il faut franchir cette putain de porte.</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -80,7 +90,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[CRAIG ALIVE DID TELL PREGNANT] If I think my time before things get serious is better spent looking for another place rather than sitting and waiting to starve, frankly, it might be. Obviously I don't want that to be the case.</text>
+          <text>[CRAIG ALIVE DID TELL PREGNANT] Si je pense qu'avant que les choses ne se compliquent, il vaut mieux que je cherche un autre endroit plutôt que de rester assis et d'attendre de mourir de faim, et franchement, c'est peut-être le cas. Même si je ne veux pas que ce soit le cas.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -99,7 +109,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Pregnant] You'd go out there in your condition? You really think that's the best idea?</text>
+          <text>[Pregnant] Tu sortirais dans ton état ? Tu penses vraiment que c'est la meilleure idée ?</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 3 || ds.leadership &gt;= 3</checkOnAppear>
@@ -108,7 +118,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Even] Look, I know things are difficult right now. Take today off to clear your head, okay?</text>
+          <text>[Even] Écoute, je sais que les choses sont difficiles en ce moment. Prends un jour de libre pour t'éclaircir les idées, d'accord ?</text>
           <def_link>407</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -116,17 +126,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Negotiation] I'm sorry it's rough at the moment. But we're all still alive, aren't we? We just need to pull together. Spend some time off today, consider alternatives, think of the group.</text>
+          <text>[Negotiation] Je suis désolée que ce soit dur en ce moment. Mais nous sommes toujours en vie, n'est-ce pas ? Nous devons juste nous serrer les coudes. Prends un peu de temps libre aujourd'hui, envisage des alternatives, pense au groupe.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.negotiation &gt;= 6</checkOnAppear>
+          <checkOnAppear>ds.negotiation &gt;= 6 &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Leadership] This isn't some kind of hotel, Karen. This is a war, and we win or lose together. Take a half day, sure, but think about the example you're setting. That'll give you some real perspective.</text>
+          <text>[Negotiation] Je suis désolé que ce soit dur en ce moment. Mais nous sommes toujours en vie, n'est-ce pas ? Nous devons juste nous serrer les coudes. Prends un peu de temps libre aujourd'hui, envisage des alternatives, pense au groupe.</text>
+          <def_link>403</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.negotiation &gt;= 6 &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Leadership] Ce n'est pas une sorte d'hôtel, Karen. C'est une guerre, et nous gagnons ou perdons ensemble. Prends un mi-temps, d'accord, mais pense à l'exemple que tu donnes. Ça te permettra de mettre les choses en perspective.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 6</checkOnAppear>
@@ -135,7 +155,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Aggressive] Well, then why bother wasting time finding out? There's the door.</text>
+          <text>[Aggressive] Alors pourquoi perdre du temps à essayer de savoir ? La porte est là.</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -150,7 +170,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[CRAIG ALIVE BUT BROKE UP] Look, &lt;charname&gt; - I'm gonna come right out and say it. Things are bad right now. Between having to deal with Craig seeming like he can hardly stand to be around me and the feeling that we're all barely holding on, I don't know if I can even stay here much longer.</text>
+          <text>[CRAIG ALIVE BUT BROKE UP] Écoute, &lt;charname&gt; - Je vais aller droit au but et le dire. Les choses vont mal en ce moment. Entre Craig qui a l'air de ne pas supporter ma présence et le sentiment que nous tenons à peine le coup, je ne sais pas si je vais pouvoir rester ici encore longtemps.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -169,7 +189,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Even] Look, I know things are difficult right now. Take today off to clear your head, okay?</text>
+          <text>[Even] Écoute, je sais que les choses sont difficiles en ce moment. Prends un jour de libre pour t'éclaircir les idées, d'accord ?</text>
           <def_link>407</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -177,17 +197,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Negotiation] I'm sorry it's rough at the moment. But we're all still alive, aren't we? We just need to pull together. Spend some time off today, consider alternatives, think of the group.</text>
+          <text>[Negotiation] Je suis désolée que ce soit dur en ce moment. Mais nous sommes toujours en vie, n'est-ce pas ? Nous devons juste nous serrer les coudes. Prends un peu de temps libre aujourd'hui, envisage des alternatives, pense au groupe.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.negotiation &gt;= 6</checkOnAppear>
+          <checkOnAppear>ds.negotiation &gt;= 6 &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Leadership] This isn't some kind of hotel, Karen. This is a war, and we win or lose together. Take a half day, sure, but think about the example you're setting. That'll give you some real perspective.</text>
+          <text>[Negotiation] Je suis désolé que ce soit dur en ce moment. Mais nous sommes toujours en vie, n'est-ce pas ? Nous devons juste nous serrer les coudes. Prends un peu de temps libre aujourd'hui, envisage des alternatives, pense au groupe.</text>
+          <def_link>403</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.negotiation &gt;= 6 &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Leadership] Ce n'est pas une sorte d'hôtel, Karen. C'est une guerre, et nous gagnons ou perdons ensemble. Prends un mi-temps, d'accord, mais pense à l'exemple que tu donnes. Ça te permettra de mettre les choses en perspective.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 6</checkOnAppear>
@@ -196,7 +226,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Aggressive] Oh, you "don't know" if you can stay? Is that a threat, or are you serious? Because there's the fucking door.</text>
+          <text>[Aggressive] Oh, tu «  ne sais pas  » si tu peux rester ? C'est une menace ou tu es sérieuse ? Parce qu'il y a toujours cette putain de porte grande ouverte.</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -211,7 +241,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[CRAIG DEAD] &lt;charname&gt;. You probably already guessed it, but things are bad right now. It was hard enough losing Craig, but now there's this feeling everywhere like we're barely making it. I just don't know if I could stay here much longer.</text>
+          <text>[CRAIG DEAD] &lt;charname&gt;. Tu l'as probablement déjà deviné, mais les choses vont mal en ce moment. C'était déjà assez dur de perdre Craig, mais là, on a l'impression qu'on a du mal à s'en sortir. Je ne sais pas si je pourrais rester ici plus longtemps.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -230,7 +260,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Even] Look, I know things are difficult right now. Take today off to clear your head, okay?</text>
+          <text>[Even] Écoute, je sais que les choses sont difficiles en ce moment. Prends un jour de libre pour t'éclaircir les idées, d'accord ?</text>
           <def_link>407</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -238,17 +268,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Negotiation] I'm sorry it's rough at the moment. But we're all still alive, aren't we? We just need to pull together. Spend some time off today, consider alternatives, think of the group.</text>
+          <text>[Negotiation] Je suis désolée que ce soit dur en ce moment. Mais nous sommes toujours en vie, n'est-ce pas ? Nous devons juste nous serrer les coudes. Prends un peu de temps libre aujourd'hui, envisage des alternatives, pense au groupe.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.negotiation &gt;= 6</checkOnAppear>
+          <checkOnAppear>ds.negotiation &gt;= 6 &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Leadership] This isn't some kind of hotel, Karen. This is a war, and we win or lose together. Take a half day, sure, but think about the example you're setting. That'll give you some real perspective.</text>
+          <text>[Negotiation] Je suis désolé que ce soit dur en ce moment. Mais nous sommes toujours en vie, n'est-ce pas ? Nous devons juste nous serrer les coudes. Prends un peu de temps libre aujourd'hui, envisage des alternatives, pense au groupe.</text>
+          <def_link>403</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.negotiation &gt;= 6 &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Leadership] Ce n'est pas une sorte d'hôtel, Karen. C'est une guerre, et nous gagnons ou perdons ensemble. Prends un mi-temps, d'accord, mais pense à l'exemple que tu donnes. Ça te permettra de mettre les choses en perspective.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 6</checkOnAppear>
@@ -257,7 +297,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[ThreatGo] Oh, you "don't know" if you can stay? Is that a threat, or are you serious? Because there's the fucking door.</text>
+          <text>[ThreatGo] Oh, tu «  ne sais pas  » si tu peux rester ? C'est une menace ou tu es sérieuse ? Parce qu'il y a toujours cette putain de porte grande ouverte.</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -272,7 +312,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[PREGNANT] No, I don't! But I don't want to hang around here getting further and further along while conditions deteriorate because you don't have a plan!</text>
+          <text>[PREGNANT] Non, je ne sais pas ! Mais je ne veux pas rester ici à attendre que les conditions se détériorent parce que tu n'as aucun plan !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -289,7 +329,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Even] Look, I know things are difficult right now. Take today off to clear your head, okay?</text>
+          <text>[Even] Écoute, je sais que les choses sont difficiles en ce moment. Prends un jour de libre pour t'éclaircir les idées, d'accord ?</text>
           <def_link>407</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -298,7 +338,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Negotiation] Karen, we're in this together. And we're all looking out for each other. If you need a day to rest and sort things out, take one - maybe it will help.</text>
+          <text>[Negotiation] Karen, on est dans le même bateau. Et nous veillons tous les uns sur les autres. Si tu as besoin d'un jour pour te reposer et faire le point, prends-en un, ça t'aidera peut-être.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 6</checkOnAppear>
@@ -307,7 +347,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Leadership] I do have a plan. And plans require trust, and sacrifice. Here - why don't you take a half day to think about how you still have a safe place to sleep. Get some perspective.</text>
+          <text>[Leadership] J'ai un plan. Et les plans exigent de la confiance et des sacrifices. Pourquoi ne pas prendre une demi-journée pour réfléchir à la façon dont tu peux encore avoir un endroit sûr pour dormir ? Profites-en pour prendre un peu de recul.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 6</checkOnAppear>
@@ -316,7 +356,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Aggressive] Sounds like you have your mind made up! There's the door. I'm not stopping you.</text>
+          <text>[Aggressive] On dirait que tu as pris ta décision ! Voilà la porte. Je ne t'arrêterai pas.</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -331,7 +371,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[EVEN] Well... okay. I'll take the time and try to sort things out for myself. I appreciate you being, well, so calm about this.</text>
+          <text>[EVEN] Bon... d'accord. Je vais prendre le temps et essayer d'éclaircir les choses par moi-même. J'apprécie que tu sois, eh bien, si calme à ce sujet.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -351,7 +391,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>It's not easy for any of us. Hope it helps.</text>
+          <text>Ce n'est facile pour aucun d'entre nous. J'espère que ça t'aidera.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -368,7 +408,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NEGOTIATION] I guess you're right. I'll try to get some more rest, consider my options. Thank you.</text>
+          <text>[NEGOTIATION] Je pense que tu as raison. Je vais essayer de me reposer et de réfléchir à mes options. Je te remercie.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -388,7 +428,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Good luck.</text>
+          <text>Bonne chance.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -405,7 +445,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LEADERSHIP] &lt;Karen frowns at you, her mouth drawing into a straight line, but after a moment she sighs and nods.&gt; Guess that's definitely one way of looking at it. Talk to you later.</text>
+          <text>[LEADERSHIP] &lt;Karen fronce les sourcils, sa bouche formant une ligne droite, mais au bout d'un moment, elle soupire et acquiesce.&gt; Je pense que c'est une façon de voir les choses. À plus tard.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -442,7 +482,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[AGGRESSIVE] &lt;Karen grinds her teeth but looks evenly at you.&gt; I think I'll pass. For now.</text>
+          <text>[AGGRESSIVE] &lt;Karen grince des dents mais te regarde d'un air calme.&gt; Je crois que je vais passer mon tour. Pour l'instant.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -462,7 +502,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;She turns and exits the room without another word.&gt;</text>
+          <text>&lt;Elle se tourne et sort de la pièce sans ajouter un mot.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -479,7 +519,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[THREATGO] You know what? I will go. I'm done with this place, and I'm done with you. I've lost enough here, I don't want this school to be the last thing I see. Goodbye.</text>
+          <text>[THREATGO] Tu sais quoi ? Je vais partir. J'en ai fini avec cet endroit, et j'en ai fini avec toi. J'ai assez perdu ici, je ne veux pas que cette école soit la dernière chose que je vois. Adieu.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -496,7 +536,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Good riddance.</text>
+          <text>Bon débarras.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

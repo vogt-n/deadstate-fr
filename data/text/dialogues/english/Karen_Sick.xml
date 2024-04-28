@@ -17,7 +17,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Hey... so. My stomach has been... not exactly cooperating lately, and although I apparently have gotten good at wind sprinting to the wastebasket, I'm not really feeling super great. Any chance I could take it easy today?</text>
+          <text>Hey... alors. Mon estomac n'est pas vraiment coopératif ces derniers temps, et bien que je sois apparemment devenue douée pour le sprint éolien jusqu'à la poubelle, je ne me sens pas vraiment bien. Est-ce que je pourrais y aller doucement aujourd'hui ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -36,7 +36,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[SECRET SICK] Sure. You don't wanna give whatever bug you've got to anyone else, right?</text>
+          <text>[SECRET SICK] Bien sûr. Tu ne veux pas refiler le virus que tu as à quelqu'un d'autre, n'est-ce pas ?</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -44,17 +44,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[SECRET DENIED] Sorry Karen, but unless it's a real emergency, we need everyone doing their part.</text>
+          <text>[SECRET DENIED] Désolé Karen, mais à moins d'une réelle urgence, tout le monde doit faire sa part.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[SECRET NEGOTIATION] Absolutely. Just make sure you keep yourself hydrated, and keep trying to keep something down.</text>
+          <text>[SECRET DENIED] Désolée Karen, mais à moins d'une réelle urgence, tout le monde doit faire sa part.</text>
+          <def_link>404</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[SECRET NEGOTIATION] Absolument. Assure-toi de bien t'hydrater et d'essayer d'avaler quelque chose.</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 4</checkOnAppear>
@@ -63,7 +73,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[SECRET LEADERSHIP] We do all need to pitch in, but if this keeps up, take off as early as you need to, okay?</text>
+          <text>[SECRET LEADERSHIP] On a tous besoin de participer, mais si ça continue, pars dès que tu en as besoin, d'accord ?</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 6</checkOnAppear>
@@ -78,7 +88,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SECRET SICK] Hah... yeah, that would not be good. Thanks... &lt;Karen suddenly burps, winces, and hurriedly moves away&gt;</text>
+          <text>[SECRET SICK] Hah... ouais, ce ne serait pas bon. Merci... &lt;Karen rote soudainement, grimace et s'éloigne précipitamment.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -98,7 +108,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Yuck. I bet that tasted awful.</text>
+          <text>Beurk. Je parie que ça avait un goût affreux.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -115,7 +125,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SECRET DENIED] Okay, yeah, I get that. I'll just... try to keep a wastebasket close by at all times.</text>
+          <text>[SECRET DENIED] D'accord, oui, je comprends. Je vais juste... essayer de garder une poubelle à proximité en permanence.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -135,7 +145,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Ew. Good luck with that.</text>
+          <text>Beurk. Bonne chance avec ça.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -152,7 +162,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SECRET NEGOTIATION] Thanks... I owe you one. I promise not to vomit on anything you like! Heh... uck.</text>
+          <text>[SECRET NEGOTIATION] Merci... Je t'en dois une. Je promets de ne pas vomir sur ce que tu aimes ! Heh... uck.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -172,7 +182,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Yay...? Look, just go get some water and rest.</text>
+          <text>Ouais... ? Écoute, va chercher de l'eau et repose-toi.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -189,7 +199,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SECRET LEADERSHIP] Okay, got it. Maybe if I get maintenance duty I can just clean up any accidents I have... wow, why am I even planning for that? Gross...</text>
+          <text>[SECRET LEADERSHIP] Ok, j'ai compris. Peut-être que si je suis chargé de l'entretien, je pourrai nettoyer tous les accidents que j'aurai... wow, pourquoi est-ce que je prévois ça ? C'est dégueulasse...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -209,7 +219,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I'm going to say "Good foresight!" and leave it at that.</text>
+          <text>Je vais dire « Bonne prévoyance ! » et m'en tenir là.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -226,7 +236,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>This is annoying, but my morning sickness has been absolutely murder on me this morning. I haven't been able to keep anything down, and I had to stop three times before I came here to... oh my God hold on a moment. </text>
+          <text>C'est ennuyeux, mais mes nausées matinales ont été absolument meurtrières pour moi ce matin. Je n'ai rien pu avaler et j'ai dû m'arrêter trois fois avant de venir ici pour... oh mon Dieu, attends un instant. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -245,7 +255,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Um... are you about to...</text>
+          <text>Um... es-tu sur le point de...</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -260,7 +270,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Karen runs out of the room - you stand there awkwardly as hear her dry-heaving into a hall trashcan. She's back a moment later, looking exhausted and annoyed.&gt; So... there you have it. The wonder of new life. Hooray. </text>
+          <text>&lt;Karen sort de la pièce en courant - tu restes là, maladroitement, à l'entendre se vider de tout son contenu dans une poubelle de l'entrée. Elle revient quelques instants plus tard, l'air épuisée et agacée.&gt; Alors... voilà. L'émerveillement d'une nouvelle vie. Hourra ! </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -277,7 +287,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[KNOWN SICK] Nobody here is going to be a jerk to an expectant mother, me least of all. Sit down and take it easy.</text>
+          <text>[KNOWN SICK] Personne ici ne va se comporter comme un con avec une future mère, et surtout pas moi. Assieds-toi et détends-toi.</text>
           <def_link>407</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -286,7 +296,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[KNOWN DENIED] I hate to do this, but if we don't keep you active when you're this early on, your late pregnancy is going to be nightmarish.</text>
+          <text>[KNOWN DENIED] Je regrette de devoir le faire, mais si tu ne restes pas active à ce stade, la fin de ta grossesse sera cauchemardesque.</text>
           <def_link>408</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -295,7 +305,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[KNOWN NEGOTIATION] Oh god, that sounded terrible. Get some water - or juice if we have any - and relax. Do some prenatal yoga if you know any... and if it doesn't make you vomit more.</text>
+          <text>[KNOWN NEGOTIATION] Oh mon Dieu, c'est terrible. Prends de l'eau - ou du jus de fruit si on en a - et détends-toi. Fais du yoga prénatal si tu en connais... et si ça ne te fait pas vomir davantage.</text>
           <def_link>410</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 4</checkOnAppear>
@@ -304,7 +314,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[KNOWN LEADERSHIP] Do you think you could get in a half-day of work at least? If you need to take a break, go for it, but we shouldn't let morning sickness get the better of you!</text>
+          <text>[KNOWN LEADERSHIP] Penses-tu pouvoir travailler au moins une demi-journée ? Si tu as besoin de faire une pause, vas-y, mais il ne faut pas que les nausées matinales prennent le dessus sur toi !</text>
           <def_link>409</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 6</checkOnAppear>
@@ -319,7 +329,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[KNOWN SICK] Hooray for the one upside of continuous puking... sleeping in. Until I throw up again, of course! ...Ah, sorry for the cynicism. I appreciate it.</text>
+          <text>[KNOWN SICK] Hourra pour le seul avantage des vomissements continus... la grasse matinée. Jusqu'à ce que je vomisse à nouveau, bien sûr ! ...Ah, désolée pour le cynisme. C'est gentil de ta part.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -339,7 +349,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>No problem. Hurry along and relax.</text>
+          <text>Il n'y a pas de problème. Dépêche-toi d'aller te détendre.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -356,7 +366,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[KNOWN DENIED] Oh god, thanks for reminding me it's gonna get worse! &lt;She sighs, and stifles a slight retch.&gt; Right. I can do this. Right. Just going to stop off in the hallway first...</text>
+          <text>[KNOWN DENIED] Oh mon dieu, merci de me rappeler que ça va être pire ! &lt;Elle soupire et étouffe un léger haut-le-cœur.&gt; C'est vrai. Je peux le faire. Bien. Je vais juste m'arrêter dans le couloir d'abord...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -376,7 +386,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Karen darts off to the wastebasket again before you can say anything else.&gt;</text>
+          <text>&lt;Karen se précipite à nouveau vers la corbeille à papier avant que tu ne puisses dire quoi que ce soit d'autre.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -393,7 +403,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[KNOWN NEGOTIATION] Prenatal yoga! Hah - oh wow, yuck, laughing was suddenly awful just then. I mean, thank you. I'm going to get that water... and see if it's not a lost cause to try and brush my teeth...</text>
+          <text>[KNOWN NEGOTIATION] Du yoga prénatal ! Hah - oh wow, pouah, rire devient soudainement horrible à ce moment-là. Je veux dire, merci. Je vais aller chercher de l'eau... et voir si ce n'est pas une cause perdue que d'essayer de me brosser les dents...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -413,7 +423,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Best of luck, momma.</text>
+          <text>Bonne chance, maman.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -430,7 +440,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[KNOWN LEADERSHIP] Half-day... right. Well, once the "morning" half of that gets over with, hopefully I'll be in good enough shape to make up for lost time. Thanks.</text>
+          <text>[KNOWN LEADERSHIP] Une demi-journée... d'accord. Une fois que la moitié "matinale" sera terminée, j'espère être en assez bonne forme pour rattraper le temps perdu. Merci.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -450,7 +460,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>No problem. Go get some rest.</text>
+          <text>Pas de problème. Va te reposer.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -467,7 +477,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Ugh. Okay, this is completely stupid, but my back is killing me today. I feel like someone punched me in the spine... any way I could take today off?</text>
+          <text>Ugh. Ok, c'est complètement stupide, mais mon dos me fait souffrir aujourd'hui. J'ai l'impression qu'on m'a donné un coup de poing dans la colonne vertébrale... Y a-t-il moyen que je prenne congé aujourd'hui ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -486,7 +496,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[WHAT] Okay, what the hell is your back doing getting messed up? You seem young for that.</text>
+          <text>[WHAT] Ok, que diable vient faire ton dos dans cette situation ? Tu as pourtant l'air bien jeune pour ça.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -495,7 +505,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[NO SICK] Say no more, back problems are the absolute worst. Rest those muscles and we'll have you on your feet again tomorrow.</text>
+          <text>[NO SICK] N'en dis pas plus, les problèmes de dos sont les pires qui soient. Ménage tes muscles et tu seras de nouveau sur pied demain.</text>
           <def_link>411</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -504,7 +514,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[NO DENIED] I hate to say this, but we can't lose anyone's work right now. We'll keep you out of the field, but see if you can get some kind of stretching done or whatever, if that helps.</text>
+          <text>[NO DENIED] Je n'aime pas dire ça, mais nous ne pouvons pas manquer de main-d'œuvre pour l'instant. Nous allons te tenir à l'écart du terrain, mais vois si tu peux faire des étirements ou autre chose, si ça peut t'aider.</text>
           <def_link>412</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -513,7 +523,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[NO NEGOTIATION] No point in hurting your muscles and making it even worse - can't negotiate with backs. Relax and do what you can to sort that out.</text>
+          <text>[NO NEGOTIATION] Il est inutile de se blesser les muscles et d'aggraver la situation - on ne peut pas négocier avec le dos. Détends-toi et fais ce que tu peux pour régler le problème.</text>
           <def_link>413</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 4</checkOnAppear>
@@ -522,7 +532,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[NO LEADERSHIP] We could really use your help, but it's important you not hurt yourself further. See what you can do with some stretches and a little rest, and maybe we can get a half day of work in!</text>
+          <text>[NO LEADERSHIP] Nous pourrions vraiment avoir besoin de ton aide, mais il est important que tu ne te blesses pas davantage. Vois ce que tu peux faire avec quelques étirements et un peu de repos, et peut-être que nous pourrons obtenir une demi-journée de travail !</text>
           <def_link>414</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 6</checkOnAppear>
@@ -537,7 +547,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I was twenty-five and super careless, and I jumped off a ledge at Lake Travis, hit my back on some rocks, it's been a periodic bastard ever since. I probably sneezed or something while I was asleep last night, because when I woke up, it hurt like hell. &lt;Karen winces a second.&gt; What's the verdict?</text>
+          <text>À 25 ans, j'étais très imprudente, j'ai sauté d'une corniche au lac Travis, je me suis cognée le dos sur des rochers et depuis, c'est une saloperie périodique. J'ai probablement éternué ou quelque chose comme ça pendant que je dormais la nuit dernière, parce que quand je me suis réveillée, ça faisait un mal de chien. &lt;Karen grimace un instant.&gt; Alors, quel est le verdict ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -554,7 +564,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[NO SICK] Say no more, back problems are the absolute worst. Rest those muscles and we'll have you on your feet again tomorrow.</text>
+          <text>[NO SICK] Ne dis rien de plus, les problèmes de dos sont les pires qui soient. Il faut laisser reposer ces muscles et tu seras de nouveau sur pied demain.</text>
           <def_link>411</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -563,7 +573,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[NO DENIED] I hate to say this, but we can't lose anyone's work right now. We'll keep you out of the field, but see if you can get some kind of stretching done or whatever, if that helps.</text>
+          <text>[NO DENIED] Je n'aime pas dire ça, mais nous ne pouvons pas nous passer de quelqu'un pour l'instant. Nous allons te laisser en dehors du terrain, mais vois si tu peux faire des étirements ou autre chose, si ça peut t'aider.</text>
           <def_link>412</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -572,7 +582,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[NO NEGOTIATION] No point in hurting your muscles and making it even worse - can't negotiate with backs. Relax and do what you can to sort that out.</text>
+          <text>[NO NEGOTIATION] Il est inutile de se faire mal aux muscles et d'aggraver la situation - on ne peut pas négocier avec le dos. Détends-toi et fais ce que tu peux pour régler le problème.</text>
           <def_link>413</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 4</checkOnAppear>
@@ -581,7 +591,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[NO LEADERSHIP] We could really use your help, but it's important you not hurt yourself further. See what you can do with some stretches and a little rest, and maybe we can get a half day of work in!</text>
+          <text>[NO LEADERSHIP] Nous avons vraiment besoin de ton aide, mais il est important que tu ne te blesses pas davantage. Vois ce que tu peux faire avec quelques étirements et un peu de repos, et peut-être que tu pourras reprendre le travail cette après-midi !</text>
           <def_link>414</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 6</checkOnAppear>
@@ -596,7 +606,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NO SICK] You're a lifesaver. I miss the days I could grab a codiene and just ride things out... but I also miss streaming movies and air conditioning, so I should stop whining right now. Thanks.</text>
+          <text>[NO SICK] Tu me sauves la vie. Je regrette le temps où je pouvais prendre une codéine pour tenir le coup... mais je regrette aussi les films en streaming et l'air conditionné, alors je devrais arrêter de me plaindre tout de suite. Merci.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -616,7 +626,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>No problem. Go get off your feet.</text>
+          <text>Pas de problème. Va te reposer.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -633,7 +643,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NO DENIED] Right, right, I'll do what I can. Just... won't be able to do it very fast. Sorry.</text>
+          <text>[NO DENIED] D'accord, d'accord, je ferai ce que je peux. Mais... je ne pourrai pas aller très vite. Je suis désolée.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -653,7 +663,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Understood, just get moving.</text>
+          <text>Compris, fais de ton mieux.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -670,7 +680,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NO NEGOTIATION] Thanks, I really appreciate it. Guess I have to wait a little longer for that bionic replacement spine. In the meantime, lying down sure sounds good...</text>
+          <text>[NO NEGOTIATION] Merci, j'apprécie vraiment. Je suppose que je vais devoir attendre un peu plus longtemps pour une colonne vertébrale bionique de remplacement. En attendant, m'allonger me fait du bien...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -690,7 +700,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You do that. Hope you feel better.</text>
+          <text>Fais donc ça. J'espère que tu te sentiras mieux.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -707,7 +717,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NO LEADERSHIP] Stretches... sure. Give me a couple hours, and I'll try to get myself up and moving again. Thanks for the understanding.</text>
+          <text>[NO LEADERSHIP] Des étirements... certainement. Donne-moi quelques heures et j'essaierai de me remettre en route. Merci de ta compréhension.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -727,7 +737,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Not a problem. Hope the stretching helps.</text>
+          <text>Pas de problème. J'espère que les étirements t'aideront.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
