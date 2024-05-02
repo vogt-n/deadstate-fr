@@ -9,13 +9,14 @@
   <parts>
     <dlgPart>
       <lines>
+         <!-- Clone pour genre-->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You call yourself a fucking leader? Other people want to listen to you, that's fine - I'm through following your shitty orders! </text>
+          <text>Tu te prétends une putain de leader ? Les autres veulent t'écouter, c'est très bien - moi, j'en ai marre de suivre tes ordres de merde ! </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
-            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -29,7 +30,25 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Count yourself lucky I don't just shank you and take control of this place myself.  </text>
+          <text>Tu te prétends un putain de leader ? Les autres veulent t'écouter, c'est très bien - moi, j'en ai marre de suivre tes ordres de merde ! </text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Regina_Pissed = 1;</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Estime-toi heureux que je ne te plante pas et que je ne prenne pas le contrôle de cet endroit moi-même.  </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -46,7 +65,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I AM still in charge and I say you don't eat today. Disobey again and I'll order you shot!</text>
+          <text>JE SUIS toujours en charge et je dis que tu ne mangeras pas aujourd'hui. Désobéis encore et je te fais fusiller !</text>
           <def_link>1245</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -55,7 +74,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm going to give you one more day to think this through. Consider what I've done for you in the past.</text>
+          <text>Je vais te donner un jour de plus pour réfléchir à tout cela. Réfléchis à ce que j'ai fait pour toi dans le passé.</text>
           <def_link>1246</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -64,7 +83,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I've made mistakes, but look what I have to work with. Think you could get this far with this lot? Do you really?</text>
+          <text>J'ai fait des erreurs, mais regarde ce que j'ai pour travailler. Tu penses pouvoir aller aussi loin avec ce groupe ? Tu le penses vraiment ?</text>
           <def_link>1247</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Negotiation &gt;= 6</checkOnAppear>
@@ -73,7 +92,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Big bad Regina can't hack it anymore? Fine. Who needs you. You can rot here and eat half-rations until you toughen up. </text>
+          <text>La grande méchante Regina n'en peut plus ? Très bien. Qui a besoin de toi. Tu peux pourrir ici et manger des demi-rations jusqu'à ce que tu t'endurcisses. </text>
           <def_link>1248</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Leadership &gt;= 6</checkOnAppear>
@@ -82,7 +101,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You can stay or you can try to walk out of here. </text>
+          <text>Tu peux rester ou tu peux essayer de sortir d'ici. </text>
           <def_link>1249</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -97,7 +116,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You're making a BIG mistake. Maybe one of your last.</text>
+          <text>Tu fais une GROSSE erreur. Peut-être l'une de tes dernières.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -117,7 +136,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Get out of my sight!</text>
+          <text>Dégage de ma vue !</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -128,7 +147,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>We'll see...</text>
+          <text>On verra bien...</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -145,7 +164,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I don't know if a day's going to make a difference... Let's hope for your sake you're right.</text>
+          <text>Je ne sais pas si un jour fera la différence... Espérons pour toi que tu as raison.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -164,7 +183,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Excuse me - I have work to do.</text>
+          <text>Excuse-moi, j'ai du travail.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -175,7 +194,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Yeah, sure.</text>
+          <text>Oui, bien sûr.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -192,7 +211,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Maybe. I don't know... Probably not. But that doesn't excuse your shitty decisions. </text>
+          <text>Peut-être. Je ne sais pas... Probablement pas. Mais ça n'excuse pas tes décisions de merde. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -212,7 +231,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Well, think it over.</text>
+          <text>Eh bien, réfléchis-y.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -223,7 +242,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>You've got a day to deal with your issues.</text>
+          <text>Tu as une journée pour régler tes problèmes.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -240,7 +259,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>...Hmph. Try that tough love shit on me - I invented that. Just get outta my sight.</text>
+          <text>...Hmph. Tu peux essayer cette connerie d'amour vache avec moi, c'est moi qui l'ai inventée. Dégage de ma vue.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -260,7 +279,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Sure thing. Some of us have to get things done.</text>
+          <text>C'est sûr. Certains d'entre nous doivent faire des choses.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -271,7 +290,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>This place is your best chance. Think it over.</text>
+          <text>Cet endroit est ta meilleure chance. Réfléchis bien.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -288,7 +307,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Ha ha ha... Yeah. We'll fucking see, now won't we?</text>
+          <text>Ha ha ha... Ouais. On verra bien, n'est-ce pas ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -308,7 +327,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Regina walks away.&gt;</text>
+          <text>&lt;Regina s'éloigne.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
