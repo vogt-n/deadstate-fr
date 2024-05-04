@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>This is fucked up. Even after &lt;charname&gt; knows we're - not together anymore, they're still making us sleep in the same room?</text>
+          <text>C'est vraiment n'importe quoi. Même si &lt;charname&gt; sait que nous ne sommes - plus ensemble, ils nous font encore dormir dans la même chambre ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -29,7 +29,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>I'm not happy about it either, but how big do you think this place is? We asked for a room when we came in together, we got one, there's only so much you can do here.</text>
+          <text>Je ne suis pas contente non plus, mais tu crois que c'est grand comment cet endroit ? On a demandé une chambre quand on est arrivés ensemble, on en a eu une, il y a des limites à ce qu'on peut faire ici.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -45,7 +45,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>But they were there! They could've done something about it. I'm hardly gonna be able to sleep.</text>
+          <text>Mais ils étaient là ! Ils auraient pu faire quelque chose. Je vais difficilement pouvoir dormir.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -61,7 +61,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>Oh come on. It's not like we're going to be sleeping in the same bed. You're being a fucking teenager about it.</text>
+          <text>Oh, allez. Ce n'est pas comme si on allait dormir dans le même lit. Tu es un putain d'adolescent à ce sujet.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -77,7 +77,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>A teenager? You can't respect that I'm in a lot of fucking pain right now, and being around you is just... it's damn difficult, and this is just... it's twisting the knife?</text>
+          <text>Un ado ? Tu ne peux pas respecter le fait que je souffre beaucoup en ce moment, et qu'être près de toi est juste... c'est sacrément difficile, et c'est juste... c'est tourner le couteau dans la plaie ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -93,17 +93,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[C] Craig - look, I'm sorry, but we can't swap things around. Karen, don't be a jerk to him, okay?</text>
+          <text>[C] Craig - Ecoute, je suis désolée, mais on ne peut pas changer les choses. Karen, ne fais pas l'imbécile avec lui, d'accord ?</text>
           <def_link>3827</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+         <dlgAnsw>
+          <text>[C] Craig - Ecoute, je suis désolé, mais on ne peut pas changer les choses. Karen, ne fais pas l'imbécile avec lui, d'accord ?</text>
+          <def_link>3827</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[K] Hey, Craig, I get it's hard, but Karen's got a damn point. This room is for sleeping, so just focus on that!</text>
+          <text>[K] Hey, Craig, je sais que c'est dur, mais Karen marque un point. Cette chambre est faite pour dormir, alors concentre-toi sur ça !</text>
           <def_link>3828</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -111,17 +121,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[N] Look, I'm sorry about the situation. But we have to learn how to deal with each other - and it won't be easy, but we're all counting on you both to be strong.</text>
+          <text>[N] Ecoute, je suis désolé pour la situation. Mais on doit apprendre à se supporter l'un l'autre - et ça ne sera pas facile, mais on compte tous sur vous pour être forts.</text>
           <def_link>3830</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 4</checkOnAppear>
-          <checksOnClick />
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[L] This is a war, and we can't choose who we bunk with. You don't like it, you sleep in shifts.</text>
+          <text>[N] Ecoute, je suis désolée pour la situation. Mais on doit apprendre à se supporter l'un l'autre - et ça ne sera pas facile, mais on compte tous sur vous pour être forts.</text>
+          <def_link>3830</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.negotiation &gt;= 4</checkOnAppear>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[L] C'est une guerre, et nous ne pouvons pas choisir avec qui nous nous battons. Si ça ne vous plaît pas, vous dormirez par roulement.</text>
           <def_link>3831</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 3</checkOnAppear>
@@ -130,7 +150,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[I] &lt;Ignore the two.&gt;</text>
+          <text>[I] &lt;Ignorez les deux.&gt;</text>
           <def_link>3829</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -145,7 +165,7 @@
       <lines>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>[C] Fine. I'll just go to sleep as quick as I possibly can so he doesn't have to deal with my horrible evil face giving him nightmares.</text>
+          <text>[C] D'accord. Je vais m'endormir le plus vite possible pour qu'il n'ait pas à faire face à mon horrible visage diabolique qui lui donne des cauchemars.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -164,7 +184,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>See? That wasn't my fault! &lt;He sighs.&gt; Thanks for at least understanding this is hard for me, &lt;charname&gt;. And um... I'm sorry I got mad at you. I get that it isn't easy, organizing this kind of thing.</text>
+          <text>Tu vois ? Ce n'était pas ma faute ! &lt;Il soupire.&gt; Merci d'avoir au moins compris que c'est difficile pour moi, &lt;charname&gt;. Et euh... Je suis désolé de m'être énervé contre toi. Je comprends que ce n'est pas facile d'organiser ce genre de choses.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -181,7 +201,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>It's fine. Just try to get some rest.</text>
+          <text>Ce n'est pas grave. Essaie juste de te reposer.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -198,7 +218,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[K] Of course you fucking take her side! I shoulda known. Fine. I'll just lie down, throw my pillow over my head, and attempt to stop thinking about how terrible my goddamn life is right now.</text>
+          <text>[K] Bien sûr que tu es de son côté ! J'aurais dû le savoir. C'est bon. Je vais juste m'allonger, mettre mon oreiller sur ma tête, et essayer d'arrêter de penser à quel point ma putain de vie est horrible en ce moment.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -217,7 +237,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>Yeah, this is gonna be great. &lt;She shakes her head.&gt; Thanks for the backup, &lt;charname&gt;. I know things can't be easy, but I do appreciate the support.</text>
+          <text>Ouais, ça va être génial. &lt;Elle secoue la tête.&gt; Merci pour le coup de main, &lt;charname&gt;. Je sais que les choses ne sont pas faciles, mais j'apprécie le soutien.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -234,7 +254,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>It's fine. Just try to get some rest.</text>
+          <text>Ce n'est pas grave. Essaie juste de te reposer.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -251,7 +271,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[N]I'm trying, but this shit is killing me. First my girlfriend tells me she got rid of our baby, then breaks up with me, and now -</text>
+          <text>[N]J'essaie, mais cette merde me tue. D'abord ma copine me dit qu'elle s'est débarrassée de notre bébé, puis elle rompt avec moi, et maintenant-</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -267,7 +287,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>Craig, this is hard for me too, and obviously I didn't want things to turn out like this. But we're not the only people here. And it's not like we can just - move to another shelter, or another city, or whatever. We're stuck, and I guess we better get over it sooner rather than later.</text>
+          <text>Craig, c'est difficile pour moi aussi, et il est évident que je ne voulais pas que les choses se passent ainsi. Mais nous ne sommes pas les seuls ici. Et ce n'est pas comme si nous pouvions déménager dans un autre refuge, ou dans une autre ville, ou quoi que ce soit d'autre. Nous sommes coincés, et je pense qu'il vaut mieux s'en remettre le plus tôt possible.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -283,7 +303,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Right... I guess. This isn't shit that just happens overnight, you know. I just... I don't work that way.</text>
+          <text>C'est vrai... J'imagine. Ce n'est pas une merde qui arrive du jour au lendemain, tu sais. C'est juste que... Je ne fonctionne pas comme ça.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -300,7 +320,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I understand. Just do your best. I'll talk to you later.</text>
+          <text>Je comprends. Fais de ton mieux. Je te parlerai plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -317,7 +337,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[L]That sounds fucking fantastic. I'll grab the first watch. A little tiredness is worth not lying around like a hurt animal.</text>
+          <text>[L]Ça a l'air fantastique. Je prendrai le premier quart. Un peu de fatigue vaut bien de ne pas rester allongé comme un animal blessé.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -337,7 +357,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>That doesn't seem like the best long-term solution, but... whatever. I'll try it for now.</text>
+          <text>Ça ne semble pas être la meilleure solution à long terme, mais... peu importe. Je vais essayer pour l'instant.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -354,7 +374,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Good. Make shifts happen, or get over the shit like adults. Either way, we're done with the topic.</text>
+          <text>C'est bien. Faites bouger les choses, ou oubliez ces conneries comme des adultes. Quoi qu'il en soit, nous en avons fini avec le sujet.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -371,7 +391,7 @@
       <lines>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>[I] And you don't think I am? You don't think that what I had to go through was fucking tough enough that you treat me like I'm some kind of... of murderer? Or like I did it to spite you, or something shallow like that?</text>
+          <text>[I] Et tu ne penses pas que c'est le cas ? Tu ne penses pas que ce que j'ai traversé était assez dur pour que tu me traites comme si j'étais une sorte de meurtrier ? Ou comme si je l'avais fait pour te contrarier, ou quelque chose de superficiel comme ça ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -390,7 +410,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You didn't even talk to me about it! Don't you think I deserved some say too?</text>
+          <text>Tu ne m'en as même pas parlé ! Tu ne penses pas que j'ai aussi mon mot à dire ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -406,7 +426,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>I tried to talk to you about it, and you wouldn't ever listen! And when it comes to my body and my own ability to survive, no, I don't think you have a say!</text>
+          <text>J'ai essayé de t'en parler, et tu n'as jamais voulu m'écouter ! Et quand il s'agit de mon corps et de ma propre capacité à survivre, non, je ne pense pas que tu aies ton mot à dire !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -422,7 +442,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>That's great! There it is. You don't care at all what I have to say to you, or how I felt about you, huh? Did our relationship ever matter to you at all, ever?!</text>
+          <text>C'est formidable ! C'est ça. Tu te fiches complètement de ce que j'ai à te dire, ou de ce que j'ai ressenti pour toi, hein ? Est-ce que notre relation a déjà eu de l'importance pour toi, jamais ?!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -438,7 +458,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>1</owner_ID>
-          <text>Jesus, I'm done with this. Let's just try to sleep and forget that the other person is in the room, because I'm angry and exhausted by just talking to you.</text>
+          <text>Bon sang, j'en ai assez. Essayons de dormir et d'oublier que l'autre personne est dans la pièce, parce que je suis en colère et épuisée rien qu'en te parlant.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -454,7 +474,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Fine. Just forget I exist. I bet that'll be really hard for you.</text>
+          <text>D'accord. Oublie que j'existe. Je parie que ce ne sera pas très dur pour toi.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -471,7 +491,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;The two of them stare stonily away from each other, not speaking.&gt;</text>
+          <text>&lt;Tous deux se regardent fixement, l'un l'autre, sans parler.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

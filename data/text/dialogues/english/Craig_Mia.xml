@@ -15,7 +15,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[DOESN'T HATE] Hey, ah, &lt;charname&gt; - I don't mean to bother you, because this might be nothing, but... I think Mia's been acting kind of odd lately.</text>
+          <text>[DOESN'T HATE] Salut, ah, &lt;charname&gt; - Je ne veux pas te déranger, parce que ce n'est peut-être rien, mais... Je pense que Mia agit bizarrement ces derniers temps.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -34,7 +34,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Odd] "Odd" like how?</text>
+          <text>[Odd] "Bizarre" comment ?</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -42,11 +42,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Dismiss] I'm sure it's not a big deal.</text>
+          <text>[Dismiss] Je suis sûre que ce n'est pas grave.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Dismiss] Je suis sûr que ce n'est pas grave.</text>
+          <def_link>402</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -58,7 +68,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[ODD] Like... &lt;He searches for words a second, then sighs.&gt; Look. When I was a teenager, I got into some pretty heavy drugs for a couple years. I kicked the habit, but um... that same kind of tension and paranoia I felt back then? It seems like Mia's kind of like that now.</text>
+          <text>[ODD] Comme... &lt;Il cherche ses mots pendant une seconde, puis soupire.&gt; Regarde. Quand j'étais adolescent, j'ai pris des drogues assez lourdes pendant quelques années. Je m'en suis débarrassé, mais... cette tension et cette paranoïa que j'ai ressenties à l'époque ? On dirait que Mia est un peu comme ça maintenant.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -75,7 +85,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Drugs] So you think Mia's on drugs?</text>
+          <text>[Drugs] Donc tu penses que Mia se drogue ?</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -84,7 +94,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Investigate] I'll definitely keep that in mind. Thanks for the heads up.</text>
+          <text>[Investigate] Je vais garder ça à l'esprit. Merci pour l'info.</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -93,7 +103,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Dismiss] I don't want to jump to conclusions. She and Sara are newer here, they may just still be on edge.</text>
+          <text>[Dismiss] Je ne veux pas tirer de conclusions hâtives. Elle et Sara sont nouvelles, elles sont peut-être encore sur les nerfs.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -108,7 +118,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[DRUGS] I don't know! Just... how she's acting reminded me of how I was when I was coming down. If it's not drugs, it's some kinda something that's freaking her out. She's doing her best to keep her cool, but I can recognize when someone's just kinda holding it together.</text>
+          <text>[DRUGS] Je ne sais pas ! C'est juste que... la façon dont elle agit me rappelle comment j'étais quand j'ai commencé à sombrer. Si ce n'est pas la drogue, c'est quelque chose qui la fait flipper. Elle fait de son mieux pour garder son sang-froid, mais je sais reconnaître quand quelqu'un ne tient pas en place.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -125,7 +135,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Investigate] I'll definitely keep that in mind. Thanks for the heads up.</text>
+          <text>[Investigate] Je garderai cela à l'esprit. Merci de m'avoir prévenu.</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -134,7 +144,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Dismiss] I don't want to jump to conclusions. She and Sara are newer here, they may just still be on edge.</text>
+          <text>[Dismiss] Je ne veux pas tirer de conclusions hâtives. Elle et Sara sont nouvelles, elles sont peut-être encore sur les nerfs.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -149,7 +159,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[INVESTIGATE] Okay, great - I mean, it may be nothing, but I thought I'd tell you just in case.</text>
+          <text>[INVESTIGATE] Ok, super - je veux dire, ce n'est peut-être rien, mais j'ai pensé à te le dire juste au cas où.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -168,7 +178,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I appreciate it. Talk to you later.</text>
+          <text>J'apprécie. A plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -185,7 +195,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[DISMISS] Well... okay, if you say so. I just wanted you to know.</text>
+          <text>[DISMISS] Eh bien... d'accord, si tu le dis. Je voulais juste que tu le saches.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -204,7 +214,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Thanks anyway. Bye.</text>
+          <text>Merci quand même. Au revoir.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -221,7 +231,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[HATE] Not that you deserve to know, but for the good the Shelter - I think Mia's up to something. Maybe Sara too, but there's definitely something odd about Mia.</text>
+          <text>[HATE] Ce n'est pas que tu mérites de savoir, mais pour le bien de l'Abri, je pense que Mia prépare quelque chose. Peut-être Sara aussi, mais il y a vraiment quelque chose de bizarre chez Mia.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -238,7 +248,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Curious] How do you mean?</text>
+          <text>[Curious] Comment ça ?</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -247,7 +257,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Meh] I'm sure it's nothing.</text>
+          <text>[Meh] Je suis sûr que ce n'est rien.</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -262,7 +272,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[CURIOUS] She's been acting paranoid - like she's on the come-down from something. I... I saw a thing about it once. It could just be an off day, but maybe it's worth asking about.</text>
+          <text>[CURIOUS] Elle agit de façon paranoïaque, comme si elle était en train de se remettre de quelque chose. Je... J'ai vu un truc à ce sujet une fois. C'est peut-être juste un jour sans, mais ça vaut peut-être la peine de se renseigner.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -279,7 +289,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Sure] I'll look into it. Thanks for the heads-up, Craig.</text>
+          <text>[Sure] J'y réfléchirai. Merci pour l'info, Craig.</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -288,7 +298,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Meh] I'm sure it's nothing.</text>
+          <text>[Meh] Je suis sûr que ce n'est rien.</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -303,7 +313,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SURE] Right, sure. Hope it's nothing. Figured I might as well have someone in charge see if it isn't.</text>
+          <text>[SURE] Oui, bien sûr. J'espère que ce n'est rien. Je me suis dit qu'il valait mieux que quelqu'un en charge vérifie si ce n'était pas le cas.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -322,7 +332,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Craig shrugs and walks out of the room.&gt;</text>
+          <text>&lt;Craig hausse les épaules et sort de la pièce.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -339,7 +349,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[MEH] Fuck, fine. So much for attempting to clue you in to... whatever.</text>
+          <text>[MEH] Bordel, c'est bon. Tant pis pour la tentative de vous mettre la puce à l'oreille... peu importe.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -358,7 +368,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Craig stomps out of the room.&gt;</text>
+          <text>&lt;Craig sort de la pièce en trottinant.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

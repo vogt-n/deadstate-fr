@@ -15,7 +15,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NO PROMISE] How could you let this happen?! You took Karen out in the field and she got bit, and now... and now...</text>
+          <text>[NO PROMISE] Comment as-tu pu laisser faire ça ?! Tu as emmené Karen à l'extérieur et elle a été mordue, et maintenant... et maintenant...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -34,7 +34,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Secret] I had no idea she was pregnant!</text>
+          <text>[Secret] Je ne savais pas qu'elle était enceinte !</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Karen_Loss == 1 &amp;&amp; ds.Karen_Expecting == 0 &amp;&amp; ds.Karen_Breakup == 0</checkOnAppear>
@@ -43,7 +43,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Knew] We all have to do our part, Craig - it's not like I meant for her to get bit!</text>
+          <text>[Knew] Nous devons tous faire notre part, Craig - ce n'est pas comme si je voulais qu'elle soit mordue !</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Karen_Loss == 1 &amp;&amp; ds.Karen_Expecting == 1 &amp;&amp; ds.Karen_Breakup == 0</checkOnAppear>
@@ -51,17 +51,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Ex] I'm sorry, but yelling at me won't fix things.</text>
+          <text>[Ex] Je suis désolée, mais me crier dessus n'arrangera pas les choses.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Karen_Loss == 1 &amp;&amp; ds.Karen_Expecting == 1 &amp;&amp; ds.Karen_Breakup == 1</checkOnAppear>
+          <checkOnAppear>ds.Karen_Loss == 1 &amp;&amp; ds.Karen_Expecting == 1 &amp;&amp; ds.Karen_Breakup == 1 &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Aggressive] Step back, Craig, or you'll regret it.</text>
+          <text>[Ex] Je suis désolé, mais me crier dessus n'arrangera pas les choses.</text>
+          <def_link>403</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Karen_Loss == 1 &amp;&amp; ds.Karen_Expecting == 1 &amp;&amp; ds.Karen_Breakup == 1 &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Aggressive] Recule, Craig, ou tu le regretteras.</text>
           <def_link>410</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -76,7 +86,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[PROMISE] You fucking bastard - you promised me! You fucking looked me in the eyes and promised me you wouldn't take her out again! And now she's fucking bit, and it's your goddamn fault! I should kill you!</text>
+          <text>[PROMISE] Espèce de salaud, tu m'avais promis ! Tu m'as regardé dans les yeux et tu m'as promis de ne plus la sortir ! Et maintenant, elle est mordue, et c'est ta putain de faute ! Je devrais te tuer !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -94,17 +104,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Apology] I'm sorry. I wish it hadn't happened.</text>
+          <text>[Apology] Je suis désolée. J'aurais aimé que ça n'arrive pas.</text>
           <def_link>407</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Leadership] We have to all make sacrifices. Don't imagine this doesn't hang heavily on me too.</text>
+          <text>[Apology] Je suis désolé. J'aurais aimé que ça n'arrive pas.</text>
+          <def_link>407</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Leadership] Nous devons tous faire des sacrifices. Ne t'imagine pas que ça ne me pèse pas lourd à moi aussi.</text>
           <def_link>408</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 6</checkOnAppear>
@@ -113,7 +133,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Negotiation] Karen still needs you, Craig. Revenge won't help her.</text>
+          <text>[Negotiation] Karen a toujours besoin de toi, Craig. La vengeance ne l'aidera pas.</text>
           <def_link>409</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 5</checkOnAppear>
@@ -122,7 +142,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Aggressive] You try, and you'll be the dead one.</text>
+          <text>[Aggressive] Essaie, et tu seras celui qui meurt.</text>
           <def_link>410</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -137,7 +157,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SECRET] I... I... goddammit, we were trying to keep it quiet until... until we knew what to do! But now I guess... if she lost it... &lt;Craig sobs a moment, then pulls himself together.&gt; How could you put her in danger?</text>
+          <text>[SECRET] Je... Je... bon sang, on essayait de garder le silence jusqu'à... jusqu'à ce qu'on sache quoi faire ! Mais maintenant, je suppose que... si elle l'a perdue... &lt;Craig sanglote un moment, puis se ressaisit.&gt; Comment as-tu pu la mettre en danger ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -153,17 +173,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Sorry] I'm sorry, Craig - I wish I could fix things. But I can't. Maybe if you'd told me...</text>
+          <text>[Sorry] Je suis désolée, Craig - j'aimerais pouvoir arranger les choses. Mais je ne peux pas. Peut-être que si tu m'avais dit...</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Aggressive]  I do what I have to keep us alive. Now step off or you won't be for long.</text>
+          <text>[Sorry] Je suis désolé, Craig - j'aimerais pouvoir arranger les choses. Mais je ne peux pas. Peut-être que si tu m'avais dit...</text>
+          <def_link>401</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Aggressive]  Je fais ce qu'il faut pour nous garder en vie. Maintenant, dégage ou tu ne le resteras pas longtemps.</text>
           <def_link>410</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -178,7 +208,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SORRY] &lt;Craig lets out a strangled scream and runs off.&gt;</text>
+          <text>[SORRY] &lt;Craig pousse un cri étranglé et s'enfuit.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -197,7 +227,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I guess that was too much for him.</text>
+          <text>Je suppose que c'était trop pour lui.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -214,7 +244,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[KNEW] It doesn't matter! You endangered two lives - and for what? What the fuck was so important that one person is already dead and another's going to die? Nothing is important enough.</text>
+          <text>[KNEW] Ce n'est pas grave ! Tu as mis deux vies en danger - et pour quoi ? Qu'est-ce qui était si important pour qu'une personne soit déjà morte et qu'une autre soit sur le point de mourir ? Rien n'est assez important.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -233,7 +263,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Craig turns and storms off.&gt;</text>
+          <text>&lt;Craig se retourne et part en trombe.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -250,7 +280,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[EX] Don't talk to me like I'm some stupid fucking kid! Karen means more to me than anything, and you put her out there to die!</text>
+          <text>[EX] Ne me parle pas comme si j'étais un putain de gamin stupide ! Karen compte plus que tout pour moi, et tu l'as laissée mourir !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -267,7 +297,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Sad] I didn't mean for her to get hurt. We'll take care of her as best we can.</text>
+          <text>[Sad] Je ne voulais pas qu'elle soit blessée. On va s'occuper d'elle du mieux qu'on peut.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -276,7 +306,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Lead] Everyone who goes out there risks their lives, yes. And I was out there with her. Where were you?</text>
+          <text>[Lead] Tous ceux qui sortent risquent leur vie, oui. Et j'étais dehors avec elle. Et toi, où étais-tu ?</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 6</checkOnAppear>
@@ -285,7 +315,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Talk] Craig, Karen is her own person. I know you care about her, but the choice to go out was hers, and she made it on her own.</text>
+          <text>[Talk] Craig, Karen est sa propre personne. Je sais que tu tiens à elle, mais le choix de sortir était le sien, et elle l'a fait seule.</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 5</checkOnAppear>
@@ -294,7 +324,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Aggressive] And I'll end things even quicker for you if you don't shut your mouth.</text>
+          <text>[Aggressive] Et je vais mettre fin aux choses encore plus vite pour toi si tu ne fermes pas ta bouche.</text>
           <def_link>410</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -309,7 +339,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SAD] Yeah right. Because you did such a great job before. </text>
+          <text>[SAD] C'est ça. Parce que tu as fait un si bon travail avant. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -328,7 +358,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Craig turns and storms out of the room.&gt;</text>
+          <text>&lt;Craig se retourne et sort de la pièce en trombe.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -343,13 +373,32 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- Clone pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LEAD] I... &lt;Craig grits his teeth, but after a moment, looks defeated.&gt; Fine. You win. I hope you're happy.</text>
+          <text>[LEAD] Je... &lt;Craig serre les dents, mais au bout d'un moment, il a l'air vaincu.&gt; C'est bon. Tu as gagné. J'espère que tu es content.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood (-4, 1028);</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[LEAD] Je... &lt;Craig serre les dents, mais au bout d'un moment, il a l'air vaincu.&gt; C'est bon. Tu as gagné. J'espère que tu es contente.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -364,7 +413,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Craig turns and shuffles out of the room.&gt;</text>
+          <text>&lt;Craig se retourne et sort de la pièce en traînant les pieds.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -381,7 +430,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[TALK] But she - she wasn't supposed to endanger herself like that! She... &lt;He lets out a sigh.&gt; Fuck. Fuck everything. I guess I'll go talk to her.</text>
+          <text>[TALK] Mais elle - elle n'était pas censée se mettre en danger comme ça ! Elle... &lt;Il pousse un soupir.&gt; Putain de merde. Tout est foutu. Je crois que je vais aller lui parler.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -399,11 +448,23 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I'm sorry. I hope things go all right.</text>
+          <text>Je suis désolé. J'espère que tout ira bien.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis désolée. J'espère que tout ira bien.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -415,14 +476,34 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- Clone pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[APOLOGY] Save it. You're a liar, and you use people like pawns. Fuck you, and fuck this place.</text>
+          <text>[APOLOGY] Garde ça pour toi. Tu es une menteuse, et tu utilises les gens comme des pions. Va te faire foutre, va te faire foutre toi et cet endroit.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Craig_Hate = 1;</string>
+            <string>changeMood(-8, 1028);</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[APOLOGY] Garde ça pour toi. Tu es un menteur, et tu utilises les gens comme des pions. Va te faire foutre, va te faire foutre toi et cet endroit.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
-            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -437,7 +518,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Craig storms out of the room.&gt;</text>
+          <text>&lt;Craig sort de la pièce en trombe.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -454,7 +535,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LEADERSHIP] Fuck your so-called "sacrifices." I all know is that Karen is going to die, and it's your fault.</text>
+          <text>[LEADERSHIP] J'emmerde tes soi-disant "sacrifices". Tout ce que je sais, c'est que Karen va mourir, et c'est de ta faute.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -473,7 +554,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Craig storms out of the room.&gt;</text>
+          <text>&lt;Craig sort de la pièce en claquant la porte.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -490,7 +571,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NEGOTIATION] Don't you dare try to use her against me! You already hurt her enough. But you are right - she does need me. Someone she can actually trust for a change.</text>
+          <text>[NEGOTIATION] Ne t'avise pas d'essayer de l'utiliser contre moi ! Tu l'as déjà suffisamment blessée. Mais tu as raison, elle a besoin de moi. Quelqu'un en qui elle peut avoir confiance, pour une fois.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -509,7 +590,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Craig storms out of the room.&gt;</text>
+          <text>&lt;Craig sort de la pièce en claquant la porte.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -526,7 +607,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[AGGRESSIVE] &lt;Craig seethes with anger, glaring at you.&gt; I'm not going to forget this, you fucker. I'm only walking away right now for her sake. For hers!</text>
+          <text>[AGGRESSIVE] &lt;Craig fulmine de colère et te jette un regard noir.&gt; Je ne vais pas l'oublier, espèce d'enfoiré. C'est pour elle que je m'en vais maintenant. Pour elle !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -546,7 +627,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Craig turns and stalks out of the room.&gt; </text>
+          <text>&lt;Craig se retourne et sort de la pièce à grands pas.&gt; </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

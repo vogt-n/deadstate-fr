@@ -17,7 +17,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[BASE] What is it?</text>
+          <text>[BASE] De quoi s'agit-il ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -34,7 +34,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Upgrade] Is there anything you think would make things better around here?</text>
+          <text>[Upgrade] Y a-t-il quelque chose qui, selon toi, pourrait améliorer les choses ici ?</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ShelterUpgradeExists(Greenhouse) == 0</checkOnAppear>
@@ -43,7 +43,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Luxury Need] Is there anything you'd like me to look for out in the field?</text>
+          <text>[Luxury Need] Y a-t-il quelque chose que tu voudrais que je recherche en particulier à l'extérieur ?</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ownsItem(2015) == 0</checkOnAppear>
@@ -52,7 +52,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Luxury Get] Here, I found this for you.</text>
+          <text>[Luxury Get] Tiens, j'ai trouvé ça pour toi.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ownsItem(2015) == 1</checkOnAppear>
@@ -60,17 +60,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Medical] I'm ready to perform the... the operation. Ah, if you are.</text>
+          <text>[Medical] Je suis prêt à faire... l'opération. Ah, si tu l'es.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ownsItem(2060) == 1 &amp;&amp; shelterGetResource(fuel) &gt;= 3 &amp;&amp; ds.Karen_Expecting == 1 &amp;&amp; ds.Karen_Abort == 0</checkOnAppear>
+          <checkOnAppear>ownsItem(2060) == 1 &amp;&amp; shelterGetResource(fuel) &gt;= 3 &amp;&amp; ds.Karen_Expecting == 1 &amp;&amp; ds.Karen_Abort == 0 &amp;&amp; isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Questions] I have a few questions for you.</text>
+          <text>[Medical] Je suis prête à faire... l'opération. Ah, si tu l'es.</text>
+          <def_link>403</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ownsItem(2060) == 1 &amp;&amp; shelterGetResource(fuel) &gt;= 3 &amp;&amp; ds.Karen_Expecting == 1 &amp;&amp; ds.Karen_Abort == 0 &amp;&amp; isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Questions] J'ai quelques questions à te poser.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -79,7 +89,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Never mind - talk to you later.</text>
+          <text>Ce n'est pas grave, on se parle plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -96,7 +106,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[QUESTIONS] Okay. Fire away.</text>
+          <text>[QUESTIONS] D'accord. Vas-y, tire.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -113,7 +123,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Background] Tell me a bit about yourself.</text>
+          <text>[Background] Parle-moi un peu de toi.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -122,7 +132,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Lampasas] What can you tell me about the Lampasas shelter?</text>
+          <text>[Lampasas] Que peux-tu me dire sur le refuge de Lampasas ?</text>
           <def_link>408</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -130,17 +140,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Breakup] Sorry about you and Craig. How're you holding up?</text>
+          <text>[Breakup] Désolé pour toi et Craig. Comment tu tiens le coup ?</text>
           <def_link>410</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Karen_Breakup == 1 &amp;&amp; ds.Craig_Dead == 0</checkOnAppear>
+          <checkOnAppear>ds.Karen_Breakup == 1 &amp;&amp; ds.Craig_Dead == 0 &amp;&amp; isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Keep] How're you and the baby doing?</text>
+          <text>[Breakup] Désolée pour toi et Craig. Comment tu tiens le coup ?</text>
+          <def_link>410</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Karen_Breakup == 1 &amp;&amp; ds.Craig_Dead == 0 &amp;&amp; isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Keep] Comment ça va, toi et le bébé ?</text>
           <def_link>411</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Karen_Keep == 1 &amp;&amp; ds.Craig_Dead == 0</checkOnAppear>
@@ -149,7 +169,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Post] How're you feeling? Everything recovering well?</text>
+          <text>[Post] Comment te sens-tu ? Tout va bien ?</text>
           <def_link>413</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Karen_Abort == 1 &amp;&amp; ds.Karen_Breakup == 0 &amp;&amp; ds.Craig_Dead == 0</checkOnAppear>
@@ -157,17 +177,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Loss] I'm sorry about Craig. He was a good guy, and he really cared about you.</text>
+          <text>[Loss] Je suis désolé pour Craig. C'était un bon gars, et il tenait vraiment à toi.</text>
           <def_link>414</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Karen_Sorry == 0 &amp;&amp; isShelterCharDead(1028)</checkOnAppear>
+          <checkOnAppear>ds.Karen_Sorry == 0 &amp;&amp; isShelterCharDead(1028) &amp;&amp; isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Actually, never mind for right now. Talk to you later.</text>
+          <text>[Loss] Je suis désolée pour Craig. C'était un bon gars, et il tenait vraiment à toi.</text>
+          <def_link>414</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Karen_Sorry == 0 &amp;&amp; isShelterCharDead(1028) &amp;&amp; isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>En fait, laisse tomber pour l'instant. On se parle plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -184,7 +214,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[UPGRADE] New thing... well, a greenhouse on the roof would be a nice touch. Always good to see plants growing - especially when they mean more fresh food.</text>
+          <text>[UPGRADE] Une nouvelle chose... Eh bien, une serre sur le toit serait une bonne idée. C'est toujours agréable de voir des plantes pousser, surtout quand elles sont synonymes de nourriture fraîche.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -201,7 +231,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Base] Right. There was something else...</text>
+          <text>[Base] C'est vrai. Une autre question ...</text>
           <def_link>398</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -210,7 +240,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Good to know. Talk to you later.</text>
+          <text>C'est bon à savoir. À plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -227,7 +257,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LUXURY NEED] Back on the AirReponse team, it was a pretty cramped interior, and we all were pretty sensitive about how we smelled. Obviously I'm not there now, but old habits die hard... so yeah, deodorant. Strong stuff, if you can find it.</text>
+          <text>[LUXURY NEED] Au sein de l'équipe AirReponse, nous étions très à l'étroit et nous étions tous très sensibles à l'odeur que nous dégagions. Évidemment, je n'y suis plus, mais les vieilles habitudes ont la vie dure... alors oui, du déodorant. Un truc fort, si tu peux en trouver.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -244,7 +274,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Base] Right. There was something else...</text>
+          <text>[Base] C'est vrai. Une autre question ...</text>
           <def_link>398</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -253,7 +283,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'll keep an eye out. Later.</text>
+          <text>J'ouvrirai l'œil. A plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -270,7 +300,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LUXURY GET] Whew, thanks. It's a silly thing to fixate on, I know, but it's nice to just not hate how I smell for a little bit. I appreciate it.</text>
+          <text>[LUXURY GET] Merci. C'est idiot de faire une fixation sur ça, je sais, mais ça fait du bien de ne pas détester mon odeur pour un petit moment. J'apprécie.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -292,7 +322,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Base] Right. There was something else...</text>
+          <text>[Base] C'est vrai. Il y avait autre chose...</text>
           <def_link>398</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -300,8 +330,20 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>Glad to help. Talk to you later.</text>
+          <text>Content d'avoir aidé. On se parle plus tard.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear />
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Contente d'avoir aidé. On se parle plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -318,7 +360,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[MEDICAL] Right. &lt;She takes a deep breath.&gt; Okay, I'm ready. Let's head to the infirmary.</text>
+          <text>[MEDICAL] Bien sûr... &lt;Elle prend une grande inspiration.&gt; Bon, je suis prête. Allons à l'infirmerie.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -335,7 +377,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Procedure] I'm right behind you.</text>
+          <text>[Procedure] Je te suis.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -355,7 +397,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[BACKGROUND] I was an AirResponse pilot - I flew a helicopter for a medical response team in and around the Waco area. Craig was a lab tech at a hospital there. We met through a mutual friend and started dating.</text>
+          <text>[BACKGROUND] J'étais pilote d'AirResponse - je pilotais un hélicoptère pour une équipe d'intervention médicale dans la région de Waco et ses environs. Craig était technicien de laboratoire dans un hôpital de la région. Nous nous sommes rencontrés par l'intermédiaire d'un ami commun et avons commencé à sortir ensemble.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -371,7 +413,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[MORE] When things started getting really bad in the area, we took some supplies and friends to the Lampasas shelter. &lt;She sighs&gt; I wish I'd known ahead of time how bad it was going to be. I regret every day the friends that went with us and never made it out.</text>
+          <text>[MORE] Lorsque les choses ont commencé à se gâter dans la région, nous avons apporté du matériel et des amis au refuge de Lampasas. &lt;Elle soupire&gt; J'aurais aimé savoir à l'avance à quel point la situation allait être grave. Je regrette tous les jours les amis qui nous accompagnaient et qui n'ont jamais pu s'en sortir.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -388,7 +430,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Helicopter] So you're a pilot? What sort of things can you fly?</text>
+          <text>[Helicopter] Alors, tu es pilote ? Quel genre d'engins peux-tu piloter ?</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -397,7 +439,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Base] Right. There was something else...</text>
+          <text>[Base] Oui, c'est vrai. Il y avait autre chose...</text>
           <def_link>398</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -406,7 +448,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Thanks for the info. Talk to you later.</text>
+          <text>Merci pour l'info. A plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -423,7 +465,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[PILOT] Well... technically I've got training on ultralights, little two, three person prop planes, but my focus is really in helicopters. I've flown a few different types, but I think I've got a good enough sense to try out something a little unfamiliar.</text>
+          <text>[PILOT] Eh bien... techniquement, j'ai suivi une formation sur les ULM, des petits avions à hélice pour deux ou trois personnes, mais je me concentre surtout sur les hélicoptères. J'ai piloté quelques types différents, mais je pense que j'ai assez de talent pour essayer quelque chose d'un peu moins familier.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -439,7 +481,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[CHOPPER] Good luck finding any around here, though. The chopper I flew to Lampasas got grounded by the military there in short order, otherwise Craig and I would have tried to get to it.</text>
+          <text>[CHOPPER] En tout cas, bonne chance pour en trouver dans le coin. L'hélicoptère que j'ai piloté à Lampasas a été cloué au sol par l'armée en peu de temps, sinon Craig et moi aurions essayé de l'utiliser.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -456,7 +498,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Base] Right. There was something else...</text>
+          <text>[Base] C'est vrai. Il y avait autre chose...</text>
           <def_link>398</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -465,7 +507,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Thanks for the info. Talk to you later.</text>
+          <text>Merci pour l'info. A plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -482,7 +524,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LAMPASAS] It was crowded - packed way beyond capacity. I think it was even just with the people who didn't want to go too far from their homes. I don't know what happened to those willing to go further... or if they actually got anywhere.</text>
+          <text>[LAMPASAS] Il y avait beaucoup de monde - bien plus que la capacité d'accueil. Je pense que c'était trop juste même en comptant que les gens qui ne voulaient pas trop s'éloigner de chez eux. Je ne sais pas ce qu'il est advenu de ceux qui voulaient aller plus loin... ni s'ils sont arrivés quelque part.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -498,7 +540,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[DISASTER] Everyone seemed on edge. Food was a little low, but nobody was starving. It was run more like a prison - asking about anything got you into trouble, and soldiers clung to their guns like they were always about to start firing. I never got a single solid night of sleep in that place.</text>
+          <text>[DISASTER] Tout le monde semblait à cran. La nourriture était un peu juste, mais personne ne mourait de faim. L'établissement ressemblait davantage à une prison : si on posait des questions, on s'attirait des ennuis, et les soldats s'accrochaient à leurs fusils comme s'ils étaient toujours sur le point de faire feu. Je n'ai jamais pu fermer l'œil de la nuit dans cet endroit.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -515,7 +557,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Base] Right. There was something else...</text>
+          <text>[Base] C'est vrai. Il y avait autre chose...</text>
           <def_link>398</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -523,11 +565,23 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>Glad you made it out of there alive. Talk to you later.</text>
+          <text>Contente que tu sois sorti vivant de là. À plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Content que tu sois sorti vivant de là. À plus tard.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -541,7 +595,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[BREAKUP] Things are difficult, but... I'm just glad he's alive, and I don't have the shadow hanging over me of something I didn't want. I wish he'd understand why I did what I did, but... maybe someday he will. I hope we both live long enough for that.</text>
+          <text>[BREAKUP] Les choses sont difficiles, mais... Je suis juste contente qu'il soit en vie, et je ne suis pas hantée par l'ombre de quelque chose que je n'ai pas voulu. J'aimerais qu'il comprenne pourquoi j'ai fait ce que j'ai fait, mais... peut-être qu'un jour il le comprendra. J'espère que nous vivrons tous les deux assez longtemps pour cela.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -558,7 +612,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Base] Right. There was something else...</text>
+          <text>[Base] C'est vrai. Il y avait autre chose...</text>
           <def_link>398</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -567,7 +621,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'll do my best to make sure that happens. Talk to you later.</text>
+          <text>Je ferai de mon mieux pour que cela arrive. On se parle plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -584,7 +638,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[KEEP] Well, it's too early to really feel anything major, but I get the occasional bout of really horrible morning sickness, and I've been craving stupid stuff like fresh waffle cones and brussels sprouts. When it eventually starts kicking, you'll get the joy of seeing me get panicked and freak out!</text>
+          <text>[KEEP] Il est trop tôt pour ressentir quoi que ce soit d'important, mais j'ai de temps en temps d'horribles nausées matinales, et j'ai envie de trucs stupides comme des gaufres fraîches et des choux de Bruxelles. Quand ça commencera à bouger, tu auras la joie de me voir paniquer et flipper !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -601,7 +655,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Baby] Wow, you're really not into all this baby stuff at all, are you?</text>
+          <text>[Baby] Wow, tu n'es vraiment pas intéressée par tous ces trucs de bébé, n'est-ce pas ?</text>
           <def_link>412</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -610,7 +664,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Base] Um... right.There was something else...</text>
+          <text>[Base] Euh... c'est vrai. Il y avait autre chose...</text>
           <def_link>398</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -619,7 +673,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Yikes. I hope that ends up being a happier moment... talk to you later.</text>
+          <text>Oulà. J'espère que ce sera un moment plus heureux... à plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -636,7 +690,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[BABY] Look. I was an only child, lost my mom when I was just seven years old, and though my aunts did their best to make me a "proper lady" or whatever, all that crap was lost on me. I will carry this baby and love it as best I can, but I will definitely not stop thinking about how creepy pregnancy can be!</text>
+          <text>[BABY] Écoute. J'étais fille unique, j'ai perdu ma mère quand j'avais à peine sept ans, et bien que mes tantes aient fait de leur mieux pour faire de moi une "dame convenable" ou je ne sais quoi, toutes ces conneries m'ont échappées. Je porterai ce bébé et l'aimerai du mieux que je pourrai, mais je n'arrêterai certainement pas de penser à quel point la grossesse peut être effrayante !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -653,7 +707,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Base] Um. Right. There was something else...</text>
+          <text>[Base] Hum. C'est vrai. Il y avait autre chose...</text>
           <def_link>398</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -662,7 +716,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Understood! Talk to you later.</text>
+          <text>J'ai compris ! A plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -679,7 +733,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[POST] Well, it definitely took getting used to. And Craig still has his mopey moments. But he understands. And I think... in a way, we're closer than we were before. He's calmed down a little, stopped acting like the world was on his shoulders. Which is how I liked him best.</text>
+          <text>[POST] Il a fallu s'y habituer. Et Craig a encore ses moments de morosité. Mais il comprend. Et je pense que... d'une certaine manière, nous sommes plus proches qu'avant. Il s'est un peu calmé, il a arrêté d'agir comme si le monde était sur ses épaules. C'est comme ça que je le préfère.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -696,7 +750,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Base] Oh, right - there was something else I wanted to ask.</text>
+          <text>[Base] Ah oui, il y a autre chose que je voulais demander.</text>
           <def_link>398</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -705,7 +759,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Good to know. Talk to you later.</text>
+          <text>C'est bon à savoir. À plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -722,7 +776,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LOSS] I... thank you. &lt;She's quiet a moment.&gt; I miss him. Not like I ever thought I wouldn't, but... he was such a good person. He wanted so much to do right. I hope I can be that strong.</text>
+          <text>[LOSS] Je... merci. &lt;Elle reste silencieuse un moment.&gt; Il me manque. Pas comme je l'aurais cru, mais... c'était quelqu'un de bien. Il voulait tellement bien faire. J'espère pouvoir être aussi forte.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -741,7 +795,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Base] If it's not too much trouble... there was something else I wanted to ask.</text>
+          <text>[Base] Si ça ne te dérange pas trop... il y a quelque chose d'autre que je voulais te demander.</text>
           <def_link>398</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -750,7 +804,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I think you are. Talk to you later.</text>
+          <text>Je crois que c'est le cas. On se parle plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -767,7 +821,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[INFIRMARY] &lt;Karen opens her eyes and looks at you blearily.&gt; Oh... it's you. What do you want?</text>
+          <text>[INFIRMARY] &lt;Karen ouvre les yeux et te regarde d'un air sombre.&gt; Oh... c'est toi. Qu'est-ce que tu veux ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -786,7 +840,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Refused] Karen, why did you do this to yourself?</text>
+          <text>[Refused] Karen, pourquoi t'es-tu infligée ça ?</text>
           <def_link>5717</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Karen_Quest == 0 &amp;&amp; ds.Craig_Death == 0</checkOnAppear>
@@ -795,7 +849,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Wait] Why didn't you wait for me to help you?</text>
+          <text>[Wait] Pourquoi n'as-tu pas attendu que je t'aide ?</text>
           <def_link>5718</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Karen_Quest == 1 &amp;&amp; ds.Craig_Death == 0</checkOnAppear>
@@ -804,7 +858,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Loss] Why would you do this? Now with Craig gone -</text>
+          <text>[Loss] Pourquoi as-tu fait ça ? Maintenant que Craig est parti -</text>
           <def_link>5719</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Karen_Quest == 0 &amp;&amp; ds.Craig_Death == 1</checkOnAppear>
@@ -813,7 +867,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Kind] How're you feeling?</text>
+          <text>[Kind] Comment te sens-tu ?</text>
           <def_link>5720</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -826,13 +880,30 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- Clone pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[REFUSED] Because you were too... fucking high and mighty to help me. I told you... told you I needed help. But you were too self-important to help someone who asked for it.</text>
+          <text>[REFUSED] Parce que tu étais trop... hautain et puissant pour m'aider. Je t'ai dit... je t'ai dit que j'avais besoin d'aide. Mais tu étais trop imbu de ta personne pour aider quelqu'un qui le demandait.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[REFUSED] Parce que tu étais trop... hautaine et puissante pour m'aider. Je t'ai dit... je t'ai dit que j'avais besoin d'aide. Mais tu étais trop imbu de ta personne pour aider quelqu'un qui le demandait.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -844,20 +915,40 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Good] I just wanted to come and see how you were feeling. I'm sorry you're not doing well. </text>
+          <text>[Good] Je voulais juste venir voir comment tu te sentais. Je suis désolé que tu n'ailles pas bien. </text>
           <def_link>5721</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Apologize] I'm sorry. If I'd known you'd do something like this -</text>
+          <text>[Good] Je voulais juste venir voir comment tu te sentais. Je suis désolée que tu n'ailles pas bien. </text>
+          <def_link>5721</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <!-- Clone pour genre -->
+        <dlgAnsw>
+          <text>[Apologize] Je suis désolée. Si j'avais su que tu ferais quelque chose comme ça - </text>
           <def_link>5722</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Apologize] Je suis désolé. Si j'avais su que tu ferais quelque chose comme ça - </text>
+          <def_link>5722</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -869,7 +960,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[WAIT] I warned you... I couldn't wait forever. 'Course, if I'd known I was gonna do a bonehead thing like slipping on the stairs, yeah, I'd have waited another day, but I couldn't wait forever. I was too... scared. Didn't want to count on anyone else...</text>
+          <text>[WAIT] Je te l'avais dit... Je ne pouvais pas attendre éternellement. Bien sûr, si j'avais su que j'allais faire une bêtise comme glisser dans les escaliers, oui, j'aurais attendu un jour de plus, mais je ne pouvais pas attendre éternellement. J'avais trop... peur. Je ne pouvais pas compter sur quelqu'un d'autre...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -885,20 +976,40 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Good] I just wanted to come and see how you were feeling. I'm sorry you're not doing well. </text>
+          <text>[Good] Je voulais juste venir voir comment tu te sentais. Je suis désolé que tu n'ailles pas bien. </text>
           <def_link>5721</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Apologize] I'm sorry. If I'd known you'd do something like this -</text>
+          <text>[Good] Je voulais juste venir voir comment tu te sentais. Je suis désolée que tu n'ailles pas bien. </text>
+          <def_link>5721</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+         <!-- Clone pour genre -->
+        <dlgAnsw>
+          <text>[Apologize] Je suis désolée. Si j'avais su que tu ferais quelque chose comme ça - </text>
           <def_link>5722</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Apologize] Je suis désolé. Si j'avais su que tu ferais quelque chose comme ça - </text>
+          <def_link>5722</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -910,7 +1021,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LOST] Stop right there, you self-important... look, I miss him. But I'm not strong enough to... I didn't want to raise a child alone. And it's my right to say yes or no to that.</text>
+          <text>[LOST] Arrête-toi là, espèce d'égocentrique... Écoute, il me manque. Mais je ne suis pas assez forte pour... Je ne voulais pas élever un enfant seule. Et c'est mon droit de dire oui ou non à ça.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -926,20 +1037,40 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Good] I just wanted to come and see how you were feeling. I'm sorry you're not doing well. </text>
+          <text>[Good] Je voulais juste venir voir comment tu te sentais. Je suis désolé que tu n'ailles pas bien. </text>
           <def_link>5721</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Apologize] I'm sorry. If I'd known you'd do something like this -</text>
+          <text>[Good] Je voulais juste venir voir comment tu te sentais. Je suis désolée que tu n'ailles pas bien. </text>
+          <def_link>5721</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+         <!-- Clone pour genre -->
+        <dlgAnsw>
+          <text>[Apologize] Je suis désolée. Si j'avais su que tu ferais quelque chose comme ça - </text>
           <def_link>5722</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Apologize] Je suis désolé. Si j'avais su que tu ferais quelque chose comme ça - </text>
+          <def_link>5722</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -951,7 +1082,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[KIND] To be honest? Totally shitty. But honestly... I don't regret what I did. Would do it again.</text>
+          <text>[KIND] Pour être honnête ? Vraiment mal. Mais honnêtement... Je ne regrette pas ce que j'ai fait. Je le referais.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -968,7 +1099,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Lost] Why would you do this? Now with Craig gone -</text>
+          <text>[Lost] Pourquoi tu as fait ça ? Maintenant que Craig est parti -</text>
           <def_link>5719</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Karen_Quest == 0 &amp;&amp; isShelterCharDead(1028)</checkOnAppear>
@@ -977,7 +1108,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Wait] Why didn't you wait for me to help you?</text>
+          <text>[Wait] Pourquoi n'as-tu pas attendue que je t'aide ?</text>
           <def_link>5718</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Karen_Quest == 1 &amp;&amp; ds.Craig_Death == 0</checkOnAppear>
@@ -986,7 +1117,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Refused] Karen, why did you do this to yourself?</text>
+          <text>[Refused] Karen, pourquoi t'es-tu infligée ça ?</text>
           <def_link>5717</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Karen_Quest == 0 &amp;&amp; ds.Craig_Death == 0</checkOnAppear>
@@ -994,11 +1125,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Good] I just wanted to come and see how you were feeling. I'm sorry you're not doing well. </text>
+          <text>[Good] Je voulais juste venir voir comment tu te sentais. Je suis désolé que tu n'ailles pas bien. </text>
           <def_link>5721</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Good] Je voulais juste venir voir comment tu te sentais. Je suis désolée que tu n'ailles pas bien. </text>
+          <def_link>5721</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -1010,7 +1151,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[GOOD] Um... thanks. If you'd okay with it, I'll just go back to sleep now. But... yeah. Thanks.</text>
+          <text>[GOOD] Um... merci. Si tu es d'accord, je vais me rendormir maintenant. Mais... oui. Merci.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1029,7 +1170,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Karen closes her eyes and nods back to sleep.&gt;</text>
+          <text>&lt;Karen ferme les yeux et se rendort.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1046,7 +1187,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[APOLOGIZE] Yeah, yeah, I know, whatever. Just... look. I've got a headache. I need to get some more sleep. Just... we'll do this later. Or not.</text>
+          <text>[APOLOGIZE] Ouais ouais, je sais, peu importe. Juste... écoute. J'ai mal à la tête. J'ai besoin de dormir un peu plus. On... On parlera de ça plus tard. Ou pas.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1065,7 +1206,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Karen closes her eyes and nods back to sleep.&gt;</text>
+          <text>&lt;Karen ferme les yeux et s'endort.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1082,7 +1223,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[RETURN] &lt;Karen seems to be dozing - or at least pretending to be. Either way, she's not wildly receptive to conversation.&gt;</text>
+          <text>[RETURN] &lt;Karen semble somnoler - ou du moins faire semblant. Quoi qu'il en soit, elle n'est pas très réceptive à la conversation.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1099,7 +1240,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Leave the woman alone.&gt;</text>
+          <text>&lt;Laisser cette femme tranquille.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

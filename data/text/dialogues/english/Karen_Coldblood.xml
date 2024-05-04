@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>What the fuck is wrong with you, you... psychopath! Killing Craig like that... you had no right!</text>
+          <text>Qu'est-ce qui ne va pas chez toi, espèce de... psychopathe ! Tuer Craig comme ça... tu n'avais pas le droit !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[ATTACK] He had a knife - he was out of his mind. He was going to attack me!</text>
+          <text>[ATTACK] Il avait un couteau - il était hors de lui. Il allait m'attaquer !</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -39,7 +39,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[THREAT] He threatened me, and paid for it. And if this is a threat, I'll do the same to you.</text>
+          <text>[THREAT] Il m'a menacé, et il a payé pour ça. Et si c'est une menace, je te ferai la même chose.</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -48,7 +48,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[LIE] Karen, he... he said he didn't have much time left, but he was going to make you pay. I couldn't let that happen.</text>
+          <text>[LIE] Karen, il... il a dit qu'il ne lui restait pas beaucoup de temps, mais qu'il allait te faire payer. Je ne pouvais pas laisser ça arriver.</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 8</checkOnAppear>
@@ -57,7 +57,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[ASK] He asked me to kill him. He didn't want to wait to turn. It was the kindest thing I could have done for him.</text>
+          <text>[ASK] Il m'a demandé de le tuer. Il ne voulait pas attendre de se transformer. C'était la meilleure chose que je pouvais faire pour lui. J'essayé d'être aimable.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -72,7 +72,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[ATTACK] Attack you? But he... that's bullshit. He had a knife, you had a gun... he wasn't a fighter, you could have disarmed him!</text>
+          <text>[ATTACK] T'attaquer ? Mais il... c'est des conneries. Il avait un couteau, tu avais un pistolet... ce n'était pas un combattant, tu aurais pu le désarmer !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -89,7 +89,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[LIE] Actually. Karen, I didn't want to have to tell you this, but Craig... he said he didn't have much time left, but he was going to make you pay. I couldn't let that happen.</text>
+          <text>[LIE] En fait. Karen, je ne voulais pas avoir à te dire ça, mais Craig... il a dit qu'il ne lui restait pas beaucoup de temps, mais qu'il allait te le faire payer. Je ne pouvais pas laisser faire ça.</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 8</checkOnAppear>
@@ -97,17 +97,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[INSTINCT] I'm sorry, Karen. I acted on instinct. I don't like what I did, but he was infected. He was lost anyway.</text>
+          <text>[INSTINCT] Je suis désolée, Karen. J'ai agi par instinct. Je n'aime pas ce que j'ai fait, mais il était infecté. Il était perdu de toute façon.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[EXILE] I'm done with answering your stupid questions. You don't like it here, fine - get out.</text>
+          <text>[INSTINCT] Je suis désolé, Karen. J'ai agi par instinct. Je n'aime pas ce que j'ai fait, mais il était infecté. Il était perdu de toute façon.</text>
+          <def_link>403</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[EXILE] J'en ai marre de répondre à tes questions stupides. Tu n'aimes pas être ici, très bien - pars.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -122,7 +132,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[THREAT] Oh, aren't you a hell of a leader. A wonderful little puppet dictator! Well, fuck you for being a tyrant, and fuck this place for letting a monster like you be in charge. I'm getting my things, and I'm leaving.</text>
+          <text>[THREAT] Oh, tu es un sacré leader. Une merveilleuse petite marionnette dictatrice ! Eh bien, va bien te faire foutre pour ton rôle de tyran, et que cet endroit aille bien se faire foutre pour avoir laissé un monstre comme toi prendre les rênes. Je prends mes affaires et je pars.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -139,7 +149,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[EXILE] You better hurry and get out of here before I change my mind about letting you out peacefully.</text>
+          <text>[EXILE] Tu ferais mieux de te dépêcher et de sortir d'ici avant que je ne change d'avis sur le fait de te laisser sortir pacifiquement.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -147,11 +157,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[ATTACK] Look - I'm sorry, that came out wrong. The fact is, Craig tried to attack me, and I defended myself. The end.</text>
+          <text>[ATTACK] Écoute, je suis désolée, je me suis mal exprimée. Le fait est que Craig a essayé de m'attaquer et que je me suis défendu. La fin.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[ATTACK] Écoute, je suis désolé, je me suis mal exprimé. Le fait est que Craig a essayé de m'attaquer et que je me suis défendu. La fin.</text>
+          <def_link>399</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -161,13 +181,30 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- Clone pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LIE] He was... no. No! I don't believe you. Even with all the things that happened between us, Craig would never hurt me. Fuck you! You lying asshole, fuck you!</text>
+          <text>[LIE] Il était... non. Non ! Je ne te crois pas. Même avec tout ce qui s'est passé entre nous, Craig ne m'aurait jamais fait de mal. Va te faire foutre ! Sale menteur, va te faire foutre !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[LIE] Il était... non. Non ! Je ne te crois pas. Même avec tout ce qui s'est passé entre nous, Craig ne m'aurait jamais fait de mal. Va te faire foutre ! Sale menteuse, va te faire foutre !</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -180,7 +217,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[INSTINCT] Karen, please. Don't remember him like that. He wasn't in his right mind, and I had no choice! Let's try to get past this!</text>
+          <text>[INSTINCT] Karen, s'il te plaît. Ne te souviens pas de lui comme ça. Il n'avait pas toute sa tête, et je n'avais pas le choix ! Essayons de dépasser ça !</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -189,7 +226,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[EXILE] Fine. You don't believe me, then why don't you go find someplace better to live, hm?</text>
+          <text>[EXILE] C'est bon. Tu ne me crois pas, alors pourquoi ne pas aller chercher un meilleur endroit pour vivre, hm ?</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -204,7 +241,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[ASK] Kind? You don't even know what that word means. &lt;She sobs a moment, but pulls herself together.&gt; Even if you thought you were doing right by him, I can't forgive you. I just... I can't.</text>
+          <text>[ASK] Aimable ? Tu ne sais même pas ce que ce mot signifie. &lt;Elle sanglote un instant, mais se ressaisit.&gt; Même si tu pensais bien faire avec lui, je ne peux pas te pardonner. Je ne peux pas... Je ne peux pas.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -222,17 +259,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[LEAVE] If you need to leave, I won't stop you. But I'm not the only one here. Others might need you.</text>
+          <text>[LEAVE] Si tu dois partir, je ne t'en empêcherai pas. Mais je ne suis pas la seule ici. D'autres pourraient avoir besoin de toi.</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[EXILE] If you can't deal with it, then you better get out now.</text>
+          <text>[LEAVE] Si tu dois partir, je ne t'en empêcherai pas. Mais je ne suis pas la seul ici. D'autres pourraient avoir besoin de toi.</text>
+          <def_link>405</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[EXILE] Si tu ne peux pas gérer ça, alors tu ferais mieux de partir maintenant.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -247,7 +294,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[INSTINCT] I... this is a nightmare. I can't deal with this right now. I don't know if I can stay here anymore...</text>
+          <text>[INSTINCT] Je... c'est un cauchemar. Je ne peux plus le supporter maintenant. Je ne sais pas si je peux encore rester ici...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -265,17 +312,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[LEAVE] If you need to leave, I won't stop you. But I'm not the only one here. Others might need you.</text>
+          <text>[LEAVE] Si tu dois partir, je ne t'en empêcherai pas. Mais je ne suis pas la seule ici. D'autres pourraient avoir besoin de toi.</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[EXILE] If you can't deal with it, then you better get out now.</text>
+          <text>[LEAVE] Si tu dois partir, je ne t'en empêcherai pas. Mais je ne suis pas la seul ici. D'autres pourraient avoir besoin de toi.</text>
+          <def_link>405</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[EXILE] Si tu ne peux pas gérer ça, alors tu ferais mieux de partir maintenant.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -290,7 +347,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[EXILE] The hell with you, &lt;charname&gt; &lt;lastname&gt;, and the hell with this place. I should have listened to Craig and ran away from you the moment I saw you. Fuck you.</text>
+          <text>[EXILE] Au diable toi, &lt;charname&gt; &lt;lastname&gt;,  et au diable cet endroit. J'aurais dû écouter Craig et m'enfuir dès que je t'ai vu. Va te faire foutre.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -307,7 +364,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;She turns and runs out the door before you can stop her.&gt;</text>
+          <text>&lt;Elle se retourne et sort en courant avant que tu puisses l'arrêter.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -327,7 +384,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LEAVE] Fine. I'll stay. But not because of you. Never forget that.</text>
+          <text>[LEAVE] C'est bon. Je vais rester. Mais pas à cause de toi. Ne l'oublie jamais.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -344,7 +401,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Karen turns and storms away before you can say anything more.&gt;</text>
+          <text>&lt;Karen se retourne et part en trombe avant que tu ne puisses dire quoi que ce soit de plus.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Craig... I can't believe he's gone. How could you let him go out there? He's... he wasn't a fighter. He was a scientist. He... he was a gentle person. How could... &lt;Karen covers her face for a moment.&gt;</text>
+          <text>Craig... Je ne peux pas croire qu'il ne soit plus là. Comment as-tu pu le laisser aller là-bas ? Il n'était pas un combattant. C'était un scientifique. Il... c'était quelqu'un de doux. Comment as-tu pu... &lt;Karen se couvre le visage un instant.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -29,17 +29,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Sorry] Karen, I'm sorry. I wish there was something I could do.</text>
+          <text>[Sorry] Karen, je suis désolée. J'aimerais pouvoir faire quelque chose.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Negotiation] You meant the world to him, Karen. I know he died believing he was protecting you.</text>
+          <text>[Sorry] Karen, je suis désolé. J'aimerais pouvoir faire quelque chose.</text>
+          <def_link>399</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Negotiation] Tu comptais beaucoup pour lui, Karen. Je sais qu'il est mort en pensant qu'il te protégeait.</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 5</checkOnAppear>
@@ -48,7 +58,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Leadership] He went out fighting. Anyone would have been proud to see his example.</text>
+          <text>[Leadership] Il s'est battu. N'importe qui aurait été fier de voir son exemple.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.leadership &gt;= 6</checkOnAppear>
@@ -57,7 +67,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Threat] Give me any more trouble about this, and you'll be joining him.</text>
+          <text>[Threat] Si tu me causes encore des ennuis à ce sujet, tu le rejoindras.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -72,7 +82,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SORRY] You can't. And you know it. Just... keep remembering that. Don't you dare forget his face. I know I never will.</text>
+          <text>[SORRY] Tu ne peux pas. Et tu le sais. Juste... souviens-toi de ça. Ne t'avise pas d'oublier son visage. Je sais que je ne l'oublierai jamais.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -91,7 +101,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Karen turns and walks out of the room.&gt;</text>
+          <text>&lt;Karen se retourne et sort de la pièce.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -108,7 +118,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NEGOTIATION] I... this doesn't change things. But... thank you.</text>
+          <text>[NEGOTIATION] Je... ça ne change rien. Mais... merci.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -125,7 +135,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Karen turns and walks out of the room.&gt; </text>
+          <text>&lt;Karen se retourne et sort de la pièce.&gt; </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -142,7 +152,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LEADERSHIP] Examples don't make up for a person being gone from your life. Nothing really can. But for as cheap as words are... those will do. If they're all I have.</text>
+          <text>[LEADERSHIP] Les exemples ne compensent pas la disparition d'une personne de votre vie. Rien ne peut vraiment le faire. Mais aussi futiles que soient les mots... ceux-là feront l'affaire. Si c'est tout ce que j'ai.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -161,7 +171,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Karen turns and walks out of the room.&gt; </text>
+          <text>&lt;Karen se tourne et sort de la pièce.&gt; </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -178,7 +188,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Karen looks up at you, her face dark.&gt; You know, thanks for this moment of clarity. I definitely see you as you really are now. And now, if you'll excuse me, I'm getting the fuck out of here.</text>
+          <text>&lt;Karen lève les yeux vers toi, le visage sombre.&gt; Tu sais, merci pour ce moment de clarté. Je te vois vraiment comme tu es maintenant. Et maintenant, si tu veux bien m'excuser, je me tire d'ici.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -195,7 +205,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Karen turns and walks out of the door for good.&gt;</text>
+          <text>&lt;Karen se retourne et franchit la porte pour de bon.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

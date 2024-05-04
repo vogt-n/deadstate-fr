@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Hey! What the hell? You keep picking me to do the death march and what do I have to show for it? Fuckall - that's what! Either you give me my cut or I'm going to cut YOU up. </text>
+          <text>Hé ! Qu'est-ce que c'est que ce bordel ? Tu continues à me choisir pour faire la marche de la mort et qu'est-ce que j'ai à y gagner ? Rien du tout, voilà ce qu'il en est ! Soit tu me donnes ma part, soit je te découpe. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -28,7 +28,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>We can't give everyone who goes out more - that's not fair.</text>
+          <text>On ne peut pas donner plus à tous ceux qui sortent, ce n'est pas juste.</text>
           <def_link>1230</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -37,7 +37,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Yeah, of course you should have more. Help yourself to an extra ten rations. </text>
+          <text>Oui, bien sûr que tu devrais avoir plus. Prends dix rations de plus. </text>
           <def_link>1231</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>shelterGetResource(food) &gt;= 10</checkOnAppear>
@@ -46,7 +46,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Shh... Look, I'll give you four extra rations, but only if you keep things quiet or everyone will demand more.</text>
+          <text>Chut... Écoute, je te donne quatre rations supplémentaires, mais seulement si tu gardes le silence, sinon tout le monde en demandera plus.</text>
           <def_link>1233</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Negotiation &gt;= 5 &amp;&amp; shelterGetResource(food) &gt;= 10</checkOnAppear>
@@ -54,11 +54,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre : ça fait mieux -->
         <dlgAnsw>
-          <text>I'm out there more than you, Regina. A real badass shuts up and does what they have to.</text>
+          <text>Je suis plus souvent dehors que toi, Regina. Un vrai dur à cuire se tait et fait ce qu'il a à faire.</text>
           <def_link>1234</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Leadership &gt;= 6</checkOnAppear>
+          <checkOnAppear>ds.Leadership &gt;= 6 &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis plus souvent dehors que toi, Regina. Une vrai dur à cuire se tait et fait ce qu'elle a à faire.</text>
+          <def_link>1234</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Leadership &gt;= 6 &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -70,7 +80,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Fuck fair! I'm worth five of these pussies and I'm only asking for a little more - that's a bargain, dipshit! </text>
+          <text>C'est de l'équité, bordel ! Je vaux cinq de ces mauviettes et je ne demande qu'un peu plus - c'est une bonne affaire, espèce d'andouille ! </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -89,7 +99,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Regina walks off grumbling something about your mother.&gt;</text>
+          <text>&lt;Regina s'en va en grommelant quelque chose à propos de ta mère.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -106,7 +116,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>A wise decision. Kicking in corpse teeth all day works up quite an appetite. </text>
+          <text>Une sage décision. Défoncer des dents de cadavres toute la journée, ça ouvre l'appétit. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -126,7 +136,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Enjoy.</text>
+          <text>Bon appétit.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -137,7 +147,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Just don't flaunt it, huh?</text>
+          <text>Mais n'en fais pas étalage, hein ?</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -154,7 +164,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Lousy entitled bitches. Okay, four it is - I wouldn't want to hear them whine if I was in your place. Makes me stompy.</text>
+          <text>Sale petite garce aux droits acquis. D'accord, c'est quatre - je ne voudrais pas les entendre pleurnicher si j'étais à ta place. Ça me donne la chair de poule.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -174,7 +184,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Thanks for understanding.</text>
+          <text>Merci de ta compréhension.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -185,7 +195,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm only doing this because you're worth it.</text>
+          <text>Je fais ça parce que tu en vaux la peine.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -202,7 +212,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You want to play the tough card? Well... fine. We'll see how long that lasts.</text>
+          <text>Tu veux jouer la carte du dur ? Eh bien... très bien. On verra combien de temps ça durera.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -219,7 +229,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Regina stares you down, then walks away.&gt;</text>
+          <text>&lt;Regina te regarde fixement, puis s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -247,7 +257,7 @@
     <lines>
       <dlgLine>
         <owner_ID>0</owner_ID>
-        <text>Lousy entitled bitches. Okay, four it is - I wouldn't want to hear them whine if I was in your place. Makes me stompy.</text>
+        <text>Sale petite garce aux droits acquis. D'accord, c'est quatre - je ne voudrais pas les entendre pleurnicher si j'étais à ta place. Ça me donne la chair de poule.</text>
         <defAppearChecks>
           <boolean>false</boolean>
           <boolean>false</boolean>
@@ -267,7 +277,7 @@
     </lines>
     <answers>
       <dlgAnsw>
-        <text>Thanks for understanding.</text>
+        <text>Merci de ta compréhension.</text>
         <def_link>-1</def_link>
         <auto_answer>false</auto_answer>
         <checkOnAppear />
@@ -278,7 +288,7 @@
         </scriptsOnClick>
       </dlgAnsw>
       <dlgAnsw>
-        <text>I'm only doing this because you're worth it.</text>
+        <text>Je fais ça parce que tu en vaux la peine.</text>
         <def_link>-1</def_link>
         <auto_answer>false</auto_answer>
         <checkOnAppear />

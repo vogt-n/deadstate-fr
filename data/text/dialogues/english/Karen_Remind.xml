@@ -9,14 +9,33 @@
   <parts>
     <dlgPart>
       <lines>
+        <!-- Clone pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Hey - I thought you said you'd help me with the pregnancy. Why haven't you gone to the clinic yet?</text>
+          <text>Je croyais que tu avais dit que tu m'aiderais pour la grossesse. Pourquoi n'es-tu pas encore allée à la clinique ?</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Karen_Remind = 1;</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Je croyais que tu avais dit que tu m'aiderais pour la grossesse. Pourquoi n'es-tu pas encore allé à la clinique ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
-            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +49,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Have] I have - and I've got the things you need.</text>
+          <text>[Have] Je l'ai fait - et j'ai ce dont tu as besoin.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ownsItem(2060) == 1</checkOnAppear>
@@ -39,7 +58,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Yes] I will. Other stuff came up - I'll go soon.</text>
+          <text>[Yes] J'y vais. J'ai d'autres choses à faire, j'irai bientôt.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -48,7 +67,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[No] Look, maybe I changed my mind, okay?</text>
+          <text>[No] Écoute, j'ai peut-être changé d'avis, d'accord ?</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -63,7 +82,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[YES] Good to hear it. But look - I don't have much time left before I have to take action myself - a week, probably. Please try to get that kit before then.</text>
+          <text>[YES] C'est bon à entendre. Mais écoute, il ne me reste plus beaucoup de temps avant de devoir agir moi-même - une semaine, probablement. S'il te plaît, essaie d'obtenir ce kit avant cette date.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -80,7 +99,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Right. I'll do my best.</text>
+          <text>D'accord. Je ferai de mon mieux.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -97,7 +116,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NO] &lt;Karen stares at you in disbelief.&gt; You can't mean that. You have to be fucking with me here.</text>
+          <text>[NO] &lt;Karen te fixe avec incrédulité.&gt; Ce n'est pas possible. Tu te fous de ma gueule, là.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -114,7 +133,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Kidding] Yeah, just messing with you. Wanted to see if you still really needed my help.</text>
+          <text>[Kidding] Oui, je me moque de toi. Je voulais voir si tu avais toujours besoin de mon aide.</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -122,11 +141,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Quit] I'm not. I'm done with it, Karen. I changed my mind.</text>
+          <text>[Quit] Non, je ne suis sérieux. J'en ai fini avec ça, Karen. J'ai changé d'avis.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Quit] Non, je ne suis sérieuse. J'en ai fini avec ça, Karen. J'ai changé d'avis.</text>
+          <def_link>402</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -138,7 +167,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[KIDDING] Yeah, super funny. I'm dying here. But seriously, I have about a week, but after that I need to try and take action myself. Keep that in mind.</text>
+          <text>[KIDDING] Ouais, super drôle. Je meurs de rire. Mais sérieusement, il me reste environ une semaine, après quoi je devrai essayer de passer à l'action moi-même. Garde ça à l'esprit.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -157,7 +186,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Right, right. I got it. Bye.</text>
+          <text>D'accord, d'accord. J'ai compris. À bientôt.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -174,7 +203,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[QUIT] What unbelivable fuckery. I can't believe I actually trusted you to help me. Guess I'm on my own.</text>
+          <text>[QUIT] Putain de merde ! Je n'arrive pas à croire que je t'ai fait confiance pour m'aider. Je suppose que je vais devoir me débrouiller toute seule.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -194,7 +223,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Karen stomps out of the room.&gt;</text>
+          <text>&lt;Karen sort de la pièce à grands pas.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -209,14 +238,31 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- Clone pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[HAVE] You do? Whew, okay. Okay. Come talk to me later, when you're ready. I need to get some things sorted out.</text>
+          <text>[HAVE] C'est vrai ? Whaou, d'accord. D'accord. Viens me parler plus tard, quand tu seras prête. J'ai besoin de régler certaines choses.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[HAVE] C'est vrai ? Whaou, d'accord. D'accord. Viens me parler plus tard, quand tu seras prêt. J'ai besoin de régler certaines choses.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
-            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -228,7 +274,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Understood. I'll do that.</text>
+          <text>C'est compris. A plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
