@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I just came to tell you that if you want me to do something today, you can forget it. I don't know what the right thing to do is, but I'm pretty sure doing nothing is better than whatever half-assed plan you come up with.</text>
+          <text>Je suis juste venu te dire que si tu veux que je fasse quelque chose aujourd'hui, tu peux oublier. Je ne sais pas quelle est la bonne chose à faire, mais je suis presque sûr que ne rien faire est mieux que n'importe quel plan foireux que tu auras trouvé.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You do nothing, you eat nothing! Try it again and you'll be doing nothing on the other side of the fence.</text>
+          <text>Tu ne fais rien, tu ne manges rien ! Essaie encore et tu ne feras rien mais de l'autre côté de la barrière cette fois.</text>
           <def_link>2501</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -39,7 +39,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm going to give you one day to think about what you're saying. Use it wisely.</text>
+          <text>Je te donne un jour pour réfléchir à ce que tu dis. Utilise-le à bon escient.</text>
           <def_link>2502</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -48,7 +48,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Look, just give me another chance. I'm trying to do the right thing, but doing nothing hurts the shelter, not me.</text>
+          <text>Écoute, donne-moi une autre chance. J'essaie de faire ce qu'il faut, mais ne rien faire nuit à tout le refuge, pas seulement à moi.</text>
           <def_link>2503</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Negotiation &gt;= 6</checkOnAppear>
@@ -57,7 +57,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Every moment we don't do anything, those things outside get closer to devouring us. Half-rations until you figure that out.</text>
+          <text>Chaque fois qu'on ne fait rien, ces choses à l'extérieur sont plus près de nous dévorer. En attendant que tu comprennes, tu n'auras que des demi-rations.</text>
           <def_link>2504</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Leadership &gt;= 6</checkOnAppear>
@@ -66,7 +66,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You have two choices - work or I throw you out that gate for good!</text>
+          <text>Tu as deux choix : travailler ou je te jette dehors pour de bon !</text>
           <def_link>2505</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -79,13 +79,32 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- Clone pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Whatever... Another brilliant decision from our dictator for life. Ha ha... this place is such a joke.</text>
+          <text>Quoi qu'il en soit... Encore une décision brillante de notre dictateur à vie. Ha ha... cet endroit est une vraie farce.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(-8, 1015);</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Quoi qu'il en soit... Encore une décision brillante de notre dictatrice à vie. Ha ha... cet endroit est une vraie farce.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -100,7 +119,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Lane walks off.&gt;</text>
+          <text>&lt;Lane s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -117,7 +136,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>...Fine. I don't know how much good it will do, but... I wasn't really expecting that reaction. I have a lot to work out... </text>
+          <text>...Bien. Je ne sais pas si ça servira à grand-chose, mais... Je ne m'attendais pas vraiment à cette réaction. J'ai beaucoup de choses à régler... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -137,7 +156,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Lane walks off.&gt;</text>
+          <text>&lt;Lane s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -154,7 +173,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Huh... I wasn't really expecting you to act human. Maybe I've misjudged you. This is all going to take some time to sink in - I gotta go.</text>
+          <text>Huh... Je ne m'attendais pas vraiment à ce que tu agisses comme un humain. Je t'ai peut-être mal jugée. Il va falloir du temps pour assimiler tout ça - je dois y aller.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -174,7 +193,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Lane walks off.&gt;</text>
+          <text>&lt;Lane s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -191,7 +210,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Fine... It's not like I want to be devoured, I just disagree with policy around here. I'll work... I guess I don't have a choice. </text>
+          <text>Je dois y aller. Ce n'est pas comme si je voulais me faire dévorer, je ne suis pas d'accord avec la politique menée ici. Mais je vais travailler... Je suppose que je n'ai pas le choix. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -210,7 +229,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Lane walks off.&gt;</text>
+          <text>&lt;Lane s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -227,7 +246,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>...I'll...</text>
+          <text>...Je vais...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -243,7 +262,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Stay and work. Fuck it - I don't want to die. Not like that. But you already knew that...</text>
+          <text>Rester et travailler. Et puis merde, je ne veux pas mourir. Pas comme ça. Mais tu le savais déjà...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -262,7 +281,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Lane walks off.&gt;</text>
+          <text>&lt;Lane s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -290,7 +309,7 @@
     <lines>
       <dlgLine>
         <owner_ID>0</owner_ID>
-        <text>...I'll...</text>
+        <text>...Je vais...</text>
         <defAppearChecks>
           <boolean>false</boolean>
           <boolean>false</boolean>
@@ -306,7 +325,7 @@
       </dlgLine>
       <dlgLine>
         <owner_ID>0</owner_ID>
-        <text>Stay and work. Fuck it - I don't want to die. Not like that. But you already knew that...</text>
+        <text>Rester et travailler. Et puis merde, je ne veux pas mourir. Pas comme ça. Mais tu le savais déjà...</text>
         <defAppearChecks>
           <boolean>false</boolean>
           <boolean>false</boolean>
@@ -325,7 +344,7 @@
     </lines>
     <answers>
       <dlgAnsw>
-        <text>&lt;Lane walks off.&gt;</text>
+        <text>&lt;Lane s'en va.&gt;</text>
         <def_link>-1</def_link>
         <auto_answer>false</auto_answer>
         <checkOnAppear />
