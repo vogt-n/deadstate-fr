@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Wait - don't shoot! I'm a pilot - I'll fly you wherever you want, just don't shoot!</text>
+          <text>Attendez - ne tirez pas ! Je suis un pilote - je vous emmènerai où vous voulez, mais ne tirez pas !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -28,7 +28,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Get that bird in the air. You fly for me now.</text>
+          <text>Mets cet oiseau en l'air. Tu voles pour moi maintenant.</text>
           <def_link>7670</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Escape_Crisis == 1</checkOnAppear>
@@ -37,7 +37,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm not going to hurt you - fly my people out and after that you're free to go.</text>
+          <text>Je ne vais pas te faire de mal - fais sortir mes hommes et après tu seras libre de partir.</text>
           <def_link>7672</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Escape_Crisis == 1 &amp;&amp; ds.Negotiation &gt;= 7</checkOnAppear>
@@ -45,11 +45,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>Sorry, I don't need a pilot.</text>
+          <text>Désolé, je n'ai pas besoin de pilote.</text>
           <def_link>7671</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Escape_Crisis == 0</checkOnAppear>
+          <checkOnAppear>ds.Escape_Crisis == 0 &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Désolée, je n'ai pas besoin de pilote.</text>
+          <def_link>7671</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Escape_Crisis == 0 &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -61,7 +71,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Whatever you say... Just don't kill me.</text>
+          <text>Tout ce que vous voulez... Ne me tuez pas, c'est tout.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -78,7 +88,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;You follow Wen to the helicopter and take off for the shelter.&gt;</text>
+          <text>&lt;Vous suivez Wen jusqu'à l'hélicoptère et décollez vers l'abri.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -97,7 +107,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Then please... let me go. Take anything you want - I don't care. I didn't even want to be here anymore. I was the only pilot left - they wouldn't let me leave my post.</text>
+          <text>Alors s'il vous plaît... laissez-moi partir. Prenez ce que vous voulez, je m'en fiche. Je ne voulais même plus être ici. J'étais le seul pilote restant - ils ne me laissaient pas quitter mon poste.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -113,7 +123,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Please... don't kill me. Just let me go.</text>
+          <text>S'il vous plaît... ne me tuez pas. Laissez-moi partir.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -130,7 +140,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Get out of here.</text>
+          <text>Partez d'ici.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -143,7 +153,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>You could radio backup. I can't take the risk. &lt;Attack&gt;</text>
+          <text>Vous pourriez appeler des renforts par radio. Je ne peux pas prendre le risque. &lt;L'attaquer&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -161,7 +171,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Okay... sure. That's all I want. I didn't even want to fly for Adair anymore. If you keep your promise, sure... Follow me - I'll take that bird wherever you want.</text>
+          <text>D'accord... bien sûr. C'est tout ce que je veux. Je ne voulais même plus voler pour Adair. Si vous tenez votre promesse, bien sûr... Suivez-moi, j'emmènerai cet oiseau où vous voulez.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -178,7 +188,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;You follow Wen to the helicopter and take off for the shelter.&gt;</text>
+          <text>&lt;Vous suivez Wen jusqu'à l'hélicoptère et décollez vers l'abri.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

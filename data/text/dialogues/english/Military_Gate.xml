@@ -15,7 +15,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Lieutenant's not taking any visitors right now.</text>
+          <text>Le lieutenant ne reçoit pas de visiteurs pour l'instant.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -32,7 +32,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Ask again.</text>
+          <text>Demandez lui à nouveau.</text>
           <def_link>6168</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -41,7 +41,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I think I know a way to get his attention. &lt;Attack&gt;</text>
+          <text>Je pense que je connais un moyen d'attirer son attention. &lt;Attaquer&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -54,7 +54,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Then I guess I wasted a trip. I'll go.</text>
+          <text>Alors je suppose que j'ai gâché un voyage. Je vais y aller.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -71,7 +71,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Lieutenant Adair told me to bring you in if you showed up.</text>
+          <text>Le lieutenant Adair m'a dit de vous faire venir si vous vous montriez.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -88,7 +88,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Thanks. Lead the way.</text>
+          <text>Merci. Ouvrez la voie.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -102,7 +102,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I need to take care of something first. </text>
+          <text>Je dois d'abord m'occuper de quelque chose. </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -119,7 +119,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Going to be the same answer. He's like that.</text>
+          <text>Ça va être la même réponse. Il est comme ça.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -135,11 +135,12 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>Tell him I was here. I'm leaving.</text>
+          <text>Dites-lui que je suis passée. Je m'en vais.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -147,7 +148,18 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Fine, I'm going.</text>
+          <text>Dites-lui que je suis passé. Je m'en vais.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Bien, j'y vais.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
