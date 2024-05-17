@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I don't feel good.</text>
+          <text>Je ne me sens pas bien.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -28,7 +28,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I know, Jodie.</text>
+          <text>Je sais, Jodie.</text>
           <def_link>1566</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -37,7 +37,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It will be over soon.</text>
+          <text>Ce sera bientôt fini.</text>
           <def_link>1566</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -52,7 +52,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I can't work today, I don't think.</text>
+          <text>Je ne peux pas travailler aujourd'hui, je ne pense pas.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -69,7 +69,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>That's okay.</text>
+          <text>Ce n'est pas grave.</text>
           <def_link>1567</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -78,7 +78,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Just close your eyes.</text>
+          <text>Ferme les yeux.</text>
           <def_link>1567</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -93,7 +93,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Okay.</text>
+          <text>D'accord..</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -109,7 +109,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm going to go to sleep now.</text>
+          <text>Je vais dormir maintenant.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -128,7 +128,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>That's good.</text>
+          <text>C'est bien.</text>
           <def_link>1568</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -137,7 +137,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You do that.</text>
+          <text>Vas-y, fais-ça.</text>
           <def_link>1568</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -146,7 +146,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>&lt;Shoot him in the head.&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête.&gt;</text>
           <def_link>1569</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -161,7 +161,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Jodie's body begins to convulse and seconds later, he stops moving. After a few minutes, he begins twitching again.&gt;</text>
+          <text>&lt;Le corps de Jodie se met à convulser et quelques secondes plus tard, il s'arrête de bouger. Au bout de quelques minutes, il recommence à tressaillir.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -178,7 +178,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Shoot him in the head.&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête.&gt;</text>
           <def_link>1569</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -193,7 +193,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Jodie's head becomes a mess of blonde hair and blood. You can confirm that he's been dispatched effectively and will remain dead.&gt;</text>
+          <text>&lt;La tête de Jodie n'est plus qu'un amas de cheveux blonds et de sang. Tu peux confirmer qu'il a été éliminé efficacement et qu'il restera mort.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -211,8 +211,31 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I'm sorry, Jodie...</text>
+          <text>Je suis désolée, Jodie...</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis désolé, Jodie...</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Tu étais un bon mécanicien. Le meilleur que j'ai jamais connu.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -223,18 +246,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>You were a good mechanic. Best I ever had.</text>
-          <def_link>-1</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick>
-            <string>dlgEndFadeFullFast();</string>
-          </scriptsOnClick>
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>You didn't have much of a chance anyhow, did you?</text>
+          <text>Tu n'avais pas beaucoup de chance de toute façon, n'est-ce pas ?</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>So I was thinking... I don't know how much it would help around here, but I kind of missing playing music on the radio and I thought maybe a day of doing a 'live show' might improve morale around here. Just a thought.</text>
+          <text>Je me disais... Je ne sais pas si ça serait très utile ici, mais ça me manque de jouer de la musique à la radio et j'ai pensé qu'une journée à faire un « spectacle en direct » pourrait améliorer le moral des gens ici. C'est juste une idée.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -28,7 +28,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Sure - sounds like a good idea.</text>
+          <text>Bien sûr, c'est une bonne idée.</text>
           <def_link>2467</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -37,7 +37,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't care.</text>
+          <text>Je m'en fiche.</text>
           <def_link>2467</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -46,7 +46,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>No offense, but I don't like your taste in music and some people here might not either.</text>
+          <text>Sans vouloir te vexer, je n'aime pas tes goûts musicaux et certaines personnes ici ne les aiment peut-être pas non plus.</text>
           <def_link>2468</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -61,7 +61,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Cool. Two things I'm going to need, though. All my best mix CDs are back at my apartment. Here - I wrote down directions on your map.</text>
+          <text>Cool. Mais je vais avoir besoin de deux choses. Tous mes meilleurs CD sont à mon appartement. Tiens, j'ai noté les indications sur ta carte.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -79,7 +79,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>And I'm going to need some fuel to keep the generator going longer that day - about 2 gallons. </text>
+          <text>Et je vais avoir besoin d'un peu de carburant pour faire fonctionner le générateur plus longtemps ce jour-là - environ 2 gallons. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -96,19 +96,29 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I'll come find you when I have your CDs and extra fuel.</text>
+          <text>Je viendrai te voir quand j'aurai tes CD et du carburant supplémentaire.</text>
           <def_link>2470</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <!-- Clone pour genre -->
+        <dlgAnsw>
+          <text>Ça change tout. Je suis désolée. Je n'ai pas les moyens.</text>
+          <def_link>2471</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>That changes things. I'm sorry. I can't spare the resources.</text>
+          <text>Ça change tout. Je suis désolé. Je n'ai pas les moyens.</text>
           <def_link>2471</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -120,7 +130,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>If it helps, I've played weddings, bar mitzvahs and private parties, so I know how to mix it up to please the crowd. If asses aren't moving, it's my duty to shake them. But in a way that's less lame than that sounded.</text>
+          <text>Si cela peut t'aider, j'ai joué dans des mariages, des bar mitzvahs et des fêtes privées, alors je sais comment mélanger les choses pour plaire à la foule. Si les culs ne bougent pas, il est de mon devoir de les secouer. Mais d'une manière qui est moins nulle que ce que j'ai dit.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -137,7 +147,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Fine. Whatever.</text>
+          <text>D'accord. Peu importe.</text>
           <def_link>2467</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -146,7 +156,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Okay, but the moment it feels like a junior prom, I'm shutting it down.</text>
+          <text>Ok, mais au moment où ça ressemble à un bal de fin d'année, j'arrête tout.</text>
           <def_link>2467</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -155,7 +165,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It's a waste of your time and our resources. Not going to happen.</text>
+          <text>C'est une perte de temps et de ressources. Ça n'arrivera pas.</text>
           <def_link>2469</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -170,7 +180,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Damn... Now how I know all those kids in those Eighties movies felt when the man tried to stop them from having good, clean fun. </text>
+          <text>Bon sang... Je sais maintenant ce que ressentaient les enfants dans les films des années 80 quand les hommes essayaient de les empêcher de s'amuser. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -190,7 +200,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Lane walks off.&gt;</text>
+          <text>&lt;Lane s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -207,7 +217,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Don't take too long. I don't know how much good it will do if the mood gets worse. Plus, I'll probably lose interest, er, definitely. </text>
+          <text>Ne prenez pas trop de temps. Je ne sais pas à quoi ça servira si l'ambiance empire. De plus, je me désintéresserai probablement, euh, définitivement. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -226,7 +236,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Lane walks off.&gt;</text>
+          <text>&lt;Lane s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -243,7 +253,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Well, bummer. Not like people need to take their mind off of anything. Whatever, see ya.</text>
+          <text>Eh bien, c'est dommage. Ce n'est pas comme si les gens avaient besoin de se changer les idées. Peu importe, à plus tard.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -262,7 +272,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Lane walks off.&gt;</text>
+          <text>&lt;Lane s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Davis said I should tell you - that last bite... I wasn't so lucky. It broke the skin, so, I guess I'm going to need antibiotics. I already lost my shit around Davis, so... I'm just letting you know. </text>
+          <text>Davis m'a dit de te le dire - cette dernière morsure... Je n'ai pas eu de chance. La peau s'est rompue, alors je crois que je vais avoir besoin d'antibiotiques. J'ai déjà craché le morceau avec Davis, alors... Je te le dis juste pour que tu le saches. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -31,7 +31,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Don't worry, Effrem - I'll make sure you get your antibiotics. See ya.</text>
+          <text>Ne t'inquiète pas, Effrem, je m'assurerai que tu ais tes antibiotiques. A bientôt.</text>
           <def_link>3402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -39,11 +39,23 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>Thank you for letting me know. I'm sorry. Excuse me.</text>
+          <text>Merci de m'avoir prévenu. Je suis désolé. Excuse-moi.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Merci de m'avoir prévenue. Je suis désolée. Excuse-moi.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -57,7 +69,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh, I know you will. I'm not turning into one of those fucking ghouls, man. Hell no. I'll find and break into the president's bunker before I run out of those.</text>
+          <text>Oh, je sais que tu le fera. Je ne vais pas me transformer en une de ces putains de goules, mec. Bien sûr que non. Je trouverai le bunker du président et je m'y introduirai avant d'en manquer.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -74,7 +86,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Effrem walks off looking angry.&gt;</text>
+          <text>&lt;Effrem s'en va, l'air furieux.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

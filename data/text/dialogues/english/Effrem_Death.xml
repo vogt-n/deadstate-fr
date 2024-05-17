@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;You enter Effrem's room. You can immediately tell he's not long for this world.&gt;</text>
+          <text>&lt;Tu entres dans la chambre d'Effrem. On voit tout de suite qu'il n'est plus de ce monde.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -27,7 +27,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Cough.&gt; I got a pretty bad fever. I don't think it's... nah, don't matter. I've been thinking about the good times. Ain't had many of those, so... not much to think about.</text>
+          <text>&lt;Tousse.&gt; J'ai une forte fièvre. Je ne pense pas que ce soit... non, ça n'a pas d'importance. J'ai pensé aux bons moments. Je n'en ai pas eu beaucoup, alors... il n'y a pas grand-chose à penser.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -43,7 +43,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You know what I said about guns? You know, back when I was just a kid, my best friend used a plastic gun, held up this liquor store. I was just supposed to be watching for cops, but... then I hear this shot. </text>
+          <text>Tu sais ce que j'ai dit à propos des armes ? Quand je n'étais qu'un enfant, mon meilleur ami a utilisé un pistolet en plastique pour braquer un magasin d'alcool. J'étais censé surveiller les flics, mais... j'ai entendu ce coup de feu. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -59,7 +59,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>And here he comes, staggering out. Big chunk out his side. I don't even know how he was walking. And then, I hear a second shot... breaks the window in the car behind me. Lucky... always lucky.</text>
+          <text>Et le voilà qui sort en titubant. Un gros morceau sur le côté. Je ne sais même pas comment il marchait. Et puis, j'entends un deuxième coup de feu... qui brise la vitre de la voiture derrière moi. Chanceux... toujours chanceux.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -75,7 +75,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Well, not this time. Think it's time for me to get that shot. I don't want to... &lt;cough&gt;I don't want... be a fucking monster.</text>
+          <text>Eh bien, pas cette fois. Je pense qu'il est temps pour moi de prendre ce tir. Je ne veux pas... &lt;tousse&gt; Je ne veux pas... devenir un putain de monstre.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -91,17 +91,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I'm sorry, Effrem. I'm sorry this happened to you.</text>
+          <text>Je suis désolée, Effrem. Je suis désolée que cela te soit arrivé.</text>
           <def_link>3407</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Anything else you need to say? I'm here for you.</text>
+          <text>Je suis désolé, Effrem. Je suis désolé que cela te soit arrivé.</text>
+          <def_link>3407</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Tu as besoin de dire autre chose ? Je suis là pour toi.</text>
           <def_link>3407</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -116,7 +126,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I just want... What the hell did I want? Survive another day? Is that it? That all I wanted?</text>
+          <text>Je veux juste... Qu'est-ce que je voulais ? Survivre un jour de plus ? C'est tout ? C'est tout ce que je voulais ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -132,7 +142,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Hold up! Hold up - we can do this after they close... I don't like this. Too dangerous... Gonna get himself killed. </text>
+          <text>Tiens bon ! Attends - on peut faire ça après la fermeture... Je n'aime pas ça. C'est trop dangereux... Il va se faire tuer. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -151,7 +161,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Effrem? Stay with me, okay?</text>
+          <text>Effrem ? Reste avec moi, d'accord ?</text>
           <def_link>3408</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -160,7 +170,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Shit... It's happening.</text>
+          <text>Merde... C'est en train d'arriver.</text>
           <def_link>3408</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -169,7 +179,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>&lt;Shoot him in the head.&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête.&gt;</text>
           <def_link>3410</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -184,7 +194,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>My mama's going to kill me... Officer? Look... I can't put my hands up, okay? I see the gun - I give... Up on the dresser... That's where you left it. Why would I steal your cheapass watch... Ah, I like this... song...</text>
+          <text>Ma mère va me tuer... Officier ? Ecoutez... Je ne peux pas lever les mains, d'accord ? Je vois l'arme - je me rends... Sur la commode... C'est là que vous l'avez laissée. Pourquoi je volerais cette montre de pacotille... Ah, j'aime cette... chanson...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -200,7 +210,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Effrem stops breathing.&gt;</text>
+          <text>&lt;Effrem arrête de respirer.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -217,7 +227,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Thanks for all your help, Effrem. Going to miss you.</text>
+          <text>Merci pour ton aide, Effrem. Tu vas me manquer.</text>
           <def_link>3409</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -226,7 +236,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Someday it's going to be me over there.  </text>
+          <text>Un jour, ce sera moi qui serai là-haut.  </text>
           <def_link>3409</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -235,7 +245,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>&lt;Shoot him in the head.&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête.&gt;</text>
           <def_link>3410</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -250,7 +260,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;After a few minutes, Effrem starts to stir.&gt;</text>
+          <text>&lt;Après quelques minutes, Effrem commence à s'agiter.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -267,7 +277,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Shoot him in the head.&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête.&gt;</text>
           <def_link>3410</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -282,7 +292,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Effrem's blood hits the wall behind him and his body goes limp.&gt;</text>
+          <text>&lt;Le sang d'Effrem éclate sur le mur derrière lui et son corps devient mou.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -301,7 +311,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>One less survivor. No more after you, I promise.</text>
+          <text>Un survivant de moins. Il n'y en aura plus après toi, je te le promets.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -312,7 +322,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>You were a pain in the ass. But you were our pain in the ass.</text>
+          <text>Tu étais un emmerdeur. Mais tu étais notre emmerdeur.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -323,7 +333,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>...It's getting too easy to do that.</text>
+          <text>...Ça devient trop facile de faire ça.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

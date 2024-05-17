@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Yawn&gt;Ah, hoping' I'd see you around this morning. Took a look around the school and I thought I'd offer up my crticisms and ideas based on my expertise.</text>
+          <text>&lt;Baillement&gt;Ah, j'espérais te voir dans les parages ce matin. J'ai jeté un coup d'œil à l'école et j'ai pensé proposer mes critiques et mes idées basées sur mon expertise.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -28,7 +28,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Let's hear it.</text>
+          <text>Je t'écoute.</text>
           <def_link>3448</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -37,7 +37,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>That's not necessary.</text>
+          <text>Ce n'est pas nécessaire.</text>
           <def_link>3446</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -45,11 +45,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I'm busy. Go tell Davis.</text>
+          <text>Je suis occupée. Parles-en à Davis.</text>
           <def_link>3446</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis occupé. Parles-en à Davis.</text>
+          <def_link>3446</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -61,7 +71,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>What the hell did you bring me here for if you didn't want my help? You don't need it, forget you then! </text>
+          <text>Pourquoi m'as-tu fait venir ici si tu ne veux pas de mon aide ? Si tu n'en as pas besoin, oublie-moi ! </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -78,7 +88,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>No, it's okay. Go ahead.</text>
+          <text>Non, c'est bon. Vas-y.</text>
           <def_link>3448</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -86,17 +96,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>My apologies, I'm under a lot of stress. Let's hear it.</text>
+          <text>Mes excuses, je suis très stressée. Je t'écoute.</text>
           <def_link>3448</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Leadership &gt;= 4</checkOnAppear>
+          <checkOnAppear>ds.Leadership &gt;= 4 &amp;&amp; isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+         <dlgAnsw>
+          <text>Mes excuses, je suis très stressé. Je t'écoute.</text>
+          <def_link>3448</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Leadership &gt;= 4 &amp;&amp; isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>This is not the way to get on my good side. Now... You're dismissed.  </text>
+          <text>Ce n'est pas comme ça que tu vas te mettre dans mes petits papiers. Maintenant... Tu es congédié.  </text>
           <def_link>3447</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -111,11 +131,11 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You ain't the only one with a new name on your shitlist... </text>
+          <text>Tu n'es pas la seule personne à avoir un nouveau nom sur ta liste des emmerdes... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
-            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -130,7 +150,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Troy storms off.&gt;</text>
+          <text>&lt;Troy part en trombe.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -147,7 +167,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Right then... Well, let's see - I walked the perimeter first...</text>
+          <text>Bon, alors... Voyons voir, j'ai parcouru le périmètre en premier...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -188,7 +208,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Y'all need to get your priorities straight. That fence out there is about a dog piss away from falling apart. I seen those things work their way through all kinds of cracks - like getting attacked by smelly hamburger meat.</text>
+          <text>Il faut que tu remettes de l'ordre dans tes priorités. Cette clôture est à deux doigts de s'effondrer. J'ai vu ces choses se frayer un chemin à travers toutes sortes de fissures - c'est comme se faire attaquer par de la viande de hamburger malodorante.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -231,7 +251,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Y'all got a good fence out there. Not leaving a gap for those smelly bastards in is the most important thing for protecting your land.</text>
+          <text>Vous avez une bonne clôture. Ne pas laisser d'ouverture à ces bâtards malodorants est la chose la plus importante pour protéger sa terre.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -274,7 +294,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Ain't no reason to let all this space go to waste - get yourself some chickens. Feed 'em any old shit - they're chickens. </text>
+          <text>Il n'y a pas de raison de laisser tout cet espace en friche - trouvez des poules. Nourrissez-les avec n'importe quoi, ce sont des poules. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -317,7 +337,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I saw you got a chicken coop. That's good. Eggs are a pretty cheap source of protein, and you put some hot sauce on there, you got breakfast. </text>
+          <text>J'ai vu que vous aviez un poulailler. C'est une bonne chose. Les œufs sont une source de protéines assez bon marché, et si tu mets de la sauce piquante dessus, tu as un petit déjeuner. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -360,7 +380,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I don't know why the heck y'all don't have a garden or two planted. That's free food if you keep the sun from getting it. Grow yourself some beans for protein. If you got Mexicans here, they'll know when to pick 'em.   </text>
+          <text>Je ne sais pas pourquoi vous n'avez pas un ou deux jardins. C'est de la nourriture gratuite si vous empêchez le soleil de l'atteindre. Faites pousser des haricots pour les protéines. Et si vous avez des Mexicains ici, ils sauront quand les cueillir.   </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -394,7 +414,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Saw the garden bins up on the roof. That's smart. Grow yourself some chili fixins - beans, peppers, tomatoes, chilis. Any Mexican here will know how to take care of all that.</text>
+          <text>J'ai vu les bacs de jardinage sur le toit. C'est intelligent. Cultiver les ingrédients du chili - haricots, poivrons, tomates, chilis. N'importe quel Mexicain ici saura comment s'occuper de tout cela.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -428,7 +448,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>That's it I think. Oh - one thing I could do for y'alll is get you a mushroom patch going. It's a bit advanced, seeing as how bad mushrooms can kill you and all, but I know what I'm doing.</text>
+          <text>C'est tout ce que je pense. Oh - une chose que je pourrais faire pour vous, c'est de vous faire pousser des champignons. C'est un peu avancé, vu que les mauvais champignons peuvent vous tuer et tout ça, mais je sais ce que je fais.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -444,7 +464,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Learned my lesson when I was gathering up wild mushrooms and ate one of them magic ones. After I got better, I learned from my uncle the proper way to grow and identify them. </text>
+          <text>J'ai appris ma leçon quand je ramassais des champignons sauvages et que j'en ai mangé un magique. Après m'être amélioré, j'ai appris de mon oncle la bonne façon de les cultiver et de les identifier. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -461,7 +481,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Mushroom patch? Yeah, that sounds like a good and tasty idea.</text>
+          <text>Un coin à champignons ? Oui, c'est une bonne idée.</text>
           <def_link>3456</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -470,7 +490,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Mushrooms? Yuck.</text>
+          <text>Des champignons ? Beurk.</text>
           <def_link>3457</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -479,7 +499,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It's not worth the risk. </text>
+          <text>Ça ne vaut pas la peine de prendre le risque. </text>
           <def_link>3458</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -488,7 +508,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Mushrooms, right - why don't we back up and talk about the casual racism?</text>
+          <text>Les champignons, d'accord - pourquoi ne pas revenir en arrière et parler des cas de racisme occasionnel ?</text>
           <def_link>3459</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -503,7 +523,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Okay, then. You get me the materials, I'll put one in the basement. As long as you know what you're doing, nothing dangerous about it.</text>
+          <text>D'accord. Tu me trouves le matériel, j'en mets un au sous-sol. Tant que tu sais ce que tu fais, il n'y a rien de dangereux.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -520,7 +540,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Thanks, Troy. We'll talk about it some more later.</text>
+          <text>Merci, Troy. On en reparlera plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -531,7 +551,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I hope you know what you're doing. I should get to work too.</text>
+          <text>J'espère que tu sais ce que tu fais. Je devrais aussi me mettre au travail.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -548,7 +568,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Are you crazy? Mushrooms are crazy tasty. And back before all this, I used to be able to make a pretty penny selling wild ones to the markets that all the rich Austin hippies shopped at.</text>
+          <text>Tu es fou ? Les champignons sont incroyablement savoureux. Et avant tout ça, j'avais l'habitude de me faire un joli billet en vendant des champignons sauvages sur les marchés où tous les riches hippies d'Austin faisaient leurs courses.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -565,7 +585,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Okay, go ahead. Somebody will eat them.</text>
+          <text>D'accord, vas-y. Quelqu'un les mangera.</text>
           <def_link>3456</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -574,7 +594,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Sounds dangerous.</text>
+          <text>Ça a l'air dangereux.</text>
           <def_link>3458</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -589,7 +609,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I wouldn't do it if it were dangerous, now would I? I told you - I got training. Whatever, you take your time and get hungry. You let me know when you're desperate enough to let me try.</text>
+          <text>Je ne le ferais pas si c'était dangereux, n'est-ce pas ? Je te l'ai dit, j'ai reçu une formation. Peu importe, prends ton temps et si tu as faim. Tu me feras savoir quand tu seras assez désespéré pour me laisser essayer.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -606,7 +626,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Okay, sure. Talk to you later.</text>
+          <text>D'accord, bien sûr. On se parle plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -617,7 +637,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't think so. Your assignment will be on the board.</text>
+          <text>Je ne pense pas. Mais ton affectation sera sur le tableau.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -634,7 +654,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Racism? This about Mexicans? No, it ain't like that. I'm not sayin' all Mexicans like to pick beans, just that most of them know how. </text>
+          <text>Racisme ? C'est à propos des Mexicains ? Non, ce n'est pas ça. Je ne dis pas que tous les Mexicains aiment cueillir des haricots, mais que la plupart d'entre eux savent le faire. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -651,7 +671,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>What you just said - that's racist!</text>
+          <text>Ce que tu viens de dire, c'est du racisme !</text>
           <def_link>3460</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -660,7 +680,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Okay, that clears things up. Tell me more about this mushroom project.</text>
+          <text>D'accord, les choses sont claires. Parle-moi de ce projet de champignons.</text>
           <def_link>3456</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -669,7 +689,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Listen to me - I will not tolerate racism in my shelter. Understand?</text>
+          <text>Écoute-moi bien : je ne tolérerai pas le racisme dans mon refuge. Tu comprends ?</text>
           <def_link>3460</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -684,7 +704,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>What? No - you're racist! I'm just speaking my mind! I didn't know it was a crime to be white here. If that's y'all's attitude, maybe I should just leave this place to all those other types.</text>
+          <text>Quoi ? Non, vous êtes raciste ! Je ne fais que dire ce que je pense ! Je ne savais pas que c'était un crime d'être blanc ici. Si c'est ton attitude, je devrais peut-être laisser cet endroit à tous ces autres types.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -703,7 +723,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Troy storms off.&gt;</text>
+          <text>&lt;Troy s'en va en claquant la porte.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
