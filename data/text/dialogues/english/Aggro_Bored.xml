@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Hey... It's hot, I'm bored, and having a shitty day... </text>
+          <text>Hé... Il fait chaud, je m'ennuie et je passe une journée de merde... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -29,7 +29,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You... wanna fuck?</text>
+          <text>Tu veux ... baiser ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -45,17 +45,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>No. Sorry.</text>
+          <text>Non. Désolé.</text>
           <def_link>2641</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Yes. Yes, I do.</text>
+          <text>Non. Désolée.</text>
+          <def_link>2641</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Oui. Oui, je veux.</text>
           <def_link>2642</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -64,7 +74,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Okay.</text>
+          <text>D'accord.</text>
           <def_link>2648</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -73,7 +83,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm not into women. </text>
+          <text>Je ne suis pas attiré par les femmes. </text>
           <def_link>2640</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -88,7 +98,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh. Bummer.</text>
+          <text>Oh. C'est dommage.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -104,7 +114,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Well, see ya.</text>
+          <text>Eh bien, à plus tard.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -121,7 +131,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro struts off.&gt;</text>
+          <text>&lt;Aggro s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -138,7 +148,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>What?</text>
+          <text>Quoi?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -155,7 +165,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>It's not you. I lost someone close to me. I'm not over it.</text>
+          <text>Ce n'est pas toi. J'ai perdu un proche. Je ne m'en remets pas.</text>
           <def_link>2643</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Family_Loss == 2</checkOnAppear>
@@ -164,7 +174,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You just... don't do anything for me.</text>
+          <text>C'est juste que... tu ne m'attire pas.</text>
           <def_link>2644</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -173,7 +183,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I like you as a friend?</text>
+          <text>Je t'apprécie en tant qu'amie ?</text>
           <def_link>2646</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -182,7 +192,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I like someone else. It might upset them.</text>
+          <text>J'aime quelqu'un d'autre. Ça pourrait l'énerver.</text>
           <def_link>2647</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -197,7 +207,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Then let's head to your room.</text>
+          <text>Alors allons dans ta chambre.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -215,7 +225,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>And before you get any ideas - this is a one time thing. I just need this right now - don't get clingy.</text>
+          <text>Et avant que tu ne te fasses des idées, c'est une fois pour toutes. J'ai juste besoin de ça maintenant - ne sois pas collant.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -231,7 +241,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Well, what are you standing there for? Let's do this.</text>
+          <text>Eh bien, qu'est-ce que tu fais planter là ? Allons-y.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -248,7 +258,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro pulls you by the shirt and leads you up to your room.&gt;</text>
+          <text>&lt;Aggro te tire par le col et t'emmène dans ta chambre.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -266,7 +276,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Me too... But this is just sex. Don't make so much of it.</text>
+          <text>Moi aussi... Mais ce n'est que du sexe. N'en fais pas tout un plat.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -283,7 +293,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I can't. Just drop it.</text>
+          <text>Je ne peux pas. Laisse tomber.</text>
           <def_link>2645</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -292,7 +302,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I guess I do need this. Yeah, sure.</text>
+          <text>Je suppose que j'ai besoin de ça. Ouais, bien sûr.</text>
           <def_link>2642</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -305,9 +315,28 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- Clone gestion du genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>What?! Fuck you! Sorry I asked... You fucking prick.</text>
+          <text>Quoi ?! Va te faire foutre ! Désolée d'avoir demandé... Putain de connard.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(-3, 1020);</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Quoi ?! Va te faire foutre ! Désolée d'avoir demandé... Putain de connasse.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -326,7 +355,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro storms off.&gt;</text>
+          <text>&lt;Aggro part en claquant la porte.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -343,7 +372,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Could be the last day of my life and that's your answer? Sorry I asked... Ugh.</text>
+          <text>C'est peut-être le dernier jour de ma vie et c'est ça ta réponse ? Désolée d'avoir demandé... Ugh.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -362,7 +391,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro struts off.&gt;</text>
+          <text>&lt;Aggro part en trombe.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -379,7 +408,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No, no, no... You do not get to use that line with me. Turning me down - the fuck's happened to the world. Ugh... Asshole.</text>
+          <text>Non, non, non... Tu n'as pas le droit d'utiliser cette phrase avec moi. Me rejeter - qu'est-ce qui se passe dans le monde, putain. Ugh... Trou du cul.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -398,7 +427,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro struts off.&gt;</text>
+          <text>&lt;Aggro part en trombe.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -415,7 +444,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I won't tell.</text>
+          <text>Je ne dirai rien.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -432,7 +461,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I can't. Just drop it.</text>
+          <text>Je ne peux pas. Laisse tomber.</text>
           <def_link>2645</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -441,7 +470,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I guess I do need this. Yeah, sure.</text>
+          <text>Je suppose que j'ai besoin de ça. Ouais, bien sûr.</text>
           <def_link>2642</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -456,7 +485,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Could have used a little more enthusiasm there, guy. Okay, whatever.</text>
+          <text>Tu pourrais faire preuve d'un peu plus d'enthousiasme, mec. Ok, peu importe.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>

@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Hey. I was just thinking about it... I probably shouldn't have just ditched Alan back there. </text>
+          <text>Hé. J'étais en train d'y penser... Je n'aurais probablement pas dû abandonner Alan là-bas. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -29,7 +29,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>See, he's - well, it's complicated - but he took our van and said he was driving out to Austin to look for help. Not the smartest plan, I guess, but he was trying, in his way.</text>
+          <text>Tu vois, il est - enfin, c'est compliqué - mais il a pris notre van et a dit qu'il allait à Austin pour chercher de l'aide. Ce n'était pas le plan le plus intelligent, je suppose, mais il essayait, à sa façon.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -45,7 +45,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>It's been a week - he might have come back. I just have this feeling. So, um... do you think you could go head back to the bar and check? I just need to know.</text>
+          <text>Cela fait une semaine - il est peut-être revenu. J'ai juste ce sentiment. Alors, hum... tu penses que tu pourrais retourner au bar et vérifier ? J'ai juste besoin de savoir.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -62,7 +62,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>It's a bit out of the way... but we'll find a way to do it.</text>
+          <text>C'est un peu à l'écart... mais on trouvera un moyen de le faire.</text>
           <def_link>2591</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -71,7 +71,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>How important is it? There are no guarantees and it will take time we don't have.</text>
+          <text>C'est important ? Il n'y a aucune garantie et cela prendra du temps que nous n'avons pas.</text>
           <def_link>2592</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -79,11 +79,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>He's probably dead. I'm sorry - we can't spare the fuel and time.</text>
+          <text>Il est probablement mort. Je suis désolée, nous n'avons ni le carburant ni le temps.</text>
           <def_link>2593</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Il est probablement mort. Je suis désolé, nous n'avons ni le carburant ni le temps.</text>
+          <def_link>2593</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -95,7 +105,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Cool. I'd rather you bring him back. Might be weird, with me leaving without him and all... </text>
+          <text>C'est cool. Je préfère que tu le ramènes. Ça pourrait être bizarre, que je parte sans lui et tout... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -111,7 +121,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Got a few things I need to tell him, but I'd rather do it when he's back. </text>
+          <text>J'ai quelques trucs à lui dire, mais je préfère le faire quand il sera de retour. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -127,7 +137,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>We should probably try to get back there within a week. He's not really good on his own, so I'm thinking you should go as soon as possible. </text>
+          <text>Nous devrions probablement essayer d'y retourner dans la semaine. Il n'est pas très doué pour se débrouiller seul, alors je pense que tu devrais y aller le plus tôt possible. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -144,7 +154,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro walks off.&gt;</text>
+          <text>&lt;Aggro s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -161,7 +171,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>He's just been kind of a constant companion all these years, you know? People were always wondering what the deal was with us - why we were still playing together after the divorce, if we were still romantically involved, if Alan was obsessed with me... but we're just kind of our own thing. </text>
+          <text>Il a été une sorte de compagnon constant toutes ces années, tu sais ? Les gens se demandaient toujours ce qui se passait entre nous - pourquoi nous jouions encore ensemble après le divorce, si nous avions toujours une relation amoureuse, si Alan était obsédé par moi... mais nous avons notre propre histoire. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -177,7 +187,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>He might be alive - that's important, right? I thought that would be a pretty good reason.</text>
+          <text>Il est peut-être vivant - c'est important, non ? Je pensais que c'était une bonne raison.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -194,7 +204,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Okay. We'll go back and look for him.</text>
+          <text>D'accord. On va retourner le chercher.</text>
           <def_link>2591</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -203,7 +213,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>We have bigger worries at the moment, but I'll try.</text>
+          <text>Nous avons de plus gros soucis en ce moment, mais j'essaierai.</text>
           <def_link>2591</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -211,11 +221,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>No. I'm sorry - it's asking too much. If he went to a city - he's dead.</text>
+          <text>Non. Je suis désolée, c'est trop demander. S'il est allé dans une ville, il est mort.</text>
           <def_link>2593</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Non. Je suis désolé, c'est trop demander. S'il est allé dans une ville, il est mort.</text>
+          <def_link>2593</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -227,7 +247,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh, c'mon... That's some heartless-ass shit. You sure you don't want to head out there just to kick him in the nuts? </text>
+          <text>Oh, allez... Quelle connerie sans coeur. Tu es sûr que tu ne veux pas aller là-bas juste pour lui donner un coup de pied dans les noix ? </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -245,7 +265,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Ugh, this place is looking like a bigger mistake than the time I played that college tour with that prop comedian. Hope Alan finds that note I left - don't think he's going to like you much when I tell him about this, though.</text>
+          <text>Ugh, cet endroit ressemble à une plus grosse erreur que la fois où j'ai fait la tournée des universités avec ce comédien. J'espère qu'Alan trouvera le mot que j'ai laissé - je ne pense qu'il ne t'aimera pas beaucoup quand je lui raconterai tout ça.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -262,7 +282,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro walks off.&gt;</text>
+          <text>&lt;Aggro s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

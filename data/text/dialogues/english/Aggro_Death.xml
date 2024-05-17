@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Just finished my last cigarette. &lt;Cough&gt;You're here to do it, right? Guess there's no point in arguing. Mind if I get some stuff off my chest first? Before I go?</text>
+          <text>Je viens de finir ma dernière cigarette. &lt;Tousse&gt;Tu es ici pour le faire, n'est-ce pas ? Je suppose qu'il n'y a pas lieu de discuter. Ça te dérange si j'enlève quelques trucs de ma poitrine d'abord ? Avant de partir ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -28,7 +28,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I don't mind.</text>
+          <text>Ça ne me dérange pas.</text>
           <def_link>2678</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -37,7 +37,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Sure, Aggro... Talk as long as you can.</text>
+          <text>Bien sûr, Aggro... Parle aussi longtemps que tu le peux.</text>
           <def_link>2678</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -45,11 +45,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I'm sorry. I'm sorry there's nothing else I could do.</text>
+          <text>Je suis désolée. Je suis désolée qu'il n'y ait rien d'autre que je puisse faire.</text>
           <def_link>2677</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis désolé. Je suis désolé qu'il n'y ait rien d'autre que je puisse faire.</text>
+          <def_link>2677</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -61,7 +71,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>It doesn't matter now...</text>
+          <text>Ça n'a plus d'importance maintenant...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -93,7 +103,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>So... I always wanted to die famously, you know? Which means I had to get famous first, which really, I wasn't. </text>
+          <text>Alors... j'ai toujours voulu mourir célèbre, tu sais ? Ce qui veut dire que je devais d'abord devenir célèbre, ce qui n'était pas le cas. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -109,7 +119,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I went from band to band to band, up and down the US, Japan, Europe... Just constantly, for one more fan. But in the end, it wouldn't have mattered that much. Everyone's dying these days... </text>
+          <text>Je suis passé d'un groupe à l'autre, d'un bout à l'autre des États-Unis, du Japon, de l'Europe... J'étais constamment à la recherche d'un fan de plus. Mais en fin de compte, cela n'aurait pas eu beaucoup d'importance. Tout le monde meurt de nos jours... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -125,7 +135,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Is all this making it harder? To, you know, pull the trigger? </text>
+          <text>Est-ce que tout cela rend les choses plus difficiles ? Pour, tu sais, appuyer sur la gâchette ? </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -142,7 +152,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>A little, but it's your right.</text>
+          <text>Un peu, mais c'est ton droit.</text>
           <def_link>2679</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -151,7 +161,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>No. It's my responsibility.</text>
+          <text>Non. C'est ma responsabilité.</text>
           <def_link>2679</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -166,7 +176,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Good... I don't regret my life... I regret some of the choices - pissing the wrong people off, losing touch with my mom, breaking Alan's heart... You know, I knew he still loved me, but, what was I supposed to do. </text>
+          <text>Bien... Je ne regrette pas ma vie... Je regrette certains choix - avoir énervé les mauvaises personnes, avoir perdu le contact avec ma mère, avoir brisé le coeur d'Alan... Je savais qu'il m'aimait encore, mais qu'est-ce que j'étais censée faire ? </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -182,7 +192,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I lead the life I wanted and he... Well, it made for some good songs, anyhow.</text>
+          <text>Je menais la vie que je voulais et lui... En tout cas, ça a fait de bonnes chansons.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -199,7 +209,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Go on...</text>
+          <text>Continue...</text>
           <def_link>2680</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -207,11 +217,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I'm glad you have no regrets.</text>
+          <text>Je suis content que tu n'aies pas de regrets.</text>
           <def_link>2680</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis contente que tu n'aies pas de regrets.</text>
+          <def_link>2680</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -223,7 +243,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I can hear the crowd at the biggest show I ever played... Over a thousand people... I was so happy... So many people... Oh &lt;sobs&gt; all I can see is... dead faces now... </text>
+          <text>Je peux entendre la foule au plus grand spectacle que j'ai jamais donné... Plus de mille personnes... J'étais si heureuse... Tant de gens... Oh &lt;sanglots&gt; tout ce que je peux voir c'est... des visages morts maintenant... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -239,7 +259,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh, fuck! All of them... I'm dying, oh shit... I'm dying!</text>
+          <text>Oh, putain ! Tous... Je meurs, oh merde... Je meurs !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -257,8 +277,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I'm sorry, Aggro. I'm so sorry.</text>
+          <text>Je suis désolé, Aggro. Je suis vraiment désolé.</text>
+          <def_link>2681</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis désolée, Aggro. Je suis vraiment désolée.</text>
+          <def_link>2681</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Il est temps... Je peux mettre fin à la douleur.</text>
           <def_link>2681</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -267,16 +306,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It's time... I can end the pain.</text>
-          <def_link>2681</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>&lt;Shoot her in the head&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête&gt;</text>
           <def_link>2683</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -291,7 +321,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Dying? The fuck... Alan... Why the hell would you get me a butterfly necklace? Like I'm gonna... mention other people's problems... A whole night of hearing other people's problems... Ooh, yeah... Now you're gonna make 'em mine...</text>
+          <text>Mourir ? Putain... Alan... Pourquoi diable m'offrirais-tu un collier en forme de papillon ? Comme si j'allais... parler des problèmes des autres... Une nuit entière à entendre les problèmes des autres... Ooh, ouais... Maintenant tu vas les faire miens...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -307,7 +337,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;A breath escapes her mouth and her head slumps down.&gt;</text>
+          <text>&lt;Un souffle s'échappe de sa bouche et sa tête s'affaisse.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -333,7 +363,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Why did you have to go and get bit! Dammit...</text>
+          <text>Pourquoi as-tu dû aller te faire mordre ? Bon sang...</text>
           <def_link>2682</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -342,7 +372,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>&lt;Shoot her in the head&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête&gt;</text>
           <def_link>2683</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -357,7 +387,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Aggro's head starts moving again. It bends to peer at you through a mass of hair.&gt;</text>
+          <text>&lt;La tête d'Aggro se remet à bouger. Elle se penche pour vous regarder à travers une masse de cheveux.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -374,7 +404,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Shoot her in the head&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête&gt;</text>
           <def_link>2683</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -389,7 +419,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Aggro's head jerks back quickly and then her hair is nothing but a wet clump on her face. She is dead.&gt;</text>
+          <text>&lt;La tête d'Aggro bascule rapidement en arrière et ses cheveux ne sont plus qu'une touffe humide sur son visage. Elle est morte.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -407,8 +437,31 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I'm sorry. Goodbye, Aggro.</text>
+          <text>Je suis désolée. Au revoir, Aggro.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis désolé. Au revoir, Aggro.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Tu vas me manquer. Repose en paix.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -419,18 +472,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'll miss you. Rest in peace.</text>
-          <def_link>-1</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick>
-            <string>dlgEndFadeFullFast();</string>
-          </scriptsOnClick>
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>Why do they have to talk... Dammit.</text>
+          <text>Pourquoi doivent-ils parler... Merde.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
