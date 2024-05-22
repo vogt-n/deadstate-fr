@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Hey. This place is kinda lame. If I don't let loose and tear up a stage soon, I might as well become one of the dead, you know?</text>
+          <text>Hé. Cet endroit est un peu nul. Si je ne me lâche pas et ne déchire pas une scène bientôt, je pourrais aussi bien devenir l'un des morts, tu sais ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -27,7 +27,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Also, I thought it might rattle a few of the olds and the more depressing folk if I played a set here, so I've got to do it. Even if they don't like the music, it's got to liven this place up a bit, don't you think?</text>
+          <text>Et puis, j'ai pensé que ça pourrait secouer quelques vieux et les gens plus déprimants si je jouais ici, alors il faut que je le fasse. Même s'ils n'aiment pas la musique, ça devrait animer un peu cet endroit, non ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -46,7 +46,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Free Aggro Moss show? Go for it.</text>
+          <text>Un concert gratuit d'Aggro Moss ? Allons-y.</text>
           <def_link>2626</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -55,7 +55,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I don't know... Some of the people are going to bitch about it. To me.</text>
+          <text>Je ne sais pas... Certains vont s'en plaindre. A moi.</text>
           <def_link>2628</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -64,7 +64,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm not really a fan of your music, so... no. </text>
+          <text>Je ne suis pas vraiment fan de ta musique, donc... non. </text>
           <def_link>2629</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -79,7 +79,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Rad. Going to need two things - a pack of electric guitar strings and two gallons of fuel for the generator to power my amp during the show. And let me assure you, I'm going to need all the juice I can push through that equipment.</text>
+          <text>Bravo. Je vais avoir besoin de deux choses : un paquet de cordes de guitare électrique et deux gallons de carburant pour le générateur qui alimentera mon ampli pendant le concert. Et laisse-moi t'assurer que je vais avoir besoin de tout le jus que je peux faire passer à travers cet équipement.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -96,7 +96,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You got it.</text>
+          <text>Tu as raison.</text>
           <def_link>2627</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -104,11 +104,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>Wait - you need what? No, sorry, can't spare the fuel. </text>
+          <text>Attends, tu as besoin de quoi ? Non, désolée, je ne peux pas me passer du carburant. </text>
           <def_link>2629</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Attends, tu as besoin de quoi ? Non, désolé, je ne peux pas me passer du carburant. </text>
+          <def_link>2629</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -120,7 +130,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Awesome. But, uh, if you could hurry it up, that'd be really cool of you. A few more quiet days and I'm going to start screaming at people just to kill the silence.</text>
+          <text>Génial. Mais, euh, si tu pouvais te dépêcher, ce serait vraiment cool de ta part. Encore quelques jours tranquilles et je vais commencer à crier sur les gens juste pour tuer le silence.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -137,7 +147,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro walks off.&gt;</text>
+          <text>&lt;Aggro s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -154,7 +164,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Fuck 'em. They'll be so busy getting their shit rocked they'll forget they're angry. Trust me, I can work a crowd - any crowd. Shit, I'll have them singing along to songs they don't even know.</text>
+          <text>Qu'ils aillent se faire foutre. Ils seront tellement occupés à se faire secouer qu'ils oublieront qu'ils sont en colère. Crois-moi, je peux faire bouger une foule - n'importe quelle foule. Merde, je les ferai chanter sur des chansons qu'ils ne connaissent même pas.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -171,7 +181,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Alright, alright - you can do it.</text>
+          <text>D'accord, d'accord - tu peux le faire.</text>
           <def_link>2626</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -179,11 +189,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>Sorry, no. I can't spare the resources or people. </text>
+          <text>Désolée, non. Je n'ai ni les ressources ni les gens. </text>
           <def_link>2630</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Désolé, non. Je n'ai ni les ressources ni les gens. </text>
+          <def_link>2630</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -195,7 +215,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Look - fan or not, you have to admit people could use a distraction to keep their minds of the doom and gloom and being back in school. It'll be fun for them and me. Remember fun? C'mon...</text>
+          <text>Ecoute, fan ou pas, tu dois admettre que les gens ont besoin d'une distraction pour ne pas penser à la morosité et au retour à l'école. Ce sera amusant pour eux et pour moi. Tu te souviens de l'amusement ? Allez...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -212,7 +232,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Fine. Do it.</text>
+          <text>Très bien. Fais-le.</text>
           <def_link>2626</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -221,7 +241,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It's a waste of time. Don't bring it up again.</text>
+          <text>C'est une perte de temps. N'en parlons plus.</text>
           <def_link>2630</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -236,7 +256,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>What the hell is wrong with you? Were you like the principal of this place or something? Man, if anyone asks, I'm blaming you for the death of rock music. Ass...</text>
+          <text>Qu'est-ce qui ne va pas chez toi ? Tu étais le directeur de cet endroit ou quelque chose comme ça ? Mec, si quelqu'un demande, je te blâme pour la mort de la musique rock. Trou du cul...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -255,7 +275,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro walks off.&gt;</text>
+          <text>&lt;Aggro s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -283,7 +303,7 @@
     <lines>
       <dlgLine>
         <owner_ID>0</owner_ID>
-        <text>What the hell is wrong with you? Were you like the principal of this place or something? Man, if anyone asks, I'm blaming you for the death of rock music. Ass...</text>
+        <text>Qu'est-ce qui ne va pas chez toi ? Tu étais le directeur de cet endroit ou quelque chose comme ça ? Mec, si quelqu'un demande, je te blâme pour la mort de la musique rock. Trou du cul...</text>
         <defAppearChecks>
           <boolean>false</boolean>
           <boolean>false</boolean>
@@ -302,7 +322,7 @@
     </lines>
     <answers>
       <dlgAnsw>
-        <text>&lt;Aggro walks off.&gt;</text>
+        <text>&lt;Aggro s'en va.&gt;</text>
         <def_link>-1</def_link>
         <auto_answer>false</auto_answer>
         <checkOnAppear />
