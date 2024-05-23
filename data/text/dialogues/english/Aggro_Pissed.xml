@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I know what you're going to say, but save it. I tried to, like, give you a chance and whatever, but you just keep fucking up. I'm out for now - go find yourself another sucker.</text>
+          <text>Je sais ce que tu vas dire, mais épargne-moi ça. J'ai essayé de te donner une chance, mais tu n'arrêtes pas de faire des conneries. Je me retire pour l'instant - va te trouver une autre poire.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You do nothing, you eat nothing. Protest again and you'll be on the other side of that fence.</text>
+          <text>Si tu ne fais rien, tu ne manges rien. Proteste encore et je te mettrai de l'autre côté de la barrière.</text>
           <def_link>2661</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -39,7 +39,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I shouldn't let you off so easily, but I'm going to give you one day to think very carefully about your future here.</text>
+          <text>Je ne devrais pas te laiser tranquille si facilement, mais je vais te donner un jour pour réfléchir très attentivement à ton avenir ici.</text>
           <def_link>2662</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -47,17 +47,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I'm sorry you're unhappy. But we're all part of this, and doing nothing hurts the group, not me.</text>
+          <text>Je suis désolée que tu sois malheureuse. Mais nous faisons tous partie de ce projet, et ne rien faire nuit à tout le groupe, pas à uniquement à moi-même.</text>
           <def_link>2663</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Negotiation &gt;= 6</checkOnAppear>
+          <checkOnAppear>ds.Negotiation &gt;= 6 &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Don't you get it? This is our last stand here! It's going to brutal and ugly and painful! Half-rations until you understand that!</text>
+          <text>Je suis désolé que tu sois malheureuse. Mais nous faisons tous partie de ce projet, et ne rien faire nuit à tout le groupe, pas à uniquement à moi-même.</text>
+          <def_link>2663</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Negotiation &gt;= 6 &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Tu ne comprends pas ? C'est notre dernier combat ! Ça va être brutal, moche et douloureux ! En attendant que tu comprennes ça, tu n'auras que des demi-rations !</text>
           <def_link>2664</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Leadership &gt;= 6</checkOnAppear>
@@ -66,7 +76,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You want to crowd dive over the fence? I'll throw your skinny ass over the side right now, if you really want to go. </text>
+          <text>Tu veux faire un saut de foule par-dessus la clôture ? Je vais jeter ton petit cul par-dessus, si tu veux vraiment y aller. </text>
           <def_link>2665</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -81,7 +91,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Fine, whatever. Just the kind of dick move I'd expect from you.</text>
+          <text>Bien, peu importe. C'est juste le genre de mouvement de con auquel je m'attendais de ta part.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -101,7 +111,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro storms off.&gt;</text>
+          <text>&lt;Aggro se sauve en claquant la porte. &gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -118,7 +128,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Wait, what? I wasn't really expecting this reaction from you, so... I'll think about it. </text>
+          <text>Attends, quoi ? Je ne m'attendais pas vraiment à cette réaction de ta part, alors... Je vais y réfléchir. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -138,7 +148,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro walks off.&gt;</text>
+          <text>&lt;Aggro s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -155,7 +165,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You couldn't just let me have my moment, could you? Well, fine - since you put it that way, no, I don't want to hurt some of the cool people here, so... fine. I'll cooperate.</text>
+          <text>Tu ne pouvais pas me laisser vivre mon moment, n'est-ce pas ? Bon, d'accord - puisque tu le dis comme ça, non, je ne veux pas blesser les gens cool ici, alors... d'accord. Je vais coopérer.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -174,7 +184,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro walks off.&gt;</text>
+          <text>&lt;Aggro s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -191,7 +201,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Wait... Okay, maybe I deserve that, to be fair - I don't know. I'm going to need some time to think about this. Maybe you should say stuff like that more often. You know, just a thought.</text>
+          <text>Attends... Ok, peut-être que je le mérite, pour être honnête - je ne sais pas. Je vais avoir besoin de temps pour y réfléchir. Peut-être que tu devrais dire des choses comme ça plus souvent. Tu sais, c'est juste une idée.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -211,7 +221,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro walks off.&gt;</text>
+          <text>&lt;Aggro s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -228,7 +238,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Let me save you the trouble - fuck you and fuck this place! Find yourself another sucker, 'cause I'm out of here!</text>
+          <text>Laisse-moi t'épargner cette peine - allez-vous faire foutre toi et cette endroit ! Trouve-toi une autre poire, parce que je me casse d'ici !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -245,7 +255,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Fine, go! I bet you don't last an hour, bitch!</text>
+          <text>Très bien, vas-y ! Je parie que tu ne tiendras pas une heure, salope !</text>
           <def_link>2666</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -253,17 +263,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>Whoa, whoa - I'm sorry. Come back and I'll give you the day off, extra rations, you name it!</text>
+          <text>Whoa, whoa - Je suis désolée. Reviens et je te donnerai un jour de congé, des rations supplémentaires, tout ce que tu veux !</text>
           <def_link>2667</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Negotiation &gt;= 8</checkOnAppear>
+          <checkOnAppear>ds.Negotiation &gt;= 8 &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Aggro, wait... let's talk!</text>
+          <text>Whoa, whoa - Je suis désolé. Reviens et je te donnerai un jour de congé, des rations supplémentaires, tout ce que tu veux !</text>
+          <def_link>2667</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Negotiation &gt;= 8 &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Aggro, attends... discutons !</text>
           <def_link>2670</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -278,7 +298,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'll last longer than this place... I do know that!</text>
+          <text>Je tiendrai plus longtemps que cet endroit... Je le sais !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -310,7 +330,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>...No bullshit? I mean, no bullshit for now on? If you're promising me that, I'll give you one last shot. One. Don't blow it - I mean it.</text>
+          <text>...Plus de conneries ? Je veux dire, plus aucune conneries à partir de maintenant ? Si tu me promets ça, je vais te donner une dernière chance. La dernière. Ne la gâche pas - je suis sérieuse.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -329,7 +349,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro walks off.&gt;</text>
+          <text>&lt;Aggro s'en va.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -346,7 +366,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Aggro storms off toward the gate. She has left the shelter.&gt;</text>
+          <text>&lt;Aggro part en trombe vers la porte. Elle a quitté le refuge.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -365,7 +385,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Fine, leave... One less mouth to feed.</text>
+          <text>D'accord, pars... Une bouche de moins à nourrir.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -376,7 +396,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Good riddance. Oh, and your music sucks!</text>
+          <text>Bon débarras. Oh, et ta musique est à chier !</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -387,7 +407,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>If I see you again, you're dead! Understand me?!</text>
+          <text>Si je te revois, tu es morte ! Compris ?!</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
