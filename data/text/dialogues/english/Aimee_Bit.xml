@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[START] &lt;lastname&gt;... hey. Guess you know already, huh. You were there, so I guess... that you saw. &lt;She nods slowly.&gt; Yeah.</text>
+          <text>[START] &lt;lastname&gt;... hey. Je suppose que tu sais déjà, hein. Tu étais là, donc je suppose... que tu as vu. &lt;Elle acquiesce lentement.&gt; Ouais.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -29,8 +29,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>Aimee, I'm so sorry.</text>
+          <text>Aimee, je suis désolée.</text>
+          <def_link>399</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Aimee, je suis désolé.</text>
+          <def_link>399</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>C'est vrai que ça arrive.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -39,16 +58,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Shit does happen.</text>
-          <def_link>399</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick />
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>&lt;Let her continue.&gt;</text>
+          <text>&lt;La laisser continuer.&gt;</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -63,7 +73,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[CONTINUE] It's so stupid. You know, when Dustin and I holed up in the Wicked Lily, and he was going on about how society was gonna fall apart? I was all like "yeah, bring it, it's about time this shit broke down." I just was... excited? Kind of? If that makes sense? Anyhow.</text>
+          <text>[CONTINUE] C'est tellement stupide. Tu sais, quand Dustin et moi nous nous sommes terrés dans le Wicked Lily, et qu'il disait que la société allait s'effondrer ? J'étais du genre « ouais, vas-y, il est temps que cette merde s'effondre ». J'étais juste... excitée ? En quelque sorte ? Si ça a un sens ? Quoi qu'il en soit.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -79,7 +89,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>The fucking fact is that I'm dying. I said it! I'm dying! I am! I'm dying. And just a short while ago, I was basically hoping the world would end. And then it kind of did. &lt;She covers her face with her hands and half-laughs, half-sobs.&gt; God, I am so fucking stupid...</text>
+          <text>Le fait est que je suis en train de mourir. Je l'ai dit ! Je meurs ! C'est vrai ! Je meurs. Et il y a peu de temps, j'espérais que le monde s'arrêterait. Et c'est ce qui s'est passé. &lt;Elle se couvre le visage de ses mains et se met à moitié à rire, à moitié à sangloter.&gt; Mon Dieu, je suis tellement stupide...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -96,7 +106,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Kind] What can I do to help?</text>
+          <text>[Kind] Qu'est-ce que je peux faire pour t'aider ?</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -105,7 +115,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Even] &lt;Let her continue.&gt;</text>
+          <text>[Even] &lt;La laisser continuer.&gt;</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -114,7 +124,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Mean] Sounds like you got your wish.</text>
+          <text>[Mean] On dirait que ton vœu a été exaucé.</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -127,13 +137,32 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- Clone pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[KIND] &lt;Aimee gives you a small half-smile.&gt; Thanks for the caring, boss. Makes it a little easier. But here's my request. Let's see if you're eager to help then.</text>
+          <text>[KIND] &lt;Aimee t'adresse un petit demi-sourire.&gt; Merci de ton soutien, chef. Ça rend les choses un peu plus faciles. Mais voici ma demande. Voyons si tu es prêt à m'aider.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(3, 1026);</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[KIND] &lt;Aimee t'adresse un petit demi-sourire.&gt; Merci de ton soutien, cheffe. Ça rend les choses un peu plus faciles. Mais voici ma demande. Voyons si tu es prête à m'aider.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -163,7 +192,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[EVEN] I hate to pawn this off on somebody, but like - I've come to the conclusion I suck at killing myself. Seriously, I have tried. Once I ate pills but I made myself throw 'em back up. Took a bath, stared at the razor, couldn't get it near my skin. Held the gun in my hand but told Dustin... no.</text>
+          <text>[EVEN] Je déteste refiler ça à quelqu'un, mais j'en suis arrivée à la conclusion que j'étais nulle pour me suicider. Sérieusement, j'ai essayé. Une fois, j'ai mangé des pilules, mais je me suis forcée à les vomir. J'ai pris un bain, j'ai regardé le rasoir, je n'arrivais pas à l'approcher de ma peau. J'ai tenu le pistolet dans ma main mais j'ai dit à Dustin... non.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -179,7 +208,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I need help actually - ending things. Like, just before I turn. Whatever you gotta do, just like... I don't wanna come back as one of those goddamn monsters. And I can't make the last thing I see my shaking hands and a gun barrel and then of course... I'll fuck up... and...</text>
+          <text>J'ai besoin d'aide en fait - pour mettre fin aux choses. Juste avant que je ne me transforme. Peu importe ce que tu dois faire, mais... Je ne veux pas revenir sous la forme d'un de ces foutus monstres. Et je ne peux pas faire en sorte que la dernière chose que je vois soit mes mains tremblantes et un canon de fusil, et bien sûr... Je vais foirer... et...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -196,7 +225,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Nice] Aimee, hey, it's okay. I'll help, I promise.</text>
+          <text>[Nice] Aimee, hey, c'est bon. Je t'aiderai, je te le promets.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -205,7 +234,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Neutral] I got it. I'll do it.</text>
+          <text>[Neutral] J'ai compris. Je le ferai.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -214,7 +243,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Cruel] Right, right, I'll kill you before you turn, whatever.</text>
+          <text>[Cruel] D'accord, d'accord, je te tuerai avant que tu ne te transformes, peu importe.</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -229,7 +258,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[MEAN] &lt;She snorts in disdain.&gt; Oh, totally. Got my wish, oh my god yes. I'm so jumping around in joy right now. So joy. Such happy. Wow. &lt;She rolls her eyes and sighs.&gt; If you're done being a dick, I'll continue.</text>
+          <text>[MEAN] &lt;Elle grogne de dédain.&gt; Oh, tout à fait. J'ai réalisé mon souhait, oh mon dieu oui. Je saute de joie en ce moment. Tellement de joie. Je suis tellement heureuse. Wow. &lt;Elle fait rouler ses yeux et soupire.&gt; Si tu as fini de jouer au con, je continue.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -261,7 +290,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NICE] &lt;She lets out a huge breath.&gt; Ugh. Oh my god. Thank you. I mean that sincerely, I do, I just... I think that was actually harder than dying's gonna be... and now I made myself sad. I'm... I'm gonna just... go.</text>
+          <text>[NICE] &lt;Elle laisse échapper une énorme bouffée d'air.&gt; Elle laisse échapper une énorme bouffée d'air. Ugh. Oh mon Dieu. Je te remercie. Je suis sincère, vraiment, c'est juste que... Je pense que mourir est plus dur que je le pensais... et maintenant, je me suis triste. Je... Je vais juste... partir.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -280,7 +309,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I understand, Aimee. I'll see you later.</text>
+          <text>Je comprends, Aimee. Je te verrai plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -295,13 +324,30 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- Clone pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NEUTRAL] Right! Right. Okay. Professional-like, right. I'll just... get my affairs in order... I guess...</text>
+          <text>[NEUTRAL] D'accord ! C'est vrai. Ok. Comme une professionnelle, d'accord. Je vais juste... mettre mes affaires en ordre... Je suppose...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[NEUTRAL] D'accord ! C'est vrai. Ok. Comme un professionnel, d'accord. Je vais juste... mettre mes affaires en ordre... Je suppose...</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -314,7 +360,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You do that. See you around.</text>
+          <text>Fais ça. A bientôt.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -331,7 +377,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[CRUEL] Gee, sorry shooting me inconveniences you so much. I'll try to make it over with fast, I guess? Whatever, yourself.</text>
+          <text>[CRUEL] Désolée de te déranger autant en te demandant de le tirer dessus. Je vais essayer d'en finir rapidement, je suppose ? Peu importe, toi-même.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -350,7 +396,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aimee hurries out of the room.&gt;</text>
+          <text>&lt;Aimee se précipite hors de la pièce.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
