@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I can't move... This sucks!</text>
+          <text>Je ne peux pas bouger... Ça craint !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You're in the final stages of the infection.</text>
+          <text>Tu es dans la phase finale de l'infection.</text>
           <def_link>3250</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -39,7 +39,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Let's get on with this, shall we?</text>
+          <text>Continuons, d'accord ?</text>
           <def_link>3250</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -48,7 +48,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>&lt;Shoot him in the head.&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête.&gt;</text>
           <def_link>3252</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -63,7 +63,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>All my life... I was waiting to be important. Waiting for people to notice and love me for something. And then all of this happened, and I was good at something... I survived. But no... No one cared.</text>
+          <text>Toute ma vie... J'ai attendu d'être important. J'attendais que les gens me remarquent et m'aiment pour quelque chose. Et puis tout ça est arrivé, et j'étais bon à quelque chose... J'ai survécu. Mais non... Tout le monde s'en fichait.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -79,7 +79,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>It's not fair! I don't even feel like I was the star of my own life! Just... Always... Always someone else getting all the attention.</text>
+          <text>Ce n'est pas juste ! Je n'ai même pas l'impression d'avoir été la star de ma propre vie ! C'est que... Toujours... Toujours quelqu'un d'autre qui reçoit toute l'attention.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -95,17 +95,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I feel sorry for you.</text>
+          <text>Je suis désolée pour toi.</text>
           <def_link>3251</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>You've still got a few minutes - anything could happen.</text>
+          <text>Je suis désolé pour toi.</text>
+          <def_link>3251</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Tu as encore quelques minutes - tout peut arriver.</text>
           <def_link>3251</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -120,7 +130,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Fuck you... Fuck you all for breaking into my store! I was safe there... I was someone... Who knows... Maybe something could've happened... Bunch of girls... I could've saved them and... </text>
+          <text>Va te faire foutre... Allez tous vous faire foutre pour avoir pénétré dans mon magasin ! J'étais en sécurité... J'étais quelqu'un... Qui sait... Il aurait pu se passer quelque chose... Une bande de filles... J'aurais pu les sauver et... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -136,7 +146,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I don't like it when they laugh... I don't want to go to school... The other kids... the other clerks make fun of me... I just want to be friends with them... I want to be... everyone to be my friend...</text>
+          <text>Je n'aime pas quand elles rient... Je ne veux pas aller à l'école... Les autres enfants... les autres employés se moquent de moi... Je veux juste être ami avec eux... Je veux être... que tout le monde soit mon ami...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -152,7 +162,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Clifford convulses, then stops moving.&gt;</text>
+          <text>&lt;Clifford a des convulsions, puis s'arrête de bouger.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -169,7 +179,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Shoot him in the head.&gt;</text>
+          <text>&lt;Lui tirer une balle dans la tête.&gt;</text>
           <def_link>3252</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -184,7 +194,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;The bullet finds its target and in a flash, most of Clifford's brain is no longer in his skull.&gt;</text>
+          <text>&lt;La balle atteint sa cible et, en un éclair, la majeure partie du cerveau de Clifford s'ejecte de sa boîte crânienne.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -203,7 +213,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Hope the next life's better to you.</text>
+          <text>J'espère que la prochaine vie sera meilleure pour toi.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -213,11 +223,12 @@
             <string>dlgEndFadeFullFast();</string>
           </scriptsOnClick>
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I didn' t like you much, but no one should have to die like that. I'm sorry.</text>
+          <text>Je ne t'aimais pas beaucoup, mais personne ne devrait mourir comme ça. Je suis désolée.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -225,7 +236,18 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Fucking creep. Good riddance.</text>
+          <text>Je ne t'aimais pas beaucoup, mais personne ne devrait mourir comme ça. Je suis désolé.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Sale type. Bon débarras.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
