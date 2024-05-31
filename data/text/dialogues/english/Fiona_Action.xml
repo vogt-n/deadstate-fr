@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[START] &lt;charname&gt; - you have to listen to me! &lt;Fiona looks exhausted, worried, as if she hasn't slept well in days.&gt; You're in danger - they're plotting against you, I know it, something needs to be done!</text>
+          <text>[START] &lt;charname&gt; - tu dois m'écouter ! &lt;Fiona a l'air épuisée, inquiète, comme si elle n'avait pas bien dormi depuis des jours.&gt; Tu es en danger, ils complotent contre toi, je le sais, il faut faire quelque chose !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Who] Who are you talking about?</text>
+          <text>[Who] De qui parles-tu ?</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>isShelterCharDead(1005) == 0 || isShelterCharDead(1007) == 0 || isShelterCharDead(1021) == 0 || isShelterCharDead(1023) == 0</checkOnAppear>
@@ -39,7 +39,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[None] What are you talking about?</text>
+          <text>[None] De quoi parles-tu ?</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>isShelterCharDead(1005) == 1 &amp;&amp; isShelterCharDead(1007) == 1 &amp;&amp; isShelterCharDead(1021) == 1 &amp;&amp; isShelterCharDead(1023) == 1</checkOnAppear>
@@ -54,7 +54,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[WHO] They! I can't say their name aloud - they'll hear - but I know they're a danger. Something needs to be done, isn't there anything you can do? Sleep with a gun under your pillow, set a watch, something? I can stay beside you if you want!</text>
+          <text>[WHO] D'eux ! Je ne peux pas dire leur nom à haute voix - ils l'entendraient - mais je sais qu'ils sont un danger. Il faut faire quelque chose, il n'y a rien que tu puisses faire ? Dormir avec une arme sous l'oreiller, faire le guet, quelque chose ? Je peux rester à tes côtés si tu veux !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -71,7 +71,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Calm] It's okay, Fiona. Calm down. I'll be okay!</text>
+          <text>[Calm] C'est bon, Fiona. Calme-toi. Ça va aller !</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -80,7 +80,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Stop] Stop it -  you're just working yourself up! There is no danger!</text>
+          <text>[Stop] Arrête, tu es en train de te monter le bourrichon ! Il n'y a pas de danger !</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -88,17 +88,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Prepared] Don't worry - I'm always prepared. Nobody will catch me by surprise.</text>
+          <text>[Prepared] Ne t'inquiète pas, je suis toujours prête. Personne ne me prendra par surprise.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Shutdown] This has gone far enough - you need to stop obsessing over me, right now.</text>
+          <text>[Prepared] Ne t'inquiète pas, je suis toujours prêt. Personne ne me prendra par surprise.</text>
+          <def_link>403</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Shutdown] C'est allé assez loin - tu dois arrêter d'être obsédée par moi, tout de suite.</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -113,7 +123,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NONE] It's complicated, but trust me, there are dangers out there you're not seeing! Something needs to be done, isn't there anything you can do? Sleep with a gun under your pillow, set a watch, something? I can stay beside you if you want!</text>
+          <text>[NONE] C'est compliqué, mais crois-moi, il y a des dangers que tu ne vois pas ! Il faut faire quelque chose, il n'y a rien que tu puisses faire ? Dormir avec une arme sous l'oreiller, mettre en place une surveillance, quelque chose ? Je peux rester à tes côtés si tu veux !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -130,7 +140,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Calm] It's okay, Fiona. Calm down. I'll be okay!</text>
+          <text>[Calm] C'est bon, Fiona. Calme-toi. Ça va aller !</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -139,7 +149,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Stop] Stop it -  you're just working yourself up! There is no danger!</text>
+          <text>[Stop] Arrête, tu es en train de te monter le bourrichon ! Il n'y a pas de danger !</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -147,8 +157,9 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Prepared] Don't worry - I'm always prepared. Nobody will catch me by surprise.</text>
+          <text>[Prepared] Ne t'inquiète pas, je suis toujours prête. Personne ne me prendra par surprise.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -157,7 +168,16 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Shutdown] This has gone far enough - you need to stop obsessing over me, right now.</text>
+          <text>[Prepared] Ne t'inquiète pas, je suis toujours prêt. Personne ne me prendra par surprise.</text>
+          <def_link>403</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Shutdown] C'est allé assez loin - tu dois arrêter d'être obsédée par moi, tout de suite.</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -172,7 +192,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[CALM] I'm trying, but I just - you mean so much to me. I know - I know you can help save things. Save everyone...</text>
+          <text>[CALM] J'essaie, mais je... tu comptes tellement pour moi. Je sais... je sais que tu peux aider à sauver des choses. Sauver tout le monde...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -191,7 +211,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Sleep] Go back to bed and get some sleep today - help sort yourself out. Don't worry about work.</text>
+          <text>[Sleep] Retourne au lit et dors un peu aujourd'hui - aide-toi à t'en sortir. Ne t'inquiète pas pour le travail.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -200,7 +220,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Work] Look - I need you to focus on the things you need to do today. All right?</text>
+          <text>[Work] Ecoute, j'ai besoin que tu te concentres sur les choses que tu dois faire aujourd'hui. D'accord ?</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -209,7 +229,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Shutdown] This has gone far enough - you need to stop obsessing over me, right now.</text>
+          <text>[Shutdown] C'est allé assez loin - tu dois arrêter d'être obsédée par moi, tout de suite.</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -224,7 +244,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[STOP] How can I stop? I know there's danger towards the thing that means the most to me in the whole world right now, and I can't prove it just yet but I know it's coming - how can I just sit by and do nothing?!</text>
+          <text>[STOP] Comment puis-je arrêter ? Je sais qu'il y a un danger pour la chose qui compte le plus pour moi dans le monde entier en ce moment, et je ne peux pas encore le prouver mais je sais qu'il arrive - comment puis-je rester assise et ne rien faire ?!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -243,7 +263,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Sleep] Go back to bed and get some sleep today - help sort yourself out. Don't worry about work.</text>
+          <text>[Sleep] Retourne au lit et dors un peu aujourd'hui - aide-toi à t'en sortir. Ne t'inquiète pas pour le travail.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -252,7 +272,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Work] Look - I need you to focus on the things you need to do today. All right?</text>
+          <text>[Work] Ecoute, j'ai besoin que tu te concentres sur les choses que tu dois faire aujourd'hui. D'accord ?</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -261,7 +281,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Shutdown] This has gone far enough - you need to stop obsessing over me, right now.</text>
+          <text>[Shutdown] C'est allé assez loin - tu dois arrêter d'être obsédée par moi, tout de suite.</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -274,14 +294,31 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- Clone pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[PREPARED] &lt;Fiona's relief is almost a palpable wave of force.&gt; Oh thank god... thank you for believing me. Just be careful - keep armed, keep wary - and I'll do whatever I can to keep you safe. Whatever it takes. I swear it!</text>
+          <text>[PREPARED] &lt;Le soulagement de Fiona est presque une vague de force palpable.&gt; Oh, Dieu merci... Merci de me croire. Sois prudente, arme-toi, méfie-toi, et je ferai tout ce que je peux pour que tu sois en sécurité. Tout ce qu'il faudra. Je le jure !</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[PREPARED] &lt;Le soulagement de Fiona est presque une vague de force palpable.&gt; Oh, Dieu merci... Merci de me croire. Sois prudent, arme-toi, méfie-toi, et je ferai tout ce que je peux pour que tu sois en sécurité. Tout ce qu'il faudra. Je le jure !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
-            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -293,7 +330,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Fiona runs out of the room before you can say anything else.&gt;</text>
+          <text>&lt;Fiona sort de la pièce en courant avant que tu ne puisses dire quoi que ce soit d'autre.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -308,14 +345,33 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- Clone pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SLEEP] How can I sleep when I - &lt;Fiona stops herself, sighs, and runs a hand through her hair.&gt; Okay. If you promise to stay vigilant, I guess I can grab a couple hours of sleep and then be back on alert. Yeah. Yeah, I'll do that...</text>
+          <text>[SLEEP] Comment puis-je dormir quand je - &lt;Fiona s'arrête, soupire et se passe une main dans les cheveux.&gt; Ok. Si tu promets de rester vigilante, je pense que je peux prendre quelques heures de sommeil et être de nouveau en alerte. Oui, c'est ce que je vais faire. Oui, je vais faire ça...</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>shelterSetAllyStatus(1038, "Sick", 24);</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[SLEEP] Comment puis-je dormir quand je - &lt;Fiona s'arrête, soupire et se passe une main dans les cheveux.&gt; Ok. Si tu promets de rester vigilant, je pense que je peux prendre quelques heures de sommeil et être de nouveau en alerte. Oui, c'est ce que je vais faire. Oui, je vais faire ça...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
-            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -329,7 +385,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Good. Go and sort yourself out.</text>
+          <text>C'est bien. Va t'occuper de toi.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -346,7 +402,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[WORK] But protecting you should be my job! I - &lt;Fiona catches herself and looks upset.&gt; I'm so sorry - I shouldn't speak against you! I'll be ready for whatever you ask, I promise. I promise!</text>
+          <text>[WORK] Mais te protéger devrait être mon travail ! Je - &lt;Fiona se reprend et prend un air contrarié.&gt; Je suis désolée, je n'aurais pas dû parler contre toi ! Je serai prête pour tout ce que tu me demanderas, je te le promets. Je te le promets !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -365,7 +421,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Right... just try to focus on that.</text>
+          <text>Bien... essaie de te concentrer là-dessus.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -380,13 +436,30 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- Clone pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SHUTDOWN] &lt;Fiona's eyes go wide.&gt; Please, please, not now, you have to listen to me! There's danger, don't you see it? I have to save you - you're the one, don't you know? The one who means everything to me. The one who could save all of us - civilization - everything! And I have to help you!</text>
+          <text>[SHUTDOWN] &lt;Les yeux de Fiona s'écarquillent.&gt; S'il te plaît, s'il te plaît, pas maintenant, tu dois m'écouter ! Il y a un danger, tu ne le vois pas ? Je dois te sauver - tu es la seule, tu ne le sais pas ? Celle qui représente tout pour moi. Celle qui pourrait nous sauver tous, la civilisation, tout ! Et je dois t'aider !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[SHUTDOWN] &lt;Les yeux de Fiona s'écarquillent.&gt; S'il te plaît, s'il te plaît, pas maintenant, tu dois m'écouter ! Il y a un danger, tu ne le vois pas ? Je dois te sauver - tu es le seul, tu ne le sais pas ? Celui qui représente tout pour moi. Celui qui pourrait nous sauver tous, la civilisation, tout ! Et je dois t'aider !</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -399,7 +472,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Sleep] Look, I don't know what's up with you, but this is your last chance. Go get sleep and calm down!</text>
+          <text>[Sleep] Je ne sais pas ce qui t'arrive, mais c'est ta dernière chance. Va dormir et calme-toi !</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -407,17 +480,27 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Flee] Fiona, it's over. I'm not someone to obsess over. I'm not "the one" for anything. I'm just trying to survive.</text>
+          <text>[Flee] Fiona, c'est fini. Je ne suis pas quelqu'un d'obsessionnel. Je ne suis pas « le bon » pour quoi que ce soit. J'essaie juste de survivre.</text>
           <def_link>407</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Fiona_Trust &lt;= 10</checkOnAppear>
+          <checkOnAppear>ds.Fiona_Trust &lt;= 10 &amp;&amp; isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Final] I'm not God, Fiona. I can't save the world! I'm just trying to survive. We all are.</text>
+          <text>[Flee] Fiona, c'est fini. Je ne suis pas quelqu'un d'obsessionnel. Je ne suis pas « la bonne » pour quoi que ce soit. J'essaie juste de survivre.</text>
+          <def_link>407</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Fiona_Trust &lt;= 10 &amp;&amp; isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Final] Je ne suis pas Dieu, Fiona. Je ne peux pas sauver le monde ! J'essaie juste de survivre. Comme nous tous.</text>
           <def_link>408</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Fiona_Trust &gt; 10</checkOnAppear>
@@ -430,13 +513,32 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- Clone pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[FLEE] I... you're not... you're not who I thought you were. All those moments we had... things we shared... You're still in danger and I - I &lt;Her lip starts to tremble, and her eyes fill with tears.&gt; I can't even look at you!</text>
+          <text>[FLEE] Je... tu n'es pas... tu n'es pas celui que je pensais que tu étais. Tous ces moments que nous avons eus... les choses que nous avons partagées... Tu es toujours en danger et je... je... &lt;Sa lèvre commence à trembler et ses yeux se remplissent de larmes.&gt; Je ne peux même plus te regarder !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Fiona_Flee = 1;</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[FLEE] Je... tu n'es pas... tu n'es pas celle que je pensais que tu étais. Tous ces moments que nous avons eus... les choses que nous avons partagées... Tu es toujours en danger et je... je... &lt;Sa lèvre commence à trembler et ses yeux se remplissent de larmes.&gt; Je ne peux même plus te regarder !</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -451,7 +553,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Fiona rushes out of the room, weeping.&gt;</text>
+          <text>&lt;Fiona se précipite hors de la pièce en pleurant.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -468,7 +570,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[FINAL] No - NO! I don't believe you! I don't know what you're doing, and I don't know when I failed you... I've always done exactly as you asked! I'd never work against you... why am I not good enough? Why can't I... why can't I serve you?</text>
+          <text>[FINAL] Non - NON ! Je ne te crois pas ! Je ne sais pas ce que tu fais, et je ne sais pas quand je t'ai déçue... J'ai toujours fait exactement ce que tu m'as demandé ! Je ne travaillerais jamais contre toi... Pourquoi ne suis-je pas assez bonne ? Pourquoi ne puis-je pas... pourquoi ne puis-je pas te servir ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -487,7 +589,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Fiona screams and runs out of the room.&gt;</text>
+          <text>&lt;Fiona hurle et sort de la pièce en courant.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
