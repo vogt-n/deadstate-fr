@@ -11,7 +11,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[START] &lt;charname&gt;... Je te prie de m'excuser pour cette intrusion, mais je voulais que tu aies quelque chose. Tiens, je pense que cela pourrait t'aider.</text>
+          <!--<text>[START] &lt;charname&gt;... I, beg your pardon for intruding, but I wanted you to have something. Here - I think this might help.</text>-->
+          <text>[START] &lt;charname&gt;... Je, je te demande pardon pour l'intrusion, mais je veux que tu saches. Voilà - je pense que je peux aider.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -28,31 +29,15 @@
             <string>addItem(2000, 10);</string>
           </onLoadScripts>
         </dlgLine>
-        <!-- Clone pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Désolée de ne pas vous les avoir apportés plus tôt, je voulais juste vous les donner à toi seule.</text>
-          <defAppearChecks>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>true</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-            <boolean>false</boolean>
-          </defAppearChecks>
-          <onAppearChecks />
-          <onLoadScripts />
-        </dlgLine>
-        <dlgLine>
-          <owner_ID>0</owner_ID>
-          <text>Désolée de ne pas vous les avoir apportés plus tôt, je voulais juste vous les donner à toi seul.</text>
+          <!--<text>Sorry I didn't get them to you sooner, I just - I wanted to give them only to you.</text>-->
+          <text>Désolé, j'aurais aimé les avoir eu plus tôt - je veux te les donner à toi et seulement toi.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
-            <boolean>true</boolean>
+            <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -64,7 +49,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Curious] C'est... beaucoup d'antibiotiques. Où les as-tu eus exactement ?</text>
+          <!--<text>[Curious] These are - a lot of antibiotics. Where exactly did you get these?</text>-->
+          <text>[Curious] C'est - beaucoup d'antibiotiques. Ou les a tu trouvé exactement ?</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -73,7 +59,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Excited] Des antibiotiques ? Ils seront très utiles. Merci, Fiona !</text>
+          <!--<text>[Excited] Antibiotics? These will definitely come in handy. Thank you, Fiona!</text>-->
+          <text>[Excited] Des antibiotiques? ça va grandement m'aider. Merci, Fiona!</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -82,7 +69,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Angry] Qu'est-ce que - As tu caché ces médicaments ?!</text>
+          <!-- <text>[Angry] What the - you've been hiding medicine?!</text> -->
+          <text>[Angry] Qu'est-ce que - Tu a caché des médicaments !? </text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -97,11 +85,12 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[CURIOUS] Ils étaient dans mon sac quand j'ai quitté la maison - là où nous nous sommes rencontrés. Je les avais pris dans le camp des pillards avant qu'ils ne me poursuivent... Je jure que je ne les ai pas volés dans les réserves ici !</text>
+          <!--<text>[CURIOUS] They were in my bag when I left the house - where we met. I'd taken them from the looters' camp before they chased after me... I swear, I didn't steal them from any supplies here!</text>-->
+          <text>[CURIOUS] Ils étaient dans mon sac quand j'ai quitter la maison - la ou nous nous sommes rencontrées. Je les ai pris dans le camps des survivants avant qu'ils ne m'en chasse... Je te promets, je ne les ai pas volé dans les stocks d'ici!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
-            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -113,7 +102,25 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Je devais m'assurer que tu avais quelque chose au cas où - au cas où quelqu'un t'aurait mordu. Je ne laisserai jamais cela arriver ! Il ne peut rien t'arriver de grave... Je ne sais pas ce que je ferais si c'était le cas...</text>
+          <!--<text>[CURIOUS] They were in my bag when I left the house - where we met. I'd taken them from the looters' camp before they chased after me... I swear, I didn't steal them from any supplies here!</text>-->
+          <text>[CURIOUS] Ils étaient dans mon sac quand j'ai quitter la maison - la ou nous nous sommes rencontrés. Je les ai pris dans le camps des survivants avant qu'ils ne m'en chasse... Je te promets, je ne les ai pas volé dans les stocks d'ici!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <!--<text>I had to make sure you had something in case - in case someone let you get bit. I would never let that happen! Nothing bad can happen to you... I'm not sure what I'd do if it did...</text>-->
+          <text>Je devais m'assurée que tu ai quelque chose au cas ou - dans le cas ou tu te ferrais mordre. Je ne laisser jamais ça se produire! Rien de mauvais ne t'arriveras... Je ne sais pas ce que je ferrai si ça devait arriver...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -130,7 +137,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Assure] Je vais bien, ça va aller. Merci d'avoir veillé sur moi.</text>
+          <!--<text>[Assure] I'm fine, I'll be all right. Thank you for looking out for me.</text>-->
+          <text>[Assure] Je fais bien, et ça va continuer. Merci de pour ton attention.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -139,7 +147,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Lead] Je suis le chef ici. Si je ne prends pas de risques moi-même, je ne peux pas demander à quelqu'un d'autre de le faire.</text>
+          <!--<text>[Lead] I'm the leader here. If I don't take risks myself, I can't ask anyone else to.</text>-->
+          <text>[Lead] Je suis en charge de ce qui se passe ici. Si je ne vais pas au danger, je ne peux pas demander aux autres de le faire.</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -148,7 +157,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Creeped] J'apprécie le geste, mais nous sommes tous dans le même bateau. La prochaine fois, mets des trucs en réserve pour que tout le monde puisse s'en servir.</text>
+          <!--<text>[Creeped] I appreciate the gesture, but we're all in this together. Next time, put stuff in storage for everyone to use.</text>-->
+          <text>[Creeped] J'apprécie le geste, mais nous sommes tous dans la même galère. La prochaine fois, met ces choses dans le stock directement pour que tout le monde en profite.</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -157,7 +167,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Possess] Merci beaucoup, Fiona. Je sais que je peux toujours compter sur toi, n'est-ce pas ?</text>
+          <!--<text>[Possess] Thank you so much, Fiona. I know I can always count on you, can't I?</text>-->
+          <text>[Possess] Merci beaucoup Fiona. Je sais que je peux toujours compter sur toi n'est-ce pas ?</text>
           <def_link>407</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -166,7 +177,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Mean] Écoute. Si je t'attrape encore en train de stocker des trucs, je me fiche que ce soit pour moi ou pas, tu vas le regretter. Tu comprends ?</text>
+          <!--<text>[Mean] Look. I catch you hoarding stuff again, I don't care if it's for me or not, you're gonna regret it. Understand?</text>-->
+          <text>[Mean] Ecoutes. Si je te reprends à cacher du matériel à nouveau, je me fiche que ce soit pour moi ou non, tu le regrettera. Compris ?</text>
           <def_link>408</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -181,7 +193,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[EXCITED] Oh, c'est bien ! Je suis contente que tu les aimes. Je les ai gardés en secret parce que je ne voulais pas que quelqu'un d'autre les prenne... Je voulais que tu les aies, seulement toi.</text>
+          <!--<text>[EXCITED] Oh, good! I'm so glad you like them. I kept them secret because I didn't want anyone else to take them... I wanted you to have them, you alone.</text>-->
+          <text>[EXCITED] Ah, parfait! Je suis cheureuse que ça te plait. Je les ai gardé secretement parceque je ne voulais pas que les autres s'en servent... Je veux que tu les ai, pour toi seulement.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -199,7 +212,8 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Je devais m'assurer que tu avais quelque chose au cas où - au cas où quelqu'un t'aurait mordu. Je ne laisserai jamais cela arriver ! Rien de mal ne peut t'arriver... Je ne sais pas ce que je ferais si c'était le cas...</text>
+          <!--<text>I had to make sure you had something in case - in case someone let you get bit. I would never let that happen! Nothing bad can happen to you... I'm not sure what I'd do if it did...</text>-->
+          <text>Je devais être sure que tu en ai dans le cas ou - dans le cas ou quelqu'un te laisserai te faire mordre. Moi, je ne laisserais jamais ça se produire! Rien de mal ne t'arriveras.. je ne sais pas ce que je ferrai si ça devait arriver...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -216,7 +230,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Assure] Je vais bien, ça va aller. Merci d'avoir veillé sur moi.</text>
+          <!--<text>[Assure] I'm fine, I'll be all right. Thank you for looking out for me.</text>-->
+          <text>[Assure] Je vais bien, et tout ira bien. Merci de veiller sur moi.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -225,7 +240,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Lead] Je suis le chef ici. Si je ne prends pas de risques moi-même, je ne peux pas demander à quelqu'un d'autre de le faire.</text>
+          <!--<text>[Lead] I'm the leader here. If I don't take risks myself, I can't ask anyone else to.</text>-->
+          <text>[Lead] Je suis le leader ici. Je ne peux pas demander aux gens de prendre des risques si moi même je n'en prends pas.</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -234,7 +250,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Creeped] J'apprécie le geste, mais nous sommes tous dans le même bateau. La prochaine fois, mets des trucs en réserve pour que tout le monde puisse s'en servir.</text>
+          <!--<text>[Creeped] I appreciate the gesture, but we're all in this together. Next time, put stuff in storage for everyone to use.</text>-->
+          <text>[Creeped] J'apprécie le geste, mais nous sommes tous dans la même galère. la prochaine fois, mets le matériel util dans le stock directement pour que ça profite à tous.</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -243,7 +260,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Possess] Merci beaucoup, Fiona. Je sais que je peux toujours compter sur toi, n'est-ce pas ?</text>
+          <!--<text>[Possess] Thank you so much, Fiona. I know I can always count on you, can't I?</text>-->
+          <text>[Possess] Merci beaucoup Fiona. Je sais que je peux toujours compter sur toi pas vrai?</text>
           <def_link>407</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -252,7 +270,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Mean] Écoute. Si je t'attrape encore en train de stocker des trucs, je me fiche que ce soit pour moi ou pas, tu vas le regretter. Tu comprends ?</text>
+          <!--<text>[Mean] Look. I catch you hoarding stuff again, I don't care if it's for me or not, you're gonna regret it. Understand?</text>-->
+          <text>[Mean] Ecoutes. Si je te reprends à cacher du matériel à nouveau, je me fiche que ce soit pour moi ou non, tu le regrettera. Compris ?</text>
           <def_link>408</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -267,12 +286,31 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[ANGRY] Pas toi, je te le promets ! Je les avais avec moi quand nous avons quitté la maison où nous nous sommes rencontrés - je voulais être sûre que c'était le bon moment pour te les donner, que personne d'autre n'essaierait de les prendre !</text>
+          <!--<text>[ANGRY] Not from you, I promise! I had them with me when we left the house were we met - I wanted to be sure it was a good time to give them to you, that nobody else would try and take them!</text>-->
+          <text>[ANGRY] Je ne te les ai pas volé, je te le promets! Je les avaient avec moi quand j'ai quitter la maison ou nous nous sommes rencontrées. Je voulais être certaine que ce serait le bon moment avant de te les donner, que personne d'autre n'allais les prendre et s'en servir!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Fiona_Trust --;</string>
+          </onLoadScripts>
+        </dlgLine><dlgLine>
+          <owner_ID>0</owner_ID>
+          <!--<text>[ANGRY] Not from you, I promise! I had them with me when we left the house were we met - I wanted to be sure it was a good time to give them to you, that nobody else would try and take them!</text>-->
+          <text>[ANGRY] Je ne te les ai pas volé, je te le promets! Je les avaient avec moi quand j'ai quitter la maison ou nous nous sommes rencontrées. Je voulais être certaine que ce serait le bon moment avant de te les donner, que personne d'autre n'allais les prendre et s'en servir!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
-            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -285,7 +323,8 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Je devais m'assurer que tu avais quelque chose au cas où - au cas où quelqu'un t'aurait mordu. Je ne laisserai jamais cela arriver ! Rien de mal ne peut t'arriver... Je ne sais pas ce que je ferais si c'était le cas...</text>
+          <!--<text>I had to make sure you had something in case - in case someone let you get bit. I would never let that happen! Nothing bad can happen to you... I'm not sure what I'd do if it did...</text>-->
+          <text>Je devais être certaine que tu en ai dans le cas ou - dans le cas ou quelqu'un te laisserai te faire mordre. Je ne laisserai jamais ça se produire! Rien de mauvais ne t'arriveras... Je ne sais pas ce que je ferrai si ça se produisait...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -302,7 +341,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Assure] Je vais bien, ça va aller. Merci d'avoir veillé sur moi.</text>
+          <!--<text>[Assure] I'm fine, I'll be all right. Thank you for looking out for me.</text>-->
+          <text>[Assure] Je vais bien, tout ira bien. Merci de veiller sur moi.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -311,7 +351,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Lead] Je suis le chef ici. Si je ne prends pas de risques moi-même, je ne peux pas demander à quelqu'un d'autre de le faire.</text>
+          <!--<text>[Lead] I'm the leader here. If I don't take risks myself, I can't ask anyone else to.</text>-->
+          <text>[Lead] Je suis le leader ici. Je ne peux pas demander aux gens de prendre des risques si moi même je n'en prends pas.</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -320,7 +361,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Creeped] J'apprécie le geste, mais nous sommes tous dans le même bateau. La prochaine fois, mets des trucs en réserve pour que tout le monde puisse s'en servir.</text>
+          <!--<text>[Creeped] I appreciate the gesture, but we're all in this together. Next time, put stuff in storage for everyone to use.</text>-->
+          <text>[Creeped] J'apprécie le geste, mais nous sommes tous dans la même galère. la prochaine fois, mets le matériel util dans le stock directement pour que ça profite à tous.</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -329,7 +371,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Possess] Merci beaucoup, Fiona. Je sais que je peux toujours compter sur toi, n'est-ce pas ?</text>
+          <!--<text>[Possess] Thank you so much, Fiona. I know I can always count on you, can't I?</text>-->
+          <text>[Possess] Merci beaucoup Fiona. Je sais que je peux toujours compter sur toi pas vrai?</text>
           <def_link>407</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -338,7 +381,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Mean] Écoute. Si je t'attrape encore en train de stocker des trucs, je me fiche que ce soit pour moi ou pas, tu vas le regretter. Tu comprends ?</text>
+          <!--<text>[Mean] Look. I catch you hoarding stuff again, I don't care if it's for me or not, you're gonna regret it. Understand?</text>-->
+          <text>[Mean] Ecoutes. Si je te reprends à cacher du matériel à nouveau, je me fiche que ce soit pour moi ou non, tu le regrettera. Compris ?</text>
           <def_link>408</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -353,7 +397,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[ASSURE] Bien sûr. Bien sûr ! Tu es tout ce qu'il y a de plus important ici. &lt;Fiona te regarde et sourit timidement un instant, ouvre la bouche pour dire quelque chose d'autre, puis rougit et détourne le regard.&gt; Je devrais y aller. Je te parlerai plus tard !</text>
+          <!--<text>[ASSURE] Of course. Of course! You mean everything to this place. &lt;Fiona looks at you and smiles shyly a moment, opens her mouth to say something else, then blushes and looks away.&gt; I - I should go. I'll talk to you later!</text>-->
+          <text>[ASSURE] Biensûr. Biensûr! Tu es tout pour cette endroit. &lt;Fiona te regardes et sourrit timidement, puis elle ouvre la bouche pour ajouter quelque chose, mais se met à rougir et détourne le regard..&gt; Je - Je dois y aller. On se parle plus tard!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -372,7 +417,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Bien sûr. Au revoir alors.</text>
+          <!--<text>Sure. Bye for now.</text>-->
+          <text>Oui. A plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -389,7 +435,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LEAD] C'est très courageux de ta part... mais un leader doit savoir que les gens le soutiennent, qu'ils le suivront, qu'ils croiront en lui. Je sais que tu seras là, à être forte. Je voulais juste te montrer à quel point je te soutiens.</text>
+          <!--<text>[LEAD] That's so brave of you... but a leader has to know that people have their back, that they'll follow them, believe in them. I know you'll be out there, being strong. I just - wanted to show you how much I support you.</text>-->
+          <text>[LEAD] C'est tellement courageux de ta parts... mais un leader doit savoir que les gens couvre ses arrières, qu'ils le suivront, qu'ils croient en lui. Je sais que tu seras la, dehors et que tu resteras fort. Je veux juste - Je veux juste te montrer à quel point je te soutiens.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -408,7 +455,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>C'est vrai, c'est gentil de ta part. Je devrais y aller, on en reparlera plus tard.</text>
+          <!--<text>Right - it's kind of you. I should get going - we'll talk more later.</text>-->
+          <text>Bien - c'est gentil de ta part. Je devrais y aller - on parlera d'avantage plus tard..</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -425,7 +473,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[CREEPED] &lt;La jeune femme a l'air abattue, mais acquiesce.&gt; Je comprends. Tu dois montrer à tout le monde que tu es là pour eux aussi. Ils n'y arriveraient pas sans toi. Ils n'y arriveraient pas. Je... ah... je te parlerai plus tard, &lt;charname&gt;. Salut.</text>
+          <!--<text>[CREEPED] &lt;The young woman looks crestfallen, but nods.&gt; I - I understand. You've got to show everyone that you're there for them, too. They couldn't do it without you. They wouldn't make it. I'll - ah - I'll talk to you later, &lt;charname&gt;. Bye.</text>-->
+          <text>[CREEPED] &lt;La jeune femme à l'air déçu, mais acquiese.&gt; Je - Je comprends. Tu dois montrer à tout le monde que tu es la pour eux également. Ils ne pourrait pas le faire sans toi. Ils n'y arriveraient pas. Je vais - ah - On se reparle plus tard, &lt;charname&gt;. Salut.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -444,7 +493,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Fiona s'éclipse rapidement de la pièce.&gt;</text>
+          <!--<text>&lt;Fiona quickly slips out of the room.&gt;</text>-->
+          <text>&lt;Fiona sort rapidement de la pièce.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -461,7 +511,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[POSSESS] &lt;Le visage de Fiona s'illumine au compliment.&gt; Tout à fait. Je sais que tu fais tourner cet endroit et je n'oublierai jamais que tu m'as sauvé la vie ! Je ferai toujours tout ce que je peux pour t'aider, je te le promets !</text>
+          <!--<text>[POSSESS] &lt;Fiona's face lights up at the compliment.&gt; Absolutely. I know you keep this place running - and I'll never forget that you saved my life! I'll always do whatever I can to help, I promise!</text>-->
+          <text>[POSSESS] &lt;Le visage de Fiona s'illumine face à ce compliment.&gt; Absolument. Je sais que tu continue de faire tourner cet endroit - et je n'oublierai jamais que tu m'a sauvé la vie! Je ferrai toujours tout ce que je peux pour t'aider, je te le promets!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -480,7 +531,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>C'est très agréable à entendre. Continue, on en reparlera une autre fois.</text>
+          <!--<text>That's so good to hear. Go on - we'll talk more another time.</text>-->
+          <text>C'est bon à entendre. Continue - On parlera d'avantage une autre fois.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -497,7 +549,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[MEAN] Oh... bien sûr ! Je suis vraiment désolée, je ne voulais pas saper ton autorité - je ne ferais jamais ça, jamais ! Chaque chose que je trouverai, je la partagerai, comme tu l'as dit. Je m'assurerai que je n'ai rien d'autre qui puisse être utilisé par quelqu'un d'autre !</text>
+          <!--<text>[MEAN] Oh... of course! I'm so sorry, I didn't mean to undermine your authority - I'd never do that, ever! Every single thing I find, I'll share, just as you said. I'll make sure I don't have anything else that anyone could use!</text>-->
+          <text>[MEAN] Oh... Biensur! Je suis désolée, Je ne voulais pas saper ton autorité - je en ferrai jamais ça, jamais! Je partagerai chaque petite chose que je trouverai, comme tu l'a dit. Je vais m'assurer que je n'ai rien qui pourrais servir à qui que ce soit!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -516,7 +569,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Fiona s'empresse de quitter la pièce.&gt;</text>
+          <!--<text>&lt;Fiona eagerly darts out of the room.&gt;</text>-->
+          <text>&lt;Fiona se précipite hors de la pièce.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
