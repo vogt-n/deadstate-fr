@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[START] Oh my goodness - you saved me! Thank you... those men... who knows what they would have done to me if they'd broken through that door...</text>
+          <text>[START] Oh mon Dieu, vous m'avez sauvé ! Merci... ces hommes... qui sait ce qu'ils m'auraient fait s'ils avaient enfoncé cette porte...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Question] Why were those guys after you like that?</text>
+          <text>[Question] Pourquoi ces types vous poursuivaient-ils ainsi ?</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -39,7 +39,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Mean] I don't care about saving you, I care about your stuff. Drop it and get the fuck out.</text>
+          <text>[Mean] Je me fiche de te sauver, je m'intéresse à tes affaires. Lâche ça et dégage.</text>
           <def_link>410</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -54,7 +54,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[QUESTION] My car broke down, and as I was fixing it, a horde of those... monsters... came along. I had to run up into a tree to escape - I didn't have any weapons, and I was lucky to get away alive!</text>
+          <text>[QUESTION] Ma voiture est tombée en panne, et pendant que je la réparais, une horde de ces... monstres... est arrivée. J'ai dû grimper dans un arbre pour m'échapper. Je n'avais aucune arme, et j'ai eu de la chance de m'en sortir vivant !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -70,7 +70,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>As I was in the tree trying to get a branch or something to use against the creatures, these men drove up. They killed some of the monsters, but instead of helping me, they took the supplies in my car and left me there.</text>
+          <text>Alors que j'étais dans l'arbre, essayant de trouver une branche ou quelque chose à utiliser contre les créatures, ces hommes sont arrivés en voiture. Ils ont tué certains des monstres, mais au lieu de m'aider, ils ont pris les provisions qui se trouvaient dans ma voiture et m'ont laissé là.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -86,17 +86,28 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Female -->
         <dlgAnsw>
-          <text>[Safe] I'm sorry. That must have been traumatic.</text>
+          <text>[Safe] - Je suis désolée. Ça a dû être traumatisan</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <!-- male -->
+        <dlgAnsw>
+          <text>[Safe] - Je suis désolé. Ça a dû être traumatisan</text>
+          <def_link>399</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Press] That doesn't explain why they were ready to kill you just now.</text>
+          <text>[Press] Mais ça n'explique pas pourquoi ils étaient prêts à te tuer tout à l'heure.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -105,7 +116,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Dismiss] Right - I've heard enough. You need to get the hell out of here before I shoot you myself.</text>
+          <text>[Dismiss] Bon, j'en ai assez entendu. Tu ferais mieux de dégager d'ici avant que je te tire dessus moi-même.</text>
           <def_link>411</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -120,7 +131,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[MEAN] Please! I don't want to fight you -  I owe you my life! M-my name is Fiona Parks. And you can take whatever I have, I promise - just let me come with you. You had to fight because of me, that's a debt I owe!</text>
+          <text>[MEAN] Je vous en prie ! Je ne veux pas me battre contre vous, je vous dois la vie ! Je m'appelle Fiona Parks. Vous pouvez prendre tout ce que j'ai, je vous le promets, mais laissez-moi venir avec vous. Vous avez dû vous battre à cause de moi, c'est une dette que j'ai envers vous !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -137,7 +148,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Join] Okay, fine. Just get the hell out of the way for now, and when I leave, you can follow.</text>
+          <text>[Join] D'accord, très bien. Écartes-toi de mon chemin pour l'instant, et quand je partirai, tu pourras me suivre.</text>
           <def_link>412</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -146,7 +157,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Question] Not before you tell me what the hell all that was about.</text>
+          <text>[Question] Pas avant que tu me dises ce qui s'est passé.</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -155,7 +166,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Dismiss] I don't care who you are or what you think you owe. Get out of here or I'll kill you.</text>
+          <text>[Dismiss] Je me fiche de qui tu es et de ce que tu penses devoir. Va-t'en d'ici ou je te tue.</text>
           <def_link>411</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -170,7 +181,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SAFE] Thank you for being so kind... I really didn't think there were any kind people left in the world after... well. After what happened. I can't tell you how happy I am to be wrong!</text>
+          <text>[SAFE] Merci d'être si gentil... Je ne pensais vraiment plus qu'il restait des gens gentils dans le monde après... enfin, après ce qui s'est passé. Je ne peux pas vous dire combien je suis heureuse de m'être trompée !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -188,11 +199,22 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Male -->
         <dlgAnsw>
-          <text>[Intro] I'm happy to prove you wrong... I guess.</text>
+          <text>[Intro] Et je suis heureux de vous prouver que le contraire est possible... Je suppose.</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <!-- Female -->
+        <dlgAnsw>
+          <text>[Intro] Et je suis heureuse de vous prouver que le contraire est possible... Je suppose.</text>
+          <def_link>400</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -204,7 +226,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[INTRO] Dear me! I'm so sorry - I'm being terribly rude! My name is Fiona - Fiona Parks. And I owe you my life! Whatever I can do to help you, I will.</text>
+          <text>[INTRO] Oh là là ! Je suis vraiment désolée, je suis terriblement impolie ! Je m'appelle Fiona, Fiona Parks. Et je vous dois la vie ! Je ferai tout ce qui est en mon pouvoir pour vous aider.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -221,7 +243,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Invite] Good to meet you, Fiona. I've got a safe place to stay if you're interested in some shelter.</text>
+          <text>[Invite] Enchantée, Fiona. J'ai un endroit sûr où vous pouvez vous réfugier si cela vous intéresse.</text>
           <def_link>416</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -230,7 +252,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Careful] Okay, great... I'm kind of good with things right now, so I'll just take care of these dead guys and go.</text>
+          <text>[Careful] D'accord, super... Je me débrouille plutôt bien pour l'instant, alors je vais juste m'occuper de ces cadavres et partir.</text>
           <def_link>415</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -239,7 +261,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Dismiss] Look, I'm not interested in your debt, and you seem like a big pile of crazy. Hurry up and take a hike.</text>
+          <text>[Dismiss] on, je me fiche de votre dette, et vous avez l'air complètement dingue. Allez, filez d'ici.</text>
           <def_link>411</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -254,7 +276,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[PRESS] Yes... I was able to finally escape the tree, kill the creatures, and patch together my car... one of their cars was leaking oil, and I followed it back to their hideout.</text>
+          <text>[PRESS] Oui... J'ai finalement réussi à m'échapper de l'arbre, à tuer les créatures et à réparer ma voiture... L'une de leurs voitures perdait de l'huile, et je l'ai suivie jusqu'à leur repaire.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -270,7 +292,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I hid from them as best I could, and - and took back some of my supplies. But they spotted me as I was leaving... the patch job I did on my car didn't hold very well, and I couldn't get very far. I ended up here, and it wasn't long until they found me. </text>
+          <text>Je me suis cachée du mieux que j'ai pu et j'ai récupéré une partie de mes provisions. Mais ils m'ont repérée alors que je partais... Les réparations que j'avais effectuées sur ma voiture n'ont pas tenu très longtemps et je n'ai pas pu aller très loin. Je me suis retrouvée ici, et ils ne tardèrent pas à me retrouver. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -286,7 +308,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;She shivers.&gt; I don't want to think of what they'd have done to me if they got in here...</text>
+          <text>&lt;Elle tremble.&gt; Je ne veux pas imaginer ce qu'ils m'auraient fait s'ils étaient entrés ici...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -303,7 +325,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Admit] This place doesn't look like it was abandoned. What happened to the person who lived here?</text>
+          <text>[Admit] Cet endroit ne semble pas avoir été abandonné. Qu'est-il arrivé aux personnes qui vivaient ici ?</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.survival &gt;= 4</checkOnAppear>
@@ -312,7 +334,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Safe] It's okay, I understand. You don't have to think about it anymore.</text>
+          <text>[Safe] Ce n'est pas grave, je comprends. Tu n'as plus besoin d'y penser.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -321,7 +343,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Wary] Right. Well, you're safe now, so I'm just gonna take care of these dead guys and leave.</text>
+          <text>[Wary] D'accord. Bon, tu es en sécurité maintenant, je vais juste m'occuper de ces cadavres et partir.</text>
           <def_link>414</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -330,7 +352,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Dismiss] Right - I've heard enough. You need to get the hell out of here before I shoot you myself.</text>
+          <text>[Dismiss] D'accord, j'en ai assez entendu. Dégages d'ici avant que je te tire dessus moi-même.</text>
           <def_link>411</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -345,7 +367,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[ADMIT] I... &lt;She sighs and looks down.&gt; I killed one of their people. I didn't want to, but I was  desperate, and I knew if I didn't have my supplies, I wouldn't last long. He surprised me, and... &lt;She squeezes her eyes shut and gives a slight sob.&gt; I was so scared, I didn't want to kill him!</text>
+          <text>[ADMIT] Je... &lt;Elle soupire et baisse les yeux.&gt; J'ai tué l'un des leurs. Je ne voulais pas, mais j'étais désespérée, et je savais que sans mes provisions, je ne tiendrais pas longtemps. Il m'a surprise, et... &lt;Elle ferme les yeux et sanglote légèrement.&gt; J'avais tellement peur, je ne voulais pas le tuer !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -362,7 +384,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Owner] Go on.</text>
+          <text>[Owner] Continue.</text>
           <def_link>407</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -371,7 +393,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Safe] It's okay. I can tell you regret it.</text>
+          <text>[Safe] Ce n'est pas grave. Je vois bien que tu le regrettes.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -380,7 +402,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Wary] Right. Well, you're safe now, so I'm just gonna take care of these dead guys and leave.</text>
+          <text>[Wary] D'accord. Bon, tu es en sécurité maintenant, alors je vais juste m'occuper de ces cadavres et partir.</text>
           <def_link>414</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -389,7 +411,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Dismiss] Right - I've heard enough. You need to get the hell out of here before I shoot you myself.</text>
+          <text>[Dismiss] D'accord, j'en ai assez entendu. Tu ferais mieux de dégager d'ici avant que je te tire dessus.</text>
           <def_link>411</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -404,7 +426,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[OWNER] &lt;She looks at her hands - they're shaking.&gt; I... I shot him. I was scared, and crashed my car into his fence, and I was just - dazed when I got out. I had the gun I'd gotten from that looter, and...</text>
+          <text>[OWNER] &lt;Elle regarde ses mains : elles tremblent.&gt; Je... je lui ai tiré dessus. J'avais peur, j'ai percuté sa clôture avec ma voiture, et j'étais juste... hébétée quand je suis sortie. J'avais le pistolet que j'avais pris à ce pillard, et...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -420,7 +442,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>And the man - the owner - he burst out of his house, yelling, and he had a weapon... a bat, I think... and he ran at me, and I just shot the gun reflexively, and I... I killed him. He'd done nothing wrong, and I... &lt;She chokes back a sob.&gt;</text>
+          <text>Et l'homme, le propriétaire, il est sorti de sa maison en hurlant, et il avait une arme... une batte, je crois... et il s'est précipité vers moi, et j'ai tiré par réflexe, et je... je l'ai tué. Il n'avait rien fait de mal, et je... &lt;Elle retient un sanglot.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -436,7 +458,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>...Any... anyway... I knew those awful men would be chasing me, but I... I couldn't just let that innocent man rot. I saw he had a firepit on his property, so I did my best to put him in it and cover him up... I even tried to make a cross and put it on his grave in case he was a Christian!</text>
+          <text>. Bref... Je savais que ces hommes horribles me poursuivraient, mais je... je ne pouvais pas laisser cet homme innocent pourrir là. J'ai vu qu'il avait un foyer sur sa propriété, alors j'ai fait de mon mieux pour l'y mettre et le recouvrir... J'ai même essayé de faire une croix et de la mettre sur sa tombe au cas où il serait chrétien !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -452,17 +474,28 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Male -->
         <dlgAnsw>
-          <text>[Safe] I'm sorry you had to go through that. It's easy to make dangerous mistakes these days.</text>
+          <text>[Safe] Je suis désolé que tu aies dû vivre ça. Il est facile de commettre des erreurs dangereuses de nos jours.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <!-- Female -->
+        <dlgAnsw>
+          <text>[Safe] Je suis désolée que tu aies dû vivre ça. Il est facile de commettre des erreurs dangereuses de nos jours.</text>
+          <def_link>399</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Wary] Right. Well, you're safe now, so I'm just gonna take care of these dead guys and leave.</text>
+          <text>[Wary] D'accord. Bon, tu es en sécurité maintenant, je vais juste m'occuper de ces cadavres et partir.</text>
           <def_link>414</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -471,7 +504,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Dismiss] Right - I've heard enough. You need to get the hell out of here before I shoot you myself.</text>
+          <text>[Dismiss] D'accord, j'en ai assez entendu. Tu ferais mieux de dégager d'ici avant que je te tire dessus.</text>
           <def_link>411</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -486,7 +519,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[WARY] Please, don't go! I can help you. M-my name is Fiona Parks, and I owe you my life! Please, let me join you, and I promise I'll be useful!</text>
+          <text>[WARY] S'il vous plaît, ne partez pas ! Je peux vous aider. Je m'appelle Fiona Parks, et je vous dois la vie ! S'il vous plaît, laissez-moi vous accompagner, je vous promets que je vous serai utile !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -503,7 +536,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Join] All right, fine - just stay out of the way for now, and when I leave, keep up.</text>
+          <text>[Join] D'accord, très bien... reste à l'écart pour l'instant, et quand je partirai, suis-moi.</text>
           <def_link>412</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -512,7 +545,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Dismiss] I'm not up for dealing with your crazy, thanks. Get the hell out of here.</text>
+          <text>[Dismiss] Je n'ai pas envie de m'occuper de ta folie, merci. Fiche le camp d'ici.</text>
           <def_link>411</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -527,7 +560,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[CAREFUL] Please, don't go! Let me join you - I can help, I promise! I'll be useful!</text>
+          <text>[CAREFUL] Ne partez pas, s'il vous plaît ! Laissez-moi vous accompagner, je peux vous aider, je vous le promets ! Je vous serai utile !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -544,7 +577,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Dismiss] I'm not up for dealing with your crazy, thanks. Get the hell out of here.</text>
+          <text>[Dismiss] Je n'ai pas envie de m'occuper de ta folie, merci. Fiche le camp d'ici</text>
           <def_link>411</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -553,7 +586,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Join] All right, fine - just stay out of the way for now, and when I leave, keep up.</text>
+          <text>[Join] D'accord, très bien, mais reste à l'écart pour l'instant, et quand je partirai, suis-moi.</text>
           <def_link>412</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -568,7 +601,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[DISMISS] &lt;Fiona's eyes fill with tears.&gt; I... I thought you were different! I thought... &lt;She sobs and runs out of the room, and out of the house.&gt;</text>
+          <text>[DISMISS] &lt;Les yeux de Fiona se remplissent de larmes..&gt; Je... Je pensais que tu étais différent ! Je pensais... &lt;Elle sanglote et sort en courant de la pièce, puis de la maison.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -585,7 +618,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>And good riddance.</text>
+          <text>Et bon débarras.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -604,7 +637,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[JOIN] Thank you, thank you so much! You won't be sorry about this, I promise. I'll do everything I can to be useful!</text>
+          <text>[JOIN] Merci, merci beaucoup ! Tu ne le regretteras pas, je te le promets. Je ferai tout mon possible pour me rendre utile !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -624,7 +657,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Fine, fine. Now scoot out of the way for now.</text>
+          <text>D'accord, d'accord. Maintenant, pousse-toi de là pour l'instant.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -643,7 +676,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[INVITE] Somewhere safe? Thank heavens! That would be amazing... I didn't think those places existed anymore. I'll stay out of your way and be ready when you are - thank you!</text>
+          <text>[INVITE] Un endroit sûr ? Dieu merci ! Ce serait formidable... Je ne pensais pas que ces endroits existaient encore. Je resterai hors de ton chemin et je serai prête quand tu le seras - merci</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -663,7 +696,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Don't worry about it - I'll see you soon.</text>
+          <text>Ne t'inquiète pas, à bientôt.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
