@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[START] I'm so sorry, &lt;charname&gt;... my stomach is hurting something fierce today. I get an ulcer from time to time, and I think it's acting up. What do you think I should do?</text>
+          <text>[START] Je suis vraiment désolé, &lt;charname&gt;... j'ai très mal au ventre aujourd'hui. J'ai parfois des ulcères, et je pense que ça recommence. Que penses-tu que je devrais faire ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Nice] Take today off - no sense making a bad situation worse.</text>
+          <text>[Nice] Prends congé aujourd'hui - inutile d'aggraver la situation.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -39,7 +39,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Talk] I know you wouldn't be worried unless it was serious - take today to rest up and be ready for tomorrow.</text>
+          <text>[Talk] Je sais que tu ne t'inquiéterais pas si ce n'était pas grave. Repose-toi bien aujourd'hui pour être prête pour demain.</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Negotiation &gt;= 4</checkOnAppear>
@@ -48,7 +48,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Lead] I know it's tough, but you've got to pull it together and be a good example to others.</text>
+          <text>[Lead] Je sais que c'est difficile, mais tu dois te ressaisir et montrer l'exemple aux autres.</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Leadership &gt;= 6</checkOnAppear>
@@ -57,7 +57,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Mean] Suck it up and get back to work.</text>
+          <text>[Mean] Fais-toi une raison et remets-toi au travail.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -70,13 +70,34 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- Clone pour gestion du genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NICE] Thank you so much! You're so kind... I promise I'll do everything I can to rest and feel better so I can work twice as hard tomorrow!</text>
+          <text>[NICE] Merci beaucoup ! Tu es tellement gentil... Je te promets que je vais faire tout mon possible pour me reposer et me sentir mieux afin de pouvoir travailler deux fois plus dur demain !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(3, 1038);</string>
+            <string>shelterSetAllyStatus(1038, "Sick", 24);</string>
+          </onLoadScripts>
+        </dlgLine>
+        <!-- Clone pour gestion du genre -->
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[NICE] Merci beaucoup ! Tu es tellement gentille... Je te promets que je vais faire tout mon possible pour me reposer et me sentir mieux afin de pouvoir travailler deux fois plus dur demain !</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -92,7 +113,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Take it easy, Fiona.</text>
+          <text>Ne t'en fais pas, Fiona.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -109,7 +130,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[TALK] Thank you for your trust in me - I promise I'll rest up and be careful and get better so I can help with whatever you need! I won't let you down, I swear!</text>
+          <text>[TALK] Merci de me faire confiance. Je te promets de me reposer, de faire attention à moi et de me rétablir afin de pouvoir t'aider dans tout ce dont tu as besoin ! Je ne te décevrai pas, je te le jure !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -129,7 +150,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Okay, just take it easy. Go rest up.</text>
+          <text>D'accord, mais vas-y doucement. Va te reposer.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -146,7 +167,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LEAD] I will... I promise. I'll just follow your example of strength as best I can... how can I fail when I have you to look up to?</text>
+          <text>[LEAD] Je le ferai... Je te le promets. Je vais simplement suivre ton exemple du mieux que je peux... Comment pourrais-je échouer alors que je t'ai comme modèle ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -166,7 +187,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Good to know. Hope you feel better soon.</text>
+          <text>C'est bon à savoir. J'espère que tu te sentiras mieux bientôt.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -183,7 +204,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[MEAN] All right - whatever you say, I promise! I'll do whatever I can to be useful, always...</text>
+          <text>[MEAN] D'accord, comme tu veux, c'est promis ! Je ferai tout mon possible pour me rendre utile, toujours...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -203,7 +224,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Sure, sure, now go make that happen.</text>
+          <text>Bien sûr, bien sûr, maintenant vas-y.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
