@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[START] Hey... &lt;charname&gt; &lt;lastname&gt;, right? I, um, wanted to thank you for taking me in. And you know, not shooting me, even though I had a gun aimed at you and stuff.</text>
+          <text>[START] Salut... &lt;charname&gt; &lt;lastname&gt;, n'est-ce pas ? Je voulais vous remercier de m'avoir recueilli. Et tu sais, de ne pas m'avoir tiré dessus, même si j'avais une arme pointée sur toi et tout ça.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -29,17 +29,27 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Kind] You were in a bad way - I'm just glad I got there in time to help.</text>
+          <text>[Kind] Tu étais en mauvaise posture, je suis content d'être arrivé à temps pour t'aider.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Neutral] Just never point a gun at me again and we should be good.</text>
+          <text>[Kind] Tu étais en mauvaise posture, je suis contente d'être arrivé à temps pour t'aider.</text>
+          <def_link>399</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Neutral] Ne pointe plus jamais d'arme sur moi et tout ira bien.</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -48,7 +58,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Even] How're you settling in?</text>
+          <text>[Even] Comment tu t'en sors avec ton installation ?</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -57,7 +67,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Mean] You're lucky I was in a good mood that day. Things nearly went another way.</text>
+          <text>[Mean] Tu as de la chance que j'étais de bonne humeur ce jour-là. Les choses ont failli tourner autrement.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -72,7 +82,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[KIND] Jeez, no kidding... you have no idea how good it feels to have an actual full night of sleep and some real food after... oh god, I don't even wanna think about it. Too long...</text>
+          <text>[KIND] Seigneur, sans blague... tu n'as pas idée du bien que ça fait d'avoir une vraie nuit de sommeil et de la vraie nourriture après... oh mon dieu, je ne veux même pas y penser. Trop longtemps...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -91,7 +101,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Quest] Seems like you've got something on your mind. You can tell me.</text>
+          <text>[Quest] On dirait que tu as quelque chose en tête. Tu peux me le dire.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -106,7 +116,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NEUTRAL] Ha! Ah... okay, um, yeah, done and done. Don't want to be doing that again...</text>
+          <text>[NEUTRAL] Ha ! Ah... ok, hum, ouais, c'est fait et c'est fini. Je ne le referai plus...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -123,7 +133,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Quest] Yeah. None of that.</text>
+          <text>[Quest] Ouais. Rien de tout ça.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -138,7 +148,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[EVEN] Um, pretty good, actually. I didn't exactly have much stuff to bring, but Davis helped me get settled and showed me around the school a bit. It feels pretty secure here, I like that.</text>
+          Hum, plutôt bien, en fait. Je n'avais pas vraiment d'affaires à apporter, mais Davis m'a aidé à m'installer et m'a fait visiter l'école. On se sent en sécurité ici, j'aime ça.<text>[EVEN] Um, pretty good, actually. I didn't exactly have much stuff to bring, but Davis helped me get settled and showed me around the school a bit. It feels pretty secure here, I like that.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -156,11 +166,21 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Quest] Good to hear it. Was there something else you wanted to talk about?</text>
+          <text>[Quest] Je suis contente de l'entendre. Y avait-il autre chose dont tu voulais parler ?</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Quest] Je suis content de l'entendre. Y avait-il autre chose dont tu voulais parler ?</text>
+          <def_link>403</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -172,7 +192,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[MEAN] Okay... um, I'll keep that in mind. &lt;She chews on her lip awkwardly for a moment.&gt; So...</text>
+          <text>[MEAN] D'accord... Je m'en souviendrai. &lt;Elle se mordille maladroitement la lèvre pendant un moment.&gt; Alors...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -191,7 +211,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Quest] Quit biting that lip and use it for talking.</text>
+          <text>[Quest] Arrête de te mordre les lèvres et sers-toi en pour parler.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -206,7 +226,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[QUEST] Anyway - Davis said you guys were always on the lookout for parts and tools and stuff, and I think I can maybe help with that! You know what always takes the hugest amounts of parts and time? Renovations. For reals.</text>
+          <text>[QUEST] Quoi qu'il en soit, Davis a dit que vous étiez toujours à la recherche de pièces détachées, d'outils et d'autres choses, et je pense que je peux peut-être vous aider ! Tu sais ce qui prend toujours le plus de pièces et de temps ? Les rénovations. Pour de vrai.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -224,7 +244,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text> See, there was this one guy who always came to the Wicked Lily - older fella, used to work in like, demolitions or something. I was working on a really big mermaid on his back, and - anyhow. He always talked about this barn he was renovating to be a bed and breakfast. It sounded pretty involved.</text>
+          <text> Il y avait un type qui venait toujours au Wicked Lily - un type plus âgé, qui travaillait dans la démolition ou quelque chose comme ça. Je travaillais sur une très grosse sirène sur son dos, et - quoi qu'il en soit. Il parlait toujours de cette grange qu'il rénovait pour en faire un bed and breakfast. Ça avait l'air assez compliqué.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -240,7 +260,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Then like, about a week before shit went south, he showed up for his last appointment looking super harried. He said shit was "getting hot" and he needed time, so he was gonna gate off the barn and take off to San Diego. My guess... he's not exactly gonna be back anytime soon.</text>
+          <text>Puis, environ une semaine avant que les choses ne dégénèrent, il s'est présenté à son dernier rendez-vous, l'air très inquiet. Il a dit que ça commençait à chauffer et qu'il avait besoin de temps, donc il allait fermer la grange et partir à San Diego. À mon avis, il n'est pas prêt de revenir.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -256,7 +276,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Anyhow - on the off chance you're interested, I'll just go and mark your map downstairs with where he said the barn was. Hopefully that'll come in handy.</text>
+          <text>Quoi qu'il en soit, au cas où tu serais intéressé, je vais aller marquer sur la carte, en bas, l'endroit où il a dit que la grange se trouvait. J'espère que ça te sera utile.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -273,7 +293,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Friendly] Thanks for the tip - I really appreciate it.</text>
+          <text>[Friendly] Merci pour le tuyau - j'apprécie vraiment.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -282,7 +302,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Okay] Maybe I'll swing by there sometime.</text>
+          <text>[Okay] Je passerai peut-être par là un jour.</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -291,7 +311,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Negative] A barn? Seriously? I guess if I've got time, I'll check it out.</text>
+          <text>[Negative] Une grange ? Sérieusement ? Je pense que si j'ai le temps, j'irai y jeter un coup d'œil.</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -306,7 +326,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[FRIENDLY] Hey, no problem, &lt;lastname&gt; - glad to help out in return for such, ah, cushy digs, hee.</text>
+          <text>[FRIENDLY] Hey, pas de problème,, &lt;lastname&gt; - Je suis contente d'aider en échange d'un tel, euh, logement confortable, hehe.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -324,11 +344,23 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>Glad to have you on board, Aimee.</text>
+          <text>Heureuse de t'avoir à bord, Aimee.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Heureux de t'avoir à bord, Aimee.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -342,7 +374,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[OKAY] Cool... glad I could help. I'll just... go keep getting settled.</text>
+          <text>[OKAY] Cool... content d'avoir pu aider. Je vais juste... aller m'installer.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -359,7 +391,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You do that. Later.</text>
+          <text>Fais-ça. A plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -376,7 +408,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NEGATIVE] I mean, I know it doesn't sound like much, but... I dunno, I was hoping it'd be helpful. Hopefully there'll be something there you can use...</text>
+          <text>[NEGATIVE] Je veux dire, je sais que ça n'a pas l'air de grand-chose, mais... Je ne sais pas, j'espérais que ce serait utile. J'espère qu'il y aura quelque chose que tu pourras utiliser...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -395,7 +427,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>We'll see.</text>
+          <text>On verra bien.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

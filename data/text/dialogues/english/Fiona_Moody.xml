@@ -11,7 +11,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I'm so sorry to bother you, &lt;charname&gt;, but... my faith in myself is wavering lately. I want to be strong for you! I need to be! I just don't know if I can pull myself together today... please, help me find the strength to do what must be done!</text>
+          <!--<text>I'm so sorry to bother you, &lt;charname&gt;, but... my faith in myself is wavering lately. I want to be strong for you! I need to be! I just don't know if I can pull myself together today... please, help me find the strength to do what must be done!</text>-->
+          <text>Je suis vraiment désolée de te déranger, &lt;charname&gt;, mais... ma foi en moi vacille ces derniers temps. Je veux être forte pour toi ! Je dois l'être ! Mais je ne sais pas si je vais pouvoir me ressaisir aujourd'hui... s'il te plaît, aide-moi à trouver la force de faire ce qui doit être fait !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +31,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Nice] It's okay - we all have tough days. Take today off to gather your thoughts.</text>
+          <text>[Nice] Ce n'est pas grave - nous avons tous des jours difficiles. Prends une journée de repos pour rassembler tes idées.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -39,7 +40,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Talk] I always find that focusing on work helps me deal with difficult times. Maybe that'll help you too.</text>
+          <text>[Talk] Je trouve que le fait de me concentrer sur mon travail m'aide à surmonter les moments difficiles. Peut-être que cela t'aidera aussi.</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 5</checkOnAppear>
@@ -48,7 +49,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Lead] It's never going to be easy, but I need to know you've got my back.</text>
+          <text>[Lead] Ce n'est jamais facile, mais j'ai besoin de savoir que tu me soutiens.</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Leadership &gt;= 4</checkOnAppear>
@@ -57,7 +58,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Mean] Here's some advice: stop throwing yourself a pity party and focus on work.</text>
+          <text>[Mean] Un conseil : arrête de t'apitoyer sur ton sort et concentre-toi sur ton travail.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -72,7 +73,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NICE] Thank you so much for being so understanding... even just looking at your face now is helping me feel better. I'll take today off and think about how lucky I am that you saved me and gave me a second chance at life!</text>
+          <text>[NICE] Merci beaucoup d'avoir été si compréhensif... le simple fait de regarder ton visage maintenant m'aide à me sentir mieux. Je vais prendre congé aujourd'hui et penser à la chance que j'ai que tu m'aies sauvé et donné une seconde chance à la vie !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -92,7 +93,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>No problem. Just take it easy.</text>
+          <text>Il n'y a pas de problème. Repose-toi bien.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -109,7 +110,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[TALK] Work... yes! I'll work extra hard today, I promise. I won't let you down!</text>
+          <text>[TALK] Travailler... oui ! Je vais travailler très dur aujourd'hui, je te le promets. Je ne te laisserai pas tomber !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -129,10 +130,21 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I'm sure you'll do great. Bye for now.</text>
+          <text>Je suis sûre que tu t'en sortiras très bien. A plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis sûr que tu t'en sortiras très bien. A plus tard.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -146,7 +158,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LEAD] Always! I swear, I will always be there for you. I'll never let any lapse of faith in myself stop me from being there for you if you need me!</text>
+          <text>[LEAD] Toujours ! Je te jure que je serai toujours là pour toi. Je ne laisserai jamais un manque de confiance en moi m'empêcher d'être là pour toi si tu as besoin de moi !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -166,7 +178,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Good to know.</text>
+          <text>Bon à savoir.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -183,7 +195,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[MEAN] You're right... you're right! I'm being weak, and awful, and you don't need that! You don't need that kind of person around you... I promise I won't be weak anymore! I'm sorry! I'll go work now - you don't need to worry about me, I swear!</text>
+          <text>[MEAN] Tu as raison... tu as raison ! Je suis faible et horrible, et tu n'as pas besoin de ça ! Tu n'as pas besoin de ce genre de personne autour de toi... Je promets de ne plus être faible ! Je suis désolée ! Je vais aller travailler maintenant - tu n'as pas besoin de t'inquiéter pour moi, je te le jure !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -203,7 +215,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Fiona hurries out of the room.&gt;</text>
+          <text>&lt;Fiona se précipite hors de la pièce.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

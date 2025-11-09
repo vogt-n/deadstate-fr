@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[START] H... hey, &lt;lastname&gt;. Sorry I don't look so good... I ran out of mascara. Heh... &lt;She coughs a moment, then sticks out her tongue wearily.&gt; Fuck this virus, man, it can't even... take a stupid joke.</text>
+          <text>[START] H... hey, &lt;lastname&gt;. Désolée, je n'ai pas l'air en forme... Je n'avais plus de mascara. Heh... &lt;Elle tousse un instant, puis tire la langue avec lassitude.&gt; J'emmerde ce virus, il n'est même pas capable... d'accepter une stupide plaisanterie.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Soothe] It's all right, Aimee. I'm here.</text>
+          <text>[Soothe] Tout va bien, Aimee. Je suis là.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -39,7 +39,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Joke] Yes, fuck that fucking virus! Because you look great. Pale really is your thing.</text>
+          <text>[Joke] Oui, j'emmerde ce putain de virus ! Parce que tu es superbe. Le pâle c'est vraiment ton truc.</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -47,11 +47,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[Quick] I'm ready when you are.</text>
+          <text>[Quick] Je suis prête quand tu l'es.</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[Quick] Je suis prêt quand tu l'es.</text>
+          <def_link>401</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -63,7 +73,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SOOTHE] Right, right, yes... calm. Supposed to be... calm. Like that really matters... though... right? Dying either way, it doesn't - &lt;She coughs again&gt; - give a shit about... calm...</text>
+          <text>[SOOTHE] D'accord, d'accord, oui... calme. Je suis censé être... calme. Ce n'est pas vraiment important... pourtant... pas vrai ? La mort de toute façon - &lt;Elle tousse à nouveau&gt; - s'en fiche de ça... calme...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -95,7 +105,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[JOKE] &lt;She laughs, then is interruped by coughing again.&gt; See? What.. what a fucker... this thing is. &lt;She sighs.&gt; God, I wish... I'd asked for pot. If heaven... exists... I'd love to go there... totally baked...</text>
+          <text>[JOKE] &lt;Elle rit, puis est interrompue par une nouvelle toux.&gt; Tu vois ? Quel... quel foutu saloperie... ce truc est. &lt;Elle soupir.&gt; Mon Dieu, j'aurais aimé... J'avais demandé de l'herbe. Si le paradis... existe... J'aimerais y aller... complètement faite...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -112,7 +122,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Soothe] That's one way to calm yourself down for sure.</text>
+          <text>[Soothe] C'est une façon de se calmer, c'est sûr.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -121,7 +131,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Second] What, and then God is like "What, you didn't bring any extra? Fuck you, you're going to hell."</text>
+          <text>[Second] Quoi, pour que Dieu dise : "Quoi, tu n'en a pas apporté pour les potes ? Va te faire foutre, tu vas aller en enfer."</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -136,7 +146,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[QUICK] Can I... just answer... "no," and that'll... change things? Because not ready! I mean - &lt;She starts coughing again, louder this time, her body shaking.&gt;</text>
+          <text>[QUICK] Est-ce que je peux... juste répondre... « Non », et ça changera les choses ? Parce que je ne suis pas prête ! Je veux dire - &lt;Elle recommence à tousser, plus fort cette fois, son corps tremble.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -153,7 +163,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Wait for it to pass.&gt;</text>
+          <text>&lt;Attendre que ça passe.&gt;</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -168,7 +178,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SECOND] Oh fuck, I hope n - &lt;Aimee tries to laugh, but starts coughing louder this time, her body shaking.&gt;</text>
+          <text>[SECOND] Oh putain, j'espère que non - &lt;Aimee essaie de rire, mais se met à tousser plus fort cette fois, son corps tremblant.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -185,7 +195,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Wait for it to pass.&gt;</text>
+          <text>&lt;Attendre que ça passe.&gt;</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -200,7 +210,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[BF] &lt;She shuts her eyes.&gt; How... how did Dustin do it? He... was so ready. Like he'd... been waiting for years. He looked... peaceful. We'd promised... then I said no, no, I didn't want to, this... wasn't the time. And he... just said... "it is for me," and... pulled the trigger...</text>
+          <text>[BF] &lt;Elle ferme les yeux.&gt; Comment... comment Dustin a-t-il fait ? Il était tellement prêt. Comme s'il avait... attendu pendant des années. Il avait l'air... paisible. On s'était promis... puis j'ai dit non, non, je ne voulais pas, ce n'était pas le moment. Et il... a juste dit... « ça l'est pour moi » et... a appuyé sur la gâchette...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -217,7 +227,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Drift] You were there for him. I'm here for you, now.</text>
+          <text>[Drift] Tu étais là pour lui. Je suis là pour toi, maintenant.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -226,7 +236,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Drift] &lt;Say nothing.&gt;</text>
+          <text>[Drift] &lt;Ne rien dire.&gt;</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -241,7 +251,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[DRIFT] I'm such a shit, you... you know. Family... parents... my sister... dunno what happened to them. Why... why am I thinking of them... now? Too late to... say sorry for stupid shit. Too late for... everything. Don't even know... if they made it...</text>
+          <text>[DRIFT] Je suis vraiment une merde, tu... tu sais. Famille... parents... ma soeur... je ne sais pas ce qui leur est arrivé. Pourquoi... pourquoi je pense à eux... maintenant ? Trop tard pour... s'excuser pour des conneries. Trop tard pour... tout. Je ne sais même pas... s'ils ont survécu...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -258,7 +268,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Fade] I'm sure they're okay, I really am...</text>
+          <text>[Fade] Je suis sûr qu'ils vont bien, vraiment...</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -267,7 +277,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Fade] Aimee? Can you hear me?</text>
+          <text>[Fade] Aimee ? Tu m'entends ?</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -282,7 +292,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[FADE] &lt;Aimee's breathing gets shallower, raspier.&gt; I... love that you... love it... worked so hard... on design... Dustin... you and me... forever, baby... promise...</text>
+          <text>[FADE] &lt;La respiration d'Aimee devient plus superficielle, plus rauque.&gt; Je... j'aime que tu... j'aime ça... j'ai travaillé si dur... sur le design... Dustin... toi et moi... pour toujours, bébé... promis...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -301,7 +311,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Shoot] &lt;Shoot Aimee in the head.&gt;</text>
+          <text>[Shoot] &lt;Tirer une balle dans la tête d'Aimee.&gt;</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -310,7 +320,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Wait] &lt;Do nothing.&gt;</text>
+          <text>[Wait] &lt;Ne rien faire.&gt;</text>
           <def_link>407</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -325,7 +335,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SHOOT] &lt;The gunshot rings in the small room. The body on the bed relaxes with finality. Aimee is gone.&gt;</text>
+          <text>[SHOOT] &lt;Le coup de feu retentit dans la petite pièce. Puis, le corps sur le lit se détend définitivement. Aimee n'est plus là.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -343,8 +353,31 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I'm so sorry, Aimee.</text>
+          <text>Je suis désolée, Aimee.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je suis désolé, Aimee.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Tant mieux pour ça.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -355,18 +388,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>So much for that.</text>
-          <def_link>-1</def_link>
-          <auto_answer>false</auto_answer>
-          <checkOnAppear />
-          <checksOnClick />
-          <linksOnClick />
-          <scriptsOnClick>
-            <string>dlgEndFadeFullFast();</string>
-          </scriptsOnClick>
-        </dlgAnsw>
-        <dlgAnsw>
-          <text>&lt;Leave the room.&gt;</text>
+          <text>&lt;Quitter la pièce.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -383,7 +405,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[WAIT] &lt;Ragged breathing slows, stops. A moment passes. Aimee's closed eyes open again, vacant and white. Lips curl back from teeth like an animal scenting prey.&gt;</text>
+          <text>[WAIT] &lt;La respiration rauque ralentit, s'arrête. Un instant s'écoule. Les yeux fermés d'Aimee s'ouvrent à nouveau, vides et blancs. Les lèvres se recroquevillent sur les dents comme un animal qui flaire sa proie.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -400,7 +422,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Shoot] &lt;Shoot Aimee in the head.&gt;</text>
+          <text>[Shoot] &lt;Tirer une balle dans la tête d'Aimee.&gt;</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

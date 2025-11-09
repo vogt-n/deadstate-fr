@@ -11,7 +11,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[START] &lt;charname&gt;! I... forgive me. I had something I wanted to talk to you about. It's a little forward of me to ask, but um... &lt;Fiona bites her lip and looks away shyly.&gt;</text>
+          <!--<text>[START] &lt;charname&gt;! I... forgive me. I had something I wanted to talk to you about. It's a little forward of me to ask, but um... &lt;Fiona bites her lip and looks away shyly.&gt;</text>-->
+          <text>[START] &lt;charname&gt;! je... te demande pardone. Il y a quelque chose dont je souhaites parler. C'est demander beaucoup venant de moi, mais hum... &lt;Fiona se mord les lèvres et regarde ailleurs timidement.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +31,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Nice] What is it, Fiona? You can tell me.</text>
+          <!--<text>[Nice] What is it, Fiona? You can tell me.</text>-->
+          <text>[Nice] De quoi s'agit-il Fiona ? Tu peux me dire.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -41,7 +43,8 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Neutral] ...Yes?</text>
+          <!--<text>[Neutral] ...Yes?</text>-->
+          <text>[Neutral] ...Oui?</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -50,7 +53,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Mean] Come on, hurry up and spit it out.</text>
+          <!--<text>[Mean] Come on, hurry up and spit it out.</text>-->
+          <text>[Mean] Aller, dépèches toi et crache le morceau.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -67,7 +71,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[ASK] What do you think of me? I mean - be honest. It really means a lot to me to know.</text>
+          <!--<text>[ASK] What do you think of me? I mean - be honest. It really means a lot to me to know.</text>-->
+          <text>[ASK] Qu'est-ce que tu penses de moi? Je veux dire - honnêtement. ça compte beaucoup pour moi tu sais.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -84,7 +89,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Warm] You've always supported me and been someone I can rely on.</text>
+          <!--<text>[Warm] You've always supported me and been someone I can rely on.</text>-->
+          <text>[Warm] Tu m'as toujours supporté et tu es quelqu'un sur qui je peux compter.</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -93,7 +99,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Even - Field] You've always been ready to head out into the field, no matter the danger. I appreciate that.</text>
+          <!--<text>[Even - Field] You've always been ready to head out into the field, no matter the danger. I appreciate that.</text>-->
+          <text>[Even - Field] Tu es toujours prête à sortir, qu'importe le danger. J'apprécie ça.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Fiona_Combat == 1</checkOnAppear>
@@ -102,7 +109,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Even - Shelter] You've done good work here in the Shelter.</text>
+          <!--<text>[Even - Shelter] You've done good work here in the Shelter.</text>-->
+          <text>[Even - Shelter] Tu as fait du bon travail dans l'abris.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Fiona_Fix == 1</checkOnAppear>
@@ -111,7 +119,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Rough] I'm not here to give you an employee evaluation, Fiona. Cut it out.</text>
+          <!--<text>[Rough] I'm not here to give you an employee evaluation, Fiona. Cut it out.</text>-->
+          <text>[Rough] Je ne suis pas la pour faire des évaluations du personnel, Fiona. Arrêtes-ça.</text>
           <def_link>405</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -120,16 +129,28 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Possess] You're an amazing person. I'm glad you work so hard to please me.</text>
+          <!--<text>[Possess] You're an amazing person. I'm glad you work so hard to please me.</text>-->
+          <text>[Possess] Tu es quelqu'un d'exceptionnelle. Je suis content que tu travailles autant pour me plaire.</text>
           <def_link>407</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+         <dlgAnsw>
+          <!--<text>[Possess] You're an amazing person. I'm glad you work so hard to please me.</text>-->
+          <text>[Possess] Tu es quelqu'un d'exceptionnelle. Je suis contente que tu travailles autant pour me plaire.</text>
+          <def_link>407</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Professional] I haven't had a problem with you. If something comes up, I will let you know.</text>
+          <!--<text>[Professional] I haven't had a problem with you. If something comes up, I will let you know.</text>-->
+          <text>[Professional] Je n'ai jamais eu de problème avec toi. Si je devais être au courant de quelque chose, je te le dirais.</text>
           <def_link>406</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -144,7 +165,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[WARM] Thank you! It means so much to hear you say that. I'm always happy to help you, because... &lt;She looks down and away for a moment before continuing.&gt;</text>
+          <!--<text>[WARM] Thank you! It means so much to hear you say that. I'm always happy to help you, because... &lt;She looks down and away for a moment before continuing.&gt;</text>-->
+          <text>[WARM] Merci! ça compte tellement pour moi de t'entendre dire ça. Je suis toujours heureuse de t'aider, parce que... &lt;Elle regarde parterre un moment avant de continuer.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -163,7 +185,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[CORE 1] Go on...</text>
+          <!--<text>[CORE 1] Go on...</text>-->
+          <text>[CORE 1] Vas-y...</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -178,7 +201,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[EVEN] I've always done my best for you! I mean, for everyone, but especially for you. I should tell you...</text>
+          <!--<text>[EVEN] I've always done my best for you! I mean, for everyone, but especially for you. I should tell you...</text>-->
+          <text>[EVEN] J'ai toujours fais de mon mieux pour toi! Je veux dire, pour tout le monde, mais surtout pour toi. Je dois te dire...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -197,7 +221,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[CORE 1] Yes?</text>
+          <text>[CORE 1] Oui?</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -212,7 +236,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[ROUGH] &lt;Fiona looks a little crestfallen.&gt; I... I know. It's just that...</text>
+          <!--<text>[ROUGH] &lt;Fiona looks a little crestfallen.&gt; I... I know. It's just that...</text>-->
+          <text>[ROUGH] &lt;Fiona a l'air déçu.&gt; Je... Je sais. C'est juste que...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -231,7 +256,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[CORE 1] What?</text>
+          <text>[CORE 1] Quoi?</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -246,7 +271,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[POSSESS] &lt;Fiona's face lights up, and her smile is beautific.&gt; I... I do! I'm so glad you noticed...</text>
+          <!--<text>[POSSESS] &lt;Fiona's face lights up, and her smile is beautific.&gt; I... I do! I'm so glad you noticed...</text>-->
+          <text>[POSSESS] &lt;Le visage de Fiona semble s'illuminer  et son sourire est magnifique.&gt; Je... je sais! Je susi heureuse que tu l'ai remarqué...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -265,7 +291,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[CORE 1] Of course. You can tell me anything that's in your heart.</text>
+          <!--<text>[CORE 1] Of course. You can tell me anything that's in your heart.</text>-->
+          <text>[CORE 1] Evidement. Tu peux me dire tout ce que tu as sur le coeur.</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -280,7 +307,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[PROFESSIONAL] &lt;Fiona nods quickly, but looks troubled.&gt; I know, but - well, I - you need to know something about me.</text>
+          <!--<text>[PROFESSIONAL] &lt;Fiona nods quickly, but looks troubled.&gt; I know, but - well, I - you need to know something about me.</text>-->
+          <text>[PROFESSIONAL] &lt;Fiona acquiese rapidement mais semble troublée.&gt; Je sais, mais - bien, je - tu dois savoir quelque chose à propos de moi.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -297,7 +325,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[CORE 1] &lt;Let her continue.&gt;</text>
+          <!--<text>[CORE 1] &lt;Let her continue.&gt;</text>-->
+          <text>[CORE 1] &lt;La laisser continuer.&gt;</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -312,7 +341,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[CORE 1] Ever since things fell apart, I started to despair that the world was doomed. It was like... the hope I had was a memory. I thought it was a thing that was in the past, but I didn't want to let it go. And yet... it was slipping away from me, even though I was trying not to let go.</text>
+          <!--<text>[CORE 1] Ever since things fell apart, I started to despair that the world was doomed. It was like... the hope I had was a memory. I thought it was a thing that was in the past, but I didn't want to let it go. And yet... it was slipping away from me, even though I was trying not to let go.</text>-->
+          <text>[CORE 1] Depuis que tout s'est effondré, J'ai commencé à désespérer pensant que le monde était comdamné. C'est comme si... l'espoir n'était plus qu'un souvenir. Je pensais que c'était quelque chose du passé, mais je ne voulais pas le laisser s'envoler. Et pourtant... il s'en allait, même si j'essayais de le retenir.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -328,7 +358,8 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[CORE 2] When you rescued me, it was like - that hope came back again, and every day here with you, it's just gotten stronger and stronger. No matter how bad things might get, it doesn't feel to me like we're just holding on... with you, it feels like things can change.</text>
+          <!--<text>[CORE 2] When you rescued me, it was like - that hope came back again, and every day here with you, it's just gotten stronger and stronger. No matter how bad things might get, it doesn't feel to me like we're just holding on... with you, it feels like things can change.</text>-->
+          <text>[CORE 2] Que tu m'as sauvé, c'était comme si - cet espoir revenait, et chaque jour ici avec toi, il devenait de plus en plus fort. Qu'importe à quel point les choses sont mauvaises, ça ne me semble pas perdu... avec toi, je sens que les choses peuvent changer.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -345,16 +376,28 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Neutral] We all find hope somewhere. I'm just glad you have it.</text>
+          <!--<text>[Neutral] We all find hope somewhere. I'm just glad you have it.</text>-->
+          <text>[Neutral] Nous trouvons tous de l'espoir dans queqlue chose. Je suis contente que ce soit également ton cas.</text>
           <def_link>413</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Advance] I will always do my best to keep everyone here happy - especially you.</text>
+          <!--<text>[Neutral] We all find hope somewhere. I'm just glad you have it.</text>-->
+          <text>[Neutral] Nous trouvons tous de l'espoir dans queqlue chose. Je suis content que ce soit également ton cas.</text>
+          <def_link>413</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <!--<text>[Advance] I will always do my best to keep everyone here happy - especially you.</text>-->
+          <text>[Advance] Je ferrais toujours de mon mieux pour garder tout le monde heureux ici - tout spécialement toi.</text>
           <def_link>414</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -363,7 +406,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Shutdown] Fiona, you need to stop idolizing me. I don't want that.</text>
+          <!--<text>[Shutdown] Fiona, you need to stop idolizing me. I don't want that.</text>-->
+          <text>[Shutdown] Fiona, tu dois arrêter de m'idolatrer. Je ne veux pas l'être.</text>
           <def_link>408</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -378,7 +422,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NEUTRAL] Thank you. I'll always do my best to leave up to your example - and keep hope alive for everyone.</text>
+          <!--<text>[NEUTRAL] Thank you. I'll always do my best to leave up to your example - and keep hope alive for everyone.</text>-->
+          <text>[NEUTRAL] Merci. Je ferrais toujours de mon mieux pour suivre ton exemple - et garder cette espoir vivant pour tout le monde.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -397,7 +442,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Good to hear. I'll talk to you later.</text>
+          <!--<text>Good to hear. I'll talk to you later.</text>-->
+          <text>C'est bon à entendre. Je te reparle plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -414,7 +460,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[ADVANCE] Thank you! I... I can't say what this means to me. You've given me so much. I... oh, I declare! I'm being such a greedy girl, taking up too much of your time again! I - maybe we can talk more later?</text>
+          <!--<text>[ADVANCE] Thank you! I... I can't say what this means to me. You've given me so much. I... oh, I declare! I'm being such a greedy girl, taking up too much of your time again! I - maybe we can talk more later?</text>-->
+          <text>[ADVANCE] Merci! Je... je ne peux pas te dire à quel point ça compte pour moi. Tu m'as tant offert. Je... oh, Je le repère! Je suis devient si prennante, je prends trop de ton temps à nouveau! Je - peux-être que nous pourrions parler d'avantage plus tard ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -433,7 +480,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I'd like that. Goodbye for now.</text>
+          <!--<text>I'd like that. Goodbye for now.</text>-->
+          <text>Avec plaisir, à plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -450,12 +498,30 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[SHUTDOWN] &lt;Fiona's eyes widen, as if in terror.&gt; N... no. I mean, that's silly! It's just - you're so important. This place would fall apart without you, I know that. That's all I mean, you give me hope!</text>
+          <!---<text>[SHUTDOWN] &lt;Fiona's eyes widen, as if in terror.&gt; N... no. I mean, that's silly! It's just - you're so important. This place would fall apart without you, I know that. That's all I mean, you give me hope!</text>-->
+          <text>[SHUTDOWN] &lt;Les yeux de Fiona s'écarquillent comme terrorifié.&gt; N... non. je veux dire, c'est ridicule! C'est juste - tu es si importante. Cet endroit s'effondrerait sans toi, tu le sais. C'est tout ce que je veux dire, tu me donnes de l'espoir!</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <!---<text>[SHUTDOWN] &lt;Fiona's eyes widen, as if in terror.&gt; N... no. I mean, that's silly! It's just - you're so important. This place would fall apart without you, I know that. That's all I mean, you give me hope!</text>-->
+          <text>[SHUTDOWN] &lt;Les yeux de Fiona s'écarquillent comme terrorifié.&gt; N... non. je veux dire, c'est ridicule! C'est juste - tu es si important. Cet endroit s'effondrerait sans toi, tu le sais. C'est tout ce que je veux dire, tu me donnes de l'espoir!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
-            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -467,16 +533,28 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Backoff] Okay, okay, I got it wrong. I'm sorry for assuming too much.</text>
+          <!--<text>[Backoff] Okay, okay, I got it wrong. I'm sorry for assuming too much.</text>-->
+          <text>[Backoff] Ok, ok, je me suis trompée. Je m'excuse d'avoir pensé ça.</text>
           <def_link>409</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[End] Fiona, I'm serious. You're your own person, you need to stop fixating on me.</text>
+          <!--<text>[Backoff] Okay, okay, I got it wrong. I'm sorry for assuming too much.</text>-->
+          <text>[Backoff] Ok, ok, je me suis trompé. Je m'excuse d'avoir pensé ça.</text>
+          <def_link>409</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <!--<text>[End] Fiona, I'm serious. You're your own person, you need to stop fixating on me.</text>-->
+          <text>[End] Sérieusement Fiona. Soit toi même, arrêtes de faire une fixation sur moi.</text>
           <def_link>410</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Fiona_Trust &lt;= 8</checkOnAppear>
@@ -485,7 +563,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Flee] I appreciate the sentiment, but I'm not a savior, I'm just a person. You know that, right?</text>
+          <!--<text>[Flee] I appreciate the sentiment, but I'm not a savior, I'm just a person. You know that, right?</text>-->
+          <text>[Flee] J'apprécie le sentiment, mais je ne suis pas le messie, juste une personne normal. Tu sais le sais non ?</text>
           <def_link>411</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Fiona_Trust &gt;= 9 &amp;&amp; ds.Fiona_Trust &lt;= 20</checkOnAppear>
@@ -494,7 +573,8 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Final] You've gotten too familiar. I'm not yours to worship. This ends now.</text>
+          <!--<text>[Final] You've gotten too familiar. I'm not yours to worship. This ends now.</text>-->
+          <text>[Final] Tu es devenue trop familière. Je ne suis pas quelqu'un à vénérer. Arrêtons ça maintenant.</text>
           <def_link>412</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Fiona_Trust &gt;= 21</checkOnAppear>
@@ -509,7 +589,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[BACKOFF] &lt;Fiona laughs awkwardly.&gt; It's - it's okay! I guess I came on a little strong. I didn't mean to upset you... really. I guess I'll go... we'll talk more later. Bye!</text>
+          <!--<text>[BACKOFF] &lt;Fiona laughs awkwardly.&gt; It's - it's okay! I guess I came on a little strong. I didn't mean to upset you... really. I guess I'll go... we'll talk more later. Bye!</text>-->
+          <text>[BACKOFF] &lt;Fiona rigole bizarement.&gt; C'est - C'est bon! Je suppose que j'y suis aller un peu fort. Je ne voulais pas te mettre en colère... vraiment. Je pense je vais y aller... on se repale plus tard. Salut!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -528,7 +609,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Before you can respond, Fiona walks quickly out of the room.&gt;</text>
+          <!--<text>&lt;Before you can respond, Fiona walks quickly out of the room.&gt;</text>-->
+          <text>&lt;Avant que tu ne puisses répondre, Fiona quitte rapidement la pièce.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -545,7 +627,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[END] I... &lt;Fiona sobs a moment.&gt; I'm sorry! I thought... I was just so lost. I thought you were the one. You saved me! You took me in! I needed you - how could you do this to me?!</text>
+          <!--<text>[END] I... &lt;Fiona sobs a moment.&gt; I'm sorry! I thought... I was just so lost. I thought you were the one. You saved me! You took me in! I needed you - how could you do this to me?!</text>-->
+          <text>[END] je... &lt;Fiona soupire un moment.&gt; Je suis désolée! Je pensais... J'étais juste tellement perdue. Je pensais que tu étais la bonne personne. Celle qui m'a sauvé! Tu m'a prise ici! J'avais besoin de toi - comment peux-tu me faire ça?!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -565,7 +648,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Fiona pushes you and runs off crying.&gt;</text>
+          <!--<text>&lt;Fiona pushes you and runs off crying.&gt;</text>-->
+          <text>&lt;Fiona te bouscules et s'enfuie en pleurant.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -582,7 +666,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[FLEE] &lt;Fiona looks stricken.&gt; But... all the things you said to me. That I meant something to you! That you knew... you know you're special! Why won't you let me treat you like you should be treated? I thought you... I...</text>
+          <!--<text>[FLEE] &lt;Fiona looks stricken.&gt; But... all the things you said to me. That I meant something to you! That you knew... you know you're special! Why won't you let me treat you like you should be treated? I thought you... I...</text>-->
+          <text>[FLEE] &lt;Fiona semble frappée.&gt; Mais... de toutes les choses que tu m'as dis. Je représente quelque chose pour toi! Tu sais... tu sais que tu es spéciale! Pourquoi tu ne me laisse pas te traiter comme tu le devrais? Je pensais que tu... je ...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -601,7 +686,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Fiona lets out a strangled cry and runs out of the room.&gt;</text>
+          <!--<text>&lt;Fiona lets out a strangled cry and runs out of the room.&gt;</text>-->
+          <text>&lt;Fiona pousse un cri étouffé et sort de la pièce en courant.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -618,7 +704,8 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[FINAL] &lt;Fiona stares at you, wild-eyed.&gt; No! But - the things you said! I know what you mean to this place - to me! Why aren't I good enough? I just want to help you! I just want to help you be who you're meant to be!</text>
+          <!--<text>[FINAL] &lt;Fiona stares at you, wild-eyed.&gt; No! But - the things you said! I know what you mean to this place - to me! Why aren't I good enough? I just want to help you! I just want to help you be who you're meant to be!</text>-->
+          <text>[FINAL] &lt;Fiona te fixe les yeux grands ouvert.&gt; Non! Mais - toutes les choses que tu m'as dite! Je sais ce que tu représente pour cet endroit - pour moi! Pourquoi ne suis pas suffisament douée? Je veux juste t'aider! Je veux juste aider ceux qui le mérites!</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -637,7 +724,8 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>We're done discussing this. Get out of my room.</text>
+          <!--<text>We're done discussing this. Get out of my room.</text>-->
+          <text>La discussion est terminée. Sors de ma chambre.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

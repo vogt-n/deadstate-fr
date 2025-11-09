@@ -11,7 +11,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[START] I... I can't believe it. I don't have long, &lt;charname&gt;... I've been bitten, infected... soon I'll be dead and a danger to you! &lt;Fiona covers her face with her hands and chokes back a sob.&gt;</text>
+          <text>[START] Je... Je n'arrive pas à y croire. Je n'ai plus beaucoup de temps, &lt;charname&gt;... J'ai été mordue, infectée... bientôt je serai morte et un danger pour toi ! &lt;Fiona se couvre le visage de ses mains et étouffe un sanglot.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -30,7 +30,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Nice] Fiona, I promise - whatever I can do to help, I will.</text>
+          <text>[Nice] Fiona, je te promets que je ferai tout ce que je peux pour t'aider.</text>
           <def_link>399</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -39,7 +39,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Even] What do you want me to do?</text>
+          <text>[Even] Que veux-tu que je fasse ?</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -48,7 +48,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Mean] It's happened to plenty of people. Toughen up.</text>
+          <text>[Mean] C'est arrivé à beaucoup de gens. Endurcis-toi.</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -61,13 +61,32 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- Clone pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NICE] &lt;She looks at you tearfully and smiles.&gt; You've always been so kind to me, &lt;charname&gt;... so kind. I wish I had the courage to ask you to be the one who... gives me peace, but I don't want that for you. I don't want that to be how you remember me!</text>
+          <text>[NICE] &lt;Elle te regarde en pleurant et te sourit.&gt; Tu as toujours été si gentil avec moi, &lt;charname&gt;... si gentil. J'aimerais avoir le courage de te demander d'être celui qui... me donnera la paix, mais je ne veux pas que ce soit le cas pour toi. Je ne veux pas que tu te souviennes de moi comme ça !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>changeMood(2, 1038);</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[NICE] &lt;Elle te regarde en pleurant et te sourit.&gt; Tu as toujours été si gentille avec moi, &lt;charname&gt;... si gentille. J'aimerais avoir le courage de te demander d'être celle qui me... donne la paix, mais je ne veux pas que ce soit le cas pour toi. Je ne veux pas que tu te souviennes de moi comme ça !</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -82,7 +101,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Fiona, take it easy. What do you mean?</text>
+          <text>Fiona, calme-toi. Qu'est-ce que tu veux dire ?</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -97,7 +116,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[MEAN] &lt;Fiona sobs.&gt; I'm... I'm trying! I just... the thought of leaving you is so hard... I wanted to be there to protect you! &lt;She sniffles and wipes her eyes, and manages to bring her emotions into heel.&gt;</text>
+          <text>[MEAN] &lt;Fiona sanglote.&gt; Je... J'essaie ! C'est juste que... l'idée de te quitter est si difficile... Je voulais être là pour te protéger ! &lt;Elle renifle, s'essuie les yeux et parvient à maîtriser ses émotions.&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -116,7 +135,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You ready to talk normally now?</text>
+          <text>Tu es prête à parler normalement maintenant ?</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -131,7 +150,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[EVEN] I... I've decided I'm going to end things for myself. You... you don't need to worry about me. If that's the last favor I can do for you, I will, I promise I will! I'll do it properly, so there's no muss, no worry...</text>
+          <text>[EVEN] Je... J'ai décidé d'en finir avec moi-même. Tu... tu n'as pas besoin de t'inquiéter pour moi. Si c'est la dernière faveur que je peux te faire, je le ferai, je te le promets ! Je le ferai correctement, pour qu'il n'y ait pas de problème, pas d'inquiétude...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -148,7 +167,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Kind] I admire your bravery, Fiona. Thank you for always being there for me.</text>
+          <text>[Kind] J'admire ton courage, Fiona. Merci d'avoir toujours été là pour moi.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -157,7 +176,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Neutral] I understand. I'll prepare accordingly.</text>
+          <text>[Neutral] Je comprends. Je me préparerai en conséquence.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -166,7 +185,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Cruel] Just make sure you don't shoot yourself inside. I don't wanna clean up the mess.</text>
+          <text>[Cruel] Assure-toi juste de ne pas te suicider à l'intérieur. Je ne veux pas nettoyer le désordre.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -181,7 +200,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[KIND] Thank you so much, &lt;charname&gt;. I'm so glad that I... had a chance to meet you... and you saved my life, and I... I'm sorry, I have to go!</text>
+          <text>[KIND] Merci beaucoup, &lt;charname&gt;. Je suis si heureuse d'avoir eu la chance de te rencontrer... et tu m'as sauvé la vie, et je... Je suis désolée, je dois y aller !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -200,7 +219,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Fiona runs out of the room, weeping softly.&gt;</text>
+          <text>&lt;Fiona sort de la pièce en pleurant doucement.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -217,7 +236,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NEUTRAL] Thank you, &lt;charname&gt;... I'm so grateful you're such a steady rock for me to look towards for guidance, even as... our time together grows so short. I... I'm sorry!</text>
+          <text>[NEUTRAL] Merci, &lt;charname&gt;... Je suis si reconnaissante que tu sois un roc solide vers lequel je peux me tourner pour être guidée, même si... le temps que nous avons passons ensemble était si court. Je... Je suis désolée !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -236,7 +255,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Fiona runs crying out of the room.&gt;</text>
+          <text>&lt;Fiona sort de la pièce en pleurant.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -253,7 +272,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[CRUEL] I swear I will! If that's the last thing I can to do make your life easier, I promise I won't... make a mess. I just wish I could s-stay with you... longer... I'm sorry, please excuse me!</text>
+          <text>[CRUEL] Je le jure ! Si c'est la dernière chose que je peux faire pour te rendre la vie plus facile, je te promets que je ne ferai pas... de gâchis. J'aimerais juste pouvoir rester avec toi... plus longtemps... Je suis désolée, excuse-moi s'il te plaît !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -272,7 +291,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Fiona runs out of the room sobbing.&gt;</text>
+          <text>&lt;Fiona sort de la pièce en sanglotant.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

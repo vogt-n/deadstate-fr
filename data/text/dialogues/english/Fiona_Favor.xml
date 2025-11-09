@@ -9,13 +9,32 @@
   <parts>
     <dlgPart>
       <lines>
+        <!-- Duplication pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[START] &lt;charname&gt; - I hate to ask you this, since you've been so good to me, but I... I've been having nightmares lately about starving. They're horrible... in them I'm always curled up, trying to stay awake, and I hear you calling for help, and I can't reach you because I'm  too weak...</text>
+          <text>[START] &lt;charname&gt; - Je déteste te demander ça, puisque tu as été si gentil avec moi, mais je... Ces derniers temps, j'ai fait des cauchemars où je mourais de faim. Ils sont horribles... dans ces cauchemars, je suis toujours recroquevillée, essayant de rester éveillée, et je t'entends appeler à l'aide, et je ne peux pas t'atteindre parce que je suis trop faible...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts>
+            <string>ds.Fiona_Favor = 1;</string>
+          </onLoadScripts>
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>[START] &lt;charname&gt; - Je déteste te demander ça, puisque tu as été si gentille avec moi, mais je... Ces derniers temps, j'ai fait des cauchemars où je mourais de faim. Ils sont horribles... dans ces cauchemars, je suis toujours recroquevillée, essayant de rester éveillée, et je t'entends appeler à l'aide, et je ne peux pas t'atteindre parce que je suis trop faible...</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -29,7 +48,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I... I'm sorry. They're so vivid. I just - if I had some extra food, just to keep around so when I wake up I know it's just a dream, that would help. It's foolish, I know, but if I can just rest and know I'll be ready if you ever need me, it would help me so much...</text>
+          <text>Je... Je suis désolée. Ils sont si vifs. Si j'avais un peu plus de nourriture, juste pour la garder à portée de main, quand je me réveille, je saurais que ce n'est qu'un rêve, ça m'aiderait. C'est idiot, je sais, mais si je pouvais me reposer et savoir que je serai prête si tu as besoin de moi, ça m'aiderait beaucoup...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -46,7 +65,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>[Nice] Easy, it's okay. If a little extra food will stave off bad dreams, it's the least I can do to help.</text>
+          <text>[Nice] Doucement, c'est bon. Si un peu de nourriture supplémentaire permet d'éviter les mauvais rêves, c'est le moins que je puisse faire pour aider.</text>
           <def_link>400</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>shelterGetResource(Food) &gt;= 10</checkOnAppear>
@@ -55,7 +74,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Mean] Look, we all have nightmares. That's not worth giving anyone extra food!</text>
+          <text>[Mean] On fait tous des cauchemars. Mais ça ne vaut pas la peine de donner un supplément de nourriture à quelqu'un!</text>
           <def_link>401</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -64,7 +83,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Talk] If you really feel it will help you, I'll give you some food. But please don't let anyone else know.</text>
+          <text>[Talk] Si tu penses vraiment que ça t'aidera, je te donnerai de la nourriture. Mais s'il te plaît, ne laisse personne d'autre le savoir.</text>
           <def_link>402</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.negotiation &gt;= 5 &amp;&amp; shelterGetResource(Food) &gt;= 10</checkOnAppear>
@@ -73,7 +92,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>[Lead] I don't think food is the answer here, Fiona. I think what you need is to trust in me, and in yourself.</text>
+          <text>[Lead] Je ne pense pas que la nourriture soit la solution, Fiona. Je pense que ce dont tu as besoin, c'est de me faire confiance et de te faire confiance à toi-même.</text>
           <def_link>403</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Leadership &gt;= 6</checkOnAppear>
@@ -81,11 +100,21 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>[None] Fiona, I'm sorry - we just don't have enough food to spare to give out extras to anyone.</text>
+          <text>[None] Fiona, je suis désolée, mais nous n'avons pas assez de nourriture pour en donner à tout le monde.</text>
           <def_link>404</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>shelterGetResource(Food) &lt; 10</checkOnAppear>
+          <checkOnAppear>shelterGetResource(Food) &lt; 10 &amp;&amp; isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>[None] Fiona, je suis désolé, mais nous n'avons pas assez de nourriture pour en donner à tout le monde.</text>
+          <def_link>404</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>shelterGetResource(Food) &lt; 10 &amp;&amp; isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -97,7 +126,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NICE] Thank you, &lt;charname&gt;! I know it's a lot to ask, but I promise, it will help me sleep more easily. If I wake up and look at the food you trusted me with, I know... I know I'll go right back to sleep with a smile.</text>
+          <text>[NICE] Merci, &lt;charname&gt; ! Je sais que c'est beaucoup demander, mais je te promets que cela m'aidera à dormir plus facilement. Si je me réveille et que je regarde la nourriture que tu m'as confiée, je sais... Je sais que je me rendormirai avec le sourire.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -116,11 +145,23 @@
         </dlgLine>
       </lines>
       <answers>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>Glad I could help.</text>
+          <text>Heureux d'avoir pu aider.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Heureuse d'avoir pu aider.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -134,7 +175,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[MEAN] Of - of course! I'm so sorry, I didn't mean to bother you, really... I'll go now...</text>
+          <text>[MEAN] Bien sûr ! Je suis vraiment désolée, je ne voulais pas te déranger, vraiment... Je vais y aller maintenant...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -153,7 +194,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Sure, whatever.</text>
+          <text>Oui, peu importe.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -170,7 +211,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[TALK] Thank you so much! I promise I'll keep it quiet - it's enough for me to know that you trust me. That's the greatest gift anyone could ever ask for...</text>
+          <text>[TALK] Merci beaucoup ! Je te promets que je ne dirai rien - il me suffit de savoir que tu me fais confiance. C'est le plus beau cadeau que l'on puisse demander...</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -190,7 +231,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Glad to hear it.</text>
+          <text>Je m'en réjouis.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -207,7 +248,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[LEAD] I... I'll always trust you! But... I guess I do need to trust myself more. I know I'll always do everything in my power to protect you. I can never let my faith in that waver, nightmares or no!</text>
+          <text>[LEAD] Je... Je te ferai toujours confiance ! Mais... Je pense que j'ai besoin de me faire plus confiance. Je sais que je ferai toujours tout ce qui est en mon pouvoir pour te protéger. Je ne peux pas laisser ma foi en cela vaciller, cauchemars ou pas !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -226,7 +267,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Um - that's the spirit! Good to hear...</text>
+          <text>C'est ça l'esprit ! C'est bon à entendre...</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -243,7 +284,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>[NONE] My word! I'm so... I'm so sorry, I didn't know things were that low! I know - I'll give up my rations for the day, if it'll help you to eat - I'll do everything I can to focus and contribute!</text>
+          <text>[NONE] Ma parole ! Je suis tellement... Je suis tellement désolée, je ne savais pas que les stock étaient si bas ! Je sais - je vais renoncer à mes rations pour la journée, si cela peut t'aider à manger - je vais faire tout ce que je peux pour me concentrer et contribuer !</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -263,7 +304,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Thanks, Fiona. I appreciate it.</text>
+          <text>Merci, Fiona. Je t'en remercie.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />

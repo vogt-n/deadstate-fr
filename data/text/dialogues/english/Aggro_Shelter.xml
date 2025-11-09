@@ -15,7 +15,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Yeah?</text>
+          <text>Ouais?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -32,7 +32,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Anything that would improve your mood?</text>
+          <text>Y a-t-il quelque chose qui pourrait améliorer ton humeur ?</text>
           <def_link>2535</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -41,7 +41,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>So what do you think about that guy Lane?</text>
+          <text>Que penses-tu de ce type, Lane ?</text>
           <def_link>2512</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Lane_Aggro == 1</checkOnAppear>
@@ -49,11 +49,12 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I went back to the bar to find Alan.</text>
+          <text>Je suis retournée au bar pour retrouver Alan.</text>
           <def_link>2524</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Aggro_Alan == 1 &amp;&amp; ownsItem(2058)</checkOnAppear>
+          <checkOnAppear>ds.Aggro_Alan == 1 &amp;&amp; ownsItem(2058) &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -61,7 +62,18 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>About what you did to Lane...</text>
+          <text>Je suis retourné au bar pour retrouver Alan.</text>
+          <def_link>2524</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Aggro_Alan == 1 &amp;&amp; ownsItem(2058) &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>removeItem(2058, 1);</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>A propos de ce que tu as fait à Lane...</text>
           <def_link>2530</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Lane_Aggro == 6 &amp;&amp; ds.Aggro_Confront == 0</checkOnAppear>
@@ -70,7 +82,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I had a few questions...</text>
+          <text>J'avais quelques questions...</text>
           <def_link>2509</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -79,7 +91,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I have the guitar strings and fuel you needed.</text>
+          <text>J'ai les cordes de guitare et le carburant dont tu avais besoin.</text>
           <def_link>2545</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ownsItem(2057) &amp;&amp; shelterGetResource(fuel) &gt;= 4 &amp;&amp; ds.Aggro_Perform == 1</checkOnAppear>
@@ -91,7 +103,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>It's nothing. Later.</text>
+          <text>Ce n'est rien. A plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -125,7 +137,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>How did you arrive at the bar?</text>
+          <text>Comment es-tu arrivée au bar ?</text>
           <def_link>2538</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -134,7 +146,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Have you heard any rumors about what's going on?</text>
+          <text>As-tu entendu des rumeurs sur ce qui se passe ?</text>
           <def_link>2539</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -143,7 +155,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Anything we could do to improve this place?</text>
+          <text>Y a-t-il quelque chose que nous pourrions faire pour améliorer cet endroit ?</text>
           <def_link>2540</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -152,7 +164,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Something bothering you?</text>
+          <text>Quelque chose te tracasse ?</text>
           <def_link>2541</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -161,7 +173,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Nothing right now. See ya.</text>
+          <text>Rien pour l'instant. A bientôt.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -178,7 +190,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Um... hey.</text>
+          <text>Um... Salut.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -195,7 +207,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Anything that would improve your mood?</text>
+          <text>Y a-t-il quelque chose qui pourrait améliorer ton humeur ?</text>
           <def_link>2535</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -204,7 +216,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>So what do you think about that guy Lane?</text>
+          <text>Que penses-tu de ce type, Lane ?</text>
           <def_link>2512</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Lane_Aggro == 1</checkOnAppear>
@@ -212,11 +224,12 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>I went back to the bar to find Alan.</text>
+          <text>Je suis retournée au bar pour retrouver Alan.</text>
           <def_link>2524</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Aggro_Alan == 1 &amp;&amp; ownsItem(2058)</checkOnAppear>
+          <checkOnAppear>ds.Aggro_Alan == 1 &amp;&amp; ownsItem(2058) &amp;&amp; isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -224,7 +237,18 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>About what you did to Lane...</text>
+          <text>Je suis retourné au bar pour retrouver Alan.</text>
+          <def_link>2524</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Aggro_Alan == 1 &amp;&amp; ownsItem(2058) &amp;&amp; isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>removeItem(2058, 1);</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>A propos de ce que tu as fait à Lane...</text>
           <def_link>2530</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Lane_Aggro == 6 &amp;&amp; ds.Aggro_Confront == 0</checkOnAppear>
@@ -233,7 +257,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>So, you in the mood? I've been thinking about you all day.</text>
+          <text>Alors, tu es d'humeur ? J'ai pensé à toi toute la journée.</text>
           <def_link>2546</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Aggro_Rocked == 2</checkOnAppear>
@@ -242,7 +266,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I have the guitar strings and fuel you needed.</text>
+          <text>J'ai les cordes de guitare et le carburant dont tu avais besoin.</text>
           <def_link>2545</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ownsItem(2057) &amp;&amp; shelterGetResource(fuel) &gt;= 4 &amp;&amp; ds.Aggro_Perform == 1</checkOnAppear>
@@ -254,7 +278,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Can I ask you a question?</text>
+          <text>Je peux te poser une question ?</text>
           <def_link>2511</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -263,7 +287,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Hey. Talk to you later.</text>
+          <text>Salut. On se parle plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -280,7 +304,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Kay.</text>
+          <text>OK.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -297,7 +321,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You were saying something about your mother before. Want to talk about it?</text>
+          <text>Tu as dit quelque chose à propos de ta mère tout à l'heure. Tu veux en parler ?</text>
           <def_link>2542</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -306,7 +330,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Anything you'd like to see in this place?</text>
+          <text>Y a-t-il quelque chose que tu aimerais voir dans cet endroit ?</text>
           <def_link>2544</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -315,7 +339,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>It's nothing - see you later.</text>
+          <text>Ce n'est rien, à plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -332,7 +356,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>There were, like, those fucking dead people all over the motel. So we drove back to the bar we played at, seeing as how it was the only place we knew about in this whole shitty area. </text>
+          <text>Il y avait ces putains de morts partout dans le motel. On est donc retournés au bar où on jouait, vu que c'était le seul endroit qu'on connaissait dans ce quartier pourri. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -349,7 +373,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Do you remember where that motel was?</text>
+          <text>Tu te souviens de l'endroit où se trouvait ce motel ?</text>
           <def_link>2550</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -358,7 +382,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I had another question.</text>
+          <text>J'avais une autre question.</text>
           <def_link>2509</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -367,7 +391,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>That's all for now. </text>
+          <text>C'est tout pour l'instant. </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -384,7 +408,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Alan was driving. I wasn't really paying attention.</text>
+          <text>C'est Alan conduisait. Je ne faisais pas vraiment attention.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -401,7 +425,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I had another question.</text>
+          <text>J'avais une autre question.</text>
           <def_link>2509</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -410,7 +434,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>That's all for now. </text>
+          <text>C'est tout pour l'instant. </text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -427,7 +451,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No. We didn't even know that everything was falling to shit. Just playing music and driving to the next gig, like always. What happened, anyway? Someone play a heavy metal record backwards or something?</text>
+          <text>Non. On ne savait même pas que tout partait en vrille. On jouait de la musique et on roulait vers le prochain concert, comme d'habitude. Qu'est-ce qui s'est passé ? Quelqu'un a joué un disque de heavy metal à l'envers ou quelque chose comme ça ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -444,7 +468,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Something like that. Another question...</text>
+          <text>Quelque chose comme ça. Encore une question...</text>
           <def_link>2509</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -453,7 +477,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Ask around. We'll speak later.</text>
+          <text>Demande autour de toi. Nous en reparlerons plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -470,7 +494,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>It could be less lame. Also not in Texas.</text>
+          <text>Ça pourrait être moins nul. Et pas au Texas non plus.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -487,7 +511,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Right. Another question...</text>
+          <text>Bon, d'accord. Encore une question...</text>
           <def_link>2509</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -496,7 +520,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>If you're not going to take this seriously, I'm going.</text>
+          <text>Si tu ne prends pas ça au sérieux, je m'en vais.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -513,7 +537,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>No. Why? The hell kind of question is that, anyhow? </text>
+          <text>Non. Pourquoi ? Quel genre de question est-ce que c'est, d'ailleurs ? </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -530,7 +554,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Apologies. I had another question.</text>
+          <text>Je m'excuse. J'avais une autre question.</text>
           <def_link>2509</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -538,11 +562,23 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>No - sorry I asked. I'll just get out of your way then.</text>
+          <text>Non - désolée d'avoir demandé. Je vais te laisser tranquille, alors.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick>
+            <string>dlgEndFadeFullFast();</string>
+          </scriptsOnClick>
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Non - désolé d'avoir demandé. Je vais te laisser tranquille, alors.</text>
+          <def_link>-1</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick>
@@ -556,7 +592,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Not much left to tell... She remarried, divorced, then married Jesus. I started hitting the road full-time, we stopped talking, I don't really know where she is even. I haven't really thought about the 'Agatha' years in a while.</text>
+          <text>Il ne reste plus grand-chose à dire... Elle s'est remariée, a divorcé, puis a épousé Jésus. J'ai commencé à prendre la route à plein temps, nous avons cessé de nous parler, et je ne sais même pas où elle se trouve. Je n'ai pas vraiment pensé aux années « Agatha » depuis un certain temps.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -573,7 +609,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>The 'Agatha' years?</text>
+          <text>Les années « Agatha » ?</text>
           <def_link>2543</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -582,7 +618,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Is that your mom's name?</text>
+          <text>C'est le nom de ta mère ?</text>
           <def_link>2543</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -597,7 +633,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Um... my name. I haven't been called Agatha since my... second band? They started calling me Aggro when I punched this chick after she slept with my deadbeat boyfriend. That was also the end of the second band, coincidentally.</text>
+          <text>Euh... mon nom. On ne m'a pas appelée Agatha depuis mon... deuxième groupe ? Ils ont commencé à m'appeler Aggro quand j'ai frappé cette nana après qu'elle ait couché avec mon petit ami mauvais payeur. C'était aussi la fin du deuxième groupe, par coïncidence.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -613,7 +649,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Weird... I don't know the last time I talked about that with someone. I must like you or something.</text>
+          <text>Bizarre... Je ne sais pas quand j'ai parlé de ça avec quelqu'un pour la dernière fois. Je dois t'apprécier ou quelque chose comme ça.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -630,7 +666,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Another question...</text>
+          <text>Encore une question...</text>
           <def_link>2511</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -639,7 +675,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Thanks for sharing. We'll talk more later.</text>
+          <text>Merci pour ton partage. Nous en reparlerons plus tard.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -656,7 +692,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>A greenhouse might be nice. Even a ghetto-style sheet plastic type would work wonders for speeding up the process for some of the plants and seedlings.  </text>
+          <text>Une serre pourrait être utile. Même une serre en plastique de type ghetto ferait des merveilles pour accélérer le processus pour certaines des plantes et des semis.  </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -673,7 +709,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I'll see what I can do. Another question...</text>
+          <text>Je vais voir ce que je peux faire. Autre question...</text>
           <def_link>2511</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -682,7 +718,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'll consider it. Excuse me.</text>
+          <text>Je vais y réfléchir. Excuse-moi.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -699,7 +735,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Um... </text>
+          <text>Hum... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -742,7 +778,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Who?</text>
+          <text>Qui?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -759,7 +795,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>The DJ.</text>
+          <text>Le DJ.</text>
           <def_link>2515</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -768,7 +804,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Curly hair. Wears glasses. Um... interesting personality. </text>
+          <text>Cheveux frisés. Il porte des lunettes. Hum... personnalité intéressante. </text>
           <def_link>2515</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -783,7 +819,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Who?</text>
+          <text>Qui?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -800,7 +836,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>The DJ.</text>
+          <text>Le DJ.</text>
           <def_link>2516</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -809,7 +845,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Curly hair. Wears glasses. Um... interesting personality. </text>
+          <text>Cheveux frisés. Il porte des lunettes. Hum... personnalité intéressante. </text>
           <def_link>2516</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -824,7 +860,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh, him. Yeah. What about him?</text>
+          <text>Oh, lui. Ouais. Qu'est-ce qu'il veux ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -841,7 +877,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Can't believe I'm doing this - he wants to know if you're interested in him.</text>
+          <text>Je n'arrive pas à croire que je fais ça - il veut savoir s'il t'intéresse.</text>
           <def_link>2517</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -850,7 +886,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'm being a pal. Trying to make a love connection - what do you say?</text>
+          <text>Je suis un ami. J'essaie d'établir une relation amoureuse. Qu'en dis-tu ?</text>
           <def_link>2517</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -859,7 +895,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>To the point - he's incredibly eager to get naked with you. You down?</text>
+          <text>Pour aller droit au but, il est incroyablement impatient de se mettre nu avec toi. Tu es d'accord ?</text>
           <def_link>2517</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -874,7 +910,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh, that guy. What about him?</text>
+          <text>Oh, ce type. Qu'est-ce qu'il a ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -891,7 +927,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You should make a move on him before someone else does.</text>
+          <text>Tu devrais faire un pas vers lui avant que quelqu'un d'autre ne le fasse.</text>
           <def_link>2522</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -900,7 +936,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>He's such a... interesting guy. Don't you think?</text>
+          <text>C'est un type tellement... intéressant. Tu ne trouves pas ?</text>
           <def_link>2522</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -909,7 +945,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>He's crazy about you. Haven't you noticed?</text>
+          <text>Il est fou de toi. Tu n'as pas remarqué ?</text>
           <def_link>2522</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -924,7 +960,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Ah ha ha ha... Oh, you're not - oh, you are. Look, I know it's the end of the world and all, but, um, pretty sure I can do better. </text>
+          <text>Ah ha ha ha... Oh, tu n'es pas - oh, tu l'es. Ecoute, je sais que c'est la fin du monde et tout, mais, hum, je suis presque sûr que je peux trouver mieux. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -941,7 +977,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>But you're a perfect match - he likes music, you play music - math, etc.</text>
+          <text>Mais vous êtes parfaitement assortis - il aime la musique, tu joues de la musique - les maths, etc.</text>
           <def_link>2518</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -950,7 +986,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>He'll practically worship you.</text>
+          <text>Il te vénère pratiquement.</text>
           <def_link>2518</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -959,7 +995,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Like who?</text>
+          <text>Comme qui ?</text>
           <def_link>2519</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -968,7 +1004,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Okay. I'll let him know you're not interested.</text>
+          <text>Ok. Je lui ferai savoir que tu n'es pas intéressée.</text>
           <def_link>2521</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -983,7 +1019,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I know you're a dude and, like, dudes have this idea that women can be won over, but no, we kind of know the second we see a guy if we're going to sleep with him or not. It's the end of the world - I don't have to keep that secret anymore.</text>
+          <text>Je sais que tu es un mec et que les mecs pensent que les femmes peuvent être conquises, mais non, nous savons à la seconde où nous voyons un mec si nous allons coucher avec lui ou non. C'est la fin du monde - je n'ai plus à garder ce secret.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1000,7 +1036,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>So... thumbs up or down?</text>
+          <text>Alors... pouce levé ou baissé ?</text>
           <def_link>2520</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1009,7 +1045,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Okay. I'll let him know you're not interested.</text>
+          <text>Ok. Je lui dirai que tu n'es pas intéressée.</text>
           <def_link>2521</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1024,7 +1060,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>I don't know... Maybe I've already got someone in mind. Does it matter?</text>
+          <text>Je ne sais pas... Peut-être que j'ai déjà quelqu'un en tête. C'est important ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1041,7 +1077,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>But Lane - he's... such a guy with nice parts and such.</text>
+          <text>Mais Lane... c'est... un tel gars avec de belles parties et tout ça.</text>
           <def_link>2520</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1050,7 +1086,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>This guy will treat you like a goddess.</text>
+          <text>Il te traitera comme une déesse.</text>
           <def_link>2520</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1059,7 +1095,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Okay. I'll let him know you're not interested.</text>
+          <text>Ok. Je lui dirai que tu n'es pas intéressée.</text>
           <def_link>2521</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1074,7 +1110,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>That'd be a no, dude.</text>
+          <text>C'est non, mec.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1091,7 +1127,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I'll let Lane know you're not interested.</text>
+          <text>Je lui dirai que tu n'es pas intéressée.</text>
           <def_link>2521</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1106,7 +1142,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Yeah, that'd be for the best. Sorry I didn't have better news for you.</text>
+          <text>Ouais, c'est mieux comme ça. Désolé de ne pas avoir de meilleures nouvelles pour toi.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1123,7 +1159,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro seems to be done with this conversation.&gt;</text>
+          <text>&lt;Aggro semble en avoir fini avec cette conversation.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1140,7 +1176,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>He's not really my type. Oh, sure, I'm sure he'd probably be eager to please and all, but then he'd probably want to talk about my process and nerdy music shit. And I'm not really attracted to him.</text>
+          <text>Ce n'est pas vraiment mon genre. Oh, bien sûr, je suis sûr qu'il serait désireux de plaire et tout, mais alors il voudrait probablement parler de mon processus et des trucs musicaux intellos. Et il ne m'attire pas vraiment.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1157,7 +1193,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>It might be the end of the world - can't be too picky.</text>
+          <text>C'est peut-être la fin du monde, ne soit pas trop exigeante.</text>
           <def_link>2523</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1166,7 +1202,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>He's such a sweet guy though.</text>
+          <text>Mais c'est un type très gentil.</text>
           <def_link>2523</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1175,7 +1211,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'll let Lane know you're not interested.</text>
+          <text>Je ferai savoir à Lane que tu n'es pas intéressée.</text>
           <def_link>2521</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1190,7 +1226,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Feel free to offer him a vag to cry on if you feel that way, but I'm going to keep my pants securely on around that guy. He's all yours.</text>
+          <text>N'hésite pas à lui offrir un vagin pour pleurer si tu le sens, mais je vais garder mon pantalon bien fermé autour de ce type. Il est tout à toi.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1207,7 +1243,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I'll let Lane know you're not interested.</text>
+          <text>Je ferai savoir à Lane que tu n'es pas intéressée.</text>
           <def_link>2521</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1222,7 +1258,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Was he back?</text>
+          <text>Il est revenu ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1241,7 +1277,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Yes and no... He made it back, but he must have been bit. He was already dead.</text>
+          <text>Oui et non... Il est revenu, mais il a dû être mordu. Il était déjà mort.</text>
           <def_link>2525</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1256,7 +1292,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh... Did you at least, you know... take care of him?</text>
+          <text>Oh... As-tu au moins, tu sais... pris soin de lui ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1273,7 +1309,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Yeah.</text>
+          <text>Ouais.</text>
           <def_link>2526</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1281,20 +1317,40 @@
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
+        <!-- Clone pour genre -->
         <dlgAnsw>
-          <text>No, sorry. We left rather than risk it.</text>
+          <text>Non, désolée. Nous sommes partis plutôt que de prendre le risque.</text>
           <def_link>2527</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear />
+          <checkOnAppear>isPcFemale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>I handled it.</text>
+          <text>Non, désolé. Nous sommes partis plutôt que de prendre le risque.</text>
+          <def_link>2527</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>isPcMale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <!-- Clone pour genre -->
+        <dlgAnsw>
+          <text>Je m'en suis occupée.</text>
           <def_link>2526</def_link>
           <auto_answer>false</auto_answer>
-          <checkOnAppear>ds.Leadership &gt;= 3</checkOnAppear>
+          <checkOnAppear>ds.Leadership &gt;= 3 &amp;&amp; isPcFemale()</checkOnAppear>
+          <checksOnClick />
+          <linksOnClick />
+          <scriptsOnClick />
+        </dlgAnsw>
+        <dlgAnsw>
+          <text>Je m'en suis occupé.</text>
+          <def_link>2526</def_link>
+          <auto_answer>false</auto_answer>
+          <checkOnAppear>ds.Leadership &gt;= 3 &amp;&amp; isPcMale()</checkOnAppear>
           <checksOnClick />
           <linksOnClick />
           <scriptsOnClick />
@@ -1306,7 +1362,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Thanks. I... Um... Like just thinking of him walking around like those things, it just wouldn't be right.</text>
+          <text>Merci. Je... Hum... Rien que de le voir se promener comme ça, ça ne serait pas bien.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1323,7 +1379,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>He left this note for you.</text>
+          <text>Il a laissé ce mot pour toi.</text>
           <def_link>2528</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1338,7 +1394,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>You mean he's still out there, just doomed to walk around and... that just doesn't seem right. Not a bit.</text>
+          <text>Tu veux dire qu'il est toujours là, condamné à se promener et... ça ne me semble pas juste. Pas du tout.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1357,7 +1413,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>He left you this note.</text>
+          <text>Il t'a laissé ce mot.</text>
           <def_link>2528</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1372,7 +1428,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Huh... Wrote me something, huh? Let's see what he... </text>
+          <text>Huh... Il m'a écrit quelque chose, hein ? Voyons ce qu'il... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1390,7 +1446,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;sniff&gt;Stupid jerk... Getting yourself killed... I should, uh... I should go. Thanks for... this. </text>
+          <text>&lt;sniff&gt;Stupide crétin... Se faire tuer... Je devrais, euh... Je devrais y aller. Merci pour... ça. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1420,13 +1476,30 @@
     </dlgPart>
     <dlgPart>
       <lines>
+        <!-- Clone pour genre -->
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Damn it... why he have to go and be so stupid? I guess I'll never get to tell him off about this. Just leaving me on my own... &lt;sniff&gt;damn him. Thanks for going and all, but I need a moment to just be angry at everything.</text>
+          <text>Bon sang... Pourquoi doit-il être aussi stupide ? Je suppose que je n'aurai jamais l'occasion de lui dire ce que j'en pense. Me laisser tout seule... &lt;sniff&gt;Qu'il aille se faire foutre. Merci d'y être allé et tout, mais j'ai besoin d'un moment pour être en colère contre tout.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
+            <boolean>true</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </defAppearChecks>
+          <onAppearChecks />
+          <onLoadScripts />
+        </dlgLine>
+        <dlgLine>
+          <owner_ID>0</owner_ID>
+          <text>Bon sang... Pourquoi doit-il être aussi stupide ? Je suppose que je n'aurai jamais l'occasion de lui dire ce que j'en pense. Me laisser tout seule... &lt;sniff&gt;Qu'il aille se faire foutre. Merci d'y être allée et tout, mais j'ai besoin d'un moment pour être en colère contre tout.</text>
+          <defAppearChecks>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>true</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1439,7 +1512,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro doesn't seem to want to talk at the moment.&gt;</text>
+          <text>&lt;Aggro ne semble plus vouloir parler pour l'instant.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1456,7 +1529,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Bastard had it coming... </text>
+          <text>Ce salaud l'a bien cherché... </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1475,7 +1548,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I'm totally on your side on this one.</text>
+          <text>Je suis tout à fait de ton côté sur ce coup-là.</text>
           <def_link>2531</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1484,7 +1557,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>No one goes around beating up other people in my shelter! Half-rations for a week.</text>
+          <text>Personne ne frappe d'autres personnes dans mon refuge ! Demi ration pendant une semaine.</text>
           <def_link>2533</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1493,7 +1566,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Usually I'd have to dole out a punishment... but I'm going to go easy on you given your past cooperation. </text>
+          <text>D'habitude, je devrais infliger une punition... mais je vais y aller mollo avec toi, vu ta coopération passée. </text>
           <def_link>2534</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ds.Negotiation &gt;= 5</checkOnAppear>
@@ -1508,7 +1581,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Good! 'Cause that sonuvabitch was seriously getting pervy. No matter what I said, it just did not get through to that ratty fanboy brain of his. So I explained it to his ribs and told them to pass it on.</text>
+          <text>C'est bien ! Parce que ce fils de pute devenait sérieusement pervers. J'avais beau dire, ça ne fonctionnait pas dans son cerveau de fanboy miteux. Alors j'ai expliqué à ses côtes et je leur ai dit de transmettre.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1527,7 +1600,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I think he got the message. But try not to do it again, okay?</text>
+          <text>Je pense qu'il a compris le message. Mais essaie de ne pas recommencer, d'accord ?</text>
           <def_link>2532</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1536,7 +1609,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>That's a freebie - no more fighting in here. Understood?</text>
+          <text>C'était gratuit - plus de bagarres ici. C'est compris ?</text>
           <def_link>2532</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1551,7 +1624,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Yeah, yeah... I got ya. Glad you have my back.</text>
+          <text>Ouais, ouais... j'ai compris. Je suis contente que tu me soutiennes.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1568,7 +1641,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro seems to have ended the conversation.&gt;</text>
+          <text>&lt;Aggro semble avoir terminé la conversation.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1585,7 +1658,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>What? For rib-tickling that perv? This is bullshit! I can't believe you're taking his side. Ugh... get outta my way.</text>
+          <text>Quoi ? Pour avoir mis le doigt dans les côtes de ce pervers ? C'est des conneries ! Je ne peux pas croire que tu prennes son parti. Ugh... dégage de mon chemin.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1605,7 +1678,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh, and get raped by bears! Dick.</text>
+          <text>Oh, et va te faire violer par des ours ! Espèce de tête de bite.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1622,7 +1695,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro seems to have ended the conversation.&gt;</text>
+          <text>&lt;Aggro semble avoir mis fin à la conversation.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1639,7 +1712,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh? Well... um, cool. He had it coming - you do understand that, right? But I realize you have to make examples of people or something, so thanks for not making one out of me. A lot.</text>
+          <text>Oh ? Eh bien... hum, cool. Il l'a bien cherché, tu le comprends, n'est-ce pas ? Mais je sais qu'il faut bien faire des exemples, alors merci de ne pas en faire un avec moi. Merci beaucoup.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1658,7 +1731,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>I think he got the message. But try not to do it again, okay?</text>
+          <text>Je pense qu'il a compris le message. Mais essaie de ne pas recommencer, d'accord ?</text>
           <def_link>2532</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1667,7 +1740,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>That's a freebie - no more fighting in here. Understood?</text>
+          <text>C'était gratuit - plus de bagarre ici. C'est compris ?</text>
           <def_link>2532</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1682,7 +1755,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Yes! I'll get set up in the morning and start playing after everyone's shift ends... Of course, I won't be available to work tomorrow, but it's going to be worth it. </text>
+          <text>Oui ! Je m'installerai dans la matinée et je commencerai à jouer après la fin du travail de tout le monde... Bien sûr, je ne serai pas disponible pour travailler demain, mais ça en vaut la peine. </text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1698,7 +1771,7 @@
         </dlgLine>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Guitar buzzing, sweaty shirts, heads nodding - going to be the most alive this place has ever seemed.</text>
+          <text>Des guitares qui bourdonnent, des chemises qui transpirent, des têtes qui hochent - cet endroit n'aura jamais semblé aussi vivant.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1720,7 +1793,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro opens the pack and examines the strings.&gt;</text>
+          <text>&lt;Aggro ouvre le paquet et examine les cordes.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1737,7 +1810,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Oh, jeez... Look, like I told you - that was a one time thing. Just accept that and be cool about it. If the internet were still around you'd be getting high-fives from like all kinds of creepy music nerds. Don't be clingy, okay?</text>
+          <text>Oh, bon sang... Comme je te l'ai dit, ce n'est qu'un coup d'une fois. Accepte-le et ne t'en fais pas. Si Internet existait encore, tu recevrais des félicitations de la part de toutes sortes d'intellos musicaux effrayants. Ne sois pas collant, d'accord ?</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1756,7 +1829,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Okay. If you say so.</text>
+          <text>D'accord. Si tu le dis.</text>
           <def_link>2547</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1765,7 +1838,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>Aw, c'mon - just one more time? Please?</text>
+          <text>Oh, allez - juste une fois de plus ? S'il te plaît ?</text>
           <def_link>2548</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1774,7 +1847,7 @@
           <scriptsOnClick />
         </dlgAnsw>
         <dlgAnsw>
-          <text>But... I love you.</text>
+          <text>Mais... Je t'aime.</text>
           <def_link>2549</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1789,7 +1862,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Cool... Well, see ya later.</text>
+          <text>Cool... Eh bien, à plus tard.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1806,7 +1879,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro digs through her pockets for a cigarette and ignores you.&gt;</text>
+          <text>&lt;Aggro fouille dans ses poches pour trouver une cigarette et t'ignore.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1823,7 +1896,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Ugh... You know what's worse than asking for sex? Begging for sex! This was totally a mistake - sorry we fucked, okay, dude? Get lost or something.</text>
+          <text>Euh... Tu sais ce qui est pire que de demander du sexe ? Mendier du sexe ! C'était une erreur, désolée d'avoir baisé, d'accord, mec ? Va te faire voir ailleurs.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1842,7 +1915,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro digs through her pockets for a cigarette and ignores you.&gt;</text>
+          <text>&lt;Aggro fouille dans ses poches pour trouver une cigarette et t'ignore.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1859,7 +1932,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Laughs&gt;You... what? Are you serious? Have you ever, like, been in love before? We fucked, dude - get over it. Man... clearly I know how to pick 'em. &lt;Laughs&gt;</text>
+          <text>&lt;Rires&gt;Tu... quoi ? T'es sérieux ? As-tu déjà été amoureux ? On a baisé, mec - oublie ça. Eh ben... c'est clair que je sais comment les choisir. &lt;Rires&gt;</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1876,7 +1949,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>&lt;Aggro digs through her pockets for a cigarette and ignores you.&gt;</text>
+          <text>&lt;Aggro fouille dans ses poches pour trouver une cigarette et t'ignore.&gt;</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1893,7 +1966,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>If it can be smoked, I'll take it. Cigars, pot, whatever. Not like I'm worried about lung cancer anymore.</text>
+          <text>Si ça peut être fumé, je le prends. Cigares, herbe, peu importe. Ce n'est pas comme si je m'inquiétais encore d'un cancer du poumon.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1910,7 +1983,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Here's a cigar.</text>
+          <text>Voilà un cigare.</text>
           <def_link>2536</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ownsItem(2014)</checkOnAppear>
@@ -1921,7 +1994,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Here's a bag of pot.</text>
+          <text>Voilà un sac d'herbe.</text>
           <def_link>2537</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear>ownsItem(2018)</checkOnAppear>
@@ -1932,7 +2005,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>I'll let you know if I have any.</text>
+          <text>Je te dirai si j'en ai.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1949,7 +2022,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>Thanks. These make me feel fancy. And I never know when I'll run out of smokes.</text>
+          <text>Merci. Ça me donne l'impression d'être chic. Et je ne sais jamais quand je serai à court de cigarettes.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -1970,7 +2043,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>You're welcome.</text>
+          <text>De rien.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1981,7 +2054,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Enjoy.</text>
+          <text>Au plaisir.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -1998,7 +2071,7 @@
       <lines>
         <dlgLine>
           <owner_ID>0</owner_ID>
-          <text>&lt;Inhales the bag&gt; Yup. Been needing this a lot lately.</text>
+          <text>&lt;Inhale le sachet&gt; Yep. J'en ai bien besoin ces derniers temps.</text>
           <defAppearChecks>
             <boolean>false</boolean>
             <boolean>false</boolean>
@@ -2019,7 +2092,7 @@
       </lines>
       <answers>
         <dlgAnsw>
-          <text>Hope it helps.</text>
+          <text>J'espère que ça t'aidera.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
@@ -2030,7 +2103,7 @@
           </scriptsOnClick>
         </dlgAnsw>
         <dlgAnsw>
-          <text>Winners don't use drugs. Except when they really need to.</text>
+          <text>Les vainqueurs ne se droguent pas. Sauf quand ils en ont vraiment besoin.</text>
           <def_link>-1</def_link>
           <auto_answer>false</auto_answer>
           <checkOnAppear />
